@@ -1,0 +1,1774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="yixueyuanModelStoreContainer" CdmEntityContainer="yixueyuanEntities">
+    <EntitySetMapping Name="Abnormals">
+      <EntityTypeMapping TypeName="yixueyuanModel.Abnormal">
+        <MappingFragment StoreEntitySet="Abnormal">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="AbnormalUuid" ColumnName="AbnormalUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="StuNum" ColumnName="StuNum" />
+          <ScalarProperty Name="CollegeUuid" ColumnName="CollegeUuid" />
+          <ScalarProperty Name="MajorUuid" ColumnName="MajorUuid" />
+          <ScalarProperty Name="StuClassUuid" ColumnName="StuClassUuid" />
+          <ScalarProperty Name="AbnormalTime" ColumnName="AbnormalTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="WarnState" ColumnName="WarnState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccessControlRecords">
+      <EntityTypeMapping TypeName="yixueyuanModel.AccessControlRecord">
+        <MappingFragment StoreEntitySet="AccessControlRecord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="AccessControlRecordUuid" ColumnName="AccessControlRecordUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ComeInTime" ColumnName="ComeInTime" />
+          <ScalarProperty Name="GetOutTime" ColumnName="GetOutTime" />
+          <ScalarProperty Name="ResearchBuildingUuid" ColumnName="ResearchBuildingUuid" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnjianTypes">
+      <EntityTypeMapping TypeName="yixueyuanModel.AnjianType">
+        <MappingFragment StoreEntitySet="AnjianType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApartmentRecords">
+      <EntityTypeMapping TypeName="yixueyuanModel.ApartmentRecord">
+        <MappingFragment StoreEntitySet="ApartmentRecord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ApartmentRecordUuid" ColumnName="ApartmentRecordUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="DormitoryUuid" ColumnName="DormitoryUuid" />
+          <ScalarProperty Name="EnterTime" ColumnName="EnterTime" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="StuNum" ColumnName="StuNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApartmentWarns">
+      <EntityTypeMapping TypeName="yixueyuanModel.ApartmentWarn">
+        <MappingFragment StoreEntitySet="ApartmentWarn">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ApartmentWarnUuid" ColumnName="ApartmentWarnUuid" />
+          <ScalarProperty Name="EquipmentId" ColumnName="EquipmentId" />
+          <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
+          <ScalarProperty Name="WarnTime" ColumnName="WarnTime" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blackers">
+      <EntityTypeMapping TypeName="yixueyuanModel.Blacker">
+        <MappingFragment StoreEntitySet="Blacker">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="BlackerUuid" ColumnName="BlackerUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampusPatrols">
+      <EntityTypeMapping TypeName="yixueyuanModel.CampusPatrol">
+        <MappingFragment StoreEntitySet="CampusPatrol">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ShenFen" ColumnName="ShenFen" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="yixueyuanModel.Car">
+        <MappingFragment StoreEntitySet="Car">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarUuid" ColumnName="CarUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="DepartmentUuid" ColumnName="DepartmentUuid" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="CarColor" ColumnName="CarColor" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="InSchoolNum" ColumnName="InSchoolNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarAccidents">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarAccident">
+        <MappingFragment StoreEntitySet="CarAccident">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarAccidentUuid" ColumnName="CarAccidentUuid" />
+          <ScalarProperty Name="AccidentTime" ColumnName="AccidentTime" />
+          <ScalarProperty Name="AccidentPlace" ColumnName="AccidentPlace" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarBlacks">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarBlack">
+        <MappingFragment StoreEntitySet="CarBlack">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarBlackUuid" ColumnName="CarBlackUuid" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="CarColor" ColumnName="CarColor" />
+          <ScalarProperty Name="CarBrand" ColumnName="CarBrand" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarIllegalStops">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarIllegalStop">
+        <MappingFragment StoreEntitySet="CarIllegalStop">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarIllegalStopUuid" ColumnName="CarIllegalStopUuid" />
+          <ScalarProperty Name="IllegalStopTime" ColumnName="IllegalStopTime" />
+          <ScalarProperty Name="IllegalStopPlace" ColumnName="IllegalStopPlace" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarNonMotors">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarNonMotor">
+        <MappingFragment StoreEntitySet="CarNonMotor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarNonMotorUuid" ColumnName="CarNonMotorUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="CarBrand" ColumnName="CarBrand" />
+          <ScalarProperty Name="DepartmentUuid" ColumnName="DepartmentUuid" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="CarColor" ColumnName="CarColor" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="InSchoolNum" ColumnName="InSchoolNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarNonMotorAccidents">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarNonMotorAccident">
+        <MappingFragment StoreEntitySet="CarNonMotorAccident">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarNonMotorAccidentUuid" ColumnName="CarNonMotorAccidentUuid" />
+          <ScalarProperty Name="AccidentTime" ColumnName="AccidentTime" />
+          <ScalarProperty Name="AccidentPlace" ColumnName="AccidentPlace" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CarBrand" ColumnName="CarBrand" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarNonMotorBlacks">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarNonMotorBlack">
+        <MappingFragment StoreEntitySet="CarNonMotorBlack">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarNonMotorBlackUuid" ColumnName="CarNonMotorBlackUuid" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="CarColor" ColumnName="CarColor" />
+          <ScalarProperty Name="CarBrand" ColumnName="CarBrand" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Origion" ColumnName="Origion" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarNonMotorHelmeteds">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarNonMotorHelmeted">
+        <MappingFragment StoreEntitySet="CarNonMotorHelmeted">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarNonMotorHelmetedUuid" ColumnName="CarNonMotorHelmetedUuid" />
+          <ScalarProperty Name="HelmetedTime" ColumnName="HelmetedTime" />
+          <ScalarProperty Name="HelmetedPlace" ColumnName="HelmetedPlace" />
+          <ScalarProperty Name="HelmetedEvent" ColumnName="HelmetedEvent" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarNonMotorIllegalStops">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarNonMotorIllegalStop">
+        <MappingFragment StoreEntitySet="CarNonMotorIllegalStop">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarNonMotorIllegalStopUuid" ColumnName="CarNonMotorIllegalStopUuid" />
+          <ScalarProperty Name="IllegalStopTime" ColumnName="IllegalStopTime" />
+          <ScalarProperty Name="IllegalStopPlace" ColumnName="IllegalStopPlace" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarNonMotorManneds">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarNonMotorManned">
+        <MappingFragment StoreEntitySet="CarNonMotorManned">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarNonMotorMannedUuid" ColumnName="CarNonMotorMannedUuid" />
+          <ScalarProperty Name="MannedTime" ColumnName="MannedTime" />
+          <ScalarProperty Name="MannedPlace" ColumnName="MannedPlace" />
+          <ScalarProperty Name="MannedEvent" ColumnName="MannedEvent" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarNonMotorSpeedRecords">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarNonMotorSpeedRecord">
+        <MappingFragment StoreEntitySet="CarNonMotorSpeedRecord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarNonMotorSpeedRecordUuid" ColumnName="CarNonMotorSpeedRecordUuid" />
+          <ScalarProperty Name="SpeedTime" ColumnName="SpeedTime" />
+          <ScalarProperty Name="SpeedPlace" ColumnName="SpeedPlace" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SpeedOver" ColumnName="SpeedOver" />
+          <ScalarProperty Name="SpeedLimit" ColumnName="SpeedLimit" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarSpeedRecords">
+      <EntityTypeMapping TypeName="yixueyuanModel.CarSpeedRecord">
+        <MappingFragment StoreEntitySet="CarSpeedRecord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CarSpeedRecordUuid" ColumnName="CarSpeedRecordUuid" />
+          <ScalarProperty Name="SpeedTime" ColumnName="SpeedTime" />
+          <ScalarProperty Name="SpeedPlace" ColumnName="SpeedPlace" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SpeedOver" ColumnName="SpeedOver" />
+          <ScalarProperty Name="SpeedLimit" ColumnName="SpeedLimit" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colleges">
+      <EntityTypeMapping TypeName="yixueyuanModel.College">
+        <MappingFragment StoreEntitySet="College">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CollegeUuid" ColumnName="CollegeUuid" />
+          <ScalarProperty Name="CollegeName" ColumnName="CollegeName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Curricula">
+      <EntityTypeMapping TypeName="yixueyuanModel.Curriculum">
+        <MappingFragment StoreEntitySet="Curriculum">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CurriculumUuid" ColumnName="CurriculumUuid" />
+          <ScalarProperty Name="CurriculumName" ColumnName="CurriculumName" />
+          <ScalarProperty Name="WeeklyUuid" ColumnName="WeeklyUuid" />
+          <ScalarProperty Name="FestivalUuid" ColumnName="FestivalUuid" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="CurriculumNum" ColumnName="CurriculumNum" />
+          <ScalarProperty Name="Weekly" ColumnName="Weekly" />
+          <ScalarProperty Name="Festival" ColumnName="Festival" />
+          <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+          <ScalarProperty Name="Semester" ColumnName="Semester" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dc_EarlyWarningRecord">
+      <EntityTypeMapping TypeName="yixueyuanModel.Dc_EarlyWarningRecord">
+        <MappingFragment StoreEntitySet="Dc_EarlyWarningRecord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dc_TemHum">
+      <EntityTypeMapping TypeName="yixueyuanModel.Dc_TemHum">
+        <MappingFragment StoreEntitySet="Dc_TemHum">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InstrumentID" ColumnName="InstrumentID" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="InCharge" ColumnName="InCharge" />
+          <ScalarProperty Name="InChargeID" ColumnName="InChargeID" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="InstrumentName" ColumnName="InstrumentName" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="yixueyuanModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="DepartmentUuid" ColumnName="DepartmentUuid" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="ResPeople" ColumnName="ResPeople" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoorOpenings">
+      <EntityTypeMapping TypeName="yixueyuanModel.DoorOpening">
+        <MappingFragment StoreEntitySet="DoorOpening">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="DoorOpeningRecordUuid" ColumnName="DoorOpeningRecordUuid" />
+          <ScalarProperty Name="AffiliatedLaboratory" ColumnName="AffiliatedLaboratory" />
+          <ScalarProperty Name="DoorOpener" ColumnName="DoorOpener" />
+          <ScalarProperty Name="OpeningHours" ColumnName="OpeningHours" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dormitories">
+      <EntityTypeMapping TypeName="yixueyuanModel.Dormitory">
+        <MappingFragment StoreEntitySet="Dormitory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="DormitoryUuid" ColumnName="DormitoryUuid" />
+          <ScalarProperty Name="DormitoryName" ColumnName="DormitoryName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DormitoryNums">
+      <EntityTypeMapping TypeName="yixueyuanModel.DormitoryNum">
+        <MappingFragment StoreEntitySet="DormitoryNum">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="DormitoryNumUuid" ColumnName="DormitoryNumUuid" />
+          <ScalarProperty Name="DormitoryUuid" ColumnName="DormitoryUuid" />
+          <ScalarProperty Name="DormitoryNumName" ColumnName="DormitoryNumName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Festivals">
+      <EntityTypeMapping TypeName="yixueyuanModel.Festival">
+        <MappingFragment StoreEntitySet="Festival">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FestivalUuid" ColumnName="FestivalUuid" />
+          <ScalarProperty Name="FestivalName" ColumnName="FestivalName" />
+          <ScalarProperty Name="FestivalTime" ColumnName="FestivalTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FireFacilities">
+      <EntityTypeMapping TypeName="yixueyuanModel.FireFacility">
+        <MappingFragment StoreEntitySet="FireFacilities">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="FireFacilitiesUuid" ColumnName="FireFacilitiesUuid" />
+          <ScalarProperty Name="ResearchBuildingUuid" ColumnName="ResearchBuildingUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SpecificationModel" ColumnName="SpecificationModel" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="DateOfManufacture" ColumnName="DateOfManufacture" />
+          <ScalarProperty Name="LastRepairDate" ColumnName="LastRepairDate" />
+          <ScalarProperty Name="ServiceLife" ColumnName="ServiceLife" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FivePictures">
+      <EntityTypeMapping TypeName="yixueyuanModel.FivePicture">
+        <MappingFragment StoreEntitySet="FivePicture">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="FivePictureUuid" ColumnName="FivePictureUuid" />
+          <ScalarProperty Name="ScoreStart" ColumnName="ScoreStart" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ScoreOver" ColumnName="ScoreOver" />
+          <ScalarProperty Name="DepartmentUuid" ColumnName="DepartmentUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Focusers">
+      <EntityTypeMapping TypeName="yixueyuanModel.Focuser">
+        <MappingFragment StoreEntitySet="Focuser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="FocuserUuid" ColumnName="FocuserUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="FocusType" ColumnName="FocusType" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Foreigners">
+      <EntityTypeMapping TypeName="yixueyuanModel.Foreigner">
+        <MappingFragment StoreEntitySet="Foreigner">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ForeignerUuid" ColumnName="ForeignerUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ForeignerAppoints">
+      <EntityTypeMapping TypeName="yixueyuanModel.ForeignerAppoint">
+        <MappingFragment StoreEntitySet="ForeignerAppoint">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ForeignerAppointUuid" ColumnName="ForeignerAppointUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="VisitName" ColumnName="VisitName" />
+          <ScalarProperty Name="VisitPhone" ColumnName="VisitPhone" />
+          <ScalarProperty Name="HealthCode" ColumnName="HealthCode" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="VisitTime" ColumnName="VisitTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ForeignerRecords">
+      <EntityTypeMapping TypeName="yixueyuanModel.ForeignerRecord">
+        <MappingFragment StoreEntitySet="ForeignerRecord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ForeignerRecordUuid" ColumnName="ForeignerRecordUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="VisitName" ColumnName="VisitName" />
+          <ScalarProperty Name="VisitPhone" ColumnName="VisitPhone" />
+          <ScalarProperty Name="HealthCode" ColumnName="HealthCode" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="VisitTime" ColumnName="VisitTime" />
+          <ScalarProperty Name="ComeInDoor" ColumnName="ComeInDoor" />
+          <ScalarProperty Name="ComeInTime" ColumnName="ComeInTime" />
+          <ScalarProperty Name="GetOutDoor" ColumnName="GetOutDoor" />
+          <ScalarProperty Name="GetOutTime" ColumnName="GetOutTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralLaboratories">
+      <EntityTypeMapping TypeName="yixueyuanModel.GeneralLaboratory">
+        <MappingFragment StoreEntitySet="GeneralLaboratory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="GeneralLaboratoryUuid" ColumnName="GeneralLaboratoryUuid" />
+          <ScalarProperty Name="GeneralLaboratoryName" ColumnName="GeneralLaboratoryName" />
+          <ScalarProperty Name="GeneralLaboratoryBasicInformation" ColumnName="GeneralLaboratoryBasicInformation" />
+          <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
+          <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+          <ScalarProperty Name="Principal" ColumnName="Principal" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="AllowEntry" ColumnName="AllowEntry" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GooutForms">
+      <EntityTypeMapping TypeName="yixueyuanModel.GooutForm">
+        <MappingFragment StoreEntitySet="GooutForm">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="GooutFormUuid" ColumnName="GooutFormUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HazardousChemicalsUseRecords">
+      <EntityTypeMapping TypeName="yixueyuanModel.HazardousChemicalsUseRecord">
+        <MappingFragment StoreEntitySet="HazardousChemicalsUseRecords">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="HazardousChemicalsUuid" ColumnName="HazardousChemicalsUuid" />
+          <ScalarProperty Name="HazardousChemicalsType" ColumnName="HazardousChemicalsType" />
+          <ScalarProperty Name="HazardousChemicalsName" ColumnName="HazardousChemicalsName" />
+          <ScalarProperty Name="ReservationPerson" ColumnName="ReservationPerson" />
+          <ScalarProperty Name="AppointmentStartTime" ColumnName="AppointmentStartTime" />
+          <ScalarProperty Name="AppointmentEndTime" ColumnName="AppointmentEndTime" />
+          <ScalarProperty Name="TotalTime" ColumnName="TotalTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HazardousChemicalsWarehouses">
+      <EntityTypeMapping TypeName="yixueyuanModel.HazardousChemicalsWarehouse">
+        <MappingFragment StoreEntitySet="HazardousChemicalsWarehouse">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="HazardousChemicalsWarehouseUuid" ColumnName="HazardousChemicalsWarehouseUuid" />
+          <ScalarProperty Name="HazardousChemicalsWarehouseName" ColumnName="HazardousChemicalsWarehouseName" />
+          <ScalarProperty Name="HazardousChemicalsWarehouseBasicInformation" ColumnName="HazardousChemicalsWarehouseBasicInformation" />
+          <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
+          <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+          <ScalarProperty Name="Principal" ColumnName="Principal" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="AllowEntry" ColumnName="AllowEntry" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InAndOutTimes">
+      <EntityTypeMapping TypeName="yixueyuanModel.InAndOutTime">
+        <MappingFragment StoreEntitySet="InAndOutTime">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="InAndOutTimeUuid" ColumnName="InAndOutTimeUuid" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncidentReports">
+      <EntityTypeMapping TypeName="yixueyuanModel.IncidentReport">
+        <MappingFragment StoreEntitySet="IncidentReport">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="IncidentReportUuid" ColumnName="IncidentReportUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="Gh" ColumnName="Gh" />
+          <ScalarProperty Name="DepartmentUuid" ColumnName="DepartmentUuid" />
+          <ScalarProperty Name="StuClassUuid" ColumnName="StuClassUuid" />
+          <ScalarProperty Name="EventLocation" ColumnName="EventLocation" />
+          <ScalarProperty Name="EventSituation" ColumnName="EventSituation" />
+          <ScalarProperty Name="SecurityTypeUuid" ColumnName="SecurityTypeUuid" />
+          <ScalarProperty Name="Recorder" ColumnName="Recorder" />
+          <ScalarProperty Name="Rectify" ColumnName="Rectify" />
+          <ScalarProperty Name="EventNumber" ColumnName="EventNumber" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="EventStatus" ColumnName="EventStatus" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Libraries">
+      <EntityTypeMapping TypeName="yixueyuanModel.Library">
+        <MappingFragment StoreEntitySet="Library">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LibraryUuid" ColumnName="LibraryUuid" />
+          <ScalarProperty Name="LibraryName" ColumnName="LibraryName" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainLabs">
+      <EntityTypeMapping TypeName="yixueyuanModel.MainLab">
+        <MappingFragment StoreEntitySet="MainLab">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MainLabUuid" ColumnName="MainLabUuid" />
+          <ScalarProperty Name="MainLabName" ColumnName="MainLabName" />
+          <ScalarProperty Name="MainLabBasicInformation" ColumnName="MainLabBasicInformation" />
+          <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
+          <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+          <ScalarProperty Name="Principal" ColumnName="Principal" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="AllowEntry" ColumnName="AllowEntry" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Majors">
+      <EntityTypeMapping TypeName="yixueyuanModel.Major">
+        <MappingFragment StoreEntitySet="Major">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MajorUuid" ColumnName="MajorUuid" />
+          <ScalarProperty Name="MajorName" ColumnName="MajorName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="CollegeUuid" ColumnName="CollegeUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapIcons">
+      <EntityTypeMapping TypeName="yixueyuanModel.MapIcon">
+        <MappingFragment StoreEntitySet="MapIcon">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Explain" ColumnName="Explain" />
+          <ScalarProperty Name="SchoolNum" ColumnName="SchoolNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monitors">
+      <EntityTypeMapping TypeName="yixueyuanModel.Monitor">
+        <MappingFragment StoreEntitySet="Monitor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MonitorUuid" ColumnName="MonitorUuid" />
+          <ScalarProperty Name="ResearchBuildingUuid" ColumnName="ResearchBuildingUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SpecificationModel" ColumnName="SpecificationModel" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="DateOfManufacture" ColumnName="DateOfManufacture" />
+          <ScalarProperty Name="LastRepairDate" ColumnName="LastRepairDate" />
+          <ScalarProperty Name="ServiceLife" ColumnName="ServiceLife" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecyclingManagements">
+      <EntityTypeMapping TypeName="yixueyuanModel.RecyclingManagement">
+        <MappingFragment StoreEntitySet="RecyclingManagement">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="RecyclingManagementUuid" ColumnName="RecyclingManagementUuid" />
+          <ScalarProperty Name="RecyclingManagementTagUuid" ColumnName="RecyclingManagementTagUuid" />
+          <ScalarProperty Name="RecyclingManagementName" ColumnName="RecyclingManagementName" />
+          <ScalarProperty Name="RecyclingManagementPeople" ColumnName="RecyclingManagementPeople" />
+          <ScalarProperty Name="RecyclingManagementTime" ColumnName="RecyclingManagementTime" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResearchBuildings">
+      <EntityTypeMapping TypeName="yixueyuanModel.ResearchBuilding">
+        <MappingFragment StoreEntitySet="ResearchBuilding">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ResearchBuildingUuid" ColumnName="ResearchBuildingUuid" />
+          <ScalarProperty Name="ResearchBuildingName" ColumnName="ResearchBuildingName" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SafeManagements">
+      <EntityTypeMapping TypeName="yixueyuanModel.SafeManagement">
+        <MappingFragment StoreEntitySet="SafeManagement">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="SafeManagementUuid" ColumnName="SafeManagementUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="Gh" ColumnName="Gh" />
+          <ScalarProperty Name="YiCard" ColumnName="YiCard" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchoolDistricts">
+      <EntityTypeMapping TypeName="yixueyuanModel.SchoolDistrict">
+        <MappingFragment StoreEntitySet="SchoolDistrict">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="SchoolDistrictName" ColumnName="SchoolDistrictName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchoolInCars">
+      <EntityTypeMapping TypeName="yixueyuanModel.SchoolInCar">
+        <MappingFragment StoreEntitySet="SchoolInCar">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="SchoolInCarUuid" ColumnName="SchoolInCarUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="DepartmentUuid" ColumnName="DepartmentUuid" />
+          <ScalarProperty Name="ComeInDoor" ColumnName="ComeInDoor" />
+          <ScalarProperty Name="ComeInTime" ColumnName="ComeInTime" />
+          <ScalarProperty Name="GetOutDoor" ColumnName="GetOutDoor" />
+          <ScalarProperty Name="GetOutTime" ColumnName="GetOutTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="CarType" ColumnName="CarType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchoolStaffRecords">
+      <EntityTypeMapping TypeName="yixueyuanModel.SchoolStaffRecord">
+        <MappingFragment StoreEntitySet="SchoolStaffRecord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="SchoolStaffRecordUuid" ColumnName="SchoolStaffRecordUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="HealthCode" ColumnName="HealthCode" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="ComeInDoor" ColumnName="ComeInDoor" />
+          <ScalarProperty Name="ComeInTime" ColumnName="ComeInTime" />
+          <ScalarProperty Name="GetOutDoor" ColumnName="GetOutDoor" />
+          <ScalarProperty Name="GetOutTime" ColumnName="GetOutTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScoreAdds">
+      <EntityTypeMapping TypeName="yixueyuanModel.ScoreAdd">
+        <MappingFragment StoreEntitySet="ScoreAdd">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ScoreAddUuid" ColumnName="ScoreAddUuid" />
+          <ScalarProperty Name="DepartmentUuid" ColumnName="DepartmentUuid" />
+          <ScalarProperty Name="DepartmentScore" ColumnName="DepartmentScore" />
+          <ScalarProperty Name="DepartmentPicture" ColumnName="DepartmentPicture" />
+          <ScalarProperty Name="DepartmentPoints" ColumnName="DepartmentPoints" />
+          <ScalarProperty Name="DepartmentAddPoints" ColumnName="DepartmentAddPoints" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="ScoreType" ColumnName="ScoreType" />
+          <ScalarProperty Name="EventsPoints" ColumnName="EventsPoints" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecurityTypes">
+      <EntityTypeMapping TypeName="yixueyuanModel.SecurityType">
+        <MappingFragment StoreEntitySet="SecurityType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="SecurityTypeUuid" ColumnName="SecurityTypeUuid" />
+          <ScalarProperty Name="SecurityTypeName" ColumnName="SecurityTypeName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specifics">
+      <EntityTypeMapping TypeName="yixueyuanModel.Specific">
+        <MappingFragment StoreEntitySet="Specific">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="SpecificUuid" ColumnName="SpecificUuid" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="EventScore" ColumnName="EventScore" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="Events" ColumnName="Events" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="RectificationTime" ColumnName="RectificationTime" />
+          <ScalarProperty Name="RectificationScore" ColumnName="RectificationScore" />
+          <ScalarProperty Name="RectificationPoints" ColumnName="RectificationPoints" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stadia">
+      <EntityTypeMapping TypeName="yixueyuanModel.Stadium">
+        <MappingFragment StoreEntitySet="Stadium">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="StadiumUuid" ColumnName="StadiumUuid" />
+          <ScalarProperty Name="StadiumName" ColumnName="StadiumName" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StrangeWarnings">
+      <EntityTypeMapping TypeName="yixueyuanModel.StrangeWarning">
+        <MappingFragment StoreEntitySet="StrangeWarning">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="StrangeWarningUuid" ColumnName="StrangeWarningUuid" />
+          <ScalarProperty Name="EquipmentNum" ColumnName="EquipmentNum" />
+          <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="ComeInDoor" ColumnName="ComeInDoor" />
+          <ScalarProperty Name="ComeInTime" ColumnName="ComeInTime" />
+          <ScalarProperty Name="GetOutDoor" ColumnName="GetOutDoor" />
+          <ScalarProperty Name="GetOutTime" ColumnName="GetOutTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="EquipmentType" ColumnName="EquipmentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StuClasses">
+      <EntityTypeMapping TypeName="yixueyuanModel.StuClass">
+        <MappingFragment StoreEntitySet="StuClass">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="StuClassUuid" ColumnName="StuClassUuid" />
+          <ScalarProperty Name="MajorUuid" ColumnName="MajorUuid" />
+          <ScalarProperty Name="StuClassName" ColumnName="StuClassName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="yixueyuanModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="StudentUuid" ColumnName="StudentUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="StuNum" ColumnName="StuNum" />
+          <ScalarProperty Name="CollegeUuid" ColumnName="CollegeUuid" />
+          <ScalarProperty Name="MajorUuid" ColumnName="MajorUuid" />
+          <ScalarProperty Name="StuClassUuid" ColumnName="StuClassUuid" />
+          <ScalarProperty Name="YiCard" ColumnName="YiCard" />
+          <ScalarProperty Name="DormitoryUuid" ColumnName="DormitoryUuid" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="DormitoryNumUuid" ColumnName="DormitoryNumUuid" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nation" ColumnName="Nation" />
+          <ScalarProperty Name="Political" ColumnName="Political" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentsApartments">
+      <EntityTypeMapping TypeName="yixueyuanModel.StudentsApartment">
+        <MappingFragment StoreEntitySet="StudentsApartment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="StudentsApartmentUuid" ColumnName="StudentsApartmentUuid" />
+          <ScalarProperty Name="StudentsApartmentName" ColumnName="StudentsApartmentName" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StuManagements">
+      <EntityTypeMapping TypeName="yixueyuanModel.StuManagement">
+        <MappingFragment StoreEntitySet="StuManagement">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="StuManagementUuid" ColumnName="StuManagementUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="Gh" ColumnName="Gh" />
+          <ScalarProperty Name="YiCard" ColumnName="YiCard" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="DepartmentUuid" ColumnName="DepartmentUuid" />
+          <ScalarProperty Name="CollegeUuid" ColumnName="CollegeUuid" />
+          <ScalarProperty Name="StuClassUuid" ColumnName="StuClassUuid" />
+          <ScalarProperty Name="DormitoryUuid" ColumnName="DormitoryUuid" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StuMapCurriculums">
+      <EntityTypeMapping TypeName="yixueyuanModel.StuMapCurriculum">
+        <MappingFragment StoreEntitySet="StuMapCurriculum">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="StuMapCurriculumUuid" ColumnName="StuMapCurriculumUuid" />
+          <ScalarProperty Name="StuNum" ColumnName="StuNum" />
+          <ScalarProperty Name="CurriculumUuid" ColumnName="CurriculumUuid" />
+          <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+          <ScalarProperty Name="SchoolTerm" ColumnName="SchoolTerm" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_ApparatusRegistration">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_ApparatusRegistration">
+        <MappingFragment StoreEntitySet="sys_ApparatusRegistration">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sys_ApparatusRegistrationUuid" ColumnName="sys_ApparatusRegistrationUuid" />
+          <ScalarProperty Name="isbig" ColumnName="isbig" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="sys_InstrumentUuid" ColumnName="sys_InstrumentUuid" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="isaudit" ColumnName="isaudit" />
+          <ScalarProperty Name="isback" ColumnName="isback" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="isusetime" ColumnName="isusetime" />
+          <ScalarProperty Name="usetype" ColumnName="usetype" />
+          <ScalarProperty Name="rooomid" ColumnName="rooomid" />
+          <ScalarProperty Name="stime" ColumnName="stime" />
+          <ScalarProperty Name="etime" ColumnName="etime" />
+          <ScalarProperty Name="applicationnameid" ColumnName="applicationnameid" />
+          <ScalarProperty Name="applicationpurpose" ColumnName="applicationpurpose" />
+          <ScalarProperty Name="consumablesnum" ColumnName="consumablesnum" />
+          <ScalarProperty Name="consumablesname" ColumnName="consumablesname" />
+          <ScalarProperty Name="laboratory" ColumnName="laboratory" />
+          <ScalarProperty Name="sampleid" ColumnName="sampleid" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="auditreason" ColumnName="auditreason" />
+          <ScalarProperty Name="auditername" ColumnName="auditername" />
+          <ScalarProperty Name="taskname" ColumnName="taskname" />
+          <ScalarProperty Name="taskresourse" ColumnName="taskresourse" />
+          <ScalarProperty Name="cardnumber" ColumnName="cardnumber" />
+          <ScalarProperty Name="usertimes" ColumnName="usertimes" />
+          <ScalarProperty Name="isteacher" ColumnName="isteacher" />
+          <ScalarProperty Name="applytime" ColumnName="applytime" />
+          <ScalarProperty Name="sys_LaboratoryUuid" ColumnName="sys_LaboratoryUuid" />
+          <ScalarProperty Name="xinhao" ColumnName="xinhao" />
+          <ScalarProperty Name="enable" ColumnName="enable" />
+          <ScalarProperty Name="teacheraudit" ColumnName="teacheraudit" />
+          <ScalarProperty Name="auditperson" ColumnName="auditperson" />
+          <ScalarProperty Name="sstime" ColumnName="sstime" />
+          <ScalarProperty Name="setime" ColumnName="setime" />
+          <ScalarProperty Name="types" ColumnName="types" />
+          <ScalarProperty Name="stimes" ColumnName="stimes" />
+          <ScalarProperty Name="truename" ColumnName="truename" />
+          <ScalarProperty Name="capital" ColumnName="capital" />
+          <ScalarProperty Name="ExperimentPurpose" ColumnName="ExperimentPurpose" />
+          <ScalarProperty Name="ExperimentalScheme" ColumnName="ExperimentalScheme" />
+          <ScalarProperty Name="FileState" ColumnName="FileState" />
+          <ScalarProperty Name="ArchivalAudit" ColumnName="ArchivalAudit" />
+          <ScalarProperty Name="FileResult" ColumnName="FileResult" />
+          <ScalarProperty Name="FileNoTime" ColumnName="FileNoTime" />
+          <ScalarProperty Name="FileGoTime" ColumnName="FileGoTime" />
+          <ScalarProperty Name="JianMianMoney" ColumnName="JianMianMoney" />
+          <ScalarProperty Name="AddMoney" ColumnName="AddMoney" />
+          <ScalarProperty Name="Isxsf" ColumnName="Isxsf" />
+          <ScalarProperty Name="SXCLShiJi" ColumnName="SXCLShiJi" />
+          <ScalarProperty Name="QiTi" ColumnName="QiTi" />
+          <ScalarProperty Name="GuangBan" ColumnName="GuangBan" />
+          <ScalarProperty Name="Isxhx" ColumnName="Isxhx" />
+          <ScalarProperty Name="HXName" ColumnName="HXName" />
+          <ScalarProperty Name="ProbjetName" ColumnName="ProbjetName" />
+          <ScalarProperty Name="ProbjetLaiYuan" ColumnName="ProbjetLaiYuan" />
+          <ScalarProperty Name="CeShiContent" ColumnName="CeShiContent" />
+          <ScalarProperty Name="NiCStime" ColumnName="NiCStime" />
+          <ScalarProperty Name="NiCSCount" ColumnName="NiCSCount" />
+          <ScalarProperty Name="Issfsy" ColumnName="Issfsy" />
+          <ScalarProperty Name="SQDanWei" ColumnName="SQDanWei" />
+          <ScalarProperty Name="NumberSample" ColumnName="NumberSample" />
+          <ScalarProperty Name="ActualCost" ColumnName="ActualCost" />
+          <ScalarProperty Name="Isdelete" ColumnName="Isdelete" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_BlackList">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_BlackList">
+        <MappingFragment StoreEntitySet="sys_BlackList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="sys_BlackListUuid" ColumnName="sys_BlackListUuid" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
+          <ScalarProperty Name="YuyueType" ColumnName="YuyueType" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="Eamil" ColumnName="Eamil" />
+          <ScalarProperty Name="card" ColumnName="card" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_Captial">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_Captial">
+        <MappingFragment StoreEntitySet="sys_Captial">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sys_CaptialUuid" ColumnName="sys_CaptialUuid" />
+          <ScalarProperty Name="capital" ColumnName="capital" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="Worker" ColumnName="Worker" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_ConsumptionRecord">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_ConsumptionRecord">
+        <MappingFragment StoreEntitySet="sys_ConsumptionRecord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="sys_ConsumptionRecordUuid" ColumnName="sys_ConsumptionRecordUuid" />
+          <ScalarProperty Name="NameSubscriber" ColumnName="NameSubscriber" />
+          <ScalarProperty Name="worker" ColumnName="worker" />
+          <ScalarProperty Name="nameInstrument" ColumnName="nameInstrument" />
+          <ScalarProperty Name="BookingFee" ColumnName="BookingFee" />
+          <ScalarProperty Name="dateConsumption" ColumnName="dateConsumption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_EntramceGuard">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_EntramceGuard">
+        <MappingFragment StoreEntitySet="sys_EntramceGuard">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sys_EntramceGuardUuid" ColumnName="sys_EntramceGuardUuid" />
+          <ScalarProperty Name="GNameListID" ColumnName="GNameListID" />
+          <ScalarProperty Name="Entcardnumber" ColumnName="Entcardnumber" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="USB" ColumnName="USB" />
+          <ScalarProperty Name="stime" ColumnName="stime" />
+          <ScalarProperty Name="etime" ColumnName="etime" />
+          <ScalarProperty Name="GNameListName" ColumnName="GNameListName" />
+          <ScalarProperty Name="StudenListID" ColumnName="StudenListID" />
+          <ScalarProperty Name="StudentListName" ColumnName="StudentListName" />
+          <ScalarProperty Name="EntcardType" ColumnName="EntcardType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_InsOpen">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_InsOpen">
+        <MappingFragment StoreEntitySet="sys_InsOpen">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sys_InsOpenUuid" ColumnName="sys_InsOpenUuid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="week" ColumnName="week" />
+          <ScalarProperty Name="kstime" ColumnName="kstime" />
+          <ScalarProperty Name="sjtime" ColumnName="sjtime" />
+          <ScalarProperty Name="Isoptional" ColumnName="Isoptional" />
+          <ScalarProperty Name="BeginTime" ColumnName="BeginTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+          <ScalarProperty Name="sys_InstrumentUuid" ColumnName="sys_InstrumentUuid" />
+          <ScalarProperty Name="Dispark" ColumnName="Dispark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_Instrument">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_Instrument">
+        <MappingFragment StoreEntitySet="sys_Instrument">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sys_InstrumentUuid" ColumnName="sys_InstrumentUuid" />
+          <ScalarProperty Name="sys_InstrumentTypeUuid" ColumnName="sys_InstrumentTypeUuid" />
+          <ScalarProperty Name="bianhao" ColumnName="bianhao" />
+          <ScalarProperty Name="studentNo" ColumnName="studentNo" />
+          <ScalarProperty Name="iname" ColumnName="iname" />
+          <ScalarProperty Name="guige" ColumnName="guige" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="canjia" ColumnName="canjia" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="gonplace" ColumnName="gonplace" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="lab" ColumnName="lab" />
+          <ScalarProperty Name="roonnumber" ColumnName="roonnumber" />
+          <ScalarProperty Name="guanPeopleID" ColumnName="guanPeopleID" />
+          <ScalarProperty Name="detail" ColumnName="detail" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="imgtwo" ColumnName="imgtwo" />
+          <ScalarProperty Name="imgstr" ColumnName="imgstr" />
+          <ScalarProperty Name="imgfor" ColumnName="imgfor" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="appartus" ColumnName="appartus" />
+          <ScalarProperty Name="isshow" ColumnName="isshow" />
+          <ScalarProperty Name="makestate" ColumnName="makestate" />
+          <ScalarProperty Name="labId" ColumnName="labId" />
+          <ScalarProperty Name="instrupower" ColumnName="instrupower" />
+          <ScalarProperty Name="guanPeopleName" ColumnName="guanPeopleName" />
+          <ScalarProperty Name="EntranceGuaerdID" ColumnName="EntranceGuaerdID" />
+          <ScalarProperty Name="EntranceGuaerdName" ColumnName="EntranceGuaerdName" />
+          <ScalarProperty Name="ismanagement" ColumnName="ismanagement" />
+          <ScalarProperty Name="menttype" ColumnName="menttype" />
+          <ScalarProperty Name="smalltime" ColumnName="smalltime" />
+          <ScalarProperty Name="minprice" ColumnName="minprice" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="Isoptional" ColumnName="Isoptional" />
+          <ScalarProperty Name="Dispark" ColumnName="Dispark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_InstrumentFault">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_InstrumentFault">
+        <MappingFragment StoreEntitySet="sys_InstrumentFault">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="sys_InstrumentFaultUuid" ColumnName="sys_InstrumentFaultUuid" />
+          <ScalarProperty Name="sys_InstrumentUuid" ColumnName="sys_InstrumentUuid" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="OccurrenceTime" ColumnName="OccurrenceTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_InstrumentMaintain">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_InstrumentMaintain">
+        <MappingFragment StoreEntitySet="sys_InstrumentMaintain">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="sys_InstrumentMaintainUuid" ColumnName="sys_InstrumentMaintainUuid" />
+          <ScalarProperty Name="sys_InstrumentUuid" ColumnName="sys_InstrumentUuid" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="MaintainBeginTime" ColumnName="MaintainBeginTime" />
+          <ScalarProperty Name="MaintainEndTime" ColumnName="MaintainEndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_InstrumentUse">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_InstrumentUse">
+        <MappingFragment StoreEntitySet="sys_InstrumentUse">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="sys_InstrumentUseUuid" ColumnName="sys_InstrumentUseUuid" />
+          <ScalarProperty Name="ApparatusName" ColumnName="ApparatusName" />
+          <ScalarProperty Name="Worker" ColumnName="Worker" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="stime" ColumnName="stime" />
+          <ScalarProperty Name="etime" ColumnName="etime" />
+          <ScalarProperty Name="setime" ColumnName="setime" />
+          <ScalarProperty Name="TheLength" ColumnName="TheLength" />
+          <ScalarProperty Name="intro" ColumnName="intro" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_Laboratory">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_Laboratory">
+        <MappingFragment StoreEntitySet="sys_Laboratory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sys_LaboratoryUuid" ColumnName="sys_LaboratoryUuid" />
+          <ScalarProperty Name="roomid" ColumnName="roomid" />
+          <ScalarProperty Name="roomname" ColumnName="roomname" />
+          <ScalarProperty Name="roomarea" ColumnName="roomarea" />
+          <ScalarProperty Name="chief" ColumnName="chief" />
+          <ScalarProperty Name="pronumber" ColumnName="pronumber" />
+          <ScalarProperty Name="hasprojection" ColumnName="hasprojection" />
+          <ScalarProperty Name="facnumber" ColumnName="facnumber" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="phototwo" ColumnName="phototwo" />
+          <ScalarProperty Name="photostr" ColumnName="photostr" />
+          <ScalarProperty Name="photofor" ColumnName="photofor" />
+          <ScalarProperty Name="detail" ColumnName="detail" />
+          <ScalarProperty Name="isshow" ColumnName="isshow" />
+          <ScalarProperty Name="makestate" ColumnName="makestate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_LaboratoryLog">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_LaboratoryLog">
+        <MappingFragment StoreEntitySet="sys_LaboratoryLog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sys_LaboratoryLogUuid" ColumnName="sys_LaboratoryLogUuid" />
+          <ScalarProperty Name="roomid" ColumnName="roomid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="demo" ColumnName="demo" />
+          <ScalarProperty Name="classstate" ColumnName="classstate" />
+          <ScalarProperty Name="proquestion" ColumnName="proquestion" />
+          <ScalarProperty Name="prostate" ColumnName="prostate" />
+          <ScalarProperty Name="laboquestion" ColumnName="laboquestion" />
+          <ScalarProperty Name="labostate" ColumnName="labostate" />
+          <ScalarProperty Name="applytime" ColumnName="applytime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_LaboratoryType">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_LaboratoryType">
+        <MappingFragment StoreEntitySet="sys_LaboratoryType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sys_LaboratoryTypeUuid" ColumnName="sys_LaboratoryTypeUuid" />
+          <ScalarProperty Name="rootid" ColumnName="rootid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_RechargeRecord">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_RechargeRecord">
+        <MappingFragment StoreEntitySet="sys_RechargeRecord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="sys_RechargeRecordUuid" ColumnName="sys_RechargeRecordUuid" />
+          <ScalarProperty Name="worker" ColumnName="worker" />
+          <ScalarProperty Name="TopAccount" ColumnName="TopAccount" />
+          <ScalarProperty Name="TopAmount" ColumnName="TopAmount" />
+          <ScalarProperty Name="PrepaidPhonePeople" ColumnName="PrepaidPhonePeople" />
+          <ScalarProperty Name="PrepaidphoneTime" ColumnName="PrepaidphoneTime" />
+          <ScalarProperty Name="SourcesFunding" ColumnName="SourcesFunding" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_User">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_User">
+        <MappingFragment StoreEntitySet="sys_User">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sys_UserUuid" ColumnName="sys_UserUuid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userpassword" ColumnName="userpassword" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="lasttime" ColumnName="lasttime" />
+          <ScalarProperty Name="linestate" ColumnName="linestate" />
+          <ScalarProperty Name="truename" ColumnName="truename" />
+          <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="LearnWorkNumber" ColumnName="LearnWorkNumber" />
+          <ScalarProperty Name="PersonnelType" ColumnName="PersonnelType" />
+          <ScalarProperty Name="ReviewStatus" ColumnName="ReviewStatus" />
+          <ScalarProperty Name="isaudite" ColumnName="isaudite" />
+          <ScalarProperty Name="adddress" ColumnName="adddress" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="AdmissionTime" ColumnName="AdmissionTime" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="DateBirth" ColumnName="DateBirth" />
+          <ScalarProperty Name="dataAddTime" ColumnName="dataAddTime" />
+          <ScalarProperty Name="PupilName" ColumnName="PupilName" />
+          <ScalarProperty Name="Iccid" ColumnName="Iccid" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemIcons">
+      <EntityTypeMapping TypeName="yixueyuanModel.SystemIcon">
+        <MappingFragment StoreEntitySet="SystemIcon">
+          <ScalarProperty Name="SystemIconUUID" ColumnName="SystemIconUUID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Custom" ColumnName="Custom" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedByUserGuid" ColumnName="CreatedByUserGuid" />
+          <ScalarProperty Name="CreatedByUserName" ColumnName="CreatedByUserName" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedByUserGuid" ColumnName="ModifiedByUserGuid" />
+          <ScalarProperty Name="ModifiedByUserName" ColumnName="ModifiedByUserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemLogs">
+      <EntityTypeMapping TypeName="yixueyuanModel.SystemLog">
+        <MappingFragment StoreEntitySet="SystemLog">
+          <ScalarProperty Name="SystemLogUUID" ColumnName="SystemLogUUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserIDType" ColumnName="UserIDType" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="OperationContent" ColumnName="OperationContent" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemMenus">
+      <EntityTypeMapping TypeName="yixueyuanModel.SystemMenu">
+        <MappingFragment StoreEntitySet="SystemMenu">
+          <ScalarProperty Name="SystemMenuUUID" ColumnName="SystemMenuUUID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="ParentGuid" ColumnName="ParentGuid" />
+          <ScalarProperty Name="ParentName" ColumnName="ParentName" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsDefaultRouter" ColumnName="IsDefaultRouter" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedByUserGuid" ColumnName="CreatedByUserGuid" />
+          <ScalarProperty Name="CreatedByUserName" ColumnName="CreatedByUserName" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedByUserGuid" ColumnName="ModifiedByUserGuid" />
+          <ScalarProperty Name="ModifiedByUserName" ColumnName="ModifiedByUserName" />
+          <ScalarProperty Name="Component" ColumnName="Component" />
+          <ScalarProperty Name="HideInMenu" ColumnName="HideInMenu" />
+          <ScalarProperty Name="NotCache" ColumnName="NotCache" />
+          <ScalarProperty Name="BeforeCloseFun" ColumnName="BeforeCloseFun" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemPermissions">
+      <EntityTypeMapping TypeName="yixueyuanModel.SystemPermission">
+        <MappingFragment StoreEntitySet="SystemPermission">
+          <ScalarProperty Name="SystemPermissionUUID" ColumnName="SystemPermissionUUID" />
+          <ScalarProperty Name="SystemMenuUUID" ColumnName="SystemMenuUUID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ActionCode" ColumnName="ActionCode" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CreatedByUserGuid" ColumnName="CreatedByUserGuid" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedByUserName" ColumnName="CreatedByUserName" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedByUserGuid" ColumnName="ModifiedByUserGuid" />
+          <ScalarProperty Name="ModifiedByUserName" ColumnName="ModifiedByUserName" />
+          <ScalarProperty Name="CaPower" ColumnName="CaPower" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemRoles">
+      <EntityTypeMapping TypeName="yixueyuanModel.SystemRole">
+        <MappingFragment StoreEntitySet="SystemRole">
+          <ScalarProperty Name="SystemRoleUUID" ColumnName="SystemRoleUUID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IsFixation" ColumnName="IsFixation" />
+          <ScalarProperty Name="SchoolUUID" ColumnName="SchoolUUID" />
+          <ScalarProperty Name="IsCreEdu" ColumnName="IsCreEdu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemRolePermissionMappings">
+      <EntityTypeMapping TypeName="yixueyuanModel.SystemRolePermissionMapping">
+        <MappingFragment StoreEntitySet="SystemRolePermissionMapping">
+          <ScalarProperty Name="SystemRoleUUID" ColumnName="SystemRoleUUID" />
+          <ScalarProperty Name="SystemPermissionUUID" ColumnName="SystemPermissionUUID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUsers">
+      <EntityTypeMapping TypeName="yixueyuanModel.SystemUser">
+        <MappingFragment StoreEntitySet="SystemUser">
+          <ScalarProperty Name="SystemUserUUID" ColumnName="SystemUserUUID" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="RealName" ColumnName="RealName" />
+          <ScalarProperty Name="UserIdCard" ColumnName="UserIdCard" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="SchoolUUID" ColumnName="SchoolUUID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ManageDepartment" ColumnName="ManageDepartment" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ZaiGang" ColumnName="ZaiGang" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="Types" ColumnName="Types" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="SystemRoleUUid" ColumnName="SystemRoleUUid" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="StaffNum" ColumnName="StaffNum" />
+          <ScalarProperty Name="Wechat" ColumnName="Wechat" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Train" ColumnName="Train" />
+          <ScalarProperty Name="Main" ColumnName="Main" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="HealthCertificate" ColumnName="HealthCertificate" />
+          <ScalarProperty Name="IsStaff" ColumnName="IsStaff" />
+          <ScalarProperty Name="IsCreEdu" ColumnName="IsCreEdu" />
+          <ScalarProperty Name="PersonnelType" ColumnName="PersonnelType" />
+          <ScalarProperty Name="ReviewStatus" ColumnName="ReviewStatus" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="IsBlacklist" ColumnName="IsBlacklist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUserRoleMappings">
+      <EntityTypeMapping TypeName="yixueyuanModel.SystemUserRoleMapping">
+        <MappingFragment StoreEntitySet="SystemUserRoleMapping">
+          <ScalarProperty Name="SystemUserUUID" ColumnName="SystemUserUUID" />
+          <ScalarProperty Name="SystemRoleUUID" ColumnName="SystemRoleUUID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="yixueyuanModel.Teacher">
+        <MappingFragment StoreEntitySet="Teacher">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="TeacherUuid" ColumnName="TeacherUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Gh" ColumnName="Gh" />
+          <ScalarProperty Name="DepartmentUuid" ColumnName="DepartmentUuid" />
+          <ScalarProperty Name="YiCard" ColumnName="YiCard" />
+          <ScalarProperty Name="DormitoryUuid" ColumnName="DormitoryUuid" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="DormitoryNumUuid" ColumnName="DormitoryNumUuid" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nation" ColumnName="Nation" />
+          <ScalarProperty Name="Political" ColumnName="Political" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+          <ScalarProperty Name="ProfessionalTitle" ColumnName="ProfessionalTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warnings">
+      <EntityTypeMapping TypeName="yixueyuanModel.Warning">
+        <MappingFragment StoreEntitySet="Warning">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="WarningUuid" ColumnName="WarningUuid" />
+          <ScalarProperty Name="WarningType" ColumnName="WarningType" />
+          <ScalarProperty Name="WarningName" ColumnName="WarningName" />
+          <ScalarProperty Name="WarningLastUser" ColumnName="WarningLastUser" />
+          <ScalarProperty Name="WarningInformation" ColumnName="WarningInformation" />
+          <ScalarProperty Name="AffiliatedLaboratory" ColumnName="AffiliatedLaboratory" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Weeklies">
+      <EntityTypeMapping TypeName="yixueyuanModel.Weekly">
+        <MappingFragment StoreEntitySet="Weekly">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WeeklyUuid" ColumnName="WeeklyUuid" />
+          <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+          <ScalarProperty Name="Semester" ColumnName="Semester" />
+          <ScalarProperty Name="WeeklyName" ColumnName="WeeklyName" />
+          <ScalarProperty Name="WeeklyTime" ColumnName="WeeklyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="whp_EntramceGuard">
+      <EntityTypeMapping TypeName="yixueyuanModel.whp_EntramceGuard">
+        <MappingFragment StoreEntitySet="whp_EntramceGuard">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="whp_EntramceGuardUuid" ColumnName="whp_EntramceGuardUuid" />
+          <ScalarProperty Name="GNameListID" ColumnName="GNameListID" />
+          <ScalarProperty Name="Entcardnumber" ColumnName="Entcardnumber" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="USB" ColumnName="USB" />
+          <ScalarProperty Name="stime" ColumnName="stime" />
+          <ScalarProperty Name="etime" ColumnName="etime" />
+          <ScalarProperty Name="GNameListName" ColumnName="GNameListName" />
+          <ScalarProperty Name="StudenListID" ColumnName="StudenListID" />
+          <ScalarProperty Name="StudentListName" ColumnName="StudentListName" />
+          <ScalarProperty Name="EntcardType" ColumnName="EntcardType" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workers">
+      <EntityTypeMapping TypeName="yixueyuanModel.Worker">
+        <MappingFragment StoreEntitySet="Worker">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="WorkerUuid" ColumnName="WorkerUuid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Gh" ColumnName="Gh" />
+          <ScalarProperty Name="DepartmentUuid" ColumnName="DepartmentUuid" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="ValidityTime" ColumnName="ValidityTime" />
+          <ScalarProperty Name="CarNum" ColumnName="CarNum" />
+          <ScalarProperty Name="YiCard" ColumnName="YiCard" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nation" ColumnName="Nation" />
+          <ScalarProperty Name="Political" ColumnName="Political" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddPeople" ColumnName="AddPeople" />
+          <ScalarProperty Name="SchoolDistrictUuid" ColumnName="SchoolDistrictUuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wrjs">
+      <EntityTypeMapping TypeName="yixueyuanModel.Wrj">
+        <MappingFragment StoreEntitySet="Wrj">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="adduser" ColumnName="adduser" />
+          <ScalarProperty Name="addtime" ColumnName="addtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_InstrumentType">
+      <EntityTypeMapping TypeName="yixueyuanModel.sys_InstrumentType">
+        <MappingFragment StoreEntitySet="sys_InstrumentType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="sys_InstrumentTypeUuid" ColumnName="sys_InstrumentTypeUuid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

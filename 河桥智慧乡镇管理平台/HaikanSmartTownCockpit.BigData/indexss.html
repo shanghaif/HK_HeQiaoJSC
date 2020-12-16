@@ -1,0 +1,2066 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.limarquee.js"></script>
+    <meta charset="UTF-8">
+    <title>河桥镇综合指挥驾驶舱</title>
+    <style>
+        .index_navi{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 6%;
+            z-index: 999;
+            min-height: 60px;
+        }
+        .nav_bg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .navBox{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        .leftLi{
+            float: left;
+        }
+        .rightLi{
+            float: right;
+        }
+        .navBox li{
+            position: relative;
+            height: 100%;
+            width: 5%;
+            text-align: center;
+        }
+        .navBox a{
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 18px;
+            color: #00ffff;
+            text-decoration: none;
+        }
+        #outTo{
+            background: transparent;
+            border-width: 0px;
+            font-size: 20px;
+            color:#00ffff;
+            position:absolute;
+            right:5%;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+        }
+        .inner{
+            padding-top:4%;
+        }
+    </style>
+</head>
+<body>
+    <div class="data_bodey">
+
+        <div class="index_tabs">
+            <!--导航-->
+            <div class="index_navi">
+                <div class="nav_bg">
+                    <img src="./img/daohang.png" alt="" style="width: 100%;height: 100%;">
+                </div>
+                <ul class="navBox">
+                    <li class="leftLi" style="margin-left: 20%;"><a href="index.html">基本信息</a></li>
+                    <li class="leftLi"><a href="party.html">数字党建</a></li>
+                    <li class="leftLi"><a href="environmental.html">环境治理</a></li>
+                    <li class="rightLi nav_active" style="margin-right: 20%;"><a href="emergency.html">应急处理</a></li>
+                    <li class="rightLi"><a href="travel.html">智慧旅游</a></li>
+                    <li class="rightLi"><a href="society.html">社会治理</a></li>
+                </ul>
+                <input type="button" value="退出登录" id="outTo">
+            </div>
+            <!--首页-->
+            <div class="inner">
+
+                <div class="left_cage">
+                    <!--雪亮工程-->
+                    <div class="dataAllBorder01 cage_cl" style="height: 930px;">
+                        <div class="video_cage" style="height:100%;">
+                            <div class="biaoti"><span>雪亮工程</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+
+                            <div class="video_around video_around_chose">
+                                <div class="video_around2">消防监控</div>
+                                <img class="video_around1" src="video/./static/video/video1.jpg">
+                            </div>
+                            <div class="video_around">
+                                <div class="video_around2">河流监控</div>
+                                <img class="video_around1" src="./static/video/video.jpg">
+                            </div>
+                            <div class="video_around">
+                                <div class="video_around2">水库监控</div>
+                                <img class="video_around1" src="video/./static/video/video2.jpg">
+                            </div>
+                            <div class="anniu1">更多</div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+
+                <div class="left_cage">
+                    <!--基础数据-->
+                    <div class="dataAllBorder01 cage_cl" style="height: 290px;">
+
+                        <div style="height:100%;">
+                            <div class="biaoti"><span>基础数据</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="basic_data">
+                                <div class="basic_information">
+                                    <div class="bacic_title">常住人口</div>
+                                    <div><span class="bacic_number">4870</span><span class="bacic_company">人</span></div>
+                                </div>
+                                <div class="basic_information">
+                                    <div class="bacic_title">总户数</div>
+                                    <div><span class="bacic_number">378</span><span class="bacic_company">户</span></div>
+                                </div>
+                                <div class="basic_information">
+                                    <div class="bacic_title">流动人口</div>
+                                    <div><span class="bacic_number">2370</span><span class="bacic_company">人</span></div>
+                                </div>
+                                <div class="basic_information">
+                                    <div class="bacic_title">居住地</div>
+                                    <div><span class="bacic_number">178</span><span class="bacic_company">条</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="boxfoot"></div>
+                    </div>
+
+                    <!--党组织人数-->
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 30px !important; height: 290px;">
+                        <div class="dataAllBorder02 video_cage" style="height:100%;">
+                            <div class="biaoti"><span>党组织人数</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+
+                            <div class="basic_data">
+                                <div class="basic_information">
+                                    <div class="bacic_title">党支部人数</div>
+                                    <div><span class="bacic_number">32</span><span class="bacic_company">人</span></div>
+                                </div>
+                                <div class="basic_information">
+                                    <div class="bacic_title">共青团人数</div>
+                                    <div><span class="bacic_number">28</span><span class="bacic_company">人</span></div>
+                                </div>
+                                <div class="basic_information">
+                                    <div class="bacic_title">工会人数</div>
+                                    <div><span class="bacic_number">25</span><span class="bacic_company">人</span></div>
+                                </div>
+                                <div class="basic_information">
+                                    <div class="bacic_title">妇联人数</div>
+                                    <div><span class="bacic_number">24</span><span class="bacic_company">人</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+
+                    <!--游客统计-->
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 30px !important; height: 290px; position: relative;">
+                        <div class="dataAllBorder02" style="padding: 1.2%; overflow: hidden;height: 290px;">
+                            <div class="biaoti"><span>游客统计</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="depart_number_box" id="bome1"></div>
+
+
+                        </div>
+                        <div class="scroll_tool_outbox">
+                            <div class="scroll_tool_box">
+                                <a class="scroll_tool" href="#">查看历史推送</a>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <!--全域地图-->
+                <div class="map" id="map">
+                </div>
+
+
+
+
+                <div class="right_cage">
+                    <!--应急指挥-->
+                    <div class="dataAllBorder01 cage_cl" style="height: 290px">
+
+                        <div class="dataAllBorder02" id="cage_cl" style="height:100%;">
+                            <div class="biaoti"><span>应急指挥</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+
+                            <div class="wrap" style="height:220px;">
+                                <ul class="yingjizhihui">
+                                    <li><p><span>水库</span><span>查看名单</span></p></li>
+                                    <li><p><span>无人机</span><span>查看名单</span></p></li>
+                                    <li><p><span>地质灾害点</span><span>查看名单</span></p></li>
+                                    <li><p><span>森林防火</span><span>查看名单</span></p></li>
+                                    <li><p><span>大气防治</span><span>查看名单</span></p></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+
+                    <!--社会矫正-->
+                    <div class="dataAllBorder01 cage_cl check_increase" style="margin-top: 30px !important; height:290px;">
+                        <div id="one1" class="dataAllBorder02 over_hide dataAllBorder20 ceshi01">
+                            <div class="biaoti"><span>社会矫正</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="depart_number_box" id="bome2"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+
+                    <!--公共停车位数据-->
+                    <div class="dataAllBorder01 cage_cl check_decrease" style="margin-top: 30px !important; height: 290px; position: relative;">
+                        <div class="dataAllBorder02 over_hide" style="padding: 1.2%;height:100%;">
+                            <div class="biaoti"><span>公共停车位数据</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="container_huan" style="height: 78%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="right_cage">
+                    <div class="dataAllBorder01 cage_cl" style="height: 350px">
+                        <!--安全码-->
+                        <div class="dataAllBorder02" id="cage_cl" style="height:100%;">
+                            <div class="biaoti"><span>安全码</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="wrap" style="height:280px;">
+                                <ul class="anquanma">
+                                    <li><p><span>河桥镇</span><span>199人</span><span>78人</span><span>查看名单</span></p></li>
+                                    <li><p><span>金燕村</span><span>199人</span><span>78人</span><span>查看名单</span></p></li>
+                                    <li><p><span>罗山村</span><span>199人</span><span>78人</span><span>查看名单</span></p></li>
+                                    <li><p><span>泥骆村</span><span>199人</span><span>78人</span><span>查看名单</span></p></li>
+                                    <li><p><span>蒲村</span><span>199人</span><span>78人</span><span>查看名单</span></p></li>
+                                    <li><p><span>七都村</span><span>199人</span><span>78人</span><span>查看名单</span></p></li>
+                                    <li><p><span>秀溪村</span><span>199人</span><span>78人</span><span>查看名单</span></p></li>
+                                    <li><p><span>学川村</span><span>199人</span><span>78人</span><span>查看名单</span></p></li>
+                                    <li><p><span>云浪村</span><span>199人</span><span>78人</span><span>查看名单</span></p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--智慧国防-->
+                    <div class="dataAllBorder01 cage_cl" style="height: 550px;margin-top:30px;">
+                        <div class="dataAllBorder02" id="cage_cl" style="height:100%;">
+                            <div class="biaoti"><span>智慧国防</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="xiaobiaoti"><span>适龄青年</span></div>
+                            <div class="wrap" style="height:255px;">
+                                <ul class="zhihuiguofang">
+                                    <li><p><span>河桥镇</span><span>199人</span><span>详细信息</span></p></li>
+                                    <li><p><span>金燕村</span><span>199人</span><span>详细信息</span></p></li>
+                                    <li><p><span>罗山村</span><span>199人</span><span>详细信息</span></p></li>
+                                    <li><p><span>泥骆村</span><span>199人</span><span>详细信息</span></p></li>
+                                    <li><p><span>蒲村</span><span>199人</span><span>详细信息</span></p></li>
+                                    <li><p><span>七都村</span><span>199人</span><span>详细信息</span></p></li>
+                                    <li><p><span>秀溪村</span><span>199人</span><span>详细信息</span></p></li>
+                                    <li><p><span>学川村</span><span>199人</span><span>详细信息</span></p></li>
+                                    <li><p><span>云浪村</span><span>199人</span><span>详细信息</span></p></li>
+                                </ul>
+                            </div>
+                            <div class="xiaobiaoti" style="margin-top:15px;"><span>镇里民兵和村里民兵</span></div>
+                            <div class="minbing">
+                                <div class="cun"><span>河桥村</span></div>
+                                <div class="cun"><span>金燕村</span></div>
+                                <div class="cun"><span>罗山村</span></div>
+                                <div class="cun"><span>泥骆村</span></div>
+                                <div class="cun"><span>蒲村</span></div>
+                                <div class="cun"><span>七都村</span></div>
+                                <div class="cun"><span>秀溪村</span></div>
+                                <div class="cun"><span>学川村</span></div>
+                                <div class="cun"><span>云浪村</span></div>
+                                <div class="cun"><span>中鑫村</span></div>
+                                <div class="cun"><span>朱秀村</span></div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!--基本信息-->
+            <div class="inner" style="display: none;">
+                <div class="data_left01">
+                    <!--河桥镇基本信息-->
+                    <div class="dataAll maginS" style="height:210px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>河桥镇基本信息</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+
+                                <div class="five_data">
+                                    <div class="five_information">
+                                        <div class="five_title">村</div>
+                                        <div><span class="five_number">11</span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">小区</div>
+                                        <div><span class="five_number">78</span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">人口</div>
+                                        <div><span class="five_number">3780</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">水库</div>
+                                        <div><span class="five_number">14</span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">种植面积</div>
+                                        <div><span class="five_number">77600</span><span class="bacic_company">亩</span></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                    <!--人口年龄段-->
+                    <div class="dataAll" style="height:290px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>人口年龄段</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <p class="data_chart" id="rode01" style="height:78%;"></p>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                    <!--落户人数分析-->
+                    <div class="dataAll" style="height:370px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>落户人数分析</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="data_chart" id="buyTime" style="height:81%;"></div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="data_left01">
+                    <!--企业数量-->
+                    <div class="dataAll maginS" style="height:210px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>企业数量</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <p class="data_chart" id="sperceBook01" style="height:70%;"></p>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                    <!--乡贤人数总数-->
+                    <div class="dataAll" style="height:150px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>乡贤人数总数</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="basic_data">
+                                    <div class="basic_information_two">
+                                        <div class="bacic_title">总数</div>
+                                        <div><span class="bacic_number">541</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="basic_information_two">
+                                        <div class="bacic_title">在乡人数</div>
+                                        <div><span class="bacic_number">175</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                    <!--民宿数量总数-->
+                    <div class="dataAll" style="height:150px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>民宿数量总数</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="basic_data">
+                                    <div class="basic_information_two">
+                                        <div class="bacic_title">总数</div>
+                                        <div><span class="bacic_number">541</span><span class="bacic_company">栋</span></div>
+                                    </div>
+                                    <div class="basic_information_two">
+                                        <div class="bacic_title">在营</div>
+                                        <div><span class="bacic_number">175</span><span class="bacic_company">栋</span></div>
+                                    </div>
+                                </div>
+                                <p class="data_chart" id="whearAbook" style="display:none"></p>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                    <!--景点数量总数-->
+                    <div class="dataAll" style="height:150px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>景点数量总数</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="basic_data">
+                                    <div class="basic_information_two">
+                                        <div class="bacic_title">总数</div>
+                                        <div><span class="bacic_number">16</span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="basic_information_two">
+                                        <div class="bacic_title">在乡人数</div>
+                                        <div><span class="bacic_number">16</span><span class="bacic_company">个</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                    <!--餐饮数量总数-->
+                    <div class="dataAll" style="height:150px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>餐饮数量总数</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="basic_data">
+                                    <div class="basic_information_two">
+                                        <div class="bacic_title">总数</div>
+                                        <div><span class="bacic_number">730</span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="basic_information_two">
+                                        <div class="bacic_title">在乡人数</div>
+                                        <div><span class="bacic_number">680</span><span class="bacic_company">个</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--全域地图-->
+                <div class="map" id="map_jbxx">
+                </div>
+
+
+
+                <div class="data_left02">
+                    <!--危房信息-->
+                    <div class="dataAllBorder01 cage_cl" style="height:510px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>危房信息</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+
+                            <div class="wrap adduser" style="height:440px;">
+                                <ul class="zhihuiguofang">
+                                    <li><p><span>河桥镇</span><span>7栋</span><span>查看坐标</span></p></li>
+                                    <li><p><span>金燕村</span><span>7栋</span><span>查看坐标</span></p></li>
+                                    <li><p><span>罗山村</span><span>7栋</span><span>查看坐标</span></p></li>
+                                    <li><p><span>泥骆村</span><span>7栋</span><span>查看坐标</span></p></li>
+                                    <li><p><span>蒲村</span><span>7栋</span><span>查看坐标</span></p></li>
+                                    <li><p><span>七都村</span><span>7栋</span><span>查看坐标</span></p></li>
+                                    <li><p><span>秀溪村</span><span>7栋</span><span>查看坐标</span></p></li>
+                                    <li><p><span>学川村</span><span>7栋</span><span>查看坐标</span></p></li>
+                                    <li><p><span>云浪村</span><span>7栋</span><span>查看坐标</span></p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+
+                    <!--景点分布-->
+                    <div class="dataAll02" style="height:390px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>景点分布</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="wrap" style="height:320px;">
+                                    <ul class="yingjizhihui">
+                                        <li><p><span>河桥老街</span><span>查看分布</span></p></li>
+                                        <li><p><span>唐昌首镇</span><span>查看分布</span></p></li>
+                                        <li><p><span>柳溪江码头</span><span>查看分布</span></p></li>
+                                        <li><p><span>曙光亭</span><span>查看分布</span></p></li>
+                                        <li><p><span>风之谷</span><span>查看分布</span></p></li>
+                                        <li><p><span>瑞晶石花洞</span><span>查看分布</span></p></li>
+                                    </ul>
+                                </div>
+                                <p class="data_chart" id="rodeAbook" style="display:none;"></p>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data_left02">
+                    <!--景点实时游客信息-->
+                    <div class="dataAll maginS" style="height:210px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>景点实时游客信息</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="five_data">
+                                    <div class="five_information">
+                                        <div class="five_title">河桥老街</div>
+                                        <div><span class="five_number">156</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">唐昌首镇</div>
+                                        <div><span class="five_number">125</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">柳溪江码头</div>
+                                        <div><span class="five_number">279</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">曙光亭</div>
+                                        <div><span class="five_number">276</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">风之谷</div>
+                                        <div><span class="five_number">372</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                </div>
+                                <p class="data_chart" id="seaAbook01" style="display:none"></p>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                    <!--民宿酒店入住情况-->
+                    <div class="dataAll" style="height:290px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>民宿酒店入住情况</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <p class="data_chart" id="actionBook" style="height: 78%;"></p>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                    <!--旅游收入分析-->
+                    <div class="dataAll" style="height:370px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>旅游收入分析</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <p class="data_chart" id="bookBmonth" style="height: 81%;"></p>
+
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--党建引领-->
+            <div class="inner" style="display:none">
+
+                <div class="data_left03">
+                    <!--党员基本信息-->
+                    <div class="dataAllBorder01 cage_cl" style="height:930px;">
+                        <div class="biaoti"><span>党员基本信息</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+
+                        <div class="minbing">
+                            <div class="cun"><span>河桥村</span></div>
+                            <div class="cun"><span>金燕村</span></div>
+                            <div class="cun"><span>罗山村</span></div>
+                            <div class="cun"><span>泥骆村</span></div>
+                            <div class="cun"><span>蒲村</span></div>
+                            <div class="cun"><span>七都村</span></div>
+                            <div class="cun"><span>秀溪村</span></div>
+                            <div class="cun"><span>学川村</span></div>
+                            <div class="cun"><span>云浪村</span></div>
+                            <div class="cun"><span>中鑫村</span></div>
+                            <div class="cun"><span>朱秀村</span></div>
+                        </div>
+                        <p class="data_chart01" id="zhanbi02" style="height:23%;"></p>
+                        <p class="data_chart01" id="allAly01" style="height:23%;margin-top:30px;"></p>
+                        <p class="data_chart01" id="age01" style="height:23%;margin-top:30px;"></p>
+
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="data_left03">
+                    <!--党员信息-->
+                    <div class="dataAllNo01" style="height:290px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>党员信息</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="basic_data">
+                                    <div class="basic_information">
+                                        <div class="bacic_title">正式党员</div>
+                                        <div><span class="bacic_number">237</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <div class="bacic_title">预备党员</div>
+                                        <div><span class="bacic_number">378</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <div class="bacic_title">发展对象</div>
+                                        <div><span class="bacic_number">87</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <div class="bacic_title">积极分子</div>
+                                        <div><span class="bacic_number">178</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+                    <!--党组织人数-->
+                    <div class="dataAllNo01" style="height:290px;margin-top: 30px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>党组织人数</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="basic_data">
+                                    <div class="basic_information">
+                                        <div class="bacic_title">党支部人数</div>
+                                        <div><span class="bacic_number">227</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <div class="bacic_title">共青团人数</div>
+                                        <div><span class="bacic_number">378</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <div class="bacic_title">工会人数</div>
+                                        <div><span class="bacic_number">87</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <div class="bacic_title">妇联人数</div>
+                                        <div><span class="bacic_number">178</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+                    <!--大学生返乡创业-->
+                    <div class="dataAllNo01" style="height:290px;margin-top: 30px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>大学生返乡创业</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <p class="zhanleft02" id="allAly03" style="height:78%;margin:0 15px"></p>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--全域地图-->
+                <div class="map" id="map_djyl"></div>
+
+
+                <div class="data_left04">
+                    <!--党员考评-->
+                    <div class="dataAllNo01 maginS01" style="height:450px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>党员考评</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="wrap" style="height:380px;">
+                                    <ul class="dangyuankaoping">
+                                        <li><p><span>王大</span><span>五星党员</span></p></li>
+                                        <li><p><span>水淼淼</span><span>五星党员</span></p></li>
+                                        <li><p><span>张新荣</span><span>五星党员</span></p></li>
+                                        <li><p><span>林家徐</span><span>五星党员</span></p></li>
+                                        <li><p><span>张强</span><span>五星党员</span></p></li>
+                                        <li><p><span>王强</span><span>五星党员</span></p></li>
+                                        <li><p><span>张翔</span><span>五星党员</span></p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+                    <!--支部活动-->
+                    <div class="dataAllNo01 maginS01" style="height:450px;margin-top:30px;">
+                        <div class="dataAllBorder01 cage_cl">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>支部活动</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="wrap" style="height:380px;">
+                                    <ul class="zhibuhuodong">
+                                        <li><p><span>河桥村召开党小组会</span><span>查看详情</span></p></li>
+                                        <li><p><span>河桥镇开展镇村干部培训活动</span><span>查看详情</span></p></li>
+                                        <li><p><span>河桥镇:持续用力建强党员队伍</span><span>查看详情</span></p></li>
+                                        <li><p><span>河桥镇开展民主评议党员工作</span><span>查看详情</span></p></li>
+                                        <li><p><span>金燕村召开党小组会</span><span>查看详情</span></p></li>
+                                        <li><p><span>罗山村召开党小组会</span><span>查看详情</span></p></li>
+                                        <li><p><span>罗山村召开党小组会</span><span>查看详情</span></p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data_left04">
+                    <!--智慧国防-->
+                    <div class="dataAllBorder01 cage_cl" style="height:930px;">
+                        <div class="dataAllBorder02">
+                            <div class="dataAllBorder02" id="cage_cl" style="height:100%;">
+                                <div class="biaoti"><span>智慧国防</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="xiaobiaoti"><span>适龄青年</span></div>
+                                <div class="wrap" style="height:635px;">
+                                    <ul class="zhihuiguofang">
+                                        <li><p><span>河桥镇</span><span>199人</span><span>详细信息</span></p></li>
+                                        <li><p><span>金燕村</span><span>199人</span><span>详细信息</span></p></li>
+                                        <li><p><span>罗山村</span><span>199人</span><span>详细信息</span></p></li>
+                                        <li><p><span>泥骆村</span><span>199人</span><span>详细信息</span></p></li>
+                                        <li><p><span>蒲村</span><span>199人</span><span>详细信息</span></p></li>
+                                        <li><p><span>七都村</span><span>199人</span><span>详细信息</span></p></li>
+                                        <li><p><span>秀溪村</span><span>199人</span><span>详细信息</span></p></li>
+                                        <li><p><span>学川村</span><span>199人</span><span>详细信息</span></p></li>
+                                        <li><p><span>云浪村</span><span>199人</span><span>详细信息</span></p></li>
+                                        <li><p><span>中鑫村</span><span>199人</span><span>详细信息</span></p></li>
+                                        <li><p><span>朱秀村</span><span>199人</span><span>详细信息</span></p></li>
+                                    </ul>
+                                </div>
+                                <div class="xiaobiaoti" style="margin-top:15px;"><span>镇里民兵和村里民兵</span></div>
+                                <div class="minbing">
+                                    <div class="cun"><span>河桥村</span></div>
+                                    <div class="cun"><span>金燕村</span></div>
+                                    <div class="cun"><span>罗山村</span></div>
+                                    <div class="cun"><span>泥骆村</span></div>
+                                    <div class="cun"><span>蒲村</span></div>
+                                    <div class="cun"><span>七都村</span></div>
+                                    <div class="cun"><span>秀溪村</span></div>
+                                    <div class="cun"><span>学川村</span></div>
+                                    <div class="cun"><span>云浪村</span></div>
+                                    <div class="cun"><span>中鑫村</span></div>
+                                    <div class="cun"><span>朱秀村</span></div>
+                                </div>
+                            </div>
+                            <p class="data_chart01" id="zhanbi03" style="display:none;"></p>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--应急处理-->
+            <div class="inner" style="display: none">
+
+                <div class="data_left05 ">
+                    <!--游客疏散情况信息-->
+                    <div class="dataAllBorder01 cage_cl" style="height:450px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>游客疏散情况信息</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <p class="data_chart" id="shijian01" style="height: 52%;margin:0 15px;"></p>
+                            <div class="wrap" style="height:160px;">
+                                <ul class="youkeshusan">
+                                    <li><p><span>游客已登记</span><span>14230</span></p></li>
+                                    <li><p><span>游客已疏散</span><span>12130</span></p></li>
+                                    <li><p><span>游客滞留</span><span>1423</span></p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--危房监测-->
+                    <div class="dataAllBorder01 cage_cl" style="height:450px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>危房监测</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="wrap adduser" style="height:380px;">
+                                <ul class="zhihuiguofang">
+                                    <li><p><span>河桥镇</span><span>7栋</span><span>查看分布</span></p></li>
+                                    <li><p><span>金燕村</span><span>7栋</span><span>查看分布</span></p></li>
+                                    <li><p><span>罗山村</span><span>7栋</span><span>查看分布</span></p></li>
+                                    <li><p><span>泥骆村</span><span>7栋</span><span>查看分布</span></p></li>
+                                    <li><p><span>蒲村</span><span>7栋</span><span>查看分布</span></p></li>
+                                    <li><p><span>七都村</span><span>7栋</span><span>查看分布</span></p></li>
+                                    <li><p><span>秀溪村</span><span>7栋</span><span>查看分布</span></p></li>
+                                    <li><p><span>学川村</span><span>7栋</span><span>查看分布</span></p></li>
+                                    <li><p><span>云浪村</span><span>7栋</span><span>查看分布</span></p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="data_left05">
+                    <!--应急响应-->
+                    <div class="dataAllBorder01 cage_cl" style="height:590px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>应急响应</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <p class="data_chart02" id="shijian03" style="display:none;"></p>
+                            <div class="yinji">
+                                <div class="xiangying" id="xiangying">
+                                    <div class="jibie05 jibie01">IV级响应</div>
+                                    <div class="jibie01">III级响应</div>
+                                    <div class="jibie01">II级响应</div>
+                                    <div class="jibie01">I级响应</div>
+                                </div>
+                                <div class="zhuanyi">
+                                    <div class="neirong"><div class="xingxi">人员转移</div><div class="xianshi01">显示</div></div>
+                                    <div class="neirong"><div class="xingxi">山塘水库巡查</div><div class="xianshi02">显示</div></div>
+                                    <div class="neirong"><div class="xingxi">危旧房巡查</div><div class="xianshi03">显示</div></div>
+                                    <div class="neirong" style="margin-bottom:15px"><div class="xingxi">地质灾害巡查</div><div class="xianshi04">显示</div></div>
+                                </div>
+                            </div>
+                            <div class="response_immediately">立刻响应</div>
+                            <div class="dr"></div>
+                            <div class="xiaobiaoti"><span>响应村庄</span></div>
+                            <div class="xiangyingcunzhuang">
+                                <div class="cun"><span>河桥村</span></div>
+                                <div class="cun"><span>金燕村</span></div>
+                                <div class="cun"><span>罗山村</span></div>
+                                <div class="cun"><span>泥骆村</span></div>
+                                <div class="cun"><span>蒲村</span></div>
+                                <div class="cun"><span>七都村</span></div>
+                                <div class="cun"><span>秀溪村</span></div>
+                                <div class="cun"><span>学川村</span></div>
+                                <div class="cun"><span>云浪村</span></div>
+                                <div class="cun"><span>中鑫村</span></div>
+                                <div class="cun"><span>朱秀村</span></div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="map" id="map_yjcl"></div>
+
+                <div class="data_left06 cage_cl">
+                    <!--雨量监测-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>雨量监测</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <p class="data_chart02" id="shijian02" style="height:75%;margin:0 15px;"></p>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--河道水位监测-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>河道水位监测</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <p class="data_chart03" id="shijian04" style="height:75%;margin:0 15px;"></p>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--救援队信息-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>救援队信息</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="jiuyuandui" id="jiuyuandui">
+                                <div class="jyd05 jyd01">第一小队</div>
+                                <div class="jyd01">第二小队</div>
+                                <div class="jyd01">更多</div>
+                            </div>
+                            <div class="dr" style="margin: 0 15px 10px 15px;"></div>
+                            <div class="team">
+                                <div style="font-size: 20px;font-weight: bold;line-height:40px;">第一小队</div>
+                                <div><span>队长：</span><span>王强</span></div>
+                                <div><span>联系电话：</span><span>1872145772</span></div>
+                                <div><span>队员数量：</span><span>6人</span></div>
+                                <div><span>队员：</span><span>王强</span>、<span>徐强</span>、<span>张强</span>、<span>吴强</span>、<span>陈强</span></div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+                <div class="data_left06 cage_cl">
+                    <div class="dataAllNo02">
+                        <!--险情分布坐标-->
+                        <div class="dataAllBorder01 cage_cl" style="height:170px;">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>险情分布坐标</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="xianqingfenxi">
+                                    <div class="cun"><span>避灾点</span></div>
+                                    <div class="cun"><span>水位</span></div>
+                                    <div class="cun"><span>降雨</span></div>
+                                    <div class="cun"><span>监控</span></div>
+                                    <div class="cun"><span>山塘水库</span></div>
+                                    <div class="cun"><span>险情</span></div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                        <!--无人机响应窗-->
+                        <div class="dataAllBorder01 cage_cl" style="height:380px;margin-top:30px;">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti"><span>无人机响应窗</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="video_around video_around_chose">
+                                    <div class="video_around2">1号无人机</div>
+                                    <img class="video_around1" src="video/./static/video/wurenji.png">
+                                </div>
+                                <div class="wurenji" id="wurenji">
+                                    <div class="wrj05 wrj01">1号无人机</div>
+                                    <div class="wrj01">2号无人机</div>
+                                    <div class="wrj01">更多</div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--智慧旅游-->
+            <div class="inner" style="display: none">
+                <div class="manage_left l_left">
+                    <!--景点实时游客信息-->
+                    <div class="dataAllBorder01 cage_cl" style="height:200px">
+                        <div class="dataAllBorder02">
+                            <div class="manage_top_middle" style="margin: 0 3% 15px 3%;width: 94%;">
+                                <div class="biaoti"><span>景点实时游客信息</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                                <div class="five_data">
+                                    <div class="five_information">
+                                        <div class="five_title">河桥老街</div>
+                                        <div><span class="five_number">156</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">唐昌首镇</div>
+                                        <div><span class="five_number">125</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">柳溪江码头</div>
+                                        <div><span class="five_number">279</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">曙光亭</div>
+                                        <div><span class="five_number">276</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="five_information">
+                                        <div class="five_title">风之谷</div>
+                                        <div><span class="five_number">372</span><span class="bacic_company">人</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--游客溢出情况-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>游客溢出情况</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="container2" style="height: 78%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--各景点人数统计-->
+                    <div class="dataAllBorder01 cage_cl" style="height:380px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>各景点人数统计</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="container1" style="height: 78%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+
+
+                <div class="manage_left l_left">
+                    <!--游客男女比例-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>游客男女比例</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="container9" style="height: 78%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--游客来源-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>游客来源</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="container10" style="height: 78%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--游客年龄段比例-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>游客年龄段比例</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="container11" style="height: 78%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="map" id="map_zhly"></div>
+
+
+                <div class="manage_right r_right">
+                    <!--民宿数量总数-->
+                    <div class="dataAllBorder01 cage_cl" style="height:150px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>民宿数量总数</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="basic_data">
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">总数</div>
+                                    <div><span class="bacic_number">237</span><span class="bacic_company">栋</span></div>
+                                </div>
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">在营</div>
+                                    <div><span class="bacic_number">178</span><span class="bacic_company">栋</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--景点数量总数-->
+                    <div class="dataAllBorder01 cage_cl" style="height:150px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>景点数量总数</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="container12" style="height: 90%;display:none"></div>
+                            <div class="basic_data">
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">总数</div>
+                                    <div><span class="bacic_number">8</span><span class="bacic_company">个</span></div>
+                                </div>
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">在营</div>
+                                    <div><span class="bacic_number">8</span><span class="bacic_company">个</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--餐饮数量总数-->
+                    <div class="dataAllBorder01 cage_cl" style="height:150px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>餐饮数量总数</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="container6" style="height: 90%;display:none"></div>
+                            <div class="basic_data">
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">总数</div>
+                                    <div><span class="bacic_number">130</span><span class="bacic_company">个</span></div>
+                                </div>
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">在营</div>
+                                    <div><span class="bacic_number">126</span><span class="bacic_company">个</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--酒店民宿入住情况-->
+                    <div class="dataAllBorder01 cage_cl" style="height:390px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>酒店民宿入住情况</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="container5" style="height: 83%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="manage_right r_right">
+                    <!--智慧公厕使用情况分析-->
+                    <div class="dataAllBorder01 cage_cl" style="height:450px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>智慧公厕使用情况分析</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="wrap adduser" style="height:380px;">
+                                <ul class="zhihuigongce">
+                                    <li><p><span>河桥老街</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>柳溪江码头</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>唐昌首镇</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>风之谷</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>曙光亭</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>瑞晶石花洞</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>河桥镇农博馆</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>观音阁</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>急流勇进</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--停车位分析-->
+                    <div class="dataAllBorder01 cage_cl" style="height:450px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>停车位分析</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="wrap adduser" style="height:380px;">
+                                <ul class="zhihuigongce">
+                                    <li><p><span>河桥老街</span><span>剩余车位：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>柳溪江码头</span><span>剩余车位：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>唐昌首镇</span><span>剩余车位：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>风之谷</span><span>剩余车位：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>曙光亭</span><span>剩余车位：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>瑞晶石花洞</span><span>剩余车位：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>河桥镇农博馆</span><span>剩余车位：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>观音阁</span><span>剩余车位：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>急流勇进</span><span>剩余车位：13</span><span>查看坐标</span></p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--社会治理-->
+            <div class="inner" style="display: none;">
+                <!--雪亮工程-->
+                <div class="user_left l_left">
+                    <!--雪亮工程-->
+                    <div class="dataAllBorder01 cage_cl" style="height:930px;">
+                        <div class="dataAllBorder02">
+                            <div class="video_cage" style="height:100%;">
+                                <div class="biaoti"><span>雪亮工程</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+
+                                <div class="video_around video_around_chose">
+                                    <div class="video_around2">消防监控</div>
+                                    <img class="video_around1" src="video/./static/video/video1.jpg">
+                                </div>
+                                <div class="video_around">
+                                    <div class="video_around2">河流监控</div>
+                                    <img class="video_around1" src="./static/video/video.jpg">
+                                </div>
+                                <div class="video_around">
+                                    <div class="video_around2">水库监控</div>
+                                    <img class="video_around1" src="video/./static/video/video2.jpg">
+                                </div>
+                                <div class="anniu1">更多</div>
+                            </div>
+
+
+                            <div style="display:none;">
+
+                                <div id="userContainerManage" style="height: 90%"></div>
+                                <div id="userContainerAttendance" style="height: 90%"></div>
+                            </div>
+
+
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="user_left l_left">
+                    <!--智慧社区-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>智慧社区</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="userContainerPersonal" style="height: 78%;margin: 0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--租房信息-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>租房信息</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="userContainerSex" style="height: 78%;margin: 0 15px;"></div>
+
+
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--智慧消防-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>智慧消防</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="user_top_middle l_left">
+                                <div id="userContainerIllegal" style="height: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+
+                <div class="map" id="map_shzl"></div>
+
+                <div class="user_right r_right">
+                    <!--交办数据-->
+                    <div class="dataAllBorder01 cage_cl" style="height:150px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>交办数据</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="basic_data">
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">已处理交办事件</div>
+                                    <div><span class="bacic_number">730</span><span class="bacic_company">件</span></div>
+                                </div>
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">未处理交办事件</div>
+                                    <div><span class="bacic_number">680</span><span class="bacic_company">件</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--交办数据统计-->
+                    <div class="dataAllBorder01 cage_cl" style="height:510px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>交办数据统计</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="wrap" style="height:440px;">
+                                <ul class="yingjizhihui">
+                                    <li><p><span>河桥村城管冲突</span><span>查看详情</span></p></li>
+                                    <li><p><span>金燕村城管冲突</span><span>查看详情</span></p></li>
+                                    <li><p><span>罗山村城管冲突</span><span>查看详情</span></p></li>
+                                    <li><p><span>泥骆村城管冲突</span><span>查看详情</span></p></li>
+                                    <li><p><span>蒲村城管冲突</span><span>查看详情</span></p></li>
+                                    <li><p><span>七都村城管冲突</span><span>查看详情</span></p></li>
+                                    <li><p><span>秀溪村城管冲突</span><span>查看详情</span></p></li>
+                                    <li><p><span>学川村城管冲突</span><span>查看详情</span></p></li>
+                                    <li><p><span>云浪村城管冲突</span><span>查看详情</span></p></li>
+                                    <li><p><span>中鑫村城管冲突</span><span>查看详情</span></p></li>
+                                    <li><p><span>朱秀村城管冲突</span><span>查看详情</span></p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--卫生点管理-->
+                    <div class="dataAllBorder01 cage_cl" style="height:210px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>卫生点管理</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div class="minbing">
+                                <div class="cun"><span>河桥村</span></div>
+                                <div class="cun"><span>金燕村</span></div>
+                                <div class="cun"><span>罗山村</span></div>
+                                <div class="cun"><span>泥骆村</span></div>
+                                <div class="cun"><span>蒲村</span></div>
+                                <div class="cun"><span>七都村</span></div>
+                                <div class="cun"><span>秀溪村</span></div>
+                                <div class="cun"><span>学川村</span></div>
+                                <div class="cun"><span>云浪村</span></div>
+                                <div class="cun"><span>中鑫村</span></div>
+                                <div class="cun"><span>朱秀村</span></div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="user_right r_right">
+                    <!--重点人员关系分析-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>重点人员关系分析</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="userContainerFlow" style="height: 78%"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--社会矫正-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>社会矫正</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="userContainerAge" style="height:78%;margin: 0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--城管执法-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:30px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti"><span>城管执法</span><span style="margin-left:3%"><img src="./static/image/diaotitupian.png" /></span></div>
+                            <div id="container4" style="height:78%;margin: 0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="user_right r_right" style="display:none">
+                    <div class="dataAllBorder01 cage_cl" style="height:150px;">
+                        <div class="dataAllBorder02">
+                            <div class="user_top_middle">
+                                <div id="userContainerComplaint" style="height: 90%"></div>
+                                <p>投诉情况</p>
+                            </div>
+                            <div class="user_top_middle">
+                                <div id="userContainerPrize" style="height: 90%"></div>
+                                <p>商家入驻</p>
+                            </div>
+                            <div class="user_top_middle l_left">
+                                <div class="user_right_left l_left">
+                                    <div id="userContainerReason" style="height: 90%"></div>
+                                    <p>游客溢出情况</p>
+                                </div>
+                                <div class="user_right_left l_left">
+                                    <div id="userContainerHandle" style="height: 90%"></div>
+                                    <p>游客报警情况</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/echarts.min.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+
+    <script>
+        $(function () {
+            $("#xiangying div").bind("click", function () {
+                $(this).siblings('div').removeClass('jibie05');  // 删除其他兄弟元素的样式
+                $(this).addClass('jibie05');
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $("#wurenji div").bind("click", function () {
+                $(this).siblings('div').removeClass('wrj05');  // 删除其他兄弟元素的样式
+                $(this).addClass('wrj05');
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $("#jiuyuandui div").bind("click", function () {
+                $(this).siblings('div').removeClass('jyd05');  // 删除其他兄弟元素的样式
+                $(this).addClass('jyd05');
+            });
+        });
+    </script>
+
+    <script>
+        var an1 = $('.xianshi01');
+        var an2 = $('.xianshi02');
+        var an3 = $('.xianshi03');
+        var an4 = $('.xianshi04');
+        an1.on('click', function () {
+            if (an1.hasClass('xianshi01')) {//如果有‘test’的样式，就去除他的样式，添加‘active’的样式
+                an1.removeClass('xianshi01').addClass('yingchang01');
+            } else if (an1.hasClass('yingchang01')) {//如果有‘active’的样式，就祛除他的样式，添加‘test’的样式
+                an1.removeClass('yingchang01').addClass('xianshi01');
+            }
+        })
+        an2.on('click', function () {
+            if (an2.hasClass('xianshi02')) {//如果有‘test’的样式，就去除他的样式，添加‘active’的样式
+                an2.removeClass('xianshi02').addClass('yingchang02');
+            } else if (an2.hasClass('yingchang02')) {//如果有‘active’的样式，就祛除他的样式，添加‘test’的样式
+                an2.removeClass('yingchang02').addClass('xianshi02');
+            }
+        })
+        an3.on('click', function () {
+            if (an3.hasClass('xianshi03')) {//如果有‘test’的样式，就去除他的样式，添加‘active’的样式
+                an3.removeClass('xianshi03').addClass('yingchang03');
+            } else if (an3.hasClass('yingchang03')) {//如果有‘active’的样式，就祛除他的样式，添加‘test’的样式
+                an3.removeClass('yingchang03').addClass('xianshi03');
+            }
+        })
+        an4.on('click', function () {
+            if (an4.hasClass('xianshi04')) {//如果有‘test’的样式，就去除他的样式，添加‘active’的样式
+                an4.removeClass('xianshi04').addClass('yingchang04');
+            } else if (an4.hasClass('yingchang04')) {//如果有‘active’的样式，就祛除他的样式，添加‘test’的样式
+                an4.removeClass('yingchang04').addClass('xianshi04');
+            }
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $('.wrap').liMarquee({
+                direction: 'up',//身上滚动
+                runshort: false,//内容不足时不滚动
+                scrollamount: 20//速度
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init($("#bome1")[0]);
+
+        option = {
+
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data: ['男', '女'],
+                textStyle: {
+                    color: "#e9ebee"
+                }
+            },
+            calculable: false,
+            graphic: {       //图形中间文字
+                type: "text",
+                left: "center",
+                top: "center",
+                style: {
+                    text: "男女比例",
+                    textAlign: "center",
+                    fill: "#fff",
+                    fontSize: 20
+                }
+            },
+            series: [
+                {
+                    name: '男女比例',
+                    type: 'pie',
+                    radius: ['50%', '80%'],
+                    center: ['50%', '50%'],
+                    data: [
+                        {
+                            value: 8, name: '男',
+                            itemStyle: {
+                                normal: {
+                                    color: '#0a8cff'
+
+                                }
+                            }
+                        },
+                        {
+                            value: 2, name: '女',
+                            itemStyle: {
+                                normal: {
+                                    color: '#ff425d'
+
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init($("#bome2")[0]);
+
+        // 指定图表的配置项和数据
+        var option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                x: 30,
+                y: 10,
+                x2: 10,
+                y2: 30,
+                borderWidth: 0
+            },
+            calculable: true,
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['2月', '4月', '6月', '8月', '10月', '12月'],
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#a4a7ab',
+                            align: 'center'
+                        }
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#a4a7ab'
+                        }
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '矫正人员',
+                    type: 'bar',
+                    barWidth: '30',
+                    data: [124, 522, 235, 365, 214, 265,],
+                    itemStyle: {
+                        normal: {
+                            color: "#00ffff"
+                        }
+                    }
+
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        //var myChart = echarts.init($("#zhuzhuangtu")[0]);
+        var myChart = echarts.init(document.getElementById('zhuzhuangtu'));
+
+        option = {
+            color: ['#3398DB'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '直接访问',
+                    type: 'bar',
+                    barWidth: '60%',
+                    data: [10, 52, 200, 334, 390, 330, 220]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+
+    <script>
+        var number;
+        $(function () {
+            if (window.screen.height <= 768) {
+                number = 4;
+            } else if (window.screen.height > 768 && window.screen.height <= 900) {
+                number = 6
+            } else if (window.screen.height > 1080) {
+                number = 8
+            }
+        });
+
+
+
+        $(function () {
+            $(".tit02Diva a").each(function (index) {
+                $(this).on("click", function () {
+                    $(".data_map").eq(index).fadeIn().siblings(".data_map").stop().hide();
+                    $(this).prev('i').removeClass('i_crlieAction');
+                    $(this).siblings('a').prev('i').addClass('i_crlieAction');
+
+                })
+            });
+            BootstrapTable();
+            Echarts();
+            $("#fresh_tool").click(function (event) {
+                event.stopPropagation();
+                cancel();
+            })
+
+        });
+        function EventClick() {
+            $(".check_increase").removeClass("check_increase_act");
+            $("#over_hide1").show().siblings().hide();
+            $(".ceshi01").show().siblings().hide();
+            $(".check_decrease").show();
+            $("#cage_cl").hide();
+            $("#map_title_innerbox").hide();
+            $("#cage_cl1").show();
+            //        $("#over_hide").show();
+            $("#map_title_innerbox1").show();
+            $(".addition_check_in").hide();
+            $("#car_check_in").hide();
+            BootstrapTable();
+        }
+        function cancel(e) {
+            $(".check_increase").removeClass("check_increase_act");
+            $("#over_hide").show().siblings().hide();
+            $(".ceshi01").show().siblings().hide();
+            $(".check_decrease").show();
+            $("#cage_cl").show();
+            $("#cage_cl1").hide();
+            $("#map_title_innerbox").show();
+            $("#map_title_innerbox1").hide();
+            //        $("#cage_cl").show();
+            //        $("#over_hide1").show();
+            //        $("#map_title_innerbox").show();
+            BootstrapTable();
+        }
+
+
+        function BootstrapTable() {
+
+
+        }
+
+        function Echarts() {
+            var myChart = echarts.init($("#container_huan")[0]);
+            option = {
+
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
+                    data: ['公共停车场', '旅游地区停车场', '剩余车位'],
+                    textStyle: {
+                        color: "#e9ebee"
+                    }
+                },
+                calculable: false,
+                graphic: {       //图形中间文字
+                    type: "text",
+                    left: "center",
+                    top: "center",
+                    style: {
+                        text: "停车比例",
+                        textAlign: "center",
+                        fill: "#fff",
+                        fontSize: 20
+                    }
+                },
+                series: [
+                    {
+                        name: '停车比例',
+                        type: 'pie',
+                        radius: ['50%', '80%'],
+                        center: ['50%', '50%'],
+                        data: [
+                            {
+                                value: 5, name: '公共停车场',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#00ffff'
+
+                                    }
+                                }
+                            },
+                            {
+                                value: 4, name: '旅游地区停车场',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#ffea00'
+
+                                    }
+                                }
+                            },
+                            {
+                                value: 5, name: '剩余车位',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#0a8cff'
+
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        }
+    </script>
+
+    <script>
+        function TimeControl() {
+            $(".message_scroll_box2").animate({ marginTop: 51 }, 1000,
+                function () {
+                    $(".message_scroll_box2").css({ marginTop: 0 });    //把顶部的边界清零
+                    $(".message_scroll_box2 .message_scroll2:first").before($(".message_scroll_box2 .message_scroll2:last"));    //在第一个新闻后面插入最后一个新闻
+
+                });
+        }
+        var T = setInterval(TimeControl, 2300);    //开始定时
+        $(".message_scroll_box2").mouseenter(function () {
+            clearInterval(T);    //停止定时
+        })
+            .mouseleave(function () {
+                T = setInterval(TimeControl, 2500);    //再次定时
+            })
+
+    </script>
+    
+    <script>
+        // 百度地图API功能
+        var map = new BMap.Map("map3", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(119.223155, 30.12514), 16);  // 初始化地图,设置中心点坐标和地图级别
+        //添加地图类型控件
+        map.addControl(new BMap.MapTypeControl({
+            mapTypes: [
+                BMAP_NORMAL_MAP,
+                BMAP_HYBRID_MAP
+            ]
+        }));
+        var mapStyle = {
+            style: "light"
+        };
+        map.setMapStyle(mapStyle);
+        map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);
+    </script>
+
+
+
+
+    <script>
+        // 基本信息地图
+        var map = new BMap.Map("map_jbxx", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(119.19595, 30.124447), 16);  // 初始化地图,设置中心点坐标和地图级别
+
+        var mapStyle = {
+            style: "light"
+        };
+        map.setMapStyle(mapStyle);
+        map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);
+    </script>
+    <script>
+        // 党建引领地图
+        var map = new BMap.Map("map_djyl", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(119.19595, 30.124447), 16);  // 初始化地图,设置中心点坐标和地图级别
+
+        var mapStyle = {
+            style: "light"
+        };
+        map.setMapStyle(mapStyle);
+        map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);
+    </script>
+    <script>
+        // 社会治理地图
+        var map = new BMap.Map("map_shzl", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(119.19595, 30.124447), 16);  // 初始化地图,设置中心点坐标和地图级别
+
+        var mapStyle = {
+            style: "light"
+        };
+        map.setMapStyle(mapStyle);
+        map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);
+    </script>
+    <script>
+        // 智慧旅游地图
+        var map = new BMap.Map("map_zhly", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(119.19595, 30.124447), 16);  // 初始化地图,设置中心点坐标和地图级别
+
+        var mapStyle = {
+            style: "light"
+        };
+        map.setMapStyle(mapStyle);
+        map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);
+    </script>
+    <script>
+        // 应急处理地图
+        var map = new BMap.Map("map_yjcl", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(119.19595, 30.124447), 16);  // 初始化地图,设置中心点坐标和地图级别
+
+        var mapStyle = {
+            style: "light"
+        };
+        map.setMapStyle(mapStyle);
+        map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);
+    </script>
+
+    <script type="text/javascript">
+
+        // 百度地图API功能
+        var zhengjiaContent =
+            "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>河桥镇人民政府</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>地址：杭州市临安区河桥镇柳溪街19号</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>电话：(0571)63611066</p>" +
+            "</div>";
+        var anjubaoContent =
+            "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>公共厕所</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>地址：杭州市临安区昌文线东50米</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>三星级厕所</p>" +
+            "</div>";
+        var heqiaolaojie =
+            "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>河桥老街</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>地址：昌化镇河桥古镇柳溪江大道</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>电话：(0571)61075891</p>" +
+            "</div>";
+        var tangchangshouzhen =
+            "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>唐昌首镇</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>地址：浙江省杭州市临安区曙光村附近河桥古镇内</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>电话：(0571)61075891</p>" +
+            "</div>";
+        var liuxijiangmatou =
+            "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>柳溪江码头</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>地址：浙江省杭州市临安区河桥镇昌文线</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>电话：(0571)61075891</p>" +
+            "</div>";
+        var fengzhigu =
+            "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>风之谷户外乐园</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>地址：浙江省杭州市临安区昌文线双塔大桥</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>电话：(0571)63661212</p>" +
+            "</div>";
+
+
+        // 百度地图API功能
+        var map = new BMap.Map("map", { mapType: BMAP_SATELLITE_MAP });
+        var point = new BMap.Point(119.247261, 30.109483);//中心点
+        map.centerAndZoom(point, 16);
+        var label = new BMap.Label('点击查看', { "offset": new BMap.Size(-10, -20) });
+        var label2 = new BMap.Label('点击查看', { "offset": new BMap.Size(-10, -20) });
+        var geolocation = new BMap.Geolocation();
+
+        map.addControl(new BMap.NavigationControl());               // 添加平移缩放控件
+        map.addControl(new BMap.ScaleControl());                    // 添加比例尺控件
+        map.addControl(new BMap.OverviewMapControl());              //添加缩略地图控件
+        map.enableScrollWheelZoom();                            //启用滚轮放大缩小
+        map.addControl(new BMap.MapTypeControl());          //添加地图类型控件
+        map.setCurrentCity("河桥镇");          // 设置地图显示的城市 此项是必须设置的
+
+
+
+        //一个//////////////////////
+        //公共厕所地图位置
+        var pointanjubao = new BMap.Point(119.242383, 30.109175);
+        //设置显示图片的图标
+        var myIcon = new BMap.Icon("2323.gif", new BMap.Size(20, 20));
+        var marker = new BMap.Marker(pointanjubao, { icon: myIcon });
+        map.addOverlay(marker);
+        marker.setLabel(label);
+        var opts = {
+            width: 220,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "公共厕所", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: "三星级厕所"
+        }
+        var infoWindow1 = new BMap.InfoWindow("地址：杭州市临安区昌文线东50米", opts);  // 创建信息窗口对象
+        marker.openInfoWindow(infoWindow1); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindow = new BMap.InfoWindow(anjubaoContent);  // 创建信息窗口对象
+
+        marker.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindow);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        marker.addEventListener("mouseout", function () {
+            this.openInfoWindow(infoWindow1, point);
+        });
+
+        //一个结束//////////////////////
+
+
+        //一个//////////////////////
+        //河桥老街地图位置
+        var heqiao = new BMap.Point(119.247314, 30.107638);
+        //设置显示图片的图标
+        var myIcon = new BMap.Icon("2323.gif", new BMap.Size(20, 20));
+        var markerheqiao = new BMap.Marker(heqiao, { icon: myIcon });
+        map.addOverlay(markerheqiao);
+        markerheqiao.setLabel(label);
+        var optsheqiao = {
+            width: 220,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "河桥老街", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: "河桥老街"
+        }
+        var heqiaolaojie1 = new BMap.InfoWindow("地址：昌化镇河桥古镇柳溪江大道", optsheqiao);  // 创建信息窗口对象
+        markerheqiao.openInfoWindow(heqiaolaojie1); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindowheqiao = new BMap.InfoWindow(heqiaolaojie);  // 创建信息窗口对象
+
+        markerheqiao.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindowheqiao);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindowheqiao.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        markerheqiao.addEventListener("mouseout", function () {
+            this.openInfoWindow(heqiaolaojie1, point);
+        });
+
+        //一个结束//////////////////////
+
+
+        //一个//////////////////////
+        //唐昌首镇地图位置
+        var tangchang = new BMap.Point(119.240337, 30.105737);
+        //设置显示图片的图标
+        var myIcon = new BMap.Icon("2323.gif", new BMap.Size(20, 20));
+        var markertangchang = new BMap.Marker(tangchang, { icon: myIcon });
+        map.addOverlay(markertangchang);
+        markertangchang.setLabel(label);
+        var optstangchang = {
+            width: 220,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "唐昌首镇", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: "唐昌首镇"
+        }
+        var tangchangshouzhen1 = new BMap.InfoWindow("地址：浙江省杭州市临安区曙光村附近河桥古镇内", optstangchang);  // 创建信息窗口对象
+        markertangchang.openInfoWindow(tangchangshouzhen1); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindowtangchang = new BMap.InfoWindow(tangchangshouzhen);  // 创建信息窗口对象
+
+        markertangchang.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindowtangchang);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindowtangchang.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        markertangchang.addEventListener("mouseout", function () {
+            this.openInfoWindow(tangchangshouzhen1, point);
+        });
+
+        //一个结束//////////////////////
+
+
+        //一个//////////////////////
+        //柳溪江码头地图位置
+        var matou = new BMap.Point(119.25509, 30.126977);
+        //设置显示图片的图标
+        var myIcon = new BMap.Icon("2323.gif", new BMap.Size(20, 20));
+        var markermatoumatou = new BMap.Marker(matou, { icon: myIcon });
+        map.addOverlay(markermatoumatou);
+        markermatoumatou.setLabel(label);
+        var optsmatou = {
+            width: 220,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "柳溪江码头", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: "柳溪江码头"
+        }
+        var liuxijiangmatou1 = new BMap.InfoWindow("地址：浙江省杭州市临安区河桥镇昌文线", optsmatou);  // 创建信息窗口对象
+        markermatoumatou.openInfoWindow(liuxijiangmatou1); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindowmatoug = new BMap.InfoWindow(liuxijiangmatou);  // 创建信息窗口对象
+
+        markermatoumatou.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindowmatou);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindowmatou.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        markermatoumatou.addEventListener("mouseout", function () {
+            this.openInfoWindow(liuxijiangmatou1, point);
+        });
+
+        //一个结束//////////////////////
+
+
+        //一个//////////////////////
+        //风之谷地图位置
+        var feng = new BMap.Point(119.246272, 30.151528);
+        //设置显示图片的图标
+        var myIcon = new BMap.Icon("2323.gif", new BMap.Size(20, 20));
+        var markerfeng = new BMap.Marker(feng, { icon: myIcon });
+        map.addOverlay(markerfeng);
+        markerfeng.setLabel(label);
+        var optsfeng = {
+            width: 220,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "风之谷", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: "风之谷"
+        }
+        var fengzhigu1 = new BMap.InfoWindow("地址：浙江省杭州市区河桥镇昌文线", optsfeng);  // 创建信息窗口对象
+        markerfeng.openInfoWindow(fengzhigu1); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindowfeng = new BMap.InfoWindow(fengzhigu);  // 创建信息窗口对象
+
+        markerfeng.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindowfeng);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindowfeng.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        markerfeng.addEventListener("mouseout", function () {
+            this.openInfoWindow(fengzhigu1, point);
+        });
+
+        //一个结束//////////////////////
+
+
+        //河桥镇人民政府
+        var pointzhengjia = new BMap.Point(119.250357, 30.112423);
+        //设置显示图片的图标
+
+
+        var markerzhengjia = new BMap.Marker(pointzhengjia, { icon: myIcon });
+        map.addOverlay(markerzhengjia);
+        markerzhengjia.setLabel(label2);
+        var optszhjia = {
+            width: 260,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "河桥镇人民政府", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: ""
+        }
+        var infoWindowzhengjia = new BMap.InfoWindow("地址：杭州市临安区河桥镇柳溪街19号", optszhjia);  // 创建信息窗口对象
+        markerzhengjia.openInfoWindow(infoWindowzhengjia); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindowzhengjiaxiao = new BMap.InfoWindow(zhengjiaContent);  // 创建信息窗口对象
+
+
+        markerzhengjia.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindowzhengjiaxiao);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindowzhengjiaxiao.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        markerzhengjia.addEventListener("mouseout", function () {
+            this.openInfoWindow(infoWindowzhengjia, point);
+        });
+
+    </script>
+
+</body>
+</html>

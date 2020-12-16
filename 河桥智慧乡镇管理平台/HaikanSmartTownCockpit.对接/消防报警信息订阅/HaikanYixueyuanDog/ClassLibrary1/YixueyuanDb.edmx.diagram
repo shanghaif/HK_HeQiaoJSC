@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2cb6e415e21d4f3e9275a28497218e03" Name="Diagram1">
+        <EntityTypeShape EntityType="yixueyuanModel.Abnormal" Width="1.5" PointX="6" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.AccessControlRecord" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.AnjianType" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.ApartmentRecord" Width="1.5" PointX="8.25" PointY="51.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.ApartmentWarn" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Blacker" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CampusPatrol" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Car" Width="1.5" PointX="8" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarAccident" Width="1.5" PointX="11.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarBlack" Width="1.5" PointX="5.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarIllegalStop" Width="1.5" PointX="11.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarNonMotor" Width="1.5" PointX="9" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarNonMotorAccident" Width="1.5" PointX="7.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarNonMotorBlack" Width="1.5" PointX="9.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarNonMotorHelmeted" Width="1.5" PointX="11.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarNonMotorIllegalStop" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarNonMotorManned" Width="1.5" PointX="13.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarNonMotorSpeedRecord" Width="1.5" PointX="13.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.CarSpeedRecord" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.College" Width="1.5" PointX="1.5" PointY="92.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Curriculum" Width="1.5" PointX="15.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Dc_EarlyWarningRecord" Width="1.5" PointX="15.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Dc_TemHum" Width="1.5" PointX="15.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Department" Width="1.5" PointX="0.75" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.DoorOpening" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Dormitory" Width="1.5" PointX="3" PointY="50.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.DormitoryNum" Width="1.5" PointX="5.25" PointY="51.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Festival" Width="1.5" PointX="2.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.FireFacility" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.FivePicture" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Focuser" Width="1.5" PointX="3" PointY="55.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Foreigner" Width="1.5" PointX="3" PointY="59.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.ForeignerAppoint" Width="1.5" PointX="3" PointY="64.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.ForeignerRecord" Width="1.5" PointX="3" PointY="69.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.GeneralLaboratory" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.GooutForm" Width="1.5" PointX="3" PointY="75.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.HazardousChemicalsUseRecord" Width="1.5" PointX="17.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.HazardousChemicalsWarehouse" Width="1.5" PointX="6.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.InAndOutTime" Width="1.5" PointX="8.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.IncidentReport" Width="1.5" PointX="3" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Library" Width="1.5" PointX="17.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.MainLab" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Major" Width="1.5" PointX="1.5" PointY="80.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.MapIcon" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Monitor" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.RecyclingManagement" Width="1.5" PointX="17.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.ResearchBuilding" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SafeManagement" Width="1.5" PointX="3" PointY="87" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SchoolDistrict" Width="1.5" PointX="0.75" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SchoolInCar" Width="1.5" PointX="11" PointY="43.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SchoolStaffRecord" Width="1.5" PointX="3" PointY="97.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.ScoreAdd" Width="1.5" PointX="3" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SecurityType" Width="1.5" PointX="0.75" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Specific" Width="1.5" PointX="3" PointY="102.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Stadium" Width="1.5" PointX="17.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.StrangeWarning" Width="1.5" PointX="3" PointY="107.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.StuClass" Width="1.5" PointX="0.75" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Student" Width="1.5" PointX="10.5" PointY="49.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.StudentsApartment" Width="1.5" PointX="14.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.StuManagement" Width="1.5" PointX="11.25" PointY="57.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.StuMapCurriculum" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_ApparatusRegistration" Width="1.5" PointX="19.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_BlackList" Width="1.5" PointX="19.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_Captial" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_ConsumptionRecord" Width="1.5" PointX="2.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_EntramceGuard" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_InsOpen" Width="1.5" PointX="21.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_Instrument" Width="1.5" PointX="21.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_InstrumentFault" Width="1.5" PointX="16.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_InstrumentMaintain" Width="1.5" PointX="21.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_InstrumentUse" Width="1.5" PointX="21.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_Laboratory" Width="1.5" PointX="4.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_LaboratoryLog" Width="1.5" PointX="6.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_LaboratoryType" Width="1.5" PointX="8.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_RechargeRecord" Width="1.5" PointX="10.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_User" Width="1.5" PointX="12.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SystemIcon" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SystemLog" Width="1.5" PointX="23.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SystemMenu" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SystemPermission" Width="1.5" PointX="8" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SystemRole" Width="1.5" PointX="23.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SystemRolePermissionMapping" Width="1.5" PointX="23.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SystemUser" Width="1.5" PointX="23.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.SystemUserRoleMapping" Width="1.5" PointX="0.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Teacher" Width="1.5" PointX="13.5" PointY="51.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Warning" Width="1.5" PointX="18.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Weekly" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.whp_EntramceGuard" Width="1.5" PointX="25.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Worker" Width="1.5" PointX="3" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.Wrj" Width="1.5" PointX="25.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="yixueyuanModel.sys_InstrumentType" Width="1.5" PointX="25.75" PointY="12.75" IsExpanded="true" />
+        <AssociationConnector Association="yixueyuanModel.FK__Abnormal__Colleg__1209AD79" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Abnormal__MajorU__12FDD1B2" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Abnormal__School__14E61A24" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Abnormal__StuCla__13F1F5EB" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__AccessCon__Resea__44952D46" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Apartment__Dormi__04AFB25B" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Apartment__Schoo__03BB8E22" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Car__DepartmentU__719CDDE7" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Car__SchoolDistr__72910220" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__CarNonMot__Depar__7D0E9093" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__CarNonMot__Schoo__7E02B4CC" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Major__CollegeUu__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Student__College__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__StuManage__Colle__793DFFAF" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__IncidentR__Depar__2EA5EC27" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__SchoolInC__Depar__01D345B0" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__ScoreAdd__Depart__3552E9B6" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__StuManage__Depar__7849DB76" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Teacher__Departm__0A688BB1" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Worker__Departme__7755B73D" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Dormitory__Dormi__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Dormitory__Schoo__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Student__Dormito__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__StuManage__Dormi__7B264821" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Teacher__Dormito__0B5CAFEA" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Student__Dormito__73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Teacher__Dormito__0C50D423" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__FireFacil__Resea__43A1090D" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Focuser__SchoolD__74794A92" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Foreigner__Schoo__19AACF41" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Foreigner__Schoo__05A3D694" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Foreigner__Schoo__0880433F" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__GooutForm__Schoo__7EF6D905" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__IncidentR__Schoo__2CBDA3B5" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__IncidentR__Secur__308E3499" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__IncidentR__StuCl__2F9A1060" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__StuClass__MajorU__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Student__MajorUu__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Monitor__Researc__4865BE2A" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__SafeManag__Schoo__756D6ECB" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__SchoolInC__Schoo__02C769E9" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__SchoolSta__Schoo__0E391C95" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Specific__School__27F8EE98" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__StrangeWa__Schoo__1A9EF37A" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Student__SchoolD__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__StuManage__Schoo__7C1A6C5A" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Teacher__SchoolD__0D44F85C" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__Student__StuClas__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK__StuManage__StuCl__7A3223E8" ManuallyRouted="false" />
+        <AssociationConnector Association="yixueyuanModel.FK_SystemPermission_SystemMenu" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

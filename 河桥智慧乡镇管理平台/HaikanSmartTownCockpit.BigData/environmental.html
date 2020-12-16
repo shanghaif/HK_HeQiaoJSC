@@ -1,0 +1,3319 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/divpoint.css">
+    <link rel="stylesheet" href="css/movePrompt.css">
+    <link rel="stylesheet" href="css/widget-win.css">
+    <link rel="stylesheet" href="css/metro-all.min.css">
+    <script src="js/jquery.js"></script>
+    <!-- <script src="js/jquery.limarquee.js"></script> -->
+
+    <script type="text/javascript" src="lib/include-lib.js" libpath=""
+        include="jquery,bootstrap,haoutil,crypto,toastr,mapv3d,layer"></script>
+
+    <script src="js/metro.min.js"></script>
+
+    <script type="text/javascript" src="js/map3dindex.js"></script>
+
+    <script src="js/video.min.js"></script>
+    <script src="js/videojs-contrib-hls.js"></script>
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="./js/flexible.js"></script>
+    <meta charset="UTF-8">
+    <title>河桥镇综合指挥驾驶舱</title>
+    <style>
+        @keyframes move {
+            0% {
+                transform: translateX(150px);
+            }
+
+            100% {
+                transform: translateX(-70px);
+            }
+        }
+
+        .ytkz2 {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .zhihuiguofang li {
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body style="letter-spacing: 2px;">
+    <label id="lab_login" style="display:none;"></label>
+    <div class="data_bodey">
+        <div class="index_tabs">
+            <!--导航-->
+            <div class="index_navi">
+                <div class="nav_bg" style="font-size: 0;">
+                    <img src="./static/image/headbg.png" alt="" style="width: 100%;height: 100%;">
+                </div>
+                <h1 class="logoBox"><img src="./static/image/logo.png" alt="" style="width:100%;"></h1>
+                <ul class="navBox" style="margin: 0;">
+                    <li class="leftLi" style="margin-left: 21%;"><a href="index.html">基本信息</a></li>
+                    <li class="leftLi"><a href="party.html">数字党建</a></li>
+                    <li class="leftLi nav_active"><a href="environmental.html">环境治理</a></li>
+                    <li class="rightLi" style="margin-right: 21%;"><a href="emergency.html">应急处理</a></li>
+                    <li class="rightLi"><a href="travel.html">智慧旅游</a></li>
+                    <li class="rightLi"><a href="society.html">社会治理</a></li>
+                </ul>
+            </div>
+            <!--首页-->
+            <div class="inner">
+                <!--五水共治地图点-->
+                <div id="item8map" class="item item--mod" style="width:80%;">
+                    <div class="table-wrapper" style="height:80%;">
+                        <h1>五水共治监控列表</h1>
+                        <div style="width: 31%;float: left;margin-left: 1%;font-size: 20px;">
+                            <select id="typeselect" data-role="select" data-drop-height="400" data-on-change="toSelect">
+                                <optgroup label="监控类型">
+                                    <option value="全部">全部</option>
+                                    <option value="五水共治污水监控">五水共治污水监控</option>
+                                    <option value="五水共治防洪水监控">五水共治防洪水监控</option>
+                                    <option value="五水共治排涝水监控">五水共治排涝水监控</option>
+                                    <option value="五水共治保供水监控">五水共治保供水监控</option>
+                                    <option value="五水共治抓节水监控">五水共治抓节水监控</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div><span class="bacic_number" id="xlgc_num"
+                                style="color: #000;padding-left: 50px;"></span><span style="color: #000;"
+                                class="bacic_company">个</span></div>
+                        <div style="height: 800px;margin-bottom: 10px;margin-top: 20px;text-align: center;">
+                            <div class="videoesBox"
+                                style="width:100%;height: 800px; overflow: auto;display: inline-block;">
+
+                            </div>
+                        </div>
+                        <!-- <a id="tomore"
+                           style="margin-left: 18px;font-size: 18px;text-decoration: none;color: #333;cursor: pointer;user-select: none;">获取更多</a> -->
+
+
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+
+                <!--卫生点-->
+                <div id="item8mapws" class="item item--mod" style="width:80%;max-width:1350px;">
+                    <div class="table-wrapper" style="height:80%;">
+                        <h1>卫生点监控列表</h1>
+                        <div style="height:650.000006px;" id="map_shuikuws">
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="wsVideo" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>污水共治</h1>
+                        <div class="two-text" id="video_name" style="float:left;">当前视频来源--XX监控</div>
+                        <span id="ytkz" style="font-size:20px;float: right;">云台控制</span>
+                        <div class="societyjiankong" style="clear: both;">
+                            <video id="p-video" class="video-js" autoplay="autoplay" controls preload="auto"
+                                style="height: 500px;width: 1000px;">
+                            </video>
+                            <!-- <img src="./static/video/video.jpg" /> -->
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="nmfshow" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>农民建房监测</h1>
+                        <div class="two-text" id="nf_video_name" style="float:left;">当前视频来源--XX监控</div>
+                        <span id="ytkz" style="font-size:20px;float: right;">云台控制</span>
+                        <div class="societyjiankong" style="clear: both;">
+                            <video id="nj-video" class="video-js" autoplay="autoplay" controls preload="auto"
+                                style="height: 500px;width: 1000px;">
+                            </video>
+                            <!-- <img src="./static/video/video.jpg" /> -->
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div class="left_cage">
+                    <!--农民建房监测-->
+                    <div class="dataAllBorder01 cage_cl" style="padding: 0 15px;">
+                        <div style="overflow: hidden;">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">农民建房监测</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <!--<div class="video_around video_around_chose btn1" style="width: 100%;height: 300px;">-->
+                            <div class="video_around video_around_chose btn2" style="width: 100%;height: 300px;" onclick="nj(1)">
+                                <div class="video_around2" style="font-size: 18px;">视频来源——农民建房监测点1</div>
+                                <!-- <img class="video_around1" src="video/./static/video/video3.jpg"> -->
+                                <video id="nfvideo1" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%; width: 100%;">
+                                </video>
+                            </div>
+                            <!--<div class="video_around video_around_chose btn1" style="width: 100%;height: 300px;">-->
+                            <div class="video_around video_around_chose btn2" style="width: 100%;height: 300px;" onclick="nj(2)">
+                                <div class="video_around2" style="font-size: 18px;">视频来源——农民建房监测点2</div>
+                                <!-- <img class="video_around1" src="video/./static/video/video3.jpg"> -->
+                                <video id="nfvideo2" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%; width: 100%;">
+                                </video>
+                            </div>
+                            <!--<div class="video_around video_around_chose btn1" style="width: 100%;height: 300px;">-->
+                            <div class="video_around video_around_chose btn2" style="width: 100%;height: 300px;" onclick="nj(3)">
+                                <div class="video_around2" style="font-size: 18px;">视频来源——农民建房监测点3</div>
+                                <!-- <img class="video_around1" src="video/./static/video/video3.jpg"> -->
+                                <video id="nfvideo3" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%; width: 100%;">
+                                </video>
+                            </div>
+                        </div>
+
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+                <div class="left_cage">
+                    <!--五水共治-->
+                    <div class="dataAllBorder01 cage_cl" style="padding: 0 15px;">
+                        <div class="video_cage" style="overflow: hidden;">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">五水共治</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                </span>
+                                <span class="gd btn8">查看更多</span>
+                            </div>
+                            <div class="video_around video_around_chose btn3" style="width: 100%;height: 250px;"
+                                id="ws_ws">
+                                <div class="video_around2" style="display: block;font-size: 18px;">
+                                    <span style="float: left;">五水共治-污水监控</span>
+                                    <span id="wsgz_ws" style="float: right;">更多</span>
+                                </div>
+                                <video id="wsvideo1" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%; width: 100%;">
+                                </video>
+                            </div>
+                            <!-- <div class="video_around video_around_chose btn3" style="width: 100%;height: 250px;"
+                                id="ws_fhs">
+                                <div class="video_around2" style="display: block;">
+                                    <span style="float: left;">五水共治-防洪水监控</span>
+                                    <span id="wsgz_fhs" style="float: right;">更多</span>
+                                </div>
+                                <video id="wsvideo2" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%; width: 100%;">
+                                </video>
+                            </div>
+                            <div class="video_around video_around_chose btn3" style="width: 100%;height: 250px;"
+                                id="ws_pls">
+                                <div class="video_around2" style="display: block;">
+                                    <span style="float: left;">五水共治-排涝水监控</span>
+                                    <span id="wsgz_pls" style="float: right;">更多</span>
+                                </div>
+                                <video id="wsvideo3" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%; width: 100%;">
+                                </video>
+                            </div>
+                            <div class="video_around video_around_chose btn3" style="width: 100%;height: 250px;"
+                                id="ws_bgs">
+                                <div class="video_around2" style="display: block;">
+                                    <span style="float: left;">五水共治-保供水监控</span>
+                                    <span id="wsgz_bgs" style="float: right;">更多</span>
+                                </div>
+                                <video id="wsvideo4" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%; width: 100%;">
+                                </video>
+                            </div>
+                            <div class="video_around video_around_chose btn3" style="width: 100%;height: 250px;"
+                                id="ws_zjs">
+                                <div class="video_around2" style="display: block;">
+                                    <span style="float: left;">五水共治-抓节水监控</span>
+                                    <span id="wsgz_zjs" style="float: right;">更多</span>
+                                </div>
+                                <video id="wsvideo5" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%; width: 100%;">
+                                </video>
+                            </div> -->
+                            <div class="xiaobiaoti"><span>
+                                    <!--河流水域情况--></span></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+                <div id="item3" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>农民建房监测</h1>
+                        <div class="two-text">当前视频来源--农民建房监测点</div>
+                        <div class="societyjiankong"><img src="./static/video/video.jpg" /></div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item1" class="item item--mod">
+                    <div class="table-wrapper">
+                        <h1>农民建房监测</h1>
+                        <div class="societyxuanzhe btn2">
+                            <div class="jiankongtext">当前视频来源--农民建房监测点</div>
+                            <img src="./static/video/video.jpg" />
+                        </div>
+                        <div class="societyxuanzhe btn2">
+                            <div class="jiankongtext">当前视频来源--农民建房监测点</div>
+                            <img src="./static/video/video.jpg" />
+                        </div>
+                        <div class="societyxuanzhe btn2">
+                            <div class="jiankongtext">当前视频来源--农民建房监测点</div>
+                            <img src="./static/video/video.jpg" />
+                        </div>
+                        <div class="societyxuanzhe btn2">
+                            <div class="jiankongtext">当前视频来源--农民建房监测点</div>
+                            <img src="./static/video/video.jpg" />
+                        </div>
+                        <div class="societyxuanzhe btn2">
+                            <div class="jiankongtext">当前视频来源--农民建房监测点</div>
+                            <img src="./static/video/video.jpg" />
+                        </div>
+                        <div class="societyxuanzhe btn2">
+                            <div class="jiankongtext">当前视频来源--农民建房监测点</div>
+                            <img src="./static/video/video.jpg" />
+                        </div>
+                        <div class="societyxuanzhe btn2">
+                            <div class="jiankongtext">当前视频来源--农民建房监测点</div>
+                            <img src="./static/video/video.jpg" />
+                        </div>
+                        <div class="societyxuanzhe btn2">
+                            <div class="jiankongtext">当前视频来源--农民建房监测点</div>
+                            <img src="./static/video/video.jpg" />
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item2" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>农民建房监测</h1>
+                        <div class="two-text">当前视频来源--农民建房监测点</div>
+                        <div class="societyjiankong"><img src="./static/video/video.jpg" /></div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+
+                <!--全域地图-->
+                <div class="map" id="map">
+                </div>
+
+                <div id="slfhshow" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>森林防火</h1>
+                        <div class="two-text" id="sl_video_name" style="float:left;">当前视频来源--XX监控</div>
+                        <span id="ytkz" style="font-size:20px;float: right;">云台控制</span>
+                        <div class="societyjiankong" style="clear: both;">
+                            <video id="sl-video" class="video-js" autoplay="autoplay" controls preload="auto"
+                                style="height: 500px;width: 1000px;">
+                            </video>
+                            <!-- <img src="./static/video/video.jpg" /> -->
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div class="right_cage">
+                    <!--森林防火-->
+                    <div class="dataAllBorder01 cage_cl" style="height: auto;">
+                        <div class="dataAllBorder02" id="cage_cl" style="height:100%;">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">森林防火</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div class="video_around video_around_chose" style="float: none;" onclick="sl(1)">
+                                <div class="video_around2" style="font-size: 18px;">视频来源—鹰眼监控</div>
+                                <!-- <img class="video_around1" src="./static/video/video7.jpg"> -->
+                                <video id="slfhvideo1" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="width: 100%;height: 210px;">
+                                </video>
+                            </div>
+                            <div class="video_around video_around_chose" style="float: none;" onclick="sl(2)">
+                                <div class="video_around2" style="font-size: 18px;">视频来源—鹰眼监控</div>
+                                <!-- <img class="video_around1" src="./static/video/video5.png"> -->
+                                <video id="slfhvideo2" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="width: 100%; height: 210px;">
+                                </video>
+                            </div>
+                            <div class="xiaobiaoti"><span>
+                                    <!--对接农林局森林防火--></span></div>
+                            <div class="depart_number_box" id="bome2"
+                                style="height: 330px;margin:0 15px;margin-bottom:15px;display:none;"></div>
+                            <div id="container_huan" style="height: 200.000006px;margin:0 15px;display:none;"></div>
+
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    
+                    <!-- 大气防治 -->
+                    <div class="dataAllBorder01 cage_cl" style="height: auto;margin-top:2%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">大气防治</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <p class="data_chart03" id="daqi_fangzhi" style="height:300px;"></p>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="right_cage">
+                    <!--卫生点管理-->
+                    <div class="dataAllBorder01 cage_cl" style="height: auto;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">卫生点管理</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                </span>
+                                <a href="http://datav.aliyuncs.com/share/73106c1ce729343b7d99542e9d0cb52c"><span
+                                        class="gd btnwsgd">更多</span></a>
+                            </div>
+                            <div class="minbing" style="margin: 0;">
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>河桥村</span></div>
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>金燕村</span></div>
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>罗山村</span></div>
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>泥骆村</span></div>
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>蒲村村</span></div>
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>七都村</span></div>
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>秀溪村</span></div>
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>学川村</span></div>
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>云浪村</span></div>
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>中鑫村</span></div>
+                                <div class="cun btn15" style="width: 110px;font-size: 20px;"><span>聚秀村</span></div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--地质灾害点-->
+                    <div class="dataAllBorder01 cage_cl" style="height: 360px;margin-top:2%;">
+                        <div class="dataAllBorder02" id="cage_cl" style="height:100%;">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">灾害点</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div class="xiaobiaoti"><span>
+                                    <!--灾害点地图坐标--></span></div>
+                            <div class="wrap wrap_zaihai">
+                                <ul id="ul_zaihai" class="zhihuiguofang" style="margin: 0;"></ul>
+                            </div>
+                            <!--<div class="xiaobiaoti" style="margin-top:15px;"><span>各村地质灾害点地图坐标</span></div>
+                            <div class="minbing">
+                                <div class="cun"><span class="btn6">河桥村</span></div>
+                                <div class="cun"><span class="btn6">金燕村</span></div>
+                                <div class="cun"><span class="btn6">罗山村</span></div>
+                                <div class="cun"><span class="btn6">泥骆村</span></div>
+                                <div class="cun"><span class="btn6">蒲村</span></div>
+                                <div class="cun"><span class="btn6">七都村</span></div>
+                                <div class="cun"><span class="btn6">秀溪村</span></div>
+                                <div class="cun"><span class="btn6">学川村</span></div>
+                                <div class="cun"><span class="btn6">云浪村</span></div>
+                                <div class="cun"><span class="btn6">中鑫村</span></div>
+                                <div class="cun"><span class="btn6">朱秀村</span></div>
+                            </div>-->
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <div id="item4" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;">
+                            <h1>农民建房监测</h1>
+                            <div class="environmentalleft">
+                                <div class="two-text">危房信息</div>
+                                <div class="environmentalcun btn5">河桥村</div>
+                                <div class="environmentalcun btn5">金燕村</div>
+                                <div class="environmentalcun btn5">罗山村</div>
+                                <div class="environmentalcun btn5">泥骆村</div>
+                                <div class="environmentalcun btn5">浦村</div>
+                                <div class="environmentalcun btn5">七都村</div>
+                                <div class="environmentalcun btn5">秀溪村</div>
+                                <div class="environmentalcun btn5">学川村</div>
+                                <div class="environmentalcun btn5">云浪村</div>
+                                <div class="environmentalcun btn5">中鑫村</div>
+                                <div class="environmentalcun btn5">聚秀村</div>
+                            </div>
+                            <div class="environmentalright">
+                                <div class="two-text">其他灾害点</div>
+                                <div class="environmentalcun btn6">河桥村</div>
+                                <div class="environmentalcun btn6">金燕村</div>
+                                <div class="environmentalcun btn6">罗山村</div>
+                                <div class="environmentalcun btn6">泥骆村</div>
+                                <div class="environmentalcun btn6">浦村</div>
+                                <div class="environmentalcun btn6">七都村</div>
+                                <div class="environmentalcun btn6">秀溪村</div>
+                                <div class="environmentalcun btn6">学川村</div>
+                                <div class="environmentalcun btn6">云浪村</div>
+                                <div class="environmentalcun btn6">中鑫村</div>
+                                <div class="environmentalcun btn6">聚秀村</div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="item5" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;">
+                            <h1>危房信息</h1>
+                            <div class="two-text">XX村</div>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr>
+                                        <th>姓名</th>
+                                        <th>位置</th>
+                                        <th>联系电话</th>
+                                        <th>负责人（网格员）</th>
+                                        <th>负责人电话</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="item16" class="item">
+                        <div class="login-box">
+                            <h2>用户登录</h2>
+                            <form>
+                                <div class="user-box">
+                                    <input type="text" id="username" required="">
+                                    <label>输入用户名</label>
+                                </div>
+                                <div class="user-box">
+                                    <input type="password" id="password" required="">
+                                    <label>输入密码</label>
+                                </div>
+                                <!--<a href="#">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    确定登录
+                                </a>-->
+                                <input type="button" value="确定登录" id="sendTo"
+                                    style="background: transparent;border-width:0px;color:white">
+                            </form>
+                        </div>
+                    </div>
+                    <div id="item6" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;">
+                            <h1>其他灾害点</h1>
+                            <div class="two-text">XX村</div>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr>
+                                        <th>姓名</th>
+                                        <th>位置</th>
+                                        <th>状态</th>
+                                        <th>负责人（网格员）</th>
+                                        <th>负责人电话</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                        <td>Content</td>
+                                    </tr>
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                </div>
+                <!--灾害点地图-->
+                <div id="item4map" class="item item--mod" style="width:80%;max-width:1350px;">
+                    <div class="table-wrapper" style="height:80%;">
+                        <h1>灾害地图点位</h1>
+                        <div id="showvideo" onclick="zhdVideo(window.clickindex)"
+                            style="font-size: 20px;line-height: 2;font-weight: bold;cursor: pointer;display: inline-block;">
+                            查看监控</div>
+                        <div style="height:650.000006px;" id="map_zaihai"></div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+            </div>
+            <div id="zhdjk" class="item item--mod" style="width:40%;">
+                <div class="table-wrapper" style="height:80%;">
+                    <h1 style="text-align: center;">灾害点监控</h1>
+                    <div style="height:550px;text-align: center;" id="zhdvideolist">
+                    </div>
+
+
+                </div>
+                <b class="item-close js-popup-close">x</b>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="js/jquery.js"></script>-->
+    <script src="js/jquery.limarquee.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.leoTextAnimate.js"></script>
+    <script src="js/jquery.popup.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!--<script src="js/index.js"></script>-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback">
+    </script>
+    <script>
+        $(function () {
+
+        });
+    </script>
+    <!-- 定义echarts图表动画 -->
+    <script>
+        function chartAnimation(option, myChart, t) {
+            var isSet = true // 为了做判断：当鼠标移动上去的时候，自动高亮就被取消
+            var charPie3currentIndex = 0
+            // 2、鼠标移动上去的时候的高亮动画
+            myChart.on('mouseover', function (param) {
+                isSet = false
+                clearInterval(startCharts)
+                // 取消之前高亮的图形
+                myChart.dispatchAction({
+                    type: 'downplay',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+                // 高亮当前图形
+                myChart.dispatchAction({
+                    type: 'highlight',
+                    seriesIndex: 0,
+                    dataIndex: param.dataIndex
+                })
+                // 显示 tooltip
+                myChart.dispatchAction({
+                    type: 'showTip',
+                    seriesIndex: 0,
+                    dataIndex: param.dataIndex
+                })
+            })
+            // 3、自动高亮展示
+            var chartHover = function () {
+                // var $obj=$this;
+                var dataLen = option.series[0].data.length;
+                //console.log(123)
+                //console.log(dataLen)
+                // console.log($obj)
+                // console.log($obj.series[0])
+                // console.log($obj.series[0].data)
+                // 取消之前高亮的图形
+                myChart.dispatchAction({
+                    type: 'downplay',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+                charPie3currentIndex = (charPie3currentIndex + 1) % dataLen
+                // 高亮当前图形
+                myChart.dispatchAction({
+                    type: 'highlight',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+                // 显示 tooltip
+                myChart.dispatchAction({
+                    type: 'showTip',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+            }
+            // chartHover(option)
+            var startCharts = setInterval(chartHover, t)
+            // 4、鼠标移出之后，恢复自动高亮
+            myChart.on('mouseout', function (param) {
+                if (!isSet) {
+                    startCharts = setInterval(chartHover, t)
+                    isSet = true
+                }
+            })
+        }
+    </script>
+    <script>
+        var baseUrl = window.sessionStorage.getItem("path");
+    </script>
+
+    <script>
+        $(function () {
+            window.cameraIndex="";
+            window.plist = [];
+            window.zhdvideos = [];
+            window.clickindex = 0;
+            var slvs=[];
+            var nmjf=[];
+        });
+        //  var map = new BMap.Map("map", {
+        //      mapType: BMAP_HYBRID_MAP
+        //  }); // 创建Map实例
+        //  map.centerAndZoom(new BMap.Point(119.247261, 30.109483), 16); // 初始化地图,设置中心点坐标和地图级别
+
+        //  var mapStyle = {
+        //      style: "light"
+        //  };
+        //  map.setMapStyle(mapStyle);
+        //  //map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        //  map.enableScrollWheelZoom(true);
+    </script>
+    <script>
+        var pv_player = videojs('p-video');
+        var sl_video=videojs('sl-video');
+        var nj_video=videojs('nj-video');
+
+        function zhdVideo(e) {
+            $("#zhdvideolist").html('');
+            console.log(e);
+            let varr = [];
+            if (e == 0) {
+                varr = window.zhdvideos.filter(x => x.shebeiAddress == "河桥镇-河桥村云月山庄旁");
+                //varr=window.zhdvideos.find(x=>x.shebeiAddress=="河桥镇-河桥村云月山庄旁");
+            }
+            if (e == 1) {
+                varr = window.zhdvideos.filter(x => x.shebeiAddress == "河桥镇-金燕村方家桥");
+            }
+            if (e == 2) {
+                varr = window.zhdvideos.filter(x => x.shebeiAddress == "河桥镇-七都村寺坞83号");
+            }
+            if (e == 3) {
+                varr = window.zhdvideos.filter(x => x.shebeiAddress == "蒲村-童婵斌住宅旁");
+            }
+            console.log(varr);
+            for (let i = 0; i < varr.length; i++) {
+                if (i == 0) {
+                    $.ajax({
+                        url: 'http://112.17.130.233:44444/api/video/VideoUrl?indexcode=' + varr[i].xlShebeiId,
+                        method: 'get',
+                        success: function (data) {
+                            console.log(66666);
+                            console.log(data);
+                            $("#zhdvideolist").append(
+                                '<div class="societyxuanzhe btn2" style="width:60%;float:none; margin:0 auto;height:470px;"><div  class="jiankongtext">当前视频来源--' +
+                                varr[i].shebeiAddress +
+                                '</div><div onclick="bbclick(this)" class="ytkz2" id="' + varr[i]
+                                .xlShebeiId + '">云台控制</div><div><video id="ved' + e + 'zhplay' + i +
+                                '" class="video-js" autoplay="autoplay" controls preload="auto" style="width:100%;height:470px; margin:0 auto"> <source src="' +
+                                data.vdata.data.url +
+                                '" type="application/x-mpegURL" /></video></div></div>');
+                            let id = "ved" + e + "zhplay" + i;
+                            console.log(id);
+
+                            let player = videojs(id);
+                            window.plist.push(player);
+                            player.play();
+                        },
+                        error: function (err) {
+                            console.log(err);
+
+                        }
+                    })
+                }
+
+            }
+
+            $('#zhdjk').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0')
+                    // for(let i=0;i<window.plist.length;i++){
+                    //     window.plist[i].pause();
+                    // }
+                    // pv_player.pause();
+                    // pv_player.src([]);
+                },
+                onPopupInit: function e() {
+                    console.log('1')
+
+                }
+            });
+        }
+    </script>
+
+    <script>
+        var pv_player = videojs('p-video');
+        window.cameraIndex = "";
+        window.clicktype = "全部";
+        var wsgzVL = [];
+        var signWSGZVL = [];
+        $.ajax({
+            url: baseUrl + 'api/v1/Video/Video/WSGZSignVideo',
+            method: 'get',
+            success: function (data) {
+                console.log(321);
+                console.log(data);
+                signWSGZVL = data.data;
+                if (data.data.query1 != null) {
+                    let player1 = videojs("wsvideo1");
+                    getVUrl3(data.data.query1.xlShebeiId, player1);
+                }
+                if (data.data.query2 != null) {
+                    let player2 = videojs("wsvideo2");
+                    getVUrl3(data.data.query2.xlShebeiId, player2);
+                }
+                if (data.data.query3 != null) {
+                    let player3 = videojs("wsvideo3");
+                    getVUrl3(data.data.query3.xlShebeiId, player3);
+                }
+                if (data.data.query4 != null) {
+                    let player4 = videojs("wsvideo4");
+                    getVUrl3(data.data.query4.xlShebeiId, player4);
+                }
+                if (data.data.query5 != null) {
+                    let player5 = videojs("wsvideo5");
+                    getVUrl3(data.data.query5.xlShebeiId, player5);
+                }
+
+
+            }
+        });
+
+        $.ajax({
+            url: baseUrl + 'api/v1/Video/Video/WSGZAllVideo',
+            method: 'get',
+            success: function (data) {
+                console.log(356);
+                console.log(data);
+                wsgzVL = data.data;
+                toCycle("全部");
+            }
+        });
+
+        function toSelect(e) {
+            console.log("$$$$$$$$$");
+            console.log(e);
+            let ty = e[0];
+            if (ty != window.clicktype) {
+                window.clicktype = ty;
+                console.log(ty);
+                window.page = 1;
+                $(".videoesBox").html('');
+                toCycle(ty.toString().trim());
+            }
+        }
+
+        function showVideo3(e) {
+            pv_player.src([]);
+            console.log(456);
+            console.log(e);
+            //console.log(e.target.getExtData());
+            let index = wsgzVL.findIndex(x => x.xlShebeiId == e);
+            console.log(index);
+            if (index != -1) {
+                console.log(wsgzVL[index].xlShebeiId);
+                window.cameraIndex = wsgzVL[index].xlShebeiId;
+                getVUrl3(wsgzVL[index].xlShebeiId, pv_player);
+                $("#video_name").text("当前视频来源--" + wsgzVL[index].shebeiAddress);
+                $('#wsVideo').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        console.log('0')
+                        pv_player.pause();
+                        pv_player.src([]);
+                    },
+                    onPopupInit: function e() {
+                        console.log('1')
+
+                    }
+                });
+            }
+
+        }
+
+        function aaclick(e) {
+            console.log(e);
+            showVideo3(e)
+        }
+
+        function toCycle(type) {
+
+            let vl = [];
+            console.log("toCYcle:" + type)
+            if (type != "全部") {
+                //条件筛选
+                vl = wsgzVL.filter(x => x.xlShebeiType == type);
+            } else {
+                vl = wsgzVL;
+            }
+
+            $(".videoesBox").html('');
+            $("#xlgc_num").html(vl.length);
+            for (let i = 0; i < vl.length; i++) {
+                if (vl[i].shebeiType == "在线") {
+                    $(".videoesBox").append(
+                        '<div class="societyxuanzhe snowBtn" style="border-radius:4px;width:31%;margin:10px 1%;box-shadow:0 0 10px rgba(0,0,0,0.2);padding:10px;"><div style="float:left;height:auto;cursor: pointer;" class="jiankongtext" onclick="aaclick(\'' +
+                        vl[i]
+                        .xlShebeiId + '\')" >' +
+                        vl[i].shebeiAddress +
+                        '</div><div style="float:right;cursor: pointer;" onclick="bbclick(this)" class="ytkz2" id="' +
+                        vl[i]
+                        .xlShebeiId + '">云台控制</div></div>');
+                } else {
+                    $(".videoesBox").append(
+                        '<div class="societyxuanzhe snowBtn" style="border-radius:4px;width:31%;margin:10px 1%;box-shadow:0 0 10px rgba(0,0,0,0.2);padding:10px;background-color: #ccc;"><div style="float:left;height:auto;cursor: pointer;" class="jiankongtext" >' +
+                        vl[i].shebeiAddress +
+                        '</div><div style="float:right;cursor: pointer;" onclick="bbclick(this)" class="ytkz2" id="' +
+                        vl[i]
+                        .xlShebeiId + '">云台控制</div></div>');
+                }
+            }
+
+        }
+
+
+
+
+        function getVUrl3(deviceSerial, player) {
+            $.ajax({
+                url: 'http://112.17.130.233:44444/api/EzvizVideo/GetVideoUrl?deviceSerial=' + deviceSerial,
+                method: 'get',
+                success: function (data) {
+                    console.log(323);
+                    console.log(data);
+
+                    player.src([{
+                        type: "application/x-mpegURL",
+                        src: data.video.liveAddress
+                    }]);
+                    player.play();
+                },
+                error: function (err) {
+                    console.log(err);
+
+                }
+            });
+
+        }
+    </script>
+    <script>
+        $('#ws_ws').on('click', function () {
+            $('#wsVideo').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0')
+                    pv_player.pause();
+                    pv_player.src([]);
+                },
+                onPopupInit: function e() {
+                    console.log('1')
+                    if (signWSGZVL.query1 != null) {
+                        window.cameraIndex = signWSGZVL.query1.xlShebeiId;
+                        getVUrl3(window.cameraIndex, pv_player);
+                    }
+
+                }
+            });
+            $("#video_name").text("当前视频来源--" + signWSGZVL.query1.shebeiAddress);
+        });
+
+        $('#ws_fhs').on('click', function () {
+            $('#wsVideo').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0')
+                    pv_player.pause();
+                    pv_player.src([]);
+                },
+                onPopupInit: function e() {
+                    console.log('1')
+                    if (signWSGZVL.query1 != null) {
+                        window.cameraIndex = signWSGZVL.query2.xlShebeiId;
+                        getVUrl3(window.cameraIndex, pv_player);
+                    }
+
+                }
+            });
+            $("#video_name").text("当前视频来源--" + signWSGZVL.query2.shebeiAddress);
+        });
+
+        $('#ws_pls').on('click', function () {
+            $('#wsVideo').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0')
+                    pv_player.pause();
+                    pv_player.src([]);
+                },
+                onPopupInit: function e() {
+                    console.log('1')
+                    if (signWSGZVL.query1 != null) {
+                        window.cameraIndex = signWSGZVL.query3.xlShebeiId;
+                        getVUrl3(window.cameraIndex, pv_player);
+                    }
+
+                }
+            });
+            $("#video_name").text("当前视频来源--" + signWSGZVL.query3.shebeiAddress);
+        });
+
+        $('#ws_bgs').on('click', function () {
+            $('#wsVideo').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0')
+                    pv_player.pause();
+                    pv_player.src([]);
+                },
+                onPopupInit: function e() {
+                    console.log('1')
+                    if (signWSGZVL.query1 != null) {
+                        window.cameraIndex = signWSGZVL.query4.xlShebeiId;
+                        getVUrl3(window.cameraIndex, pv_player);
+                    }
+
+                }
+            });
+            $("#video_name").text("当前视频来源--" + signWSGZVL.query4.shebeiAddress);
+        });
+
+        $('#ws_zjs').on('click', function () {
+            $('#wsVideo').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0')
+                    pv_player.pause();
+                    pv_player.src([]);
+                },
+                onPopupInit: function e() {
+                    console.log('1')
+                    if (signWSGZVL.query1 != null) {
+                        window.cameraIndex = signWSGZVL.query5.xlShebeiId;
+                        getVUrl3(window.cameraIndex, pv_player);
+                    }
+
+                }
+            });
+            $("#video_name").text("当前视频来源--" + signWSGZVL.query4.shebeiAddress);
+        });
+
+
+        $('#wsgz_ws').on('click', function (event) {
+            event.stopPropagation();
+            $('#item8map').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function () {
+                    console.log('0');
+                    $(".videoBox").html('');
+                },
+                onPopupInit: function () {
+                    console.log('1');
+
+                }
+            });
+            window.page = 1;
+            // $('.vtype').css("background-color", "rgba(50,73,96,1)");
+            // $('#vtype2').css("background-color", "rgba(79,195,161,1)");
+            $(".videoesBox").html('');
+            let select = $("#typeselect").data('select');
+            select.val(["五水共治污水监控"]);
+            toCycle("五水共治污水监控");
+        });
+        $('#wsgz_fhs').on('click', function (event) {
+            event.stopPropagation();
+            $('#item8map').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function () {
+                    console.log('0');
+                    $(".videoBox").html('');
+                },
+                onPopupInit: function () {
+                    console.log('1');
+
+                }
+            });
+            window.page = 1;
+            // $('.vtype').css("background-color", "rgba(50,73,96,1)");
+            // $('#vtype2').css("background-color", "rgba(79,195,161,1)");
+            $(".videoesBox").html('');
+            let select = $("#typeselect").data('select');
+            select.val(["五水共治防洪水监控"]);
+            toCycle("五水共治防洪水监控");
+        });
+
+        $('#wsgz_pls').on('click', function (event) {
+            event.stopPropagation();
+            $('#item8map').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function () {
+                    console.log('0');
+                    $(".videoBox").html('');
+                },
+                onPopupInit: function () {
+                    console.log('1');
+
+                }
+            });
+            window.page = 1;
+            // $('.vtype').css("background-color", "rgba(50,73,96,1)");
+            // $('#vtype2').css("background-color", "rgba(79,195,161,1)");
+            $(".videoesBox").html('');
+            let select = $("#typeselect").data('select');
+            select.val(["五水共治排涝水监控"]);
+            toCycle("五水共治排涝水监控");
+        });
+        $('#wsgz_bgs').on('click', function (event) {
+            event.stopPropagation();
+            $('#item8map').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function () {
+                    console.log('0');
+                    $(".videoBox").html('');
+                },
+                onPopupInit: function () {
+                    console.log('1');
+
+                }
+            });
+            window.page = 1;
+            // $('.vtype').css("background-color", "rgba(50,73,96,1)");
+            // $('#vtype2').css("background-color", "rgba(79,195,161,1)");
+            $(".videoesBox").html('');
+            let select = $("#typeselect").data('select');
+            select.val(["五水共治保供水监控"]);
+            toCycle("五水共治保供水监控");
+        });
+
+        $('#wsgz_zjs').on('click', function (event) {
+            event.stopPropagation();
+            $('#item8map').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function () {
+                    console.log('0');
+                    $(".videoBox").html('');
+                },
+                onPopupInit: function () {
+                    console.log('1');
+
+                }
+            });
+            window.page = 1;
+            // $('.vtype').css("background-color", "rgba(50,73,96,1)");
+            // $('#vtype2').css("background-color", "rgba(79,195,161,1)");
+            $(".videoesBox").html('');
+            let select = $("#typeselect").data('select');
+            select.val(["五水共治抓节水监控"]);
+            toCycle("五水共治抓节水监控");
+        });
+        $('#ytkz').on('click', function () {
+            console.log("cccccccc");
+            console.log(window.cameraIndex);
+            window.location.href = "/PTZControl2.html?cid=" + window.cameraIndex;
+            // window.open("../liumengdie/PTZControl.html","_blank");
+        });
+    </script>
+
+    <script>
+        // var vlist = [];
+        // var player3 = videojs("wsvideo3");
+        // $.ajax({
+        //     url: 'http://112.17.130.233:4474/api/v1/Video/Video/WSGZVideo2',
+        //     method: 'get',
+        //     success: function (data) {
+        //         console.log(11111);
+        //         console.log(data);
+        //         vlist = data.data;
+        //         //window.list = vlist;
+
+
+        //         if (vlist.length > 1) {
+        //             console.log('111111')
+        //             // console.log(window.vp1);
+        //             let player1 = videojs("wsvideo1");
+        //             getVUrl(vlist[0].xlShebeiId, player1);
+        //         }
+        //         if (vlist.length > 2) {
+        //             // console.log(window.vp2);
+        //             let player2 = videojs("wsvideo2");
+
+        //             getVUrl(vlist[1].xlShebeiId, player2);
+        //         }
+        //         if (vlist.length > 3) {
+        //             // console.log(window.vp3);
+        //             player3 = videojs("wsvideo3");
+        //             getVUrl(vlist[2].xlShebeiId, player3);
+        //         }
+        //         // window.page = 1;
+        //         // toCycle();
+        //     },
+        //     error: function (data) {
+        //         console.log("监控数据请求失败")
+        //         console.log(data);
+        //     }
+        // });
+
+        // $.ajax({
+        //     url: baseUrl + 'api/v1/Video/Video/WSGZVideo',
+        //     method: 'get',
+        //     success: function (data) {
+        //         console.log(2222222);
+        //         console.log(data);
+        //         let vlist2 = data.data;
+        //         //window.list = vlist;
+
+
+        //         // if (vlist.length > 1) {
+        //         //     console.log('111111')
+        //         //     // console.log(window.vp1);
+        //         //     let player1 = videojs("wsvideo1");
+        //         //     getVUrl(vlist[0].xlShebeiId, player1);
+        //         // }
+        //         // if (vlist.length > 2) {
+        //         //     // console.log(window.vp2);
+        //         //     let player2 = videojs("wsvideo2");
+
+        //         //     getVUrl(vlist[1].xlShebeiId, player2);
+        //         // }
+        //         if (vlist.length > 1) {
+        //             // console.log(window.vp3);
+        //             player3 = videojs("wsvideo3");
+        //             getVUrl2(vlist2[2].xlShebeiId, player3);
+        //         }
+        //         // window.page = 1;
+        //         // toCycle();
+        //     },
+        //     error: function (data) {
+        //         console.log("监控数据请求失败")
+        //         console.log(data);
+        //     }
+        // });
+
+        //农民建房
+        $.ajax({
+            url: 'http://112.17.130.233:4474/api/v1/Video/Video/NMJFVideo2',
+            method: 'get',
+            success: function (data) {
+                console.log(2222222);
+                console.log(data);
+                let vlist2 = data.data;
+                //window.list = vlist;
+                nmjf=[];
+                nmjf.push(vlist2[0]);
+                nmjf.push(vlist2[2]);
+                nmjf.push(vlist2[6]);
+
+
+                if (vlist2.length > 1) {
+                    console.log('111111')
+                    // console.log(window.vp1);
+                    let nfplayer1 = videojs("nfvideo1");
+                    getVUrl(vlist2[0].xlShebeiId, nfplayer1);
+
+                }
+                if (vlist2.length > 3) {
+                    // console.log(window.vp2);
+                    let nfplayer2 = videojs("nfvideo2");
+
+                    getVUrl(vlist2[2].xlShebeiId, nfplayer2);
+                }
+                if (vlist2.length > 7) {
+                    // console.log(window.vp3);
+                    let nfplayer3 = videojs("nfvideo3");
+                    getVUrl(vlist2[6].xlShebeiId, nfplayer3);
+                }
+                // window.page = 1;
+                // toCycle();
+            },
+            error: function (data) {
+                console.log("监控数据请求失败")
+                console.log(data);
+            }
+        });
+
+        //森林防火
+        $.ajax({
+            url: baseUrl+'api/v1/Video/Video/SLFHAllVideo',
+            //url: 'http://localhost:54321/api/value/api/v1/Video/Video/SLFHAllVideo',
+            method: 'get',
+            success: function (data) {
+                console.log(9584);
+                console.log(data);
+                let slvlist = data.data;
+                //window.list = vlist;
+                slvs=slvlist;
+
+
+                if (slvlist.length >= 1) {
+                    console.log('8975')
+                    console.log(slvlist[0].xlShebeiId)
+                    // console.log(window.vp1);
+                    let slplayer1 = videojs("slfhvideo1");
+                    getVUrl2(slvlist[0].xlShebeiId, slplayer1);
+
+                }
+                if (slvlist.length >= 2) {
+                    // console.log(window.vp2);
+                    console.log('8976')
+                    console.log(slvlist[1].xlShebeiId)
+                    let slplayer2 = videojs("slfhvideo2");
+
+                    getVUrl2(slvlist[1].xlShebeiId, slplayer2);
+                }
+                
+                // window.page = 1;
+                // toCycle();
+            },
+            error: function (data) {
+                console.log("监控数据请求失败")
+                console.log(data);
+            }
+        });
+
+        //灾害点监控
+
+        $.ajax({
+            url: 'http://112.17.130.233:4474/api/v1/Video/Video/ZHDVideo2',
+            method: 'get',
+            success: function (data) {
+                console.log(3333333);
+                console.log(data);
+                window.zhdvideos = data.data;
+                //window.list = vlist;
+
+            },
+            error: function (data) {
+                console.log("监控数据请求失败")
+                console.log(data);
+            }
+        });
+
+
+
+        function getVUrl(indexcode, player) {
+
+            $.ajax({
+                url: 'http://112.17.130.233:44444/api/video/VideoUrl?indexcode=' + indexcode,
+                method: 'get',
+                success: function (data) {
+                    console.log(88333322);
+                    console.log(data);
+
+                    player.src([{
+                        type: "application/x-mpegURL",
+                        src: data.vdata.data.url
+                    }]);
+                    player.play();
+                },
+                error: function (err) {
+                    console.log(err);
+
+                }
+            });
+        }
+
+        function getVUrl2(indexcode, player) {
+            $.ajax({
+                url: 'http://172.18.19.212:44444/api/skvideo/VideoUrl?indexcode=' + indexcode,
+                method: 'get',
+                success: function (data) {
+                    console.log(88333322);
+                    console.log(data);
+
+                    player.src([{
+                        type: "application/x-mpegURL",
+                        src: data.vdata.data.url
+                    }]);
+                    player.play();
+                },
+                error: function (err) {
+                    console.log(err);
+
+                }
+            });
+        }
+    </script>
+    <script>
+        $('.btn1').on('click', function () {
+            $('#item1').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        function nj(item) {
+            if (item === 1) {
+                $('#nmfshow').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        console.log('0')
+                        nj_video.pause();
+                        nj_video.src([]);
+                    },
+                    onPopupInit: function e() {
+                        console.log('1')
+
+                    }
+                });
+                if (nmjf[0] != null) {
+                    console.log('vp1')
+                    console.log(nmjf[0].xlShebeiId)
+                    //window.cameraIndex = nmjf[0].xlShebeiId;
+                    getVUrl(nmjf[0].xlShebeiId, nj_video);
+                }
+                $("#sl_video_name").text("当前视频来源--" + nmjf[0].shebeiAddress);
+            }else if(item===2){
+                $('#nmfshow').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        console.log('0')
+                        nj_video.pause();
+                        nj_video.src([]);
+                    },
+                    onPopupInit: function e() {
+                        console.log('1')
+
+                    }
+                });
+                if (nmjf[1] != null) {
+                    console.log('vp2')
+                    console.log(nmjf[1].xlShebeiId)
+                    //window.cameraIndex = nmjf[1].xlShebeiId;
+                    getVUrl(nmjf[1].xlShebeiId, nj_video);
+                }
+                $("#sl_video_name").text("当前视频来源--" + nmjf[1].shebeiAddress);
+            }else if(item===3){
+                $('#nmfshow').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        console.log('0')
+                        nj_video.pause();
+                        nj_video.src([]);
+                    },
+                    onPopupInit: function e() {
+                        console.log('1')
+
+                    }
+                });
+                if (nmjf[2] != null) {
+                    console.log('vp3')
+                    console.log(nmjf[2].xlShebeiId)
+                    //window.cameraIndex = nmjf[1].xlShebeiId;
+                    getVUrl(nmjf[2].xlShebeiId, nj_video);
+                }
+                $("#sl_video_name").text("当前视频来源--" + nmjf[2].shebeiAddress);
+            }
+        }
+        function sl(item) {
+            if (item === 1) {
+                $('#slfhshow').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        console.log('0')
+                        sl_video.pause();
+                        sl_video.src([]);
+                    },
+                    onPopupInit: function e() {
+                        console.log('1')
+
+                    }
+                });
+                if (slvs[0] != null) {
+                    console.log('vp1')
+                    console.log(slvs[0].xlShebeiId)
+                    //window.cameraIndex = slvs[0].xlShebeiId;
+                    getVUrl2(slvs[0].xlShebeiId, sl_video);
+                }
+                $("#sl_video_name").text("当前视频来源--" + slvs[0].shebeiAddress);
+            } else if (item === 2) {
+                $('#slfhshow').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        console.log('0')
+                        sl_video.pause();
+                        sl_video.src([]);
+
+                    },
+                    onPopupInit: function e() {
+                        console.log('2')
+
+                    }
+                });
+                if (slvs[1] != null) {
+                    console.log('vp2')
+                    console.log(slvs[1].xlShebeiId)
+                    //window.cameraIndex = slvs[1].xlShebeiId;
+                    getVUrl2(slvs[1].xlShebeiId, sl_video);
+                }
+                $("#sl_video_name").text("当前视频来源--" + slvs[1].shebeiAddress);
+            }
+        }
+    </script>
+    <script>
+        // $('.btn2').on('click', function () {
+        //     $('#item2').popup({
+        //         time: 1000,
+        //         classAnimateShow: 'slideInUp',
+        //         classAnimateHide: 'fadeOut',
+        //         onPopupClose: function e() {
+        //             // console.log('0')
+        //         },
+        //         onPopupInit: function e() {
+        //             // console.log('1')
+        //         }
+        //     });
+        // });
+    </script>
+    <script>
+        // $('.btn3').on('click', function () {
+        //     $('#item3').popup({
+        //         time: 1000,
+        //         classAnimateShow: 'slideInUp',
+        //         classAnimateHide: 'fadeOut',
+        //         onPopupClose: function e() {
+        //             // console.log('0')
+        //         },
+        //         onPopupInit: function e() {
+        //             // console.log('1')
+        //         }
+        //     });
+        // });
+    </script>
+    <!--<script>
+        $('.btn4').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: "http://localhost:54321/api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item4map').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item16').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>-->
+    <script>
+        $('.btn5').on('click', function () {
+            $('#item5').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn6').on('click', function () {
+            $('#item6').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn7').on('click', function () {
+            $('#item7').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn8').on('click', function () {
+            $('#item8map').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+            window.page = 1;
+            $(".videoesBox").html('');
+            let select = $("#typeselect").data('select');
+            select.val(["全部"]);
+            toCycle("全部");
+            //水库分布
+            // $.ajax({
+            //     url: baseUrl + 'api/v1/MapQian/Allmap/allwushuidata',
+            //     type: "get",
+            //     dataType: "json",
+            //     success: function (data) {
+            //         console.log("五水共治")
+            //         console.log(data)
+
+
+            //         var lnglat = new BMap.Point(119.247261, 30.109483);
+
+            //         //判断获取的点位数据是否合法
+            //         if (data.data.length > 0) {
+            //             for (var i = 0; i < data.data.length; i++) {
+            //                 if (data.data[i].lon != "" && data.data[i].lon != null && data.data[i].lat != "" && data.data[i].lat != null) {
+            //                     lnglat = new BMap.Point(data.data[i].lon, data.data[i].lat);
+            //                     break;
+            //                 }
+            //             }
+            //         }
+            //         var map = new BMap.Map("map_shuiku", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+            //         map.centerAndZoom(lnglat, 16);  // 初始化地图,设置中心点和地图级别(坐标为数据库传来的第一个点)
+
+            //         map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+            //         map.enableScrollWheelZoom(true);
+
+            //         for (var i = 0; i < data.data.length; i++) {
+            //             var point = new BMap.Point(data.data[i].lon, data.data[i].lat);
+            //             map.centerAndZoom(point, 0);
+            //             var marker = new BMap.Marker(point);// 创建标注（显示危房地图点位）
+
+            //             //创建标点自定义属性
+            //             marker.uuid = data.data[i].waterLevelUuid;
+            //             marker.lon = data.data[i].lon;
+            //             marker.lat = data.data[i].lat;
+            //             marker.name = data.data[i].waterName;//名称
+            //             marker.jbxx = data.data[i].waterInfo;//基本信息
+            //             marker.weizhi = data.data[i].weizhi;//位置
+            //             marker.accurate = data.data[i].accurate;//精准线
+            //             marker.shuiwei = data.data[i].watersw;//水位
+            //             map.addOverlay(marker);
+
+            //             //监听点位点击事件
+            //             marker.addEventListener("click", function (e) {
+            //                 var opts = {
+            //                     width: 250,     // 信息窗口宽度
+            //                     height: 240,     // 信息窗口高度
+            //                     title: "<h4 style='text-align:center;font-weight:bold;'>河流信息</h4>",  // 信息窗口标题
+            //                     fontSize: 10
+            //                 }
+            //                 var Pointwindow = new BMap.Point(e.target.lon, e.target.lat);//创建一个点位对象
+            //                 var infoWindow = new BMap.InfoWindow("<p>河流名称：" + e.target.name + "</p><p>基本信息：" + e.target.jbxx + "</p><p>河流位置：" + e.target.weizhi + "</p><p>精准线：" + e.target.accurate + "</p><p>水位：" + e.target.shuiwei + "</p><p>地图经纬度：" + e.target.lon + "," + e.target.lat + "</p>", opts);  // 创建信息窗口对象
+            //                 map.openInfoWindow(infoWindow, Pointwindow);
+            //             });
+
+            //         }
+            //     },
+            //     error: function (data) {
+            //         //alert(data);
+            //         console.log("五水共治请求失败:");
+            //         console.log(data);
+            //     }
+            // })
+        });
+    </script>
+
+    <script>
+        $('.btn14').on('click', function () {
+            $('#item8mapws').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+            //卫生点管理
+            $.ajax({
+                url: baseUrl + 'api/v1/MapQian/Allmap/chaxunweisheng',
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    console.log("卫生点管理")
+                    console.log(data)
+                    var lnglat = new BMap.Point(119.247261, 30.109483);
+                    //判断获取的点位数据是否合法
+                    if (data.data.length > 0) {
+                        for (var i = 0; i < data.data.length; i++) {
+                            if (data.data[i].lon != "" && data.data[i].lon != null && data.data[i]
+                                .lat != "" && data.data[i].lat != null) {
+                                lnglat = new BMap.Point(data.data[i].lon, data.data[i].lat);
+                                break;
+                            }
+                        }
+                    }
+                    var map = new BMap.Map("map_shuikuws", {
+                        mapType: BMAP_HYBRID_MAP
+                    }); // 创建Map实例
+                    map.centerAndZoom(lnglat, 16); // 初始化地图,设置中心点和地图级别(坐标为数据库传来的第一个点)
+
+                    map.setCurrentCity("临安"); // 设置地图显示的城市 此项是必须设置的
+                    map.enableScrollWheelZoom(true);
+
+
+
+
+                    for (var i = 0; i < data.data.length; i++) {
+                        var point = new BMap.Point(data.data[i].lon, data.data[i].lat);
+                        map.centerAndZoom(point, 0);
+                        var marker = new BMap.Marker(point); // 创建标注（显示危房地图点位）
+
+                        //创建标点自定义属性
+                        marker.uuid = data.data[i].ygieneUuid;
+                        marker.lon = data.data[i].lon;
+                        marker.lat = data.data[i].lat;
+                        marker.name = data.data[i].ygieneName; //卫生点名称
+                        marker.jbxx = data.data[i].ygieneAddress; //卫生点详细位置
+                        marker.ygieneMonitorId = data.data[i].ygieneMonitorId; //卫生点编号
+                        map.addOverlay(marker);
+
+                        //监听点位点击事件
+                        marker.addEventListener("click", function (e) {
+                            var opts = {
+                                width: 250, // 信息窗口宽度
+                                height: 240, // 信息窗口高度
+                                title: "<h4 style='text-align:center;font-weight:bold;'>卫生点信息</h4>", // 信息窗口标题
+                                fontSize: 10
+                            }
+                            var Pointwindow = new BMap.Point(e.target.lon, e.target
+                                .lat); //创建一个点位对象
+                            var infoWindow = new BMap.InfoWindow("<p>卫生点名称：" + e.target
+                                .name + "</p><p>卫生点详细位置：" + e.target.jbxx +
+                                "</p><p>卫生点编号：" + e.target.ygieneMonitorId +
+                                "</p><p>地图经纬度：" + e.target.lon + "," + e.target.lat +
+                                "</p>", opts); // 创建信息窗口对象
+                            map.openInfoWindow(infoWindow, Pointwindow);
+                        });
+
+                    }
+
+                },
+                error: function (data) {
+                    //alert(data);
+                    console.log("卫生点坐标请求失败:");
+                    console.log(data);
+                }
+            })
+        });
+    </script>
+
+    <script>
+        function bbclick(e) {
+            //console.log(e)
+            console.log($(e).attr('id'));
+            console.log("cccccccc");
+            let cid = $(e).attr('id');
+            window.location.href = "/PTZControl2.html?cid=" + cid;
+        }
+        $('.btn15').on('click', function () {
+            $("#map_shuikuws").html("");
+            console.log($(this).text());
+            let vt = $(this).text();
+            $.ajax({
+                url: baseUrl + 'api/v1/Socialgovernance/healthmanagement/list?site=' + vt,
+                method: 'get',
+                success: function (data) {
+                    console.log(data);
+                    let vlist = data.data;
+                    for (let i = 0; i < vlist.length; i++) {
+                        $.ajax({
+                            url: 'http://112.17.130.233:44444/api/video/VideoUrl?indexcode=' +
+                                vlist[i].ygieneMonitorId,
+                            method: 'get',
+                            success: function (data) {
+                                console.log(3333333);
+                                console.log(data);
+                                $("#map_shuikuws").append(
+                                    '<div class="societyxuanzhe btn2"><div  class="jiankongtext">当前视频来源--' +
+                                    vlist[i].ygieneAddress +
+                                    '</div><div onclick="bbclick(this)" class="ytkz2" id="' +
+                                    vlist[i].ygieneMonitorId +
+                                    '">云台控制</div><div><video id="vedplay' + i +
+                                    '" class="video-js" autoplay="autoplay" controls preload="auto" style="width:100%;height:335px; margin:0 auto"> <source src="' +
+                                    data.vdata.data.url +
+                                    '" type="application/x-mpegURL" /></video></div></div>'
+                                );
+                                let id = "vedplay" + i;
+                                console.log(id);
+
+                                let player = videojs(id);
+                                window.plist.push(player);
+                                player.play();
+                            },
+                            error: function (err) {
+                                console.log(err);
+
+                            }
+                        })
+                    }
+                    // $(".map_shuikuws").append(
+                    //     '<div class="societyxuanzhe btn2"><div  class="jiankongtext">当前视频来源--' +
+                    //     vl[i].shebeiAddress + '</div><div><video id="vedplay' + i +
+                    //     '" class="video-js" autoplay="autoplay" controls preload="auto" style="width:100%;height:335px; margin:0 auto"> <source src="' +
+                    //     data.vdata.data.url +
+                    //     '" type="application/x-mpegURL" /></video></div></div>');
+
+                },
+                error: function (err) {
+                    console.log(err);
+
+                }
+            });
+            $('#item8mapws').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0');
+                    $("#map_shuikuws").html("");
+                    for (let i = 0; i < window.plist.length; i++) {
+                        window.plist[i].dispose();
+                    }
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+            //console.log("点击的东西");
+            //console.log($(this).children("span").html());
+            //卫生点管理
+            // $.ajax({
+            //     url: baseUrl + 'api/v1/MapQian/Allmap/dangeweisheng',
+            //     type: "get",
+            //     data: {
+            //         weisheng: $(this).children("span").html()
+            //     },
+            //     dataType: "json",
+            //     success: function (data) {
+            //         console.log("卫生点管理")
+            //         console.log(data)
+            //         var lnglat = new BMap.Point(119.247261, 30.109483);
+            //         //判断获取的点位数据是否合法
+            //         if (data.data.length > 0) {
+            //             for (var i = 0; i < data.data.length; i++) {
+            //                 if (data.data[i].lon != "" && data.data[i].lon != null && data.data[i]
+            //                     .lat != "" && data.data[i].lat != null) {
+            //                     lnglat = new BMap.Point(data.data[i].lon, data.data[i].lat);
+            //                     break;
+            //                 }
+            //             }
+            //         }
+            //         var map = new BMap.Map("map_shuikuws", {
+            //             mapType: BMAP_HYBRID_MAP
+            //         }); // 创建Map实例
+            //         map.centerAndZoom(lnglat, 16); // 初始化地图,设置中心点和地图级别(坐标为数据库传来的第一个点)
+
+            //         map.setCurrentCity("临安"); // 设置地图显示的城市 此项是必须设置的
+            //         map.enableScrollWheelZoom(true);
+
+            //         for (var i = 0; i < data.data.length; i++) {
+            //             var point = new BMap.Point(data.data[i].lon, data.data[i].lat);
+            //             map.centerAndZoom(point, 0);
+            //             var marker = new BMap.Marker(point); // 创建标注（显示危房地图点位）
+
+            //             //创建标点自定义属性
+            //             marker.uuid = data.data[i].ygieneUuid;
+            //             marker.lon = data.data[i].lon;
+            //             marker.lat = data.data[i].lat;
+            //             marker.name = data.data[i].ygieneName; //卫生点名称
+            //             marker.jbxx = data.data[i].ygieneAddress; //卫生点详细位置
+            //             marker.ygieneMonitorId = data.data[i].ygieneMonitorId; //卫生点编号
+            //             map.addOverlay(marker);
+
+            //             //监听点位点击事件
+            //             marker.addEventListener("click", function (e) {
+            //                 var opts = {
+            //                     width: 250, // 信息窗口宽度
+            //                     height: 240, // 信息窗口高度
+            //                     title: "<h4 style='text-align:center;font-weight:bold;'>卫生点信息</h4>", // 信息窗口标题
+            //                     fontSize: 10
+            //                 }
+            //                 var Pointwindow = new BMap.Point(e.target.lon, e.target
+            //                 .lat); //创建一个点位对象
+            //                 var infoWindow = new BMap.InfoWindow("<p>卫生点名称：" + e.target
+            //                     .name + "</p><p>卫生点详细位置：" + e.target.jbxx +
+            //                     "</p><p>卫生点编号：" + e.target.ygieneMonitorId +
+            //                     "</p><p>地图经纬度：" + e.target.lon + "," + e.target.lat +
+            //                     "</p>", opts); // 创建信息窗口对象
+            //                 map.openInfoWindow(infoWindow, Pointwindow);
+            //             });
+
+            //         }
+
+            //     },
+            //     error: function (data) {
+            //         //alert(data);
+            //         console.log("卫生点坐标请求失败:");
+            //         console.log(data);
+            //     }
+            // })
+
+        });
+    </script>
+
+    <script>
+        $('.btn9').on('click', function () {
+            $('#item9').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn10').on('click', function () {
+            $('#item10').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn11').on('click', function () {
+            $('#item11').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+
+
+
+    <script>
+        $('.bacic_number').leoTextAnimate({
+            autorun: true, //是否自动运行
+            fixed: [',', ':', '.'], //
+            start: '-'
+        });
+    </script>
+
+
+    <script>
+        var number;
+        $(function () {
+            if (window.screen.height <= 768) {
+                number = 4;
+            } else if (window.screen.height > 768 && window.screen.height <= 900) {
+                number = 6
+            } else if (window.screen.height > 1080) {
+                number = 8
+            }
+        });
+
+
+
+        $(function () {
+            $(".tit02Diva a").each(function (index) {
+                $(this).on("click", function () {
+                    $(".data_map").eq(index).fadeIn().siblings(".data_map").stop().hide();
+                    $(this).prev('i').removeClass('i_crlieAction');
+                    $(this).siblings('a').prev('i').addClass('i_crlieAction');
+
+                })
+            });
+            Echarts();
+            $("#fresh_tool").click(function (event) {
+                event.stopPropagation();
+                cancel();
+            })
+
+        });
+
+        function EventClick() {
+            $(".check_increase").removeClass("check_increase_act");
+            $("#over_hide1").show().siblings().hide();
+            $(".ceshi01").show().siblings().hide();
+            $(".check_decrease").show();
+            $("#cage_cl").hide();
+            $("#map_title_innerbox").hide();
+            $("#cage_cl1").show();
+            //        $("#over_hide").show();
+            $("#map_title_innerbox1").show();
+            $(".addition_check_in").hide();
+            $("#car_check_in").hide();
+            BootstrapTable();
+        }
+
+        function cancel(e) {
+            $(".check_increase").removeClass("check_increase_act");
+            $("#over_hide").show().siblings().hide();
+            $(".ceshi01").show().siblings().hide();
+            $(".check_decrease").show();
+            $("#cage_cl").show();
+            $("#cage_cl1").hide();
+            $("#map_title_innerbox").show();
+            $("#map_title_innerbox1").hide();
+            //        $("#cage_cl").show();
+            //        $("#over_hide1").show();
+            //        $("#map_title_innerbox").show();
+            BootstrapTable();
+        }
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init($("#bome1")[0]);
+        option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    lineStyle: {
+                        color: '#57617B'
+                    }
+                }
+            },
+            legend: {
+
+                //icon: 'vertical',
+                data: ['当日数据', '历史数据'],
+                //align: 'center',
+                // right: '35%',
+                top: '0',
+                textStyle: {
+                    color: "#fff"
+                },
+                // itemWidth: 15,
+                // itemHeight: 15,
+                itemGap: 20,
+            },
+            grid: {
+                left: '0',
+                right: '20',
+                top: '10',
+                bottom: '0',
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'category',
+                boundaryGap: false,
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: 'rgba(255,255,255,.6)'
+                    }
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.1)'
+                    }
+                },
+                data: ['1;00', '2;00', '3;00', '4;00', '5;00', '6;00', '7;00', '8;00', '9;00', '10;00',
+                    '11;00', '12;00'
+                ]
+            }, {
+
+
+
+
+            }],
+            yAxis: [{
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: 'rgba(255,255,255,.6)'
+                    }
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.1)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255,255,255,.1)'
+                    }
+                }
+            }],
+            series: [{
+                name: '当日数据',
+                type: 'line',
+                smooth: true,
+                symbol: 'circle',
+                symbolSize: 5,
+                showSymbol: false,
+                lineStyle: {
+                    normal: {
+                        width: 2
+                    }
+                },
+                areaStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(24, 163, 64, 0.3)'
+                        }, {
+                            offset: 0.8,
+                            color: 'rgba(24, 163, 64, 0)'
+                        }], false),
+                        shadowColor: 'rgba(0, 0, 0, 0.1)',
+                        shadowBlur: 10
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#cdba00',
+                        borderColor: 'rgba(137,189,2,0.27)',
+                        borderWidth: 12
+                    }
+                },
+                data: [120, 58, 142, 134, 150, 120, 110, 125, 145, 122, 165, 122]
+            }, {
+                name: '历史数据',
+                type: 'line',
+                smooth: true,
+                symbol: 'circle',
+                symbolSize: 5,
+                showSymbol: false,
+                lineStyle: {
+                    normal: {
+                        width: 2
+                    }
+                },
+                areaStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(39, 122,206, 0.3)'
+                        }, {
+                            offset: 0.8,
+                            color: 'rgba(39, 122,206, 0)'
+                        }], false),
+                        shadowColor: 'rgba(0, 0, 0, 0.1)',
+                        shadowBlur: 10
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#FD3D00',
+                        borderColor: 'rgba(0,136,212,0.2)',
+                        borderWidth: 12
+                    }
+                },
+                data: [120, 110, 125, 145, 122, 165, 122, 144, 182, 148, 134, 150]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        // 调用饼图动画函数
+        chartAnimation(option, myChart, 3000);
+    </script>
+
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init($("#bome2")[0]);
+
+        // 指定图表的配置项和数据
+        var option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                x: 30,
+                y: 10,
+                x2: 10,
+                y2: 30,
+                borderWidth: 0
+            },
+            calculable: true,
+            xAxis: [{
+                type: 'category',
+                data: ['2月', '4月', '6月', '8月', '10月', '12月'],
+                splitLine: {
+                    show: false
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#a4a7ab',
+                        align: 'center'
+                    }
+                }
+            }],
+            yAxis: [{
+                type: 'value',
+                splitLine: {
+                    show: false
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#a4a7ab'
+                    }
+                }
+            }],
+            series: [{
+                name: '矫正人员',
+                type: 'bar',
+                barWidth: '30',
+                data: [124, 522, 235, 365, 214, 265, ],
+                itemStyle: {
+                    normal: {
+                        color: "#00ffff"
+                    }
+                }
+
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        // 调用饼图动画函数
+        chartAnimation(option, myChart, 3000);
+    </script>
+
+    <script>
+        function Echarts() {
+            var myChart = echarts.init($("#container_huan")[0]);
+            option = {
+
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
+                    data: ['公共停车场', '旅游地区停车场', '剩余车位'],
+                    textStyle: {
+                        color: "#e9ebee"
+                    }
+                },
+                calculable: false,
+                graphic: { //图形中间文字
+                    type: "text",
+                    left: "center",
+                    top: "center",
+                    style: {
+                        text: "停车比例",
+                        textAlign: "center",
+                        fill: "#fff",
+                        fontSize: 20
+                    }
+                },
+                series: [{
+                    name: '停车比例',
+                    type: 'pie',
+                    radius: ['50%', '80%'],
+                    center: ['50%', '50%'],
+                    data: [{
+                            value: 5,
+                            name: '公共停车场',
+                            itemStyle: {
+                                normal: {
+                                    color: '#00ffff'
+
+                                }
+                            }
+                        },
+                        {
+                            value: 4,
+                            name: '旅游地区停车场',
+                            itemStyle: {
+                                normal: {
+                                    color: '#ffea00'
+
+                                }
+                            }
+                        },
+                        {
+                            value: 5,
+                            name: '剩余车位',
+                            itemStyle: {
+                                normal: {
+                                    color: '#0a8cff'
+
+                                }
+                            }
+                        }
+                    ]
+                }]
+            };
+
+            myChart.setOption(option);
+            // 调用饼图动画函数
+            chartAnimation(option, myChart, 3000);
+        }
+    </script>
+
+    <!-- <script type="text/javascript">
+        // 百度地图API功能
+        var zhengjiaContent =
+            "<h4 style='margin:0 0 5.000006px 0;padding:0.2em 0'>河桥镇人民政府</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>地址：杭州市临安区河桥镇柳溪街19号</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>电话：(0571)63611066</p>" +
+            "</div>";
+        var anjubaoContent =
+            "<h4 style='margin:0 0 5.000006px 0;padding:0.2em 0'>公共厕所</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>地址：杭州市临安区昌文线东50米</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>三星级厕所</p>" +
+            "</div>";
+        var heqiaolaojie =
+            "<h4 style='margin:0 0 5.000006px 0;padding:0.2em 0'>河桥老街</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>地址：昌化镇河桥古镇柳溪江大道</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>电话：(0571)61075891</p>" +
+            "</div>";
+        var tangchangshouzhen =
+            "<h4 style='margin:0 0 5.000006px 0;padding:0.2em 0'>唐昌首镇</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>地址：浙江省杭州市临安区曙光村附近河桥古镇内</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>电话：(0571)61075891</p>" +
+            "</div>";
+        var liuxijiangmatou =
+            "<h4 style='margin:0 0 5.000006px 0;padding:0.2em 0'>柳溪江码头</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>地址：浙江省杭州市临安市河桥镇昌文线</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>电话：(0571)61075891</p>" +
+            "</div>";
+        var fengzhigu =
+            "<h4 style='margin:0 0 5.000006px 0;padding:0.2em 0'>风之谷户外乐园</h4>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>地址：浙江省杭州市临安区昌文线双塔大桥</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:12.999994px;text-indent:2em'>电话：(0571)63661212</p>" +
+            "</div>";
+
+
+        // 百度地图API功能
+        var map = new BMap.Map("map", { mapType: BMAP_SATELLITE_MAP });
+        var point = new BMap.Point(119.247261, 30.109483);//中心点
+        map.centerAndZoom(point, 16);
+        var label = new BMap.Label('点击查看', { "offset": new BMap.Size(-10, -20) });
+        var label2 = new BMap.Label('点击查看', { "offset": new BMap.Size(-10, -20) });
+        var geolocation = new BMap.Geolocation();
+        //geolocation.getCurrentPosition(function (r) {
+        //    if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+        //        var mk = new BMap.Marker(r.point);
+        //        map.addOverlay(mk);
+        //        map.panTo(r.point);
+        //        point = r.point;
+        //        alert('您的位置：' + r.point.lng + ',' + r.point.lat);
+        //    }
+        //    else {
+        //        //alert('failed'+this.getStatus());
+        //    }
+        //}, { enableHighAccuracy: true })
+        ////初始化地图
+
+
+
+        //map.addControl(new BMap.NavigationControl());               // 添加平移缩放控件
+        map.addControl(new BMap.ScaleControl());                    // 添加比例尺控件
+        map.addControl(new BMap.OverviewMapControl());              //添加缩略地图控件
+        map.enableScrollWheelZoom();                            //启用滚轮放大缩小
+        //map.addControl(new BMap.MapTypeControl());          //添加地图类型控件
+        map.setCurrentCity("河桥镇");          // 设置地图显示的城市 此项是必须设置的
+
+
+
+        //一个//////////////////////
+        //公共厕所地图位置
+        var pointanjubao = new BMap.Point(119.242383, 30.109175);
+        //设置显示图片的图标
+        var myIcon = new BMap.Icon("2323.gif", new BMap.Size(20, 20));
+        var marker = new BMap.Marker(pointanjubao, { icon: myIcon });
+        map.addOverlay(marker);
+        marker.setLabel(label);
+        var opts = {
+            width: 220,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "公共厕所", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: "三星级厕所"
+        }
+        var infoWindow1 = new BMap.InfoWindow("地址：杭州市临安区昌文线东50米", opts);  // 创建信息窗口对象
+        marker.openInfoWindow(infoWindow1); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindow = new BMap.InfoWindow(anjubaoContent);  // 创建信息窗口对象
+
+        marker.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindow);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        marker.addEventListener("mouseout", function () {
+            this.openInfoWindow(infoWindow1, point);
+        });
+
+        //一个结束//////////////////////
+
+
+
+
+
+
+
+        //一个//////////////////////
+        //河桥老街地图位置
+        var heqiao = new BMap.Point(119.247314, 30.107638);
+        //设置显示图片的图标
+        var myIcon = new BMap.Icon("2323.gif", new BMap.Size(20, 20));
+        var markerheqiao = new BMap.Marker(heqiao, { icon: myIcon });
+        map.addOverlay(markerheqiao);
+        markerheqiao.setLabel(label);
+        var optsheqiao = {
+            width: 220,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "河桥老街", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: "河桥老街"
+        }
+        var heqiaolaojie1 = new BMap.InfoWindow("地址：昌化镇河桥古镇柳溪江大道", optsheqiao);  // 创建信息窗口对象
+        markerheqiao.openInfoWindow(heqiaolaojie1); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindowheqiao = new BMap.InfoWindow(heqiaolaojie);  // 创建信息窗口对象
+
+        markerheqiao.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindowheqiao);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindowheqiao.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        markerheqiao.addEventListener("mouseout", function () {
+            this.openInfoWindow(heqiaolaojie1, point);
+        });
+
+        //一个结束//////////////////////
+
+
+
+
+        //一个//////////////////////
+        //唐昌首镇地图位置
+        var tangchang = new BMap.Point(119.240337, 30.105737);
+        //设置显示图片的图标
+        var myIcon = new BMap.Icon("2323.gif", new BMap.Size(20, 20));
+        var markertangchang = new BMap.Marker(tangchang, { icon: myIcon });
+        map.addOverlay(markertangchang);
+        markertangchang.setLabel(label);
+        var optstangchang = {
+            width: 220,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "唐昌首镇", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: "唐昌首镇"
+        }
+        var tangchangshouzhen1 = new BMap.InfoWindow("地址：浙江省杭州市临安区曙光村附近河桥古镇内", optstangchang);  // 创建信息窗口对象
+        markertangchang.openInfoWindow(tangchangshouzhen1); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindowtangchang = new BMap.InfoWindow(tangchangshouzhen);  // 创建信息窗口对象
+
+        markertangchang.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindowtangchang);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindowtangchang.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        markertangchang.addEventListener("mouseout", function () {
+            this.openInfoWindow(tangchangshouzhen1, point);
+        });
+
+        //一个结束//////////////////////
+
+
+
+
+        //一个//////////////////////
+        //柳溪江码头地图位置
+        var matou = new BMap.Point(119.25509, 30.126977);
+        //设置显示图片的图标
+        var myIcon = new BMap.Icon("2323.gif", new BMap.Size(20, 20));
+        var markermatoumatou = new BMap.Marker(matou, { icon: myIcon });
+        map.addOverlay(markermatoumatou);
+        markermatoumatou.setLabel(label);
+        var optsmatou = {
+            width: 220,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "柳溪江码头", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: "柳溪江码头"
+        }
+        var liuxijiangmatou1 = new BMap.InfoWindow("地址：浙江省杭州市临安市河桥镇昌文线", optsmatou);  // 创建信息窗口对象
+        markermatoumatou.openInfoWindow(liuxijiangmatou1); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindowmatoug = new BMap.InfoWindow(liuxijiangmatou);  // 创建信息窗口对象
+
+        markermatoumatou.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindowmatou);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindowmatou.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        markermatoumatou.addEventListener("mouseout", function () {
+            this.openInfoWindow(liuxijiangmatou1, point);
+        });
+
+        //一个结束//////////////////////
+
+
+        //一个//////////////////////
+        //风之谷地图位置
+        var feng = new BMap.Point(119.246272, 30.151528);
+        //设置显示图片的图标
+        var myIcon = new BMap.Icon("2323.gif", new BMap.Size(20, 20));
+        var markerfeng = new BMap.Marker(feng, { icon: myIcon });
+        map.addOverlay(markerfeng);
+        markerfeng.setLabel(label);
+        var optsfeng = {
+            width: 220,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "风之谷", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: "风之谷"
+        }
+        var fengzhigu1 = new BMap.InfoWindow("地址：浙江省杭州市临安市河桥镇昌文线", optsfeng);  // 创建信息窗口对象
+        markerfeng.openInfoWindow(fengzhigu1); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindowfeng = new BMap.InfoWindow(fengzhigu);  // 创建信息窗口对象
+
+        markerfeng.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindowfeng);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindowfeng.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        markerfeng.addEventListener("mouseout", function () {
+            this.openInfoWindow(fengzhigu1, point);
+        });
+
+        //一个结束//////////////////////
+
+
+        //河桥镇人民政府
+        var pointzhengjia = new BMap.Point(119.250357, 30.112423);
+        //设置显示图片的图标
+
+
+        var markerzhengjia = new BMap.Marker(pointzhengjia, { icon: myIcon });
+        map.addOverlay(markerzhengjia);
+        markerzhengjia.setLabel(label2);
+        var optszhjia = {
+            width: 260,     // 信息窗口宽度
+            height: 60,     // 信息窗口高度
+            title: "河桥镇人民政府", // 信息窗口标题
+            enableMessage: true,//设置允许信息窗发送短息
+            message: ""
+        }
+        var infoWindowzhengjia = new BMap.InfoWindow("地址：杭州市临安区河桥镇柳溪街19号", optszhjia);  // 创建信息窗口对象
+        markerzhengjia.openInfoWindow(infoWindowzhengjia); //开启信息窗口
+
+
+        //鼠标经过显示图片
+        var infoWindowzhengjiaxiao = new BMap.InfoWindow(zhengjiaContent);  // 创建信息窗口对象
+
+
+        markerzhengjia.addEventListener("mouseover", function () {
+            this.openInfoWindow(infoWindowzhengjiaxiao);
+            //图片加载完毕重绘infowindow
+            document.getElementById('imgDemo').onload = function () {
+                infoWindowzhengjiaxiao.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
+        //鼠标离开时候
+        markerzhengjia.addEventListener("mouseout", function () {
+            this.openInfoWindow(infoWindowzhengjia, point);
+        });
+
+    </script>
+
+
+    <!--灾害地图点-->
+    <script>
+        $.ajax({
+            url: baseUrl + 'api/v1/MapQian/Allmap/zaihaidian',
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                //console.log("灾害点数据请求成功")
+                //console.log(data)
+                for (var i = 0; i < data.data.length; i++) {
+                    let disasterAddress = data.data[i].key.disasterAddress;
+                    if (data.data[i].key.disasterAddress.length > 10) {
+                        disasterAddress = data.data[i].key.disasterAddress.substring(0, 10);
+                    }
+                    $("#ul_zaihai").append('<li><p><span class="span_ddname" style="width: 50%;">' +
+                        disasterAddress + '</span><span style="width: 20%;">' + data.data[i].count +
+                        '个</span><span><span style="width:auto;height:auto;cursor:pointer;" class="btn4map">详细信息</span></span></p></li>'
+                    )
+                }
+                $('.wrap_zaihai').liMarquee({
+                    direction: 'up', //身上滚动
+                    runshort: false, //内容不足时不滚动
+                    scrollamount: 20 //速度
+                });
+                //灾害点点击更多
+                $('.btn4').on('click', function () {
+                    $('#item4map').popup({
+                        time: 1000,
+                        classAnimateShow: 'slideInUp',
+                        classAnimateHide: 'fadeOut',
+                        onPopupClose: function e() {
+                            // console.log('0')
+                        },
+                        onPopupInit: function e() {
+                            // console.log('1')
+                        }
+                    });
+                    // 基本信息地图
+                    var map = new BMap.Map("map_zaihai", {
+                        mapType: BMAP_HYBRID_MAP
+                    }); // 创建Map实例
+                    map.centerAndZoom(new BMap.Point(119.247261, 30.109483),
+                        16); // 初始化地图,设置中心点坐标和地图级别
+                    map.setCurrentCity("临安"); // 设置地图显示的城市 此项是必须设置的
+                    map.enableScrollWheelZoom(true);
+
+                    $.ajax({
+                        url: baseUrl + 'api/v1/MapQian/Allmap/allzaihaidian',
+                        type: "get",
+                        data: {
+                            name: "all"
+                        },
+                        dataType: "json",
+                        success: function (data) {
+                            for (var i = 0; i < data.data.length; i++) {
+                                //console.log(data.data[i])
+                                var lonlatlist = data.data[i].mapRegion.split('-');
+                                //console.log("数据拆分")
+                                //console.log(lonlatlist)
+
+                                for (var z = 0; z < lonlatlist.length; z++) {
+                                    var lonlat = lonlatlist[z].split('|'); //将灾害点坐标转化为数组
+                                    //console.log("再次拆分")
+                                    //console.log(lonlat)
+                                    var pointlist = new Array();
+                                    for (var j = 0; j < lonlat.length; j++) {
+                                        var pointlon = lonlat[j].split(',')[0];
+                                        var pointlat = lonlat[j].split(',')[1];
+                                        pointlist[j] = new BMap.Point(pointlon,
+                                            pointlat)
+                                    }
+                                    var polygon = new BMap.Polygon(pointlist, {
+                                        strokeColor: "red",
+                                        strokeWeight: 0.8,
+                                        strokeOpacity: 1
+                                    });
+                                    //自定义属性
+                                    polygon.disasterName = data.data[i]
+                                        .disasterName; //灾害名称
+                                    polygon.disasterAddress = data.data[i]
+                                        .disasterAddress; //灾害位置
+                                    polygon.addPeople = data.data[i].addPeople; //添加人
+                                    map.addOverlay(polygon);
+                                    //获取多边形中心点
+                                    var x = 0,
+                                        y = 0;
+                                    var path = polygon.getPath(); //返回多边型的点数组；ply是多边形覆盖物
+                                    for (var k = 0; k < path.length; k++) {
+                                        x = x + parseFloat(path[k].lng);
+                                        y = y + parseFloat(path[k].lat);
+                                    }
+                                    x = x / path.length;
+                                    y = y / path.length;
+                                    map.centerAndZoom(new BMap.Point(x, y),
+                                        16); // 初始化地图,重新设置中心点坐标和地图级别
+                                    polygon.addEventListener('click', function (e) {
+                                        //this.setFillColor("blue");//改变当前多边形背景色
+                                        var opts = {
+                                            width: 250, // 信息窗口宽度
+                                            height: 150, // 信息窗口高度
+                                            title: "<h4 style='text-align:center;font-weight:bold;'>灾害点信息</h4>", // 信息窗口标题
+                                            fontSize: 10
+                                        }
+                                        var Pointwindow = new BMap.Point(e.point
+                                            .lng, e.point.lat); //创建一个点位对象
+                                        var infoWindow = new BMap.InfoWindow(
+                                            "<p>灾害名称:" + e.target
+                                            .disasterName + "</p><p>灾害位置:" +
+                                            e.target.disasterAddress +
+                                            "</p><p>添加人:" + e.target
+                                            .addPeople + "</p>", opts
+                                        ); // 创建信息窗口对象
+                                        map.openInfoWindow(infoWindow,
+                                            Pointwindow);
+                                    })
+                                }
+                            }
+                        },
+                        error: function (data) {
+                            //alert(data);
+                            console.log("所有灾害点详细数据请求失败")
+                            console.log(data);
+                        }
+                    });
+
+
+                });
+
+                //点击灾害点列表
+                $('.btn4map').on('click', function () {
+                    console.log(123132)
+                    let vname = $(this).parent().siblings(".span_ddname").text();
+                    if (vname == "澄村殿") {
+                        window.clickindex = 0;
+                    }
+                    if (vname == "九江坞") {
+                        window.clickindex = 1;
+                    }
+                    if (vname == "寺坞里") {
+                        window.clickindex = 2;
+                    }
+                    if (vname == "柘坞里") {
+                        window.clickindex = 3;
+                    }
+                    console.log(vname);
+                    $('#item4map').popup({
+                        time: 1000,
+                        classAnimateShow: 'slideInUp',
+                        classAnimateHide: 'fadeOut',
+                        onPopupClose: function e() {
+                            // console.log('0')
+                        },
+                        onPopupInit: function e() {
+                            // console.log('1')
+                        }
+                    });
+                    // 基本信息地图
+                    var map = new BMap.Map("map_zaihai", {
+                        mapType: BMAP_HYBRID_MAP
+                    }); // 创建Map实例
+                    map.centerAndZoom(new BMap.Point(119.247261, 30.109483),
+                        16); // 初始化地图,设置中心点坐标和地图级别
+                    map.setCurrentCity("临安"); // 设置地图显示的城市 此项是必须设置的
+                    map.enableScrollWheelZoom(true);
+
+                    $.ajax({
+                        url: baseUrl + 'api/v1/MapQian/Allmap/allzaihaidian',
+                        type: "get",
+                        data: {
+                            name: $(this).parent().siblings(".span_ddname").html()
+                        },
+                        dataType: "json",
+                        success: function (data) {
+                            //console.log("所有灾害点详细数据请求成功")
+                            //console.log(data);
+
+                            for (var i = 0; i < data.data.length; i++) {
+                                //console.log(data.data[i])
+                                if (data.data[i].mapRegion != null) {
+                                    var lonlatlist = data.data[i].mapRegion.split('-');
+                                    //console.log("数据拆分")
+                                    //console.log(lonlatlist)
+
+                                    for (var z = 0; z < lonlatlist.length; z++) {
+                                        var lonlat = lonlatlist[z].split(
+                                            '|'); //将灾害点坐标转化为数组
+                                        //console.log("再次拆分")
+                                        //console.log(lonlat)
+                                        var pointlist = new Array();
+                                        for (var j = 0; j < lonlat.length; j++) {
+                                            var pointlon = lonlat[j].split(',')[0];
+                                            var pointlat = lonlat[j].split(',')[1];
+                                            pointlist[j] = new BMap.Point(pointlon,
+                                                pointlat)
+                                        }
+                                        var polygon = new BMap.Polygon(pointlist, {
+                                            strokeColor: "red",
+                                            strokeWeight: 0.8,
+                                            strokeOpacity: 1
+                                        });
+                                        //自定义属性
+                                        polygon.disasterName = data.data[i]
+                                            .disasterName; //灾害名称
+                                        polygon.disasterAddress = data.data[i]
+                                            .disasterAddress; //灾害位置
+                                        polygon.addPeople = data.data[i]
+                                            .addPeople; //添加人
+                                        map.addOverlay(polygon);
+
+
+
+                                        //获取多边形中心点
+                                        var x = 0,
+                                            y = 0;
+                                        var path = polygon
+                                            .getPath(); //返回多边型的点数组；ply是多边形覆盖物
+                                        for (var k = 0; k < path.length; k++) {
+                                            x = x + parseFloat(path[k].lng);
+                                            y = y + parseFloat(path[k].lat);
+                                        }
+                                        x = x / path.length;
+                                        y = y / path.length;
+                                        map.centerAndZoom(new BMap.Point(x, y),
+                                            18); // 初始化地图,重新设置中心点坐标和地图级别
+
+                                        polygon.addEventListener('click', function (e) {
+                                            var opts = {
+                                                width: 250, // 信息窗口宽度
+                                                height: 150, // 信息窗口高度
+                                                title: "<h4 style='text-align:center;font-weight:bold;'>灾害点信息</h4>", // 信息窗口标题
+                                                fontSize: 10
+                                            }
+                                            var Pointwindow = new BMap.Point(e
+                                                .point.lng, e.point.lat
+                                            ); //创建一个点位对象
+                                            var infoWindow = new BMap
+                                                .InfoWindow("<p>灾害名称:" + e
+                                                    .target.disasterName +
+                                                    "</p><p>灾害位置:" + e.target
+                                                    .disasterAddress +
+                                                    "</p><p>添加人:" + e.target
+                                                    .addPeople + "</p>", opts
+                                                ); // 创建信息窗口对象
+                                            map.openInfoWindow(infoWindow,
+                                                Pointwindow);
+
+                                        })
+                                    }
+                                }
+                            }
+
+                            //var polygon = new BMap.Polygon([
+                            //    new BMap.Point(119.249881, 30.114493),
+                            //    new BMap.Point(119.252953, 30.113634),
+                            //    new BMap.Point(119.250653, 30.111689),
+                            //],
+                            //    { strokeColor: "red", strokeWeight: 0.8, strokeOpacity: 1 }
+                            //);
+                            //map.addOverlay(polygon);
+
+                        },
+                        error: function (data) {
+                            //alert(data);
+                            console.log("所有灾害点详细数据请求失败")
+                            console.log(data);
+                        }
+                    });
+
+
+                });
+
+
+
+            },
+            error: function (data) {
+                //alert(data);
+                console.log("灾害点数据请求失败")
+                console.log(data);
+            }
+        });
+    </script>
+
+    <!--大气防治-->
+    <script>
+        $(function () {
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/daqifangzhi',
+                method: 'get',
+                success: function (data) {
+                    console.log("获取大气防治数据");
+                    console.log(data);
+                    console.log(data.data.data1);
+                    var myChart = echarts.init($("#daqi_fangzhi")[0]);
+                    option = {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                lineStyle: {
+                                    color: '#57617B'
+                                }
+                            }
+                        },
+                        legend: {
+
+                            //icon: 'vertical',
+                            data: ['临界点', '当日数值'],
+                            //align: 'center',
+                            // right: '35%',
+                            top: '0',
+                            textStyle: {
+                                color: "#fff",
+                                fontSize:16
+                            },
+                            // itemWidth: 15,
+                            // itemHeight: 15,
+                            itemGap: 20,
+                        },
+                        grid: {
+                            left: '0',
+                            right: '20',
+                            top: '10',
+                            bottom: '0',
+                            containLabel: true
+                        },
+                        xAxis: [{
+                            type: 'category',
+                            boundaryGap: false,
+                            axisLabel: {
+                                show: true,
+                                textStyle: {
+                                    color: '#fff',
+                                    fontSize:16
+                                }
+                            },
+                            axisLine: {
+                                lineStyle: {
+                                    color: '#fff'
+                                }
+                            },
+                            data: [
+                                data.data.data1[6],
+                                data.data.data1[5],
+                                data.data.data1[4],
+                                data.data.data1[3],
+                                data.data.data1[2],
+                                data.data.data1[1],
+                                data.data.data1[0]
+                            ]
+                        }, {
+
+
+
+
+                        }],
+                        yAxis: [{
+                            axisLabel: {
+                                show: true,
+                                textStyle: {
+                                    color: '#fff',
+                                    fontSize:16
+                                }
+                            },
+                            axisLine: {
+                                lineStyle: {
+                                    color: 'rgba(255,255,255,.1)'
+                                }
+                            },
+                            splitLine: {
+                                lineStyle: {
+                                    color: 'rgba(255,255,255,.1)'
+                                }
+                            }
+                        }],
+                        series: [{
+                            name: '临界点',
+                            type: 'line',
+                            smooth: true,
+                            symbol: 'circle',
+                            symbolSize: 5,
+                            showSymbol: false,
+                            lineStyle: {
+                                normal: {
+                                    width: 2
+                                }
+                            },
+                            areaStyle: {
+                                normal: {
+                                    color: new echarts.graphic.LinearGradient(0, 0, 0,
+                                        1, [{
+                                            offset: 0,
+                                            color: 'rgba(24, 163, 64, 0.3)'
+                                        }, {
+                                            offset: 0.8,
+                                            color: 'rgba(24, 163, 64, 0)'
+                                        }], false),
+                                    shadowColor: 'rgba(0, 0, 0, 0.1)',
+                                    shadowBlur: 10
+                                }
+                            },
+                            itemStyle: {
+                                normal: {
+                                    color: '#ff0000',
+                                    borderColor: 'rgba(137,189,2,0.27)',
+                                    borderWidth: 12
+                                }
+                            },
+                            data: [75, 75, 75, 75, 75, 75, 75]
+                        }, {
+                            name: '当日数值',
+                            type: 'line',
+                            smooth: true,
+                            symbol: 'circle',
+                            symbolSize: 5,
+                            showSymbol: false,
+                            lineStyle: {
+                                normal: {
+                                    width: 2
+                                }
+                            },
+                            areaStyle: {
+                                normal: {
+                                    color: new echarts.graphic.LinearGradient(0, 0, 0,
+                                        1, [{
+                                            offset: 0,
+                                            color: 'rgba(39, 122,206, 0.3)'
+                                        }, {
+                                            offset: 0.8,
+                                            color: 'rgba(39, 122,206, 0)'
+                                        }], false),
+                                    shadowColor: 'rgba(0, 0, 0, 0.1)',
+                                    shadowBlur: 10
+                                }
+                            },
+                            itemStyle: {
+                                normal: {
+                                    color: '#00ffff',
+                                    borderColor: 'rgba(0,136,212,0.2)',
+                                    borderWidth: 12
+                                }
+                            },
+                            data: [data.data.data[6], data.data.data[5], data.data.data[
+                                    4], data.data.data[3], data.data.data[2], data
+                                .data.data[1], data.data.data[0]
+                            ]
+                        }]
+                    };
+                    myChart.setOption(option);
+                    // 调用饼图动画函数
+                    chartAnimation(option, myChart, 3000);
+                },
+                error: function (err) {
+                    //alert(err);
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $("#sendTo").click(function () {
+
+            //获取值
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var jiaose = $("#lab_login").html();
+            console.log(username, password);
+            var data = {
+                username: $("#username").val(),
+                password: $("#password").val(),
+                jiaose: $("#lab_login").html()
+            };
+
+            $.ajax({
+                url: "http://localhost:54321/api/v1/QTLogin/Login/receive",
+                type: "post",
+                data: JSON.stringify(data),
+                dataType: "json",
+                contentType: 'application/json;charset=UTF-8',
+                headers: {
+                    withCredentials: true,
+                },
+                success: function (data) {
+                    console.log("返回的数据")
+                    console.log(data);
+                    if (data.message == "操作成功") {
+                        $("#item16").hide();
+                        console.log(data.data)
+                        localStorage.setItem('token', data.data);
+                        console.log(localStorage.getItem('token'));
+                        alert("登入成功");
+                        location.reload();
+
+                    } else {
+                        alert(data.message);
+                    }
+                }
+            })
+        })
+    </script>
+    <script>
+        $("#outTo").click(function () {
+            var storage = window.localStorage;
+            //storage.a = 1;
+            //storage.setItem("c", 3);
+            //console.log(storage);
+            storage.removeItem("token");
+            location.reload();
+            //console.log(storage.a);
+
+        });
+    </script>
+    <script>
+        window.onload = function () {
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                outTo.style.display = "block";
+            } else {
+                outTo.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        setTimeout(function(){
+            createMap2("map");
+        },3000)
+        // createMap2("map");
+    </script>
+
+</body>
+
+</html>

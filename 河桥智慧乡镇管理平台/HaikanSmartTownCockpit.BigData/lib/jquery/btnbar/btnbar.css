@@ -1,0 +1,115 @@
+/* 2017-9-28 15:43:38 | 修改 木遥（QQ：516584683） */
+
+.btnbar {
+    position: absolute;
+    width: 100%;
+    min-height: 40px;
+    bottom: 30px;
+    z-index: 9999;
+}
+
+.btnbar_panel {
+    width: 780px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.btnbar_items_panel {
+    width: 680px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btnbar_items_panel_scroll {
+    position: absolute;
+    width: 2000px;
+    height: 40px;
+    left: 0px;
+}
+
+.btnbar_item {
+    font: 16px "Microsoft YaHei";
+    color: rgba(255,255,255,1);
+    pointer-events: auto;
+    display: inline-block;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: url(img/button.png) no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.btnbar_item_select {
+    background: url(img/button_select.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.btnbar_left {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url(img/left.png) center center / 70% 70% no-repeat;
+}
+
+.btnbar_right {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url(img/right.png) center center / 70% 70% no-repeat;
+}
+
+
+
+
+
+
+/**info*/
+.infoview {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    min-height: 200px;
+    width: 260px;
+}
+
+.infoview_panel {
+    height: 50%;
+    width: 100%;
+    color: #ffffff;
+    padding: 10px;
+    background: url(img/infoBox.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 5px;
+}
+
+.infoview_panel_scroll {
+    height: 98%;
+    width: 99%;
+    overflow-y: auto;
+}
+
+.infoview_panel div {
+    margin-top: 5px;
+}
+
+.infoview_panel label {
+    color: #03dae7;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.infoview_panel span {
+    padding-left: 8px;
+}
+
+.infoview_panel .title {
+    color: #ffec48;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}

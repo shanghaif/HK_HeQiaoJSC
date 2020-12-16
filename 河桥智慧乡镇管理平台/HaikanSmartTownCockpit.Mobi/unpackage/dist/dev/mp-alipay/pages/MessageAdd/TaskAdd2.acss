@@ -1,0 +1,23 @@
+
+page {
+	height: 100%;
+}
+.officeItem {
+	margin: 10px 0;
+	width: 31%;
+	margin: 7px 1%;
+	float: left;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	/* background-color: #007AFF; */
+	border: 1px solid #ccc;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+}
+.active {
+	background-color: #007AFF;
+	color: #fff;
+}
+

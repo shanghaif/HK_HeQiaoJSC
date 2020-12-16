@@ -1,0 +1,421 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "EntityFramework/6.4.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "build": {
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
+        }
+      },
+      "EntityFramework.zh-Hans/6.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "[6.2.0]"
+        },
+        "resource": {
+          "lib/net45/zh-Hans/EntityFramework.SqlServer.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hans/EntityFramework.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "Haikan2/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/Haikan2.dll": {}
+        },
+        "runtime": {
+          "lib/Haikan2.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win": {
+      "EntityFramework/6.4.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "build": {
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
+        }
+      },
+      "EntityFramework.zh-Hans/6.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "[6.2.0]"
+        },
+        "resource": {
+          "lib/net45/zh-Hans/EntityFramework.SqlServer.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hans/EntityFramework.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "Haikan2/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/Haikan2.dll": {}
+        },
+        "runtime": {
+          "lib/Haikan2.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x64": {
+      "EntityFramework/6.4.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "build": {
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
+        }
+      },
+      "EntityFramework.zh-Hans/6.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "[6.2.0]"
+        },
+        "resource": {
+          "lib/net45/zh-Hans/EntityFramework.SqlServer.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hans/EntityFramework.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "Haikan2/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/Haikan2.dll": {}
+        },
+        "runtime": {
+          "lib/Haikan2.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "EntityFramework/6.4.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "build": {
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
+        }
+      },
+      "EntityFramework.zh-Hans/6.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "[6.2.0]"
+        },
+        "resource": {
+          "lib/net45/zh-Hans/EntityFramework.SqlServer.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hans/EntityFramework.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "Haikan2/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/Haikan2.dll": {}
+        },
+        "runtime": {
+          "lib/Haikan2.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EntityFramework/6.4.4": {
+      "sha512": "yj1+/4tci7Panu3jKDHYizxwVm0Jvm7b7m057b5h4u8NUHGCR8WIWirBTw+8EptRffwftIWPBeIRGNKD1ewEMQ==",
+      "type": "package",
+      "path": "entityframework/6.4.4",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/EntityFramework.DefaultItems.props",
+        "build/EntityFramework.props",
+        "build/EntityFramework.targets",
+        "build/Microsoft.Data.Entity.Build.Tasks.dll",
+        "build/netcoreapp3.0/EntityFramework.props",
+        "build/netcoreapp3.0/EntityFramework.targets",
+        "buildTransitive/EntityFramework.props",
+        "buildTransitive/EntityFramework.targets",
+        "buildTransitive/netcoreapp3.0/EntityFramework.props",
+        "buildTransitive/netcoreapp3.0/EntityFramework.targets",
+        "content/net40/App.config.install.xdt",
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.install.xdt",
+        "content/net40/Web.config.transform",
+        "entityframework.6.4.4.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "lib/netstandard2.1/EntityFramework.SqlServer.dll",
+        "lib/netstandard2.1/EntityFramework.SqlServer.xml",
+        "lib/netstandard2.1/EntityFramework.dll",
+        "lib/netstandard2.1/EntityFramework.xml",
+        "tools/EntityFramework6.PS2.psd1",
+        "tools/EntityFramework6.PS2.psm1",
+        "tools/EntityFramework6.psd1",
+        "tools/EntityFramework6.psm1",
+        "tools/about_EntityFramework6.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/net40/any/ef6.exe",
+        "tools/net40/any/ef6.pdb",
+        "tools/net40/win-x86/ef6.exe",
+        "tools/net40/win-x86/ef6.pdb",
+        "tools/net45/any/ef6.exe",
+        "tools/net45/any/ef6.pdb",
+        "tools/net45/win-x86/ef6.exe",
+        "tools/net45/win-x86/ef6.pdb",
+        "tools/netcoreapp3.0/any/ef6.dll",
+        "tools/netcoreapp3.0/any/ef6.pdb",
+        "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
+      ]
+    },
+    "EntityFramework.zh-Hans/6.2.0": {
+      "sha512": "ejFYxGyOFhPqmxLV4KVQo1DDo1MBJVP3I4GSa/qr9cOfMjVA9nAAmv6dStqmo6PQIRdj0bwLM4BBlwvLtHschg==",
+      "type": "package",
+      "path": "entityframework.zh-hans/6.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "entityframework.zh-hans.6.2.0.nupkg.sha512",
+        "entityframework.zh-hans.nuspec",
+        "lib/net40/zh-Hans/EntityFramework.SqlServer.resources.dll",
+        "lib/net40/zh-Hans/EntityFramework.SqlServer.xml",
+        "lib/net40/zh-Hans/EntityFramework.resources.dll",
+        "lib/net40/zh-Hans/EntityFramework.xml",
+        "lib/net45/zh-Hans/EntityFramework.SqlServer.resources.dll",
+        "lib/net45/zh-Hans/EntityFramework.SqlServer.xml",
+        "lib/net45/zh-Hans/EntityFramework.resources.dll",
+        "lib/net45/zh-Hans/EntityFramework.xml"
+      ]
+    },
+    "Haikan2/2.3.0": {
+      "sha512": "akO8jCOxHzPWvLC8Fx0oMAqNigAk5Is2QGY+b6nAv0JKdgMqw3Nt1/BonHqOXjJ0l4jTXuck9VgEy7aGvQjBqQ==",
+      "type": "package",
+      "path": "haikan2/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        "haikan2.2.3.0.nupkg.sha512",
+        "haikan2.nuspec",
+        "lib/Haikan2.dll"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "EntityFramework >= 6.4.4",
+      "EntityFramework.zh-Hans >= 6.2.0",
+      "Haikan2 >= 2.3.0",
+      "Newtonsoft.Json >= 12.0.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\work_hqzhxz\\201210_09.27\\河桥智慧乡镇管理平台\\HaikanSmartTownCockpit.WatchDog\\Haikan.SmartTownCockpitCore\\Haikan.SmartTownCockpitCore.csproj",
+      "projectName": "Haikan.SmartTownCockpitCore",
+      "projectPath": "D:\\work_hqzhxz\\201210_09.27\\河桥智慧乡镇管理平台\\HaikanSmartTownCockpit.WatchDog\\Haikan.SmartTownCockpitCore\\Haikan.SmartTownCockpitCore.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "D:\\work_hqzhxz\\201210_09.27\\河桥智慧乡镇管理平台\\HaikanSmartTownCockpit.WatchDog\\Haikan.SmartTownCockpitCore\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://www.haikan.com.cn:8081/repository/nuget-hosted/": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "dependencies": {
+          "EntityFramework": {
+            "target": "Package",
+            "version": "[6.4.4, )"
+          },
+          "EntityFramework.zh-Hans": {
+            "target": "Package",
+            "version": "[6.2.0, )"
+          },
+          "Haikan2": {
+            "target": "Package",
+            "version": "[2.3.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "检测到的包版本在依赖项约束之外: EntityFramework.zh-Hans 6.2.0 需要 EntityFramework (= 6.2.0)，但版本 EntityFramework 6.4.4 已解决。",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.7.2",
+        ".NETFramework,Version=v4.7.2/win",
+        ".NETFramework,Version=v4.7.2/win-x64",
+        ".NETFramework,Version=v4.7.2/win-x86"
+      ]
+    }
+  ]
+}

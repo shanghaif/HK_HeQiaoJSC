@@ -1,0 +1,30 @@
+{
+  "uni-app": {
+    "scripts": {
+      "mp-dingtalk": {
+        "title": "钉钉小程序",
+        "env": {
+          "UNI_PLATFORM": "mp-alipay"
+        },
+        "define": {
+          "MP-DINGTALK": true
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "echarts": "^4.8.0",
+    "gdt-jsapi": "^1.9.4",
+    "mpvue-echarts": "^0.3.2"
+  },
+  "name": "taskmanager",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

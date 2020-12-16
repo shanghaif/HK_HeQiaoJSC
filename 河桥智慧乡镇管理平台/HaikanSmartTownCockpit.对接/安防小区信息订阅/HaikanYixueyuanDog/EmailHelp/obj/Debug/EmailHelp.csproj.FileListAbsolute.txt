@@ -1,0 +1,6 @@
+D:\我的工作目录\2020.10.21\河桥智慧乡镇管理平台\数据对接\安防小区信息订阅\HaikanYixueyuanDog\EmailHelp\bin\Debug\EmailHelp.dll
+D:\我的工作目录\2020.10.21\河桥智慧乡镇管理平台\数据对接\安防小区信息订阅\HaikanYixueyuanDog\EmailHelp\bin\Debug\EmailHelp.pdb
+D:\我的工作目录\2020.10.21\河桥智慧乡镇管理平台\数据对接\安防小区信息订阅\HaikanYixueyuanDog\EmailHelp\obj\Debug\EmailHelp.csprojAssemblyReference.cache
+D:\我的工作目录\2020.10.21\河桥智慧乡镇管理平台\数据对接\安防小区信息订阅\HaikanYixueyuanDog\EmailHelp\obj\Debug\EmailHelp.csproj.CoreCompileInputs.cache
+D:\我的工作目录\2020.10.21\河桥智慧乡镇管理平台\数据对接\安防小区信息订阅\HaikanYixueyuanDog\EmailHelp\obj\Debug\EmailHelp.dll
+D:\我的工作目录\2020.10.21\河桥智慧乡镇管理平台\数据对接\安防小区信息订阅\HaikanYixueyuanDog\EmailHelp\obj\Debug\EmailHelp.pdb

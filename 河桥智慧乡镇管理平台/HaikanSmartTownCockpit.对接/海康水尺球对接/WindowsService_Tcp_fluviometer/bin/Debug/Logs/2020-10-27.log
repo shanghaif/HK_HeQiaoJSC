@@ -1,0 +1,104 @@
+
+时间：2020-10-27 18:47:38  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 40 
+调试：tcp1启动 
+
+时间：2020-10-27 18:47:38  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 45 
+调试：tcp2启动 
+
+时间：2020-10-27 18:47:52  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 413 
+调试：监听2错误：通常每个套接字地址(协议/网络地址/端口)只允许使用一次。 
+
+时间：2020-10-27 18:47:52  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 420 
+调试：重启TCP2 
+
+时间：2020-10-27 18:47:52  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 413 
+调试：监听2错误：通常每个套接字地址(协议/网络地址/端口)只允许使用一次。 
+
+时间：2020-10-27 18:47:52  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 420 
+调试：重启TCP2 
+
+时间：2020-10-27 18:47:52  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 413 
+调试：监听2错误：通常每个套接字地址(协议/网络地址/端口)只允许使用一次。 
+
+时间：2020-10-27 18:49:19  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 40 
+调试：tcp1启动 
+
+时间：2020-10-27 18:49:19  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 45 
+调试：tcp2启动 
+
+时间：2020-10-27 18:52:17  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 40 
+调试：tcp1启动 
+
+时间：2020-10-27 18:52:17  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 45 
+调试：tcp2启动 
+
+时间：2020-10-27 18:52:50  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 40 
+调试：tcp1启动 
+
+时间：2020-10-27 18:52:50  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 45 
+调试：tcp2启动 
+
+时间：2020-10-27 18:55:26  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 40 
+调试：tcp1启动 
+
+时间：2020-10-27 18:55:26  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 45 
+调试：tcp2启动 
+
+时间：2020-10-27 18:55:30  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 253 
+调试：监听2开启 
+
+时间：2020-10-27 18:55:30  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 72 
+调试：监听1开启 
+
+时间：2020-10-27 18:55:30  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 259 
+调试：while2(true) 
+
+时间：2020-10-27 18:55:30  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 81 
+调试：TCP1Connected! 
+
+时间：2020-10-27 18:55:30  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 88 
+调试：stream1可读 
+
+时间：2020-10-27 18:55:30  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 264 
+调试：tcp2Connected! 
+
+时间：2020-10-27 18:55:30  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 272 
+调试：stream2可读 
+
+时间：2020-10-27 18:55:33  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 91 
+调试：接受报文1 
+
+时间：2020-10-27 18:55:33  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 275 
+调试：接受报文2 
+
+时间：2020-10-27 18:55:35  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 384 
+调试：Received:7E7E000000000001C95932002B0208E0201027185500F1F1000000000150F0F02010271855392300000715201900000026190000003812240003853D 
+
+时间：2020-10-27 18:55:35  等级：INFO  
+类名：WindowsService_Tcp_fluviometer.Service1 - 202 
+调试：Received:7E7E000000000002C95932002B028F3E201027185500F1F1000000000250F0F02010271855392300000725201900000026190000003812240003E59E 

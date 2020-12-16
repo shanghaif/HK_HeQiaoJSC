@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB6FC663-8371-4E86-AEB1-BC807D57DCFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLibrary1</RootNamespace>
+    <AssemblyName>ClassLibrary1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Haikan2">
+      <HintPath>..\HaikanYixueyuanDog\bin\Debug\Haikan2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abnormal.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccessControlRecord.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AnjianType.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApartmentRecord.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApartmentWarn.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Blacker.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CampusPatrol.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Car.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarAccident.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarBlack.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarIllegalStop.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarNonMotor.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarNonMotorAccident.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarNonMotorBlack.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarNonMotorHelmeted.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarNonMotorIllegalStop.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarNonMotorManned.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarNonMotorSpeedRecord.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarSpeedRecord.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="College.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Curriculum.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dc_EarlyWarningRecord.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dc_TemHum.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoorOpening.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dormitory.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DormitoryNum.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Festival.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FireFacility.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FivePicture.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Focuser.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Foreigner.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForeignerAppoint.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForeignerRecord.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralLaboratory.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GooutForm.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HazardousChemicalsUseRecord.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HazardousChemicalsWarehouse.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InAndOutTime.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReport.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Library.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainLab.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Major.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MapIcon.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MDB\BLL\College.cs" />
+    <Compile Include="MDB\BLL\Department.cs" />
+    <Compile Include="MDB\BLL\Dormitory.cs" />
+    <Compile Include="MDB\BLL\DormitoryNum.cs" />
+    <Compile Include="MDB\BLL\Major.cs" />
+    <Compile Include="MDB\BLL\MenJin.cs" />
+    <Compile Include="MDB\BLL\StuClass.cs" />
+    <Compile Include="MDB\BLL\Student.cs" />
+    <Compile Include="MDB\BLL\SystemUser.cs" />
+    <Compile Include="MDB\BLL\TcqInfo.cs" />
+    <Compile Include="MDB\BLL\TcqType.cs" />
+    <Compile Include="MDB\BLL\Teacher.cs" />
+    <Compile Include="MDB\BLL\xf_Building.cs" />
+    <Compile Include="MDB\BLL\YiCardLSXX.cs" />
+    <Compile Include="MDB\DAL\College.cs" />
+    <Compile Include="MDB\DAL\Department.cs" />
+    <Compile Include="MDB\DAL\Dormitory.cs" />
+    <Compile Include="MDB\DAL\DormitoryNum.cs" />
+    <Compile Include="MDB\DAL\Major.cs" />
+    <Compile Include="MDB\DAL\MenJin.cs" />
+    <Compile Include="MDB\DAL\StuClass.cs" />
+    <Compile Include="MDB\DAL\Student.cs" />
+    <Compile Include="MDB\DAL\SystemUser.cs" />
+    <Compile Include="MDB\DAL\TcqInfo.cs" />
+    <Compile Include="MDB\DAL\TcqType.cs" />
+    <Compile Include="MDB\DAL\Teacher.cs" />
+    <Compile Include="MDB\DAL\xf_Building.cs" />
+    <Compile Include="MDB\DAL\YiCardLSXX.cs" />
+    <Compile Include="MDB\Model\College.cs" />
+    <Compile Include="MDB\Model\Department.cs" />
+    <Compile Include="MDB\Model\Dormitory.cs" />
+    <Compile Include="MDB\Model\DormitoryNum.cs" />
+    <Compile Include="MDB\Model\Major.cs" />
+    <Compile Include="MDB\Model\MenJin.cs" />
+    <Compile Include="MDB\Model\StuClass.cs" />
+    <Compile Include="MDB\Model\Student.cs" />
+    <Compile Include="MDB\Model\SystemUser.cs" />
+    <Compile Include="MDB\Model\TcqInfo.cs" />
+    <Compile Include="MDB\Model\TcqType.cs" />
+    <Compile Include="MDB\Model\Teacher.cs" />
+    <Compile Include="MDB\Model\xf_Building.cs" />
+    <Compile Include="MDB\Model\YiCardLSXX.cs" />
+    <Compile Include="Monitor.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecyclingManagement.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResearchBuilding.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SafeManagement.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolDistrict.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolInCar.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolStaffRecord.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreAdd.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityType.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Specific.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Stadium.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StrangeWarning.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StuClass.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsApartment.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StuManagement.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StuMapCurriculum.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemIcon.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemLog.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemMenu.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemPermission.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemRole.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemRolePermissionMapping.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUserRoleMapping.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_ApparatusRegistration.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_BlackList.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_Captial.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_ConsumptionRecord.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_EntramceGuard.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_InsOpen.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_Instrument.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_InstrumentFault.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_InstrumentMaintain.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_InstrumentType.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_InstrumentUse.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_Laboratory.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_LaboratoryLog.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_LaboratoryType.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_RechargeRecord.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_User.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Warning.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Weekly.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="whp_EntramceGuard.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Worker.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Wrj.cs">
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YixueyuanDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YixueyuanDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YixueyuanDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YixueyuanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YixueyuanDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YixueyuanDb.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="YixueyuanDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>YixueyuanDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="YixueyuanDb.edmx.diagram">
+      <DependentUpon>YixueyuanDb.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="YixueyuanDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YixueyuanDb.edmx</DependentUpon>
+      <LastGenOutput>YixueyuanDb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="YixueyuanDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YixueyuanDb.edmx</DependentUpon>
+      <LastGenOutput>YixueyuanDb.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

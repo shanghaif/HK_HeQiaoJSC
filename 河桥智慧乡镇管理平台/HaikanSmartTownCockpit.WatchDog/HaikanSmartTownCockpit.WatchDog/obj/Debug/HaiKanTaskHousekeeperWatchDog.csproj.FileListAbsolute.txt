@@ -1,0 +1,573 @@
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\bin\Debug\Apache.NMS.dll
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\bin\Debug\log4net.dll
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\bin\Debug\log4net.xml
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\SmartCampusManagementWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\我的工作目录\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csprojAssemblyReference.cache
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CoreCompileInputs.cache
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.pdb
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\罗俊\东阳市市场监督管理局任务管家平台\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.pdb
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csprojAssemblyReference.cache
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CoreCompileInputs.cache
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\工作目录\罗俊\东阳市场监督管理局任务管家\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.dll
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.dll
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.pdb
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll.config
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.xml
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.xml
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csprojAssemblyReference.cache
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CoreCompileInputs.cache
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\我的工作目录3\东阳市场监督管理局任务管家系统看门狗(1)\东阳市场监督管理局任务管家系统看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Haikang.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Beans.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Charsets.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Cldrdata.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Corba.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Core.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Jdbc.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Localedata.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Management.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Media.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Misc.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Naming.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Nashorn.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Remoting.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Security.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Text.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Tools.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Util.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.API.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Bind.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Crypto.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Parse.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Transform.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.WebServices.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.XPath.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.JNI.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.pdb
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll.config
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.xml
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.xml
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csprojAssemblyReference.cache
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CoreCompileInputs.cache
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\work-data\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-codec-1.6.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-lang3-3.1.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-logging-1.1.3.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Haikang.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpclient-4.3.3.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpcore-4.3.3.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Beans.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Charsets.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Cldrdata.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Corba.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Core.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Jdbc.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Localedata.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Management.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Media.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Misc.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Naming.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Nashorn.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Remoting.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Security.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Text.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Tools.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Util.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.API.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Bind.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Crypto.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Parse.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Transform.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.WebServices.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.XPath.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.JNI.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.pdb
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll.config
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.xml
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.xml
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csprojAssemblyReference.cache
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CoreCompileInputs.cache
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\work_hqzhxz\200923_14.33\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-codec-1.6.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-lang3-3.1.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-logging-1.1.3.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Haikang.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpclient-4.3.3.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpcore-4.3.3.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Beans.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Charsets.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Cldrdata.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Corba.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Core.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Jdbc.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Localedata.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Management.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Media.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Misc.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Naming.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Nashorn.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Remoting.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Security.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Text.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Tools.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Util.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.API.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Bind.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Crypto.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Parse.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Transform.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.WebServices.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.XPath.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.JNI.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.pdb
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll.config
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.xml
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.xml
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csprojAssemblyReference.cache
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CoreCompileInputs.cache
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKan3.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\System.Data.SqlClient.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\QRCoder.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\DotNetZip.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OOXML.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\BouncyCastle.Crypto.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OpenXml4Net.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKan3.pdb
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe.config
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\BouncyCastle.Crypto.xml
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.pdb
+D:\我的工作目录\河桥智慧乡镇\2020 10 26\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\BouncyCastle.Crypto.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-codec-1.6.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-lang3-3.1.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-logging-1.1.3.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKan3.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Haikang.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpclient-4.3.3.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpcore-4.3.3.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Beans.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Charsets.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Cldrdata.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Corba.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Core.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Jdbc.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Localedata.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Management.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Media.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Misc.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Naming.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Nashorn.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Remoting.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Security.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Text.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Tools.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Util.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.API.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Bind.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Crypto.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Parse.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Transform.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.WebServices.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.XPath.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.JNI.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OOXML.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OpenXml4Net.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\System.Data.SqlClient.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\QRCoder.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\DotNetZip.dll
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.pdb
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll.config
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\BouncyCastle.Crypto.xml
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.xml
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.xml
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKan3.pdb
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.pdb
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csprojAssemblyReference.cache
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe.config
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CoreCompileInputs.cache
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\work_hqzhxz\201028_08.37\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\BouncyCastle.Crypto.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-codec-1.6.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-lang3-3.1.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-logging-1.1.3.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKan3.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Haikang.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpclient-4.3.3.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpcore-4.3.3.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Beans.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Charsets.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Cldrdata.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Corba.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Core.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Jdbc.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Localedata.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Management.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Media.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Misc.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Naming.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Nashorn.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Remoting.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Security.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Text.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Tools.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Util.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.API.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Bind.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Crypto.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Parse.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Transform.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.WebServices.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.XPath.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.JNI.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OOXML.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OpenXml4Net.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\System.Data.SqlClient.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\QRCoder.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\DotNetZip.dll
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.pdb
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll.config
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\BouncyCastle.Crypto.xml
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.xml
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.xml
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKan3.pdb
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.pdb
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csprojAssemblyReference.cache
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe.config
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CoreCompileInputs.cache
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\我的工作目录\work_萧山码上知\新建文件夹\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\BouncyCastle.Crypto.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-codec-1.6.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-lang3-3.1.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-logging-1.1.3.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKan3.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Haikang.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpclient-4.3.3.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpcore-4.3.3.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Beans.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Charsets.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Cldrdata.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Corba.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Core.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Jdbc.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Localedata.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Management.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Media.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Misc.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Naming.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Nashorn.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Remoting.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Security.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Text.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Tools.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Util.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.API.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Bind.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Crypto.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Parse.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Transform.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.WebServices.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.XPath.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.JNI.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OOXML.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OpenXml4Net.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\System.Data.SqlClient.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\QRCoder.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\DotNetZip.dll
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.pdb
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll.config
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\BouncyCastle.Crypto.xml
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.xml
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.xml
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKan3.pdb
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.pdb
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csprojAssemblyReference.cache
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe.config
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CoreCompileInputs.cache
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\work_hqzhxz\201124_16.07\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe.config
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.exe
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\SmartCampusManagementWatchDog.pdb
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.ActiveMQ.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Apache.NMS.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\BouncyCastle.Crypto.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-codec-1.6.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-lang3-3.1.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\commons-logging-1.1.3.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKan3.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Haikang.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpclient-4.3.3.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\httpcore-4.3.3.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Beans.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Charsets.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Cldrdata.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Corba.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Core.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Jdbc.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Localedata.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Management.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Media.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Misc.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Naming.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Nashorn.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Remoting.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Security.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Text.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Tools.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.Util.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.API.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Bind.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Crypto.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Parse.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.Transform.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.WebServices.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.OpenJDK.XML.XPath.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\IKVM.Runtime.JNI.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OOXML.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OpenXml4Net.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\System.Data.SqlClient.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\QRCoder.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\DotNetZip.dll
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.pdb
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKanTaskHousekeeperCore.dll.config
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\BouncyCastle.Crypto.xml
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.xml
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\EntityFramework.SqlServer.xml
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\HaiKan3.pdb
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.pdb
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\log4net.xml
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.pdb
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\bin\Debug\Newtonsoft.Json.xml
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csprojAssemblyReference.cache
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe.config
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.FrmMain.resources
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.GenerateResource.cache
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CoreCompileInputs.cache
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\HaiKanTaskHousekeeperWatchDog.csproj.CopyComplete
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.exe
+D:\work_hqzhxz\201130_08.38\河桥智慧乡镇管理平台\河桥数据驾驶舱统一地址库看门狗\HaiKanTaskHousekeeperWatchDog\obj\Debug\SmartCampusManagementWatchDog.pdb

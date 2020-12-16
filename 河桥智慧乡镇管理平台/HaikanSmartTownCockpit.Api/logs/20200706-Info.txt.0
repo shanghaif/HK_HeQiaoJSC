@@ -1,0 +1,6 @@
+2020-07-06 17:40:22,890 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Application started. Press Ctrl+C to shut down.
+2020-07-06 17:40:22,933 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Hosting environment: Development
+2020-07-06 17:40:22,937 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Content root path: D:\我的工作目录\河桥智慧乡镇\河桥智慧乡镇平台\HaikanSmartTownCockpit.Api
+2020-07-06 17:49:06,529 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Application started. Press Ctrl+C to shut down.
+2020-07-06 17:49:06,567 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Hosting environment: Development
+2020-07-06 17:49:06,569 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Content root path: D:\我的工作目录\河桥智慧乡镇\河桥智慧乡镇管理平台\HaikanSmartTownCockpit.Api

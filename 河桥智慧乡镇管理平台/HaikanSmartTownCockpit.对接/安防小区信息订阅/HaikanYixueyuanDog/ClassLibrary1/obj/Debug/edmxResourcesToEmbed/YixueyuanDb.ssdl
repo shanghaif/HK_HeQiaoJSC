@@ -1,0 +1,2585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="yixueyuanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Abnormal">
+    <Key>
+      <PropertyRef Name="AbnormalUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="AbnormalUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="StuNum" Type="varchar" MaxLength="255" />
+    <Property Name="CollegeUuid" Type="uniqueidentifier" />
+    <Property Name="MajorUuid" Type="uniqueidentifier" />
+    <Property Name="StuClassUuid" Type="uniqueidentifier" />
+    <Property Name="AbnormalTime" Type="datetime" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="State" Type="varchar" MaxLength="255" />
+    <Property Name="WarnState" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AccessControlRecord">
+    <Key>
+      <PropertyRef Name="AccessControlRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="AccessControlRecordUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="ComeInTime" Type="varchar" MaxLength="255" />
+    <Property Name="GetOutTime" Type="varchar" MaxLength="255" />
+    <Property Name="ResearchBuildingUuid" Type="uniqueidentifier" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AnjianType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Remarks" Type="varchar" MaxLength="255" />
+    <Property Name="Other" Type="varchar" MaxLength="255" />
+    <Property Name="IsDelete" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ApartmentRecord">
+    <Key>
+      <PropertyRef Name="ApartmentRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="ApartmentRecordUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdentityType" Type="int" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="DormitoryUuid" Type="uniqueidentifier" />
+    <Property Name="EnterTime" Type="datetime" />
+    <Property Name="OutTime" Type="datetime" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="StuNum" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ApartmentWarn">
+    <Key>
+      <PropertyRef Name="ApartmentWarnUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="ApartmentWarnUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EquipmentId" Type="varchar" MaxLength="255" />
+    <Property Name="EquipmentName" Type="varchar" MaxLength="255" />
+    <Property Name="WarnTime" Type="datetime" />
+    <Property Name="Place" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Blacker">
+    <Key>
+      <PropertyRef Name="BlackerUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="BlackerUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Features" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="CampusPatrol">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="255" />
+    <Property Name="ShenFen" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="longitude" Type="varchar" MaxLength="255" />
+    <Property Name="latitude" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="CarUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="IdentityType" Type="int" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentUuid" Type="uniqueidentifier" />
+    <Property Name="State" Type="int" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="CarColor" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="InSchoolNum" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="CarAccident">
+    <Key>
+      <PropertyRef Name="CarAccidentUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarAccidentUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccidentTime" Type="varchar" MaxLength="255" />
+    <Property Name="AccidentPlace" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="CarBlack">
+    <Key>
+      <PropertyRef Name="CarBlackUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarBlackUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="CarColor" Type="varchar" MaxLength="255" />
+    <Property Name="CarBrand" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="CarIllegalStop">
+    <Key>
+      <PropertyRef Name="CarIllegalStopUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarIllegalStopUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IllegalStopTime" Type="varchar" MaxLength="255" />
+    <Property Name="IllegalStopPlace" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar(max)" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="CarNonMotor">
+    <Key>
+      <PropertyRef Name="CarNonMotorUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarNonMotorUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="IdentityType" Type="int" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="CarBrand" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentUuid" Type="uniqueidentifier" />
+    <Property Name="State" Type="int" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="CarColor" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="InSchoolNum" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="CarNonMotorAccident">
+    <Key>
+      <PropertyRef Name="CarNonMotorAccidentUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarNonMotorAccidentUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccidentTime" Type="varchar" MaxLength="255" />
+    <Property Name="AccidentPlace" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="CarBrand" Type="varchar" MaxLength="255" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="CarNonMotorBlack">
+    <Key>
+      <PropertyRef Name="CarNonMotorBlackUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarNonMotorBlackUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="CarColor" Type="varchar" MaxLength="255" />
+    <Property Name="CarBrand" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="Origion" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="CarNonMotorHelmeted">
+    <Key>
+      <PropertyRef Name="CarNonMotorHelmetedUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarNonMotorHelmetedUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HelmetedTime" Type="varchar" MaxLength="255" />
+    <Property Name="HelmetedPlace" Type="varchar" MaxLength="255" />
+    <Property Name="HelmetedEvent" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar(max)" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="CarNonMotorIllegalStop">
+    <Key>
+      <PropertyRef Name="CarNonMotorIllegalStopUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarNonMotorIllegalStopUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IllegalStopTime" Type="varchar" MaxLength="255" />
+    <Property Name="IllegalStopPlace" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar(max)" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="CarNonMotorManned">
+    <Key>
+      <PropertyRef Name="CarNonMotorMannedUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarNonMotorMannedUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MannedTime" Type="varchar" MaxLength="255" />
+    <Property Name="MannedPlace" Type="varchar" MaxLength="255" />
+    <Property Name="MannedEvent" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar(max)" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="CarNonMotorSpeedRecord">
+    <Key>
+      <PropertyRef Name="CarNonMotorSpeedRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarNonMotorSpeedRecordUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SpeedTime" Type="varchar" MaxLength="255" />
+    <Property Name="SpeedPlace" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="SpeedOver" Type="varchar" MaxLength="255" />
+    <Property Name="SpeedLimit" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="CarSpeedRecord">
+    <Key>
+      <PropertyRef Name="CarSpeedRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CarSpeedRecordUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SpeedTime" Type="varchar" MaxLength="255" />
+    <Property Name="SpeedPlace" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="SpeedOver" Type="varchar" MaxLength="255" />
+    <Property Name="SpeedLimit" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="College">
+    <Key>
+      <PropertyRef Name="CollegeUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="CollegeUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CollegeName" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Curriculum">
+    <Key>
+      <PropertyRef Name="CurriculumUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurriculumUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CurriculumName" Type="varchar" MaxLength="255" />
+    <Property Name="WeeklyUuid" Type="uniqueidentifier" />
+    <Property Name="FestivalUuid" Type="uniqueidentifier" />
+    <Property Name="Week" Type="varchar" MaxLength="255" />
+    <Property Name="CurriculumNum" Type="varchar" MaxLength="255" />
+    <Property Name="Weekly" Type="varchar" MaxLength="255" />
+    <Property Name="Festival" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolYear" Type="varchar" MaxLength="255" />
+    <Property Name="Semester" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Dc_EarlyWarningRecord">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoomID" Type="varchar" MaxLength="255" />
+    <Property Name="RoomName" Type="varchar" MaxLength="255" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="Reason" Type="varchar" MaxLength="255" />
+    <Property Name="Remarks" Type="varchar" MaxLength="255" />
+    <Property Name="State" Type="varchar" MaxLength="255" />
+    <Property Name="IsDelete" Type="varchar" MaxLength="255" />
+    <Property Name="DeleteTime" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Dc_TemHum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstrumentID" Type="varchar" MaxLength="255" />
+    <Property Name="Temperature" Type="varchar" MaxLength="255" />
+    <Property Name="Humidity" Type="varchar" MaxLength="255" />
+    <Property Name="State" Type="varchar" MaxLength="255" />
+    <Property Name="InCharge" Type="varchar" MaxLength="255" />
+    <Property Name="InChargeID" Type="varchar" MaxLength="255" />
+    <Property Name="IsDelete" Type="varchar" MaxLength="255" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="InstrumentName" Type="varchar" MaxLength="255" />
+    <Property Name="DeleteTime" Type="varchar" MaxLength="255" />
+    <Property Name="RoomID" Type="varchar" MaxLength="255" />
+    <Property Name="RoomName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="DepartmentUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="255" />
+    <Property Name="ResPeople" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DoorOpening">
+    <Key>
+      <PropertyRef Name="DoorOpeningRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="DoorOpeningRecordUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AffiliatedLaboratory" Type="varchar" MaxLength="255" />
+    <Property Name="DoorOpener" Type="varchar" MaxLength="255" />
+    <Property Name="OpeningHours" Type="datetime2" Precision="7" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Dormitory">
+    <Key>
+      <PropertyRef Name="DormitoryUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="DormitoryUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DormitoryName" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="DormitoryNum">
+    <Key>
+      <PropertyRef Name="DormitoryNumUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="DormitoryNumUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DormitoryUuid" Type="uniqueidentifier" />
+    <Property Name="DormitoryNumName" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Festival">
+    <Key>
+      <PropertyRef Name="FestivalUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FestivalUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FestivalName" Type="varchar" MaxLength="255" />
+    <Property Name="FestivalTime" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="FireFacilities">
+    <Key>
+      <PropertyRef Name="FireFacilitiesUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="FireFacilitiesUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ResearchBuildingUuid" Type="uniqueidentifier" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="SpecificationModel" Type="varchar" MaxLength="255" />
+    <Property Name="Company" Type="varchar" MaxLength="255" />
+    <Property Name="Unit" Type="varchar" MaxLength="255" />
+    <Property Name="Number" Type="int" />
+    <Property Name="DateOfManufacture" Type="datetime2" Precision="7" />
+    <Property Name="LastRepairDate" Type="datetime2" Precision="7" />
+    <Property Name="ServiceLife" Type="int" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="FivePicture">
+    <Key>
+      <PropertyRef Name="FivePictureUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="FivePictureUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ScoreStart" Type="varchar" MaxLength="255" />
+    <Property Name="Level" Type="int" />
+    <Property Name="color" Type="varchar" MaxLength="255" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="ScoreOver" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Focuser">
+    <Key>
+      <PropertyRef Name="FocuserUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="FocuserUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="FocusType" Type="varchar" MaxLength="255" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Foreigner">
+    <Key>
+      <PropertyRef Name="ForeignerUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="ForeignerUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="IdentityType" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="ForeignerAppoint">
+    <Key>
+      <PropertyRef Name="ForeignerAppointUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="ForeignerAppointUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="IdentityType" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="VisitName" Type="varchar" MaxLength="255" />
+    <Property Name="VisitPhone" Type="varchar" MaxLength="255" />
+    <Property Name="HealthCode" Type="varchar" MaxLength="255" />
+    <Property Name="Temperature" Type="varchar" MaxLength="255" />
+    <Property Name="VisitTime" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="ForeignerRecord">
+    <Key>
+      <PropertyRef Name="ForeignerRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="ForeignerRecordUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="IdentityType" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="VisitName" Type="varchar" MaxLength="255" />
+    <Property Name="VisitPhone" Type="varchar" MaxLength="255" />
+    <Property Name="HealthCode" Type="varchar" MaxLength="255" />
+    <Property Name="Temperature" Type="varchar" MaxLength="255" />
+    <Property Name="VisitTime" Type="varchar" MaxLength="255" />
+    <Property Name="ComeInDoor" Type="varchar" MaxLength="255" />
+    <Property Name="ComeInTime" Type="varchar" MaxLength="255" />
+    <Property Name="GetOutDoor" Type="varchar" MaxLength="255" />
+    <Property Name="GetOutTime" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="GeneralLaboratory">
+    <Key>
+      <PropertyRef Name="GeneralLaboratoryUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="GeneralLaboratoryUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GeneralLaboratoryName" Type="varchar" MaxLength="255" />
+    <Property Name="GeneralLaboratoryBasicInformation" Type="varchar" MaxLength="255" />
+    <Property Name="BuildingName" Type="varchar" MaxLength="255" />
+    <Property Name="RoomNumber" Type="varchar" MaxLength="255" />
+    <Property Name="Principal" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="AllowEntry" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="GooutForm">
+    <Key>
+      <PropertyRef Name="GooutFormUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="GooutFormUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="Reason" Type="varchar" MaxLength="255" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="HazardousChemicalsUseRecords">
+    <Key>
+      <PropertyRef Name="HazardousChemicalsUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="HazardousChemicalsUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HazardousChemicalsType" Type="varchar" MaxLength="255" />
+    <Property Name="HazardousChemicalsName" Type="varchar" MaxLength="255" />
+    <Property Name="ReservationPerson" Type="varchar" MaxLength="255" />
+    <Property Name="AppointmentStartTime" Type="datetime2" Precision="7" />
+    <Property Name="AppointmentEndTime" Type="datetime2" Precision="7" />
+    <Property Name="TotalTime" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HazardousChemicalsWarehouse">
+    <Key>
+      <PropertyRef Name="HazardousChemicalsWarehouseUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="HazardousChemicalsWarehouseUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HazardousChemicalsWarehouseName" Type="varchar" MaxLength="255" />
+    <Property Name="HazardousChemicalsWarehouseBasicInformation" Type="varchar" MaxLength="255" />
+    <Property Name="BuildingName" Type="varchar" MaxLength="255" />
+    <Property Name="RoomNumber" Type="varchar" MaxLength="255" />
+    <Property Name="Principal" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="AllowEntry" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="InAndOutTime">
+    <Key>
+      <PropertyRef Name="InAndOutTimeUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="InAndOutTimeUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InTime" Type="int" />
+    <Property Name="OutTime" Type="int" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="IncidentReport">
+    <Key>
+      <PropertyRef Name="IncidentReportUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="IncidentReportUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="Gh" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentUuid" Type="uniqueidentifier" />
+    <Property Name="StuClassUuid" Type="uniqueidentifier" />
+    <Property Name="EventLocation" Type="varchar" MaxLength="255" />
+    <Property Name="EventSituation" Type="varchar" MaxLength="255" />
+    <Property Name="SecurityTypeUuid" Type="uniqueidentifier" />
+    <Property Name="Recorder" Type="varchar" MaxLength="255" />
+    <Property Name="Rectify" Type="varchar" MaxLength="255" />
+    <Property Name="EventNumber" Type="varchar" MaxLength="255" />
+    <Property Name="EventTime" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+    <Property Name="EventStatus" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="EventName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Library">
+    <Key>
+      <PropertyRef Name="LibraryUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="LibraryUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LibraryName" Type="varchar" MaxLength="255" />
+    <Property Name="Location" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="MainLab">
+    <Key>
+      <PropertyRef Name="MainLabUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="MainLabUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MainLabName" Type="varchar" MaxLength="255" />
+    <Property Name="MainLabBasicInformation" Type="varchar" MaxLength="255" />
+    <Property Name="BuildingName" Type="varchar" MaxLength="255" />
+    <Property Name="RoomNumber" Type="varchar" MaxLength="255" />
+    <Property Name="Principal" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="AllowEntry" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Major">
+    <Key>
+      <PropertyRef Name="MajorUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="MajorUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MajorName" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="CollegeUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="MapIcon">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon" Type="varchar" MaxLength="255" />
+    <Property Name="Explain" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolNum" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Monitor">
+    <Key>
+      <PropertyRef Name="MonitorUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="MonitorUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ResearchBuildingUuid" Type="uniqueidentifier" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="SpecificationModel" Type="varchar" MaxLength="255" />
+    <Property Name="Company" Type="varchar" MaxLength="255" />
+    <Property Name="Unit" Type="varchar" MaxLength="255" />
+    <Property Name="Number" Type="int" />
+    <Property Name="DateOfManufacture" Type="datetime2" Precision="7" />
+    <Property Name="LastRepairDate" Type="datetime2" Precision="7" />
+    <Property Name="ServiceLife" Type="int" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="RecyclingManagement">
+    <Key>
+      <PropertyRef Name="RecyclingManagementUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="RecyclingManagementUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RecyclingManagementTagUuid" Type="varchar" MaxLength="255" />
+    <Property Name="RecyclingManagementName" Type="varchar" MaxLength="255" />
+    <Property Name="RecyclingManagementPeople" Type="varchar" MaxLength="255" />
+    <Property Name="RecyclingManagementTime" Type="datetime2" Precision="7" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ResearchBuilding">
+    <Key>
+      <PropertyRef Name="ResearchBuildingUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="ResearchBuildingUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ResearchBuildingName" Type="varchar" MaxLength="255" />
+    <Property Name="Location" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SafeManagement">
+    <Key>
+      <PropertyRef Name="SafeManagementUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="SafeManagementUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="IdentityType" Type="varchar" MaxLength="255" />
+    <Property Name="Gh" Type="varchar" MaxLength="255" />
+    <Property Name="YiCard" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SchoolDistrict">
+    <Key>
+      <PropertyRef Name="SchoolDistrictUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SchoolDistrictName" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SchoolInCar">
+    <Key>
+      <PropertyRef Name="SchoolInCarUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="SchoolInCarUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentUuid" Type="uniqueidentifier" />
+    <Property Name="ComeInDoor" Type="varchar" MaxLength="255" />
+    <Property Name="ComeInTime" Type="varchar" MaxLength="255" />
+    <Property Name="GetOutDoor" Type="varchar" MaxLength="255" />
+    <Property Name="GetOutTime" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="CarType" Type="int" />
+  </EntityType>
+  <EntityType Name="SchoolStaffRecord">
+    <Key>
+      <PropertyRef Name="SchoolStaffRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="SchoolStaffRecordUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="HealthCode" Type="varchar" MaxLength="255" />
+    <Property Name="Temperature" Type="varchar" MaxLength="255" />
+    <Property Name="ComeInDoor" Type="varchar" MaxLength="255" />
+    <Property Name="ComeInTime" Type="varchar" MaxLength="255" />
+    <Property Name="GetOutDoor" Type="varchar" MaxLength="255" />
+    <Property Name="GetOutTime" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="ScoreAdd">
+    <Key>
+      <PropertyRef Name="ScoreAddUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="ScoreAddUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DepartmentUuid" Type="uniqueidentifier" />
+    <Property Name="DepartmentScore" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentPicture" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentPoints" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentAddPoints" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="ScoreType" Type="int" />
+    <Property Name="EventsPoints" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SecurityType">
+    <Key>
+      <PropertyRef Name="SecurityTypeUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="SecurityTypeUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SecurityTypeName" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Specific">
+    <Key>
+      <PropertyRef Name="SpecificUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="SpecificUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TypeName" Type="varchar" MaxLength="255" />
+    <Property Name="EventScore" Type="varchar" MaxLength="255" />
+    <Property Name="EventName" Type="varchar" MaxLength="255" />
+    <Property Name="Events" Type="varchar" MaxLength="255" />
+    <Property Name="Points" Type="varchar" MaxLength="255" />
+    <Property Name="RectificationTime" Type="varchar" MaxLength="255" />
+    <Property Name="RectificationScore" Type="varchar" MaxLength="255" />
+    <Property Name="RectificationPoints" Type="varchar" MaxLength="255" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="255" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Stadium">
+    <Key>
+      <PropertyRef Name="StadiumUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="StadiumUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StadiumName" Type="varchar" MaxLength="255" />
+    <Property Name="Location" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="StrangeWarning">
+    <Key>
+      <PropertyRef Name="StrangeWarningUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="StrangeWarningUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EquipmentNum" Type="varchar" MaxLength="255" />
+    <Property Name="EquipmentName" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="ComeInDoor" Type="varchar" MaxLength="255" />
+    <Property Name="ComeInTime" Type="varchar" MaxLength="255" />
+    <Property Name="GetOutDoor" Type="varchar" MaxLength="255" />
+    <Property Name="GetOutTime" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="EquipmentType" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="StuClass">
+    <Key>
+      <PropertyRef Name="StuClassUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="StuClassUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MajorUuid" Type="uniqueidentifier" />
+    <Property Name="StuClassName" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="StudentUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="StuNum" Type="varchar" MaxLength="255" />
+    <Property Name="CollegeUuid" Type="uniqueidentifier" />
+    <Property Name="MajorUuid" Type="uniqueidentifier" />
+    <Property Name="StuClassUuid" Type="uniqueidentifier" />
+    <Property Name="YiCard" Type="varchar" MaxLength="255" />
+    <Property Name="DormitoryUuid" Type="uniqueidentifier" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="DormitoryNumUuid" Type="uniqueidentifier" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Nation" Type="varchar" MaxLength="255" />
+    <Property Name="Political" Type="varchar" MaxLength="255" />
+    <Property Name="Religion" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="StudentsApartment">
+    <Key>
+      <PropertyRef Name="StudentsApartmentUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="StudentsApartmentUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StudentsApartmentName" Type="varchar" MaxLength="255" />
+    <Property Name="Location" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="StuManagement">
+    <Key>
+      <PropertyRef Name="StuManagementUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="StuManagementUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="IdentityType" Type="varchar" MaxLength="255" />
+    <Property Name="Gh" Type="varchar" MaxLength="255" />
+    <Property Name="YiCard" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentUuid" Type="uniqueidentifier" />
+    <Property Name="CollegeUuid" Type="uniqueidentifier" />
+    <Property Name="StuClassUuid" Type="uniqueidentifier" />
+    <Property Name="DormitoryUuid" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="StuMapCurriculum">
+    <Key>
+      <PropertyRef Name="StuMapCurriculumUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="StuMapCurriculumUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StuNum" Type="varchar" MaxLength="20" />
+    <Property Name="CurriculumUuid" Type="uniqueidentifier" />
+    <Property Name="SchoolYear" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolTerm" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_ApparatusRegistration">
+    <Key>
+      <PropertyRef Name="sys_ApparatusRegistrationUuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_ApparatusRegistrationUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="isbig" Type="nvarchar" MaxLength="5" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="sys_InstrumentUuid" Type="uniqueidentifier" />
+    <Property Name="num" Type="int" />
+    <Property Name="isaudit" Type="nvarchar" MaxLength="10" />
+    <Property Name="isback" Type="nvarchar" MaxLength="5" />
+    <Property Name="money" Type="nvarchar" MaxLength="500" />
+    <Property Name="size" Type="nvarchar" MaxLength="50" />
+    <Property Name="isusetime" Type="nvarchar" MaxLength="50" />
+    <Property Name="usetype" Type="nvarchar" MaxLength="50" />
+    <Property Name="rooomid" Type="nvarchar" MaxLength="50" />
+    <Property Name="stime" Type="datetime" />
+    <Property Name="etime" Type="datetime" />
+    <Property Name="applicationnameid" Type="nvarchar" MaxLength="50" />
+    <Property Name="applicationpurpose" Type="nvarchar" MaxLength="200" />
+    <Property Name="consumablesnum" Type="nvarchar" MaxLength="500" />
+    <Property Name="consumablesname" Type="nvarchar" MaxLength="500" />
+    <Property Name="laboratory" Type="nvarchar" MaxLength="50" />
+    <Property Name="sampleid" Type="int" />
+    <Property Name="note" Type="nvarchar" MaxLength="200" />
+    <Property Name="auditreason" Type="nvarchar" MaxLength="200" />
+    <Property Name="auditername" Type="nvarchar" MaxLength="50" />
+    <Property Name="taskname" Type="nvarchar" MaxLength="50" />
+    <Property Name="taskresourse" Type="nvarchar" MaxLength="200" />
+    <Property Name="cardnumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="usertimes" Type="varchar" MaxLength="50" />
+    <Property Name="isteacher" Type="nvarchar" MaxLength="50" />
+    <Property Name="applytime" Type="datetime" />
+    <Property Name="sys_LaboratoryUuid" Type="uniqueidentifier" />
+    <Property Name="xinhao" Type="int" />
+    <Property Name="enable" Type="int" />
+    <Property Name="teacheraudit" Type="varchar" MaxLength="10" />
+    <Property Name="auditperson" Type="nvarchar" MaxLength="2000" />
+    <Property Name="sstime" Type="datetime" />
+    <Property Name="setime" Type="datetime" />
+    <Property Name="types" Type="nvarchar" MaxLength="50" />
+    <Property Name="stimes" Type="varchar" MaxLength="50" />
+    <Property Name="truename" Type="varchar" MaxLength="255" />
+    <Property Name="capital" Type="varchar" MaxLength="255" />
+    <Property Name="ExperimentPurpose" Type="varchar" MaxLength="255" />
+    <Property Name="ExperimentalScheme" Type="varchar" MaxLength="255" />
+    <Property Name="FileState" Type="varchar" MaxLength="255" />
+    <Property Name="ArchivalAudit" Type="varchar" MaxLength="255" />
+    <Property Name="FileResult" Type="nvarchar(max)" />
+    <Property Name="FileNoTime" Type="datetime2" Precision="7" />
+    <Property Name="FileGoTime" Type="datetime" />
+    <Property Name="JianMianMoney" Type="varchar" MaxLength="255" />
+    <Property Name="AddMoney" Type="varchar" MaxLength="255" />
+    <Property Name="Isxsf" Type="varchar" MaxLength="255" />
+    <Property Name="SXCLShiJi" Type="varchar" MaxLength="2000" />
+    <Property Name="QiTi" Type="varchar" MaxLength="255" />
+    <Property Name="GuangBan" Type="varchar" MaxLength="255" />
+    <Property Name="Isxhx" Type="varchar" MaxLength="255" />
+    <Property Name="HXName" Type="varchar" MaxLength="255" />
+    <Property Name="ProbjetName" Type="varchar" MaxLength="255" />
+    <Property Name="ProbjetLaiYuan" Type="varchar" MaxLength="255" />
+    <Property Name="CeShiContent" Type="varchar" MaxLength="2000" />
+    <Property Name="NiCStime" Type="varchar" MaxLength="255" />
+    <Property Name="NiCSCount" Type="varchar" MaxLength="255" />
+    <Property Name="Issfsy" Type="varchar" MaxLength="255" />
+    <Property Name="SQDanWei" Type="varchar" MaxLength="255" />
+    <Property Name="NumberSample" Type="varchar" MaxLength="255" />
+    <Property Name="ActualCost" Type="varchar" MaxLength="255" />
+    <Property Name="Isdelete" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_BlackList">
+    <Key>
+      <PropertyRef Name="sys_BlackListUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="sys_BlackListUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="EndTime" Type="varchar" MaxLength="255" />
+    <Property Name="Reason" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="EquipmentName" Type="varchar" MaxLength="255" />
+    <Property Name="YuyueType" Type="varchar" MaxLength="255" />
+    <Property Name="Comment" Type="varchar" MaxLength="255" />
+    <Property Name="number" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="255" />
+    <Property Name="Eamil" Type="varchar" MaxLength="255" />
+    <Property Name="card" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_Captial">
+    <Key>
+      <PropertyRef Name="sys_CaptialUuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_CaptialUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="capital" Type="nvarchar" MaxLength="50" />
+    <Property Name="price" Type="money" />
+    <Property Name="Worker" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_ConsumptionRecord">
+    <Key>
+      <PropertyRef Name="sys_ConsumptionRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_ConsumptionRecordUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NameSubscriber" Type="varchar" MaxLength="255" />
+    <Property Name="worker" Type="varchar" MaxLength="255" />
+    <Property Name="nameInstrument" Type="varchar" MaxLength="255" />
+    <Property Name="BookingFee" Type="varchar" MaxLength="255" />
+    <Property Name="dateConsumption" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_EntramceGuard">
+    <Key>
+      <PropertyRef Name="sys_EntramceGuardUuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_EntramceGuardUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GNameListID" Type="nvarchar(max)" />
+    <Property Name="Entcardnumber" Type="nvarchar(max)" />
+    <Property Name="ip" Type="nvarchar" MaxLength="50" />
+    <Property Name="USB" Type="int" />
+    <Property Name="stime" Type="varchar" MaxLength="225" />
+    <Property Name="etime" Type="varchar" MaxLength="225" />
+    <Property Name="GNameListName" Type="nvarchar(max)" />
+    <Property Name="StudenListID" Type="nvarchar(max)" />
+    <Property Name="StudentListName" Type="nvarchar(max)" />
+    <Property Name="EntcardType" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_InsOpen">
+    <Key>
+      <PropertyRef Name="sys_InsOpenUuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_InsOpenUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="week" Type="nvarchar" MaxLength="255" />
+    <Property Name="kstime" Type="nvarchar" MaxLength="255" />
+    <Property Name="sjtime" Type="nvarchar" MaxLength="255" />
+    <Property Name="Isoptional" Type="varchar" MaxLength="255" />
+    <Property Name="BeginTime" Type="varchar" MaxLength="255" />
+    <Property Name="EndTime" Type="varchar" MaxLength="255" />
+    <Property Name="IsDel" Type="varchar" MaxLength="255" />
+    <Property Name="sys_InstrumentUuid" Type="uniqueidentifier" />
+    <Property Name="Dispark" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_Instrument">
+    <Key>
+      <PropertyRef Name="sys_InstrumentUuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_InstrumentUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="sys_InstrumentTypeUuid" Type="uniqueidentifier" />
+    <Property Name="bianhao" Type="varchar" MaxLength="50" />
+    <Property Name="studentNo" Type="varchar" MaxLength="50" />
+    <Property Name="iname" Type="nvarchar" MaxLength="50" />
+    <Property Name="guige" Type="nvarchar" MaxLength="50" />
+    <Property Name="time" Type="datetime" />
+    <Property Name="canjia" Type="nvarchar" MaxLength="50" />
+    <Property Name="count" Type="float" />
+    <Property Name="price" Type="money" />
+    <Property Name="gonplace" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="lab" Type="nvarchar" MaxLength="50" />
+    <Property Name="roonnumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="guanPeopleID" Type="nvarchar(max)" />
+    <Property Name="detail" Type="text" />
+    <Property Name="img" Type="nvarchar(max)" />
+    <Property Name="imgtwo" Type="nvarchar(max)" />
+    <Property Name="imgstr" Type="nvarchar(max)" />
+    <Property Name="imgfor" Type="nvarchar(max)" />
+    <Property Name="money" Type="decimal" Precision="18" Scale="1" />
+    <Property Name="appartus" Type="nvarchar" MaxLength="50" />
+    <Property Name="isshow" Type="char" MaxLength="4" />
+    <Property Name="makestate" Type="varchar" MaxLength="20" />
+    <Property Name="labId" Type="int" />
+    <Property Name="instrupower" Type="nvarchar" MaxLength="50" />
+    <Property Name="guanPeopleName" Type="varchar" MaxLength="255" />
+    <Property Name="EntranceGuaerdID" Type="nvarchar(max)" />
+    <Property Name="EntranceGuaerdName" Type="nvarchar(max)" />
+    <Property Name="ismanagement" Type="varchar" MaxLength="255" />
+    <Property Name="menttype" Type="varchar" MaxLength="255" />
+    <Property Name="smalltime" Type="varchar" MaxLength="255" />
+    <Property Name="minprice" Type="varchar" MaxLength="255" />
+    <Property Name="remark" Type="varchar" MaxLength="2000" />
+    <Property Name="Isoptional" Type="varchar" MaxLength="255" />
+    <Property Name="Dispark" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_InstrumentFault">
+    <Key>
+      <PropertyRef Name="sys_InstrumentFaultUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_InstrumentFaultUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="sys_InstrumentUuid" Type="uniqueidentifier" />
+    <Property Name="Reason" Type="text" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="OccurrenceTime" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_InstrumentMaintain">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_InstrumentMaintainUuid" Type="uniqueidentifier" />
+    <Property Name="sys_InstrumentUuid" Type="uniqueidentifier" />
+    <Property Name="Reason" Type="text" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="MaintainBeginTime" Type="varchar" MaxLength="255" />
+    <Property Name="MaintainEndTime" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“yixueyuan.dbo.sys_InstrumentType”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="sys_InstrumentType">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="sys_InstrumentTypeUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_InstrumentTypeUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_InstrumentUse">
+    <Key>
+      <PropertyRef Name="sys_InstrumentUseUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_InstrumentUseUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ApparatusName" Type="varchar" MaxLength="255" />
+    <Property Name="Worker" Type="varchar" MaxLength="255" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="stime" Type="varchar" MaxLength="255" />
+    <Property Name="etime" Type="varchar" MaxLength="255" />
+    <Property Name="setime" Type="varchar" MaxLength="255" />
+    <Property Name="TheLength" Type="varchar" MaxLength="255" />
+    <Property Name="intro" Type="varchar" MaxLength="255" />
+    <Property Name="Money" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_Laboratory">
+    <Key>
+      <PropertyRef Name="sys_LaboratoryUuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_LaboratoryUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="roomid" Type="nvarchar" MaxLength="50" />
+    <Property Name="roomname" Type="varchar" MaxLength="50" />
+    <Property Name="roomarea" Type="varchar" MaxLength="50" />
+    <Property Name="chief" Type="varchar" MaxLength="50" />
+    <Property Name="pronumber" Type="int" />
+    <Property Name="hasprojection" Type="varchar" MaxLength="5" />
+    <Property Name="facnumber" Type="int" />
+    <Property Name="category" Type="nvarchar" MaxLength="250" />
+    <Property Name="photo" Type="nvarchar" MaxLength="250" />
+    <Property Name="phototwo" Type="nvarchar" MaxLength="250" />
+    <Property Name="photostr" Type="nvarchar" MaxLength="250" />
+    <Property Name="photofor" Type="nvarchar" MaxLength="250" />
+    <Property Name="detail" Type="text" />
+    <Property Name="isshow" Type="char" MaxLength="4" />
+    <Property Name="makestate" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sys_LaboratoryLog">
+    <Key>
+      <PropertyRef Name="sys_LaboratoryLogUuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_LaboratoryLogUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="roomid" Type="int" />
+    <Property Name="username" Type="nvarchar" MaxLength="20" />
+    <Property Name="state" Type="nvarchar" MaxLength="10" />
+    <Property Name="classid" Type="int" />
+    <Property Name="demo" Type="varchar" MaxLength="225" />
+    <Property Name="classstate" Type="nvarchar" MaxLength="20" />
+    <Property Name="proquestion" Type="nvarchar" MaxLength="225" />
+    <Property Name="prostate" Type="nvarchar" MaxLength="20" />
+    <Property Name="laboquestion" Type="nvarchar" MaxLength="225" />
+    <Property Name="labostate" Type="nvarchar" MaxLength="20" />
+    <Property Name="applytime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sys_LaboratoryType">
+    <Key>
+      <PropertyRef Name="sys_LaboratoryTypeUuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_LaboratoryTypeUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="rootid" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sys_RechargeRecord">
+    <Key>
+      <PropertyRef Name="sys_RechargeRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_RechargeRecordUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="worker" Type="varchar" MaxLength="255" />
+    <Property Name="TopAccount" Type="varchar" MaxLength="255" />
+    <Property Name="TopAmount" Type="varchar" MaxLength="255" />
+    <Property Name="PrepaidPhonePeople" Type="varchar" MaxLength="255" />
+    <Property Name="PrepaidphoneTime" Type="varchar" MaxLength="255" />
+    <Property Name="SourcesFunding" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sys_User">
+    <Key>
+      <PropertyRef Name="sys_UserUuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_UserUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="200" />
+    <Property Name="userpassword" Type="varchar" MaxLength="200" />
+    <Property Name="roleid" Type="int" />
+    <Property Name="photo" Type="nvarchar" MaxLength="200" />
+    <Property Name="lasttime" Type="datetime" />
+    <Property Name="linestate" Type="nvarchar" MaxLength="20" />
+    <Property Name="truename" Type="nvarchar" MaxLength="20" />
+    <Property Name="ActiveTime" Type="datetime" />
+    <Property Name="mobile" Type="varchar" MaxLength="255" />
+    <Property Name="email" Type="varchar" MaxLength="255" />
+    <Property Name="sex" Type="varchar" MaxLength="255" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="255" />
+    <Property Name="LearnWorkNumber" Type="varchar" MaxLength="255" />
+    <Property Name="PersonnelType" Type="varchar" MaxLength="255" />
+    <Property Name="ReviewStatus" Type="varchar" MaxLength="255" />
+    <Property Name="isaudite" Type="varchar" MaxLength="255" />
+    <Property Name="adddress" Type="varchar" MaxLength="255" />
+    <Property Name="job" Type="varchar" MaxLength="255" />
+    <Property Name="department" Type="varchar" MaxLength="255" />
+    <Property Name="AdmissionTime" Type="varchar" MaxLength="255" />
+    <Property Name="ClassName" Type="varchar" MaxLength="255" />
+    <Property Name="DateBirth" Type="varchar" MaxLength="255" />
+    <Property Name="dataAddTime" Type="datetime" />
+    <Property Name="PupilName" Type="varchar" MaxLength="255" />
+    <Property Name="Iccid" Type="varchar" MaxLength="255" />
+    <Property Name="Remark" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SystemIcon">
+    <Key>
+      <PropertyRef Name="SystemIconUUID" />
+    </Key>
+    <Property Name="SystemIconUUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Size" Type="nvarchar" MaxLength="20" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="Custom" Type="nvarchar" MaxLength="60" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatedByUserGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedByUserName" Type="nvarchar(max)" />
+    <Property Name="ModifiedOn" Type="datetime2" Precision="7" />
+    <Property Name="ModifiedByUserGuid" Type="uniqueidentifier" />
+    <Property Name="ModifiedByUserName" Type="nvarchar(max)" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SystemLog">
+    <Key>
+      <PropertyRef Name="SystemLogUUID" />
+    </Key>
+    <Property Name="SystemLogUUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="255" />
+    <Property Name="UserIDType" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="OperationContent" Type="text" Nullable="false" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDelete" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SystemMenu">
+    <Key>
+      <PropertyRef Name="SystemMenuUUID" />
+    </Key>
+    <Property Name="SystemMenuUUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Url" Type="nvarchar" MaxLength="255" />
+    <Property Name="Alias" Type="nvarchar" MaxLength="255" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="255" />
+    <Property Name="ParentGuid" Type="uniqueidentifier" />
+    <Property Name="ParentName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Level" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="IsDefaultRouter" Type="int" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedByUserGuid" Type="uniqueidentifier" />
+    <Property Name="CreatedByUserName" Type="nvarchar" MaxLength="255" />
+    <Property Name="ModifiedOn" Type="nvarchar" MaxLength="255" />
+    <Property Name="ModifiedByUserGuid" Type="uniqueidentifier" />
+    <Property Name="ModifiedByUserName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Component" Type="nvarchar" MaxLength="255" />
+    <Property Name="HideInMenu" Type="int" />
+    <Property Name="NotCache" Type="int" />
+    <Property Name="BeforeCloseFun" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SystemPermission">
+    <Key>
+      <PropertyRef Name="SystemPermissionUUID" />
+    </Key>
+    <Property Name="SystemPermissionUUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SystemMenuUUID" Type="uniqueidentifier" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="ActionCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="int" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="CreatedByUserGuid" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedByUserName" Type="nvarchar" MaxLength="255" />
+    <Property Name="ModifiedOn" Type="nvarchar" MaxLength="255" />
+    <Property Name="ModifiedByUserGuid" Type="uniqueidentifier" />
+    <Property Name="ModifiedByUserName" Type="nvarchar" MaxLength="255" />
+    <Property Name="CaPower" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SystemRole">
+    <Key>
+      <PropertyRef Name="SystemRoleUUID" />
+    </Key>
+    <Property Name="SystemRoleUUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="255" />
+    <Property Name="AddTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsFixation" Type="int" />
+    <Property Name="SchoolUUID" Type="uniqueidentifier" />
+    <Property Name="IsCreEdu" Type="int" />
+  </EntityType>
+  <EntityType Name="SystemRolePermissionMapping">
+    <Key>
+      <PropertyRef Name="SystemRoleUUID" />
+      <PropertyRef Name="SystemPermissionUUID" />
+    </Key>
+    <Property Name="SystemRoleUUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SystemPermissionUUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AddTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SystemUser">
+    <Key>
+      <PropertyRef Name="SystemUserUUID" />
+    </Key>
+    <Property Name="SystemUserUUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LoginName" Type="nvarchar" MaxLength="255" />
+    <Property Name="RealName" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserIdCard" Type="nvarchar" MaxLength="255" />
+    <Property Name="PassWord" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserType" Type="int" />
+    <Property Name="SchoolUUID" Type="uniqueidentifier" />
+    <Property Name="AddTime" Type="nvarchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="ManageDepartment" Type="text" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ZaiGang" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="InTime" Type="varchar" MaxLength="20" />
+    <Property Name="Types" Type="varchar" MaxLength="255" />
+    <Property Name="Address" Type="varchar" MaxLength="255" />
+    <Property Name="SystemRoleUUid" Type="varchar" MaxLength="255" />
+    <Property Name="Remarks" Type="varchar" MaxLength="255" />
+    <Property Name="StaffNum" Type="nvarchar" MaxLength="255" />
+    <Property Name="Wechat" Type="varchar" MaxLength="255" />
+    <Property Name="Topic" Type="varchar" MaxLength="255" />
+    <Property Name="Content" Type="varchar" MaxLength="255" />
+    <Property Name="Train" Type="varchar" MaxLength="255" />
+    <Property Name="Main" Type="varchar" MaxLength="255" />
+    <Property Name="Job" Type="nvarchar" MaxLength="255" />
+    <Property Name="HealthCertificate" Type="int" />
+    <Property Name="IsStaff" Type="int" />
+    <Property Name="IsCreEdu" Type="int" />
+    <Property Name="PersonnelType" Type="varchar" MaxLength="255" />
+    <Property Name="ReviewStatus" Type="varchar" MaxLength="255" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="255" />
+    <Property Name="IsBlacklist" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SystemUserRoleMapping">
+    <Key>
+      <PropertyRef Name="SystemUserUUID" />
+      <PropertyRef Name="SystemRoleUUID" />
+    </Key>
+    <Property Name="SystemUserUUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SystemRoleUUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AddTime" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="AddPeople" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TeacherUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="TeacherUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="Gh" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentUuid" Type="uniqueidentifier" />
+    <Property Name="YiCard" Type="varchar" MaxLength="255" />
+    <Property Name="DormitoryUuid" Type="uniqueidentifier" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="DormitoryNumUuid" Type="uniqueidentifier" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Nation" Type="varchar" MaxLength="255" />
+    <Property Name="Political" Type="varchar" MaxLength="255" />
+    <Property Name="Religion" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+    <Property Name="ProfessionalTitle" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Warning">
+    <Key>
+      <PropertyRef Name="WarningUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="WarningUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="WarningType" Type="varchar" MaxLength="255" />
+    <Property Name="WarningName" Type="varchar" MaxLength="255" />
+    <Property Name="WarningLastUser" Type="varchar" MaxLength="255" />
+    <Property Name="WarningInformation" Type="varchar" MaxLength="255" />
+    <Property Name="AffiliatedLaboratory" Type="varchar" MaxLength="255" />
+    <Property Name="Mark" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Weekly">
+    <Key>
+      <PropertyRef Name="WeeklyUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WeeklyUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SchoolYear" Type="varchar" MaxLength="255" />
+    <Property Name="Semester" Type="varchar" MaxLength="255" />
+    <Property Name="WeeklyName" Type="varchar" MaxLength="255" />
+    <Property Name="WeeklyTime" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="whp_EntramceGuard">
+    <Key>
+      <PropertyRef Name="whp_EntramceGuardUuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="whp_EntramceGuardUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GNameListID" Type="nvarchar(max)" />
+    <Property Name="Entcardnumber" Type="nvarchar(max)" />
+    <Property Name="ip" Type="nvarchar" MaxLength="50" />
+    <Property Name="USB" Type="int" />
+    <Property Name="stime" Type="varchar" MaxLength="225" />
+    <Property Name="etime" Type="varchar" MaxLength="225" />
+    <Property Name="GNameListName" Type="nvarchar(max)" />
+    <Property Name="StudenListID" Type="nvarchar(max)" />
+    <Property Name="StudentListName" Type="nvarchar(max)" />
+    <Property Name="EntcardType" Type="varchar" MaxLength="255" />
+    <Property Name="IsDelete" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="WorkerUuid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime2" Precision="7" />
+    <Property Name="WorkerUuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Sex" Type="varchar" MaxLength="255" />
+    <Property Name="Gh" Type="varchar" MaxLength="255" />
+    <Property Name="DepartmentUuid" Type="uniqueidentifier" />
+    <Property Name="Job" Type="varchar" MaxLength="255" />
+    <Property Name="ValidityTime" Type="varchar" MaxLength="255" />
+    <Property Name="CarNum" Type="varchar" MaxLength="255" />
+    <Property Name="YiCard" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+    <Property Name="IdCard" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Nation" Type="varchar" MaxLength="255" />
+    <Property Name="Political" Type="varchar" MaxLength="255" />
+    <Property Name="Religion" Type="varchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="int" />
+    <Property Name="AddTime" Type="varchar" MaxLength="255" />
+    <Property Name="AddPeople" Type="varchar" MaxLength="255" />
+    <Property Name="SchoolDistrictUuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Wrj">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="255" />
+    <Property Name="UserNo" Type="varchar" MaxLength="255" />
+    <Property Name="longitude" Type="varchar" MaxLength="255" />
+    <Property Name="latitude" Type="varchar" MaxLength="255" />
+    <Property Name="url" Type="varchar" MaxLength="255" />
+    <Property Name="adduser" Type="varchar" MaxLength="255" />
+    <Property Name="addtime" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__Abnormal__Colleg__1209AD79">
+    <End Role="College" Type="Self.College" Multiplicity="0..1" />
+    <End Role="Abnormal" Type="Self.Abnormal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="College">
+        <PropertyRef Name="CollegeUuid" />
+      </Principal>
+      <Dependent Role="Abnormal">
+        <PropertyRef Name="CollegeUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Abnormal__MajorU__12FDD1B2">
+    <End Role="Major" Type="Self.Major" Multiplicity="0..1" />
+    <End Role="Abnormal" Type="Self.Abnormal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Major">
+        <PropertyRef Name="MajorUuid" />
+      </Principal>
+      <Dependent Role="Abnormal">
+        <PropertyRef Name="MajorUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Abnormal__School__14E61A24">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Abnormal" Type="Self.Abnormal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Abnormal">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Abnormal__StuCla__13F1F5EB">
+    <End Role="StuClass" Type="Self.StuClass" Multiplicity="0..1" />
+    <End Role="Abnormal" Type="Self.Abnormal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StuClass">
+        <PropertyRef Name="StuClassUuid" />
+      </Principal>
+      <Dependent Role="Abnormal">
+        <PropertyRef Name="StuClassUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AccessCon__Resea__44952D46">
+    <End Role="ResearchBuilding" Type="Self.ResearchBuilding" Multiplicity="0..1" />
+    <End Role="AccessControlRecord" Type="Self.AccessControlRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResearchBuilding">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Principal>
+      <Dependent Role="AccessControlRecord">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Apartment__Dormi__04AFB25B">
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="0..1" />
+    <End Role="ApartmentRecord" Type="Self.ApartmentRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dormitory">
+        <PropertyRef Name="DormitoryUuid" />
+      </Principal>
+      <Dependent Role="ApartmentRecord">
+        <PropertyRef Name="DormitoryUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Apartment__Schoo__03BB8E22">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="ApartmentRecord" Type="Self.ApartmentRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="ApartmentRecord">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Car__DepartmentU__719CDDE7">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Car__SchoolDistr__72910220">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CarNonMot__Depar__7D0E9093">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="CarNonMotor" Type="Self.CarNonMotor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="CarNonMotor">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CarNonMot__Schoo__7E02B4CC">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="CarNonMotor" Type="Self.CarNonMotor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="CarNonMotor">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dormitory__Dormi__6EF57B66">
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="0..1" />
+    <End Role="DormitoryNum" Type="Self.DormitoryNum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dormitory">
+        <PropertyRef Name="DormitoryUuid" />
+      </Principal>
+      <Dependent Role="DormitoryNum">
+        <PropertyRef Name="DormitoryUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dormitory__Schoo__6E01572D">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Dormitory">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FireFacil__Resea__43A1090D">
+    <End Role="ResearchBuilding" Type="Self.ResearchBuilding" Multiplicity="0..1" />
+    <End Role="FireFacilities" Type="Self.FireFacilities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResearchBuilding">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Principal>
+      <Dependent Role="FireFacilities">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Focuser__SchoolD__74794A92">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Focuser" Type="Self.Focuser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Focuser">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Foreigner__Schoo__05A3D694">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="ForeignerAppoint" Type="Self.ForeignerAppoint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="ForeignerAppoint">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Foreigner__Schoo__0880433F">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="ForeignerRecord" Type="Self.ForeignerRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="ForeignerRecord">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Foreigner__Schoo__19AACF41">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Foreigner" Type="Self.Foreigner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Foreigner">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GooutForm__Schoo__7EF6D905">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="GooutForm" Type="Self.GooutForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="GooutForm">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IncidentR__Depar__2EA5EC27">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="IncidentReport" Type="Self.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IncidentR__Schoo__2CBDA3B5">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="IncidentReport" Type="Self.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IncidentR__Secur__308E3499">
+    <End Role="SecurityType" Type="Self.SecurityType" Multiplicity="0..1" />
+    <End Role="IncidentReport" Type="Self.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SecurityType">
+        <PropertyRef Name="SecurityTypeUuid" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="SecurityTypeUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IncidentR__StuCl__2F9A1060">
+    <End Role="StuClass" Type="Self.StuClass" Multiplicity="0..1" />
+    <End Role="IncidentReport" Type="Self.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StuClass">
+        <PropertyRef Name="StuClassUuid" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="StuClassUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Major__CollegeUu__6B24EA82">
+    <End Role="College" Type="Self.College" Multiplicity="0..1" />
+    <End Role="Major" Type="Self.Major" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="College">
+        <PropertyRef Name="CollegeUuid" />
+      </Principal>
+      <Dependent Role="Major">
+        <PropertyRef Name="CollegeUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Monitor__Researc__4865BE2A">
+    <End Role="ResearchBuilding" Type="Self.ResearchBuilding" Multiplicity="0..1" />
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResearchBuilding">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Principal>
+      <Dependent Role="Monitor">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SafeManag__Schoo__756D6ECB">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="SafeManagement" Type="Self.SafeManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="SafeManagement">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchoolInC__Depar__01D345B0">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="SchoolInCar" Type="Self.SchoolInCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="SchoolInCar">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchoolInC__Schoo__02C769E9">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="SchoolInCar" Type="Self.SchoolInCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="SchoolInCar">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchoolSta__Schoo__0E391C95">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="SchoolStaffRecord" Type="Self.SchoolStaffRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="SchoolStaffRecord">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ScoreAdd__Depart__3552E9B6">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="ScoreAdd" Type="Self.ScoreAdd" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="ScoreAdd">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Specific__School__27F8EE98">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Specific" Type="Self.Specific" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Specific">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StrangeWa__Schoo__1A9EF37A">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="StrangeWarning" Type="Self.StrangeWarning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="StrangeWarning">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuClass__MajorU__6D0D32F4">
+    <End Role="Major" Type="Self.Major" Multiplicity="0..1" />
+    <End Role="StuClass" Type="Self.StuClass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Major">
+        <PropertyRef Name="MajorUuid" />
+      </Principal>
+      <Dependent Role="StuClass">
+        <PropertyRef Name="MajorUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__College__6FE99F9F">
+    <End Role="College" Type="Self.College" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="College">
+        <PropertyRef Name="CollegeUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="CollegeUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__Dormito__72C60C4A">
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dormitory">
+        <PropertyRef Name="DormitoryUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="DormitoryUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__Dormito__73BA3083">
+    <End Role="DormitoryNum" Type="Self.DormitoryNum" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DormitoryNum">
+        <PropertyRef Name="DormitoryNumUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="DormitoryNumUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__MajorUu__70DDC3D8">
+    <End Role="Major" Type="Self.Major" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Major">
+        <PropertyRef Name="MajorUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="MajorUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__SchoolD__74AE54BC">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__StuClas__71D1E811">
+    <End Role="StuClass" Type="Self.StuClass" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StuClass">
+        <PropertyRef Name="StuClassUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="StuClassUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuManage__Colle__793DFFAF">
+    <End Role="College" Type="Self.College" Multiplicity="0..1" />
+    <End Role="StuManagement" Type="Self.StuManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="College">
+        <PropertyRef Name="CollegeUuid" />
+      </Principal>
+      <Dependent Role="StuManagement">
+        <PropertyRef Name="CollegeUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuManage__Depar__7849DB76">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="StuManagement" Type="Self.StuManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="StuManagement">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuManage__Dormi__7B264821">
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="0..1" />
+    <End Role="StuManagement" Type="Self.StuManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dormitory">
+        <PropertyRef Name="DormitoryUuid" />
+      </Principal>
+      <Dependent Role="StuManagement">
+        <PropertyRef Name="DormitoryUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuManage__Schoo__7C1A6C5A">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="StuManagement" Type="Self.StuManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="StuManagement">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuManage__StuCl__7A3223E8">
+    <End Role="StuClass" Type="Self.StuClass" Multiplicity="0..1" />
+    <End Role="StuManagement" Type="Self.StuManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StuClass">
+        <PropertyRef Name="StuClassUuid" />
+      </Principal>
+      <Dependent Role="StuManagement">
+        <PropertyRef Name="StuClassUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__Departm__0A688BB1">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__Dormito__0B5CAFEA">
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dormitory">
+        <PropertyRef Name="DormitoryUuid" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="DormitoryUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__Dormito__0C50D423">
+    <End Role="DormitoryNum" Type="Self.DormitoryNum" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DormitoryNum">
+        <PropertyRef Name="DormitoryNumUuid" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="DormitoryNumUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__SchoolD__0D44F85C">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Worker__Departme__7755B73D">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Worker" Type="Self.Worker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="Worker">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemPermission_SystemMenu">
+    <End Role="SystemMenu" Type="Self.SystemMenu" Multiplicity="0..1" />
+    <End Role="SystemPermission" Type="Self.SystemPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemMenu">
+        <PropertyRef Name="SystemMenuUUID" />
+      </Principal>
+      <Dependent Role="SystemPermission">
+        <PropertyRef Name="SystemMenuUUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="yixueyuanModelStoreContainer">
+    <EntitySet Name="Abnormal" EntityType="Self.Abnormal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccessControlRecord" EntityType="Self.AccessControlRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AnjianType" EntityType="Self.AnjianType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApartmentRecord" EntityType="Self.ApartmentRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApartmentWarn" EntityType="Self.ApartmentWarn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blacker" EntityType="Self.Blacker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CampusPatrol" EntityType="Self.CampusPatrol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Car" EntityType="Self.Car" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarAccident" EntityType="Self.CarAccident" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarBlack" EntityType="Self.CarBlack" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarIllegalStop" EntityType="Self.CarIllegalStop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarNonMotor" EntityType="Self.CarNonMotor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarNonMotorAccident" EntityType="Self.CarNonMotorAccident" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarNonMotorBlack" EntityType="Self.CarNonMotorBlack" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarNonMotorHelmeted" EntityType="Self.CarNonMotorHelmeted" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarNonMotorIllegalStop" EntityType="Self.CarNonMotorIllegalStop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarNonMotorManned" EntityType="Self.CarNonMotorManned" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarNonMotorSpeedRecord" EntityType="Self.CarNonMotorSpeedRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarSpeedRecord" EntityType="Self.CarSpeedRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="College" EntityType="Self.College" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Curriculum" EntityType="Self.Curriculum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dc_EarlyWarningRecord" EntityType="Self.Dc_EarlyWarningRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dc_TemHum" EntityType="Self.Dc_TemHum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoorOpening" EntityType="Self.DoorOpening" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dormitory" EntityType="Self.Dormitory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DormitoryNum" EntityType="Self.DormitoryNum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Festival" EntityType="Self.Festival" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FireFacilities" EntityType="Self.FireFacilities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FivePicture" EntityType="Self.FivePicture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Focuser" EntityType="Self.Focuser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Foreigner" EntityType="Self.Foreigner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ForeignerAppoint" EntityType="Self.ForeignerAppoint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ForeignerRecord" EntityType="Self.ForeignerRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GeneralLaboratory" EntityType="Self.GeneralLaboratory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GooutForm" EntityType="Self.GooutForm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HazardousChemicalsUseRecords" EntityType="Self.HazardousChemicalsUseRecords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HazardousChemicalsWarehouse" EntityType="Self.HazardousChemicalsWarehouse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InAndOutTime" EntityType="Self.InAndOutTime" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IncidentReport" EntityType="Self.IncidentReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Library" EntityType="Self.Library" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MainLab" EntityType="Self.MainLab" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Major" EntityType="Self.Major" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MapIcon" EntityType="Self.MapIcon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Monitor" EntityType="Self.Monitor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecyclingManagement" EntityType="Self.RecyclingManagement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResearchBuilding" EntityType="Self.ResearchBuilding" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SafeManagement" EntityType="Self.SafeManagement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SchoolDistrict" EntityType="Self.SchoolDistrict" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SchoolInCar" EntityType="Self.SchoolInCar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SchoolStaffRecord" EntityType="Self.SchoolStaffRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScoreAdd" EntityType="Self.ScoreAdd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SecurityType" EntityType="Self.SecurityType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Specific" EntityType="Self.Specific" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stadium" EntityType="Self.Stadium" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StrangeWarning" EntityType="Self.StrangeWarning" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StuClass" EntityType="Self.StuClass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentsApartment" EntityType="Self.StudentsApartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StuManagement" EntityType="Self.StuManagement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StuMapCurriculum" EntityType="Self.StuMapCurriculum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_ApparatusRegistration" EntityType="Self.sys_ApparatusRegistration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_BlackList" EntityType="Self.sys_BlackList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_Captial" EntityType="Self.sys_Captial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_ConsumptionRecord" EntityType="Self.sys_ConsumptionRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_EntramceGuard" EntityType="Self.sys_EntramceGuard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_InsOpen" EntityType="Self.sys_InsOpen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_Instrument" EntityType="Self.sys_Instrument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_InstrumentFault" EntityType="Self.sys_InstrumentFault" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_InstrumentMaintain" EntityType="Self.sys_InstrumentMaintain" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_InstrumentUse" EntityType="Self.sys_InstrumentUse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_Laboratory" EntityType="Self.sys_Laboratory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_LaboratoryLog" EntityType="Self.sys_LaboratoryLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_LaboratoryType" EntityType="Self.sys_LaboratoryType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_RechargeRecord" EntityType="Self.sys_RechargeRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_User" EntityType="Self.sys_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemIcon" EntityType="Self.SystemIcon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemLog" EntityType="Self.SystemLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemMenu" EntityType="Self.SystemMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemPermission" EntityType="Self.SystemPermission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemRole" EntityType="Self.SystemRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemRolePermissionMapping" EntityType="Self.SystemRolePermissionMapping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemUser" EntityType="Self.SystemUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemUserRoleMapping" EntityType="Self.SystemUserRoleMapping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warning" EntityType="Self.Warning" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Weekly" EntityType="Self.Weekly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="whp_EntramceGuard" EntityType="Self.whp_EntramceGuard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Worker" EntityType="Self.Worker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wrj" EntityType="Self.Wrj" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_InstrumentType" EntityType="Self.sys_InstrumentType" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sys_InstrumentType].[ID] AS [ID], 
+    [sys_InstrumentType].[sys_InstrumentTypeUuid] AS [sys_InstrumentTypeUuid], 
+    [sys_InstrumentType].[name] AS [name]
+    FROM [dbo].[sys_InstrumentType] AS [sys_InstrumentType]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Abnormal__Colleg__1209AD79" Association="Self.FK__Abnormal__Colleg__1209AD79">
+      <End Role="College" EntitySet="College" />
+      <End Role="Abnormal" EntitySet="Abnormal" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Abnormal__MajorU__12FDD1B2" Association="Self.FK__Abnormal__MajorU__12FDD1B2">
+      <End Role="Major" EntitySet="Major" />
+      <End Role="Abnormal" EntitySet="Abnormal" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Abnormal__School__14E61A24" Association="Self.FK__Abnormal__School__14E61A24">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="Abnormal" EntitySet="Abnormal" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Abnormal__StuCla__13F1F5EB" Association="Self.FK__Abnormal__StuCla__13F1F5EB">
+      <End Role="StuClass" EntitySet="StuClass" />
+      <End Role="Abnormal" EntitySet="Abnormal" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AccessCon__Resea__44952D46" Association="Self.FK__AccessCon__Resea__44952D46">
+      <End Role="ResearchBuilding" EntitySet="ResearchBuilding" />
+      <End Role="AccessControlRecord" EntitySet="AccessControlRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Apartment__Dormi__04AFB25B" Association="Self.FK__Apartment__Dormi__04AFB25B">
+      <End Role="Dormitory" EntitySet="Dormitory" />
+      <End Role="ApartmentRecord" EntitySet="ApartmentRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Apartment__Schoo__03BB8E22" Association="Self.FK__Apartment__Schoo__03BB8E22">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="ApartmentRecord" EntitySet="ApartmentRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Car__DepartmentU__719CDDE7" Association="Self.FK__Car__DepartmentU__719CDDE7">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Car" EntitySet="Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Car__SchoolDistr__72910220" Association="Self.FK__Car__SchoolDistr__72910220">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="Car" EntitySet="Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CarNonMot__Depar__7D0E9093" Association="Self.FK__CarNonMot__Depar__7D0E9093">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="CarNonMotor" EntitySet="CarNonMotor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CarNonMot__Schoo__7E02B4CC" Association="Self.FK__CarNonMot__Schoo__7E02B4CC">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="CarNonMotor" EntitySet="CarNonMotor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dormitory__Dormi__6EF57B66" Association="Self.FK__Dormitory__Dormi__6EF57B66">
+      <End Role="Dormitory" EntitySet="Dormitory" />
+      <End Role="DormitoryNum" EntitySet="DormitoryNum" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dormitory__Schoo__6E01572D" Association="Self.FK__Dormitory__Schoo__6E01572D">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="Dormitory" EntitySet="Dormitory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FireFacil__Resea__43A1090D" Association="Self.FK__FireFacil__Resea__43A1090D">
+      <End Role="ResearchBuilding" EntitySet="ResearchBuilding" />
+      <End Role="FireFacilities" EntitySet="FireFacilities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Focuser__SchoolD__74794A92" Association="Self.FK__Focuser__SchoolD__74794A92">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="Focuser" EntitySet="Focuser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Foreigner__Schoo__05A3D694" Association="Self.FK__Foreigner__Schoo__05A3D694">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="ForeignerAppoint" EntitySet="ForeignerAppoint" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Foreigner__Schoo__0880433F" Association="Self.FK__Foreigner__Schoo__0880433F">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="ForeignerRecord" EntitySet="ForeignerRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Foreigner__Schoo__19AACF41" Association="Self.FK__Foreigner__Schoo__19AACF41">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="Foreigner" EntitySet="Foreigner" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GooutForm__Schoo__7EF6D905" Association="Self.FK__GooutForm__Schoo__7EF6D905">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="GooutForm" EntitySet="GooutForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IncidentR__Depar__2EA5EC27" Association="Self.FK__IncidentR__Depar__2EA5EC27">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="IncidentReport" EntitySet="IncidentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IncidentR__Schoo__2CBDA3B5" Association="Self.FK__IncidentR__Schoo__2CBDA3B5">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="IncidentReport" EntitySet="IncidentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IncidentR__Secur__308E3499" Association="Self.FK__IncidentR__Secur__308E3499">
+      <End Role="SecurityType" EntitySet="SecurityType" />
+      <End Role="IncidentReport" EntitySet="IncidentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IncidentR__StuCl__2F9A1060" Association="Self.FK__IncidentR__StuCl__2F9A1060">
+      <End Role="StuClass" EntitySet="StuClass" />
+      <End Role="IncidentReport" EntitySet="IncidentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Major__CollegeUu__6B24EA82" Association="Self.FK__Major__CollegeUu__6B24EA82">
+      <End Role="College" EntitySet="College" />
+      <End Role="Major" EntitySet="Major" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Monitor__Researc__4865BE2A" Association="Self.FK__Monitor__Researc__4865BE2A">
+      <End Role="ResearchBuilding" EntitySet="ResearchBuilding" />
+      <End Role="Monitor" EntitySet="Monitor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SafeManag__Schoo__756D6ECB" Association="Self.FK__SafeManag__Schoo__756D6ECB">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="SafeManagement" EntitySet="SafeManagement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchoolInC__Depar__01D345B0" Association="Self.FK__SchoolInC__Depar__01D345B0">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="SchoolInCar" EntitySet="SchoolInCar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchoolInC__Schoo__02C769E9" Association="Self.FK__SchoolInC__Schoo__02C769E9">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="SchoolInCar" EntitySet="SchoolInCar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchoolSta__Schoo__0E391C95" Association="Self.FK__SchoolSta__Schoo__0E391C95">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="SchoolStaffRecord" EntitySet="SchoolStaffRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ScoreAdd__Depart__3552E9B6" Association="Self.FK__ScoreAdd__Depart__3552E9B6">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="ScoreAdd" EntitySet="ScoreAdd" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Specific__School__27F8EE98" Association="Self.FK__Specific__School__27F8EE98">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="Specific" EntitySet="Specific" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StrangeWa__Schoo__1A9EF37A" Association="Self.FK__StrangeWa__Schoo__1A9EF37A">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="StrangeWarning" EntitySet="StrangeWarning" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuClass__MajorU__6D0D32F4" Association="Self.FK__StuClass__MajorU__6D0D32F4">
+      <End Role="Major" EntitySet="Major" />
+      <End Role="StuClass" EntitySet="StuClass" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__College__6FE99F9F" Association="Self.FK__Student__College__6FE99F9F">
+      <End Role="College" EntitySet="College" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__Dormito__72C60C4A" Association="Self.FK__Student__Dormito__72C60C4A">
+      <End Role="Dormitory" EntitySet="Dormitory" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__Dormito__73BA3083" Association="Self.FK__Student__Dormito__73BA3083">
+      <End Role="DormitoryNum" EntitySet="DormitoryNum" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__MajorUu__70DDC3D8" Association="Self.FK__Student__MajorUu__70DDC3D8">
+      <End Role="Major" EntitySet="Major" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__SchoolD__74AE54BC" Association="Self.FK__Student__SchoolD__74AE54BC">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__StuClas__71D1E811" Association="Self.FK__Student__StuClas__71D1E811">
+      <End Role="StuClass" EntitySet="StuClass" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuManage__Colle__793DFFAF" Association="Self.FK__StuManage__Colle__793DFFAF">
+      <End Role="College" EntitySet="College" />
+      <End Role="StuManagement" EntitySet="StuManagement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuManage__Depar__7849DB76" Association="Self.FK__StuManage__Depar__7849DB76">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="StuManagement" EntitySet="StuManagement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuManage__Dormi__7B264821" Association="Self.FK__StuManage__Dormi__7B264821">
+      <End Role="Dormitory" EntitySet="Dormitory" />
+      <End Role="StuManagement" EntitySet="StuManagement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuManage__Schoo__7C1A6C5A" Association="Self.FK__StuManage__Schoo__7C1A6C5A">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="StuManagement" EntitySet="StuManagement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuManage__StuCl__7A3223E8" Association="Self.FK__StuManage__StuCl__7A3223E8">
+      <End Role="StuClass" EntitySet="StuClass" />
+      <End Role="StuManagement" EntitySet="StuManagement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__Departm__0A688BB1" Association="Self.FK__Teacher__Departm__0A688BB1">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__Dormito__0B5CAFEA" Association="Self.FK__Teacher__Dormito__0B5CAFEA">
+      <End Role="Dormitory" EntitySet="Dormitory" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__Dormito__0C50D423" Association="Self.FK__Teacher__Dormito__0C50D423">
+      <End Role="DormitoryNum" EntitySet="DormitoryNum" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__SchoolD__0D44F85C" Association="Self.FK__Teacher__SchoolD__0D44F85C">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistrict" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Worker__Departme__7755B73D" Association="Self.FK__Worker__Departme__7755B73D">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Worker" EntitySet="Worker" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemPermission_SystemMenu" Association="Self.FK_SystemPermission_SystemMenu">
+      <End Role="SystemMenu" EntitySet="SystemMenu" />
+      <End Role="SystemPermission" EntitySet="SystemPermission" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

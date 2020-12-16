@@ -1,0 +1,11 @@
+2020-10-24 17:27:42,407 [5] ERROR Microsoft.EntityFrameworkCore.Query [(null)]  - An exception occurred while iterating over the results of a query for context type 'HaikanSmartTownCockpit.Api.Entities.haikanHeQiaoContext'.
+System.InvalidOperationException: The required column 'Guid' was not present in the results of a 'FromSql' operation.
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.BuildIndexMap(IReadOnlyList`1 columnNames, DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: The required column 'Guid' was not present in the results of a 'FromSql' operation.
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.BuildIndexMap(IReadOnlyList`1 columnNames, DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()

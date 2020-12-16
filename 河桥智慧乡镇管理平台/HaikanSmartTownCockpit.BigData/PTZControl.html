@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link href="css/video-js.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.limarquee.js"></script>
+    <script type="text/javascript" src="lib/include-lib.js" libpath=""
+    include="jquery,bootstrap,haoutil,crypto,toastr,mapv3d,layer"></script>
+    <script src="js/video.min.js"></script>
+    <script src="js/videojs-contrib-hls.js"></script>
+    <title>云台控件</title>
+</head>
+
+<body>
+    <div style="margin-bottom: 20px;">
+        <video id="vyt" class="video-js" autoplay="autoplay" controls preload="auto"
+            style="height: 700px; width: 1400px;">
+        </video>
+    </div>
+    <div style="width: 800px;">
+        <div style="width: 750px;height: 50px;float: left;" id="blist1">
+            <div class="action" id="LEFT">左转</div>
+            <div class="action" id="RIGHT">右转</div>
+            <div class="action" id="UP">上转</div>
+            <div class="action" id="DOWN">下转</div>
+            <div class="action" id="LEFT_UP">左上</div>
+            <div class="action" id="LEFT_DOWN">左下</div>
+            <div class="action" id="RIGHT_UP">右上</div>
+            <div class="action" id="RIGHT_DOWN">右下</div>
+        </div>
+        <div style="width: 700px;height: 50px;float: left;" id="blist2">
+            <div class="action" id="ZOOM_IN">焦距变大</div>
+            <div class="action" id="ZOOM_OUT">焦距变小</div>
+            <div class="action" id="FOCUS_NEAR">焦点前移</div>
+            <div class="action" id="FOCUS_FAR">焦点后移</div>
+            <div class="action" id="IRIS_ENLARGE">光圈扩大</div>
+            <div class="action" id="IRIS_REDUCE">光圈缩小</div>
+        </div>
+        <div style="width: 700px;height: 50px;float: left;">
+
+            <div class="action" style="width: 120px;" id="START_RECORD_TRACK">开始记录轨迹</div>
+            <div class="action" style="width: 120px;" id="STOP_RECORD_TRACK">停止记录轨迹</div>
+            <div class="action" id="START_TRACK">开始轨迹</div>
+            <div class="action" id="STOP_TRACK">停止轨迹</div>
+        </div>
+        <div style="width: 700px;height: 50px;float: left;">
+
+            <div class="action" style="width: 120px;" id="WIPER_SWITCH">接通雨刷开关</div>
+        </div>
+
+
+    </div>
+    <script>
+        $(function () {
+            window.checkList=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+            var result = location.search.match(new RegExp("[\?\&]" + "cid" + "=([^\&]+)", "i"));
+            console.log(result);
+            console.log(result[1]);
+            window.cid=result[1];
+            $.ajax({
+                url: 'http://112.17.130.233:44444/api/video/VideoUrl?indexcode=' +result[1],
+                method: 'get',
+                success: function (data) {
+                    console.log(111111);
+                    console.log(data);
+                    
+                    let player = videojs('vyt');
+                    player.src([{
+                        type: "application/x-mpegURL",
+                        src: data.vdata.data.url
+                    }]);
+                    player.play();
+                },
+                error: function (err) {
+                    console.log(err);
+
+                }
+            });
+        });
+
+        var hint=[
+            {code:'0x01b00200',message:'录像计划未配置,无法获取存储信息'},
+            {code:'0x01b00401',message:'不支持的存储方式'},
+            {code:'0x01b01007',message:'数据结构互相转换时出错'},
+            {code:'0x01b01010',message:'非法参数'},
+            {code:'0x01b01011',message:'查询数据不存在'},
+            {code:'0x01b0101d',message:'请求参数对应值的类型不合法'},
+            {code:'0x01b0101e',message:'对讲编号不合法'},
+            {code:'0x01b01103',message:'url格式不合法'},
+            {code:'0x01b01104',message:'时间格式不合法'},
+            {code:'0x01b01105',message:'码流类型不合法'},
+            {code:'0x01b0110b',message:'媒体没有对应网域编号的ip'},
+            {code:'0x01b0110e',message:'传输方式参数不合法'},
+            {code:'0x01b01301',message:'监控点不存在'},
+            {code:'0x01b01304',message:'没有监控点对应录像存储信息'},
+            {code:'0x01b0f000',message:'程序内部错误'},
+            {code:'0x01b0f002',message:'调用中心存储服务接口请求失败'},
+            {code:'0x01b71400',message:'请求错误：请求错误（语义有误或者请求参数有误）'},
+            {code:'0x01900017',message:'参数错误'},
+            {code:'0x01900050',message:'设备操作失败'},
+            {code:'0x01900053',message:'设备不支持'},
+            {code:'0x0190022d',message:'获取设备所属服务失败'},
+            {code:'0x01900231',message:'设备数据不存在'},
+            {code:'0x02812000',message:'监控点不存在'},
+            {code:'0x02830000',message:'token无效'},
+            {code:'0x02830001',message:'验证token失败'},
+            {code:'0x02830015',message:'调用外部服务功能失败'},
+            {code:'0x02830022',message:'用户不存在'},
+            {code:'0x0283003a',message:'不支持的操作'},
+            {code:'0x0283003f',message:'服务异常'},
+            {code:'0x02830042',message:'参数错误'},
+            {code:'0x02850102',message:'后台接口内部逻辑处理错误（数据库连不上、依赖接口访问失败等）'},
+            {code:'0x02811037',message:'萤石设备验证码错误'},
+            {code:'0x02811038',message:'萤石设备序列号错误'},
+            {code:'0x02811039',message:'萤石设备已经被自己添加'},
+            {code:'0x02811003',message:'编码设备不存在'},
+            {code:'0x02811004',message:'编码设备不在线'},
+            {code:'0x0281103a',message:'萤石设备已经被其他人添加'},
+            {code:'0x0281103b',message:'萤石设备添加失败'},
+            {code:'0x0281103c',message:'萤石接口异常'},
+            {code:'0x0281103d',message:'不拥有该萤石设备'},
+            {code:'0x0281103e',message:'萤石功能未启用'},
+            {code:'0x0281201e',message:'监控点未配置录像计划'},
+            {code:'0x02814000',message:'区域不存在'},
+            {code:'0x02830043',message:'参数不能为空'},
+            {code:'0x02830064',message:'参数超过上限'},
+            {code:'0x0d200101',message:'协议参数错误'},
+            {code:'0x0d200102',message:'权限验证不通过'},
+            {code:'0x0d200105',message:'解析json失败'},
+            {code:'0x0d20010d',message:'封装json失败'},
+            {code:'0x0d200119',message:'安全会话ID已过期'},
+            {code:'0x0d200d02',message:'录像计划不存在'},
+            {code:'0x0d200d39',message:'手动录像已经存在，请先关闭后再下发'},
+            {code:'0x0d200d01',message:'无效参数'},
+            {code:'0x0d200916',message:'sac pool ID不存在（资源池不存在）'},
+            {code:'0x0d200d0a',message:'没有找到指定存储设备'},
+            {code:'0x0d200d13',message:'存储设备不在线'},
+            {code:'0x0d200d10',message:'存储设备不支持该操作'},
+            {code:'0x0d200d07',message:'向存储设备下发计划失败'},
+            {code:'0x0d200d11',message:'手动录像任务不存在'},
+            {code:'0x0d200506',message:'返回结果为空'},
+            {code:'0x0d200b0f',message:'设备不支持该功能'},
+            {code:'0x0d200d18',message:'查询录像轨迹不存在'},
+            {code:'0x0d200d33',message:'获取VNSC信息失败'},
+            {code:'0x0d200105',message:'json解析失败'},
+            {code:'0x0d20010e',message:'连接VNSC失败'},
+            {code:'0x00072001',message:'必填参数为空'},
+            {code:'0x00072002',message:'参数范围不正确'},
+            {code:'0x00072003',message:'参数格式不正确'},
+            {code:'0x00072201',message:'资源访问未授权'},
+            {code:'0x00072202',message:'资源不存在'},
+            {code:'0x00072203',message:'license数量受限'},
+            {code:'0x00052301',message:'其他错误'},
+        ]
+
+
+        function toAction(cid,num,comm,arr,index,ele){
+            console.log(arr[index]);
+            if(arr[index]==0){
+                // if(index>=0&&index<=7){
+
+                // }
+                let bl1= $('#blist1').children();
+                let bl2=$('#blist2').children();
+                for(let i=0;i<bl1.length;i++){
+                    $(bl1[i]).css("background-color","rgba(146, 255, 255, 0.562)");
+                }
+                for(let i=0;i<bl2.length;i++){
+                    $(bl2[i]).css("background-color","rgba(146, 255, 255, 0.562)");
+                }
+                ele.css("background-color","rgba(15, 255, 255, 1)");
+            }else{
+                ele.css("background-color","rgba(146, 255, 255, 0.562)");
+            }
+            $.ajax({
+                url: 'http://112.17.130.233:44444/api/video/ToVideoAction?cameraIndexCode=' +window.cid+'&number='+num+'&command='+comm,
+                method: 'get',
+                success: function (data) {
+                    console.log(222222);
+                    console.log(data);
+                    if(data.data.code=="0"){
+                        if(arr[index]==0){
+                            arr[index]=1;
+                        }else{
+                            arr[index]=0;
+                        }
+                        toastr.success('操作成功');
+                    }else{
+                        let mess= hint.find(x=>x.code==data.data.code);
+                        if(typeof(mess)!="undefined"){
+                            toastr.error(mess.message)
+                        }
+                        if(arr[index]==0){
+                            ele.css("background-color","rgba(146, 255, 255, 0.562)");
+                        }else{
+                            ele.css("background-color","rgba(15, 255, 255, 1)");
+                        }
+                        
+                        
+                    }
+                    
+                    // let player = videojs('vyt');
+                    // player.src([{
+                    //     type: "application/x-mpegURL",
+                    //     src: data.vdata.data.url
+                    // }]);
+                    // player.play();
+                    
+                },
+                error: function (err) {
+                    console.log(err);
+                    
+                    
+                }
+            });
+
+
+        }
+
+
+        $('#LEFT').on('click', function () {
+            console.log("left");
+            toAction(window.cid,window.checkList[0],"LEFT",window.checkList,0,$(this));
+                
+           
+            // $.ajax({
+            //     url: 'http://112.17.130.233:44444/api/video/ToVideoAction?cameraIndexCode=' +window.cid+'&number='+window.checkList[0]+'&command=LEFT',
+            //     method: 'get',
+            //     success: function (data) {
+            //         console.log(222222);
+            //         console.log(data);
+                    
+            //         // let player = videojs('vyt');
+            //         // player.src([{
+            //         //     type: "application/x-mpegURL",
+            //         //     src: data.vdata.data.url
+            //         // }]);
+            //         // player.play();
+            //     },
+            //     error: function (err) {
+            //         console.log(err);
+
+            //     }
+            // });
+            
+        });
+        $('#RIGHT').on('click', function () {
+            console.log("right");
+            toAction(window.cid,window.checkList[1],"RIGHT",window.checkList,1,$(this));
+
+            // $.ajax({
+            //     url: 'http://112.17.130.233:44444/api/video/ToVideoAction?cameraIndexCode=' +window.cid+'&number=0&command=RIGHT',
+            //     method: 'get',
+            //     success: function (data) {
+            //         console.log(222222);
+            //         console.log(data);
+                    
+            //         // let player = videojs('vyt');
+            //         // player.src([{
+            //         //     type: "application/x-mpegURL",
+            //         //     src: data.vdata.data.url
+            //         // }]);
+            //         // player.play();
+            //     },
+            //     error: function (err) {
+            //         console.log(err);
+
+            //     }
+            // });
+        });
+        $('#UP').on('click', function () {
+            console.log("up");
+            toAction(window.cid,window.checkList[2],"UP",window.checkList,2,$(this));
+        });
+        $('#DOWN').on('click', function () {
+            console.log("down");
+            toAction(window.cid,window.checkList[3],"DOWN",window.checkList,3,$(this));
+        });
+        $('#LEFT_UP').on('click', function () {
+            console.log("left_up");
+            toAction(window.cid,window.checkList[4],"LEFT_UP",window.checkList,4,$(this));
+        });
+        $('#LEFT_DOWN').on('click', function () {
+            console.log("left_down");
+            toAction(window.cid,window.checkList[5],"LEFT_DOWN",window.checkList,5,$(this));
+        });
+        $('#RIGHT_UP').on('click', function () {
+            console.log("right_up");
+            toAction(window.cid,window.checkList[6],"RIGHT_UP",window.checkList,6,$(this));
+        });
+        $('#RIGHT_DOWN').on('click', function () {
+            console.log("right_down");
+            toAction(window.cid,window.checkList[7],"RIGHT_DOWN",window.checkList,7,$(this));
+        });
+        $('#ZOOM_IN').on('click', function () {
+            console.log("zoom_in");
+            toAction(window.cid,window.checkList[8],"ZOOM_IN",window.checkList,8,$(this));
+        });
+        $('#ZOOM_OUT').on('click', function () {
+            console.log("zoom_out");
+            toAction(window.cid,window.checkList[9],"ZOOM_OUT",window.checkList,9,$(this));
+        });
+        $('#FOCUS_NEAR').on('click', function () {
+            console.log("focus_near");
+            toAction(window.cid,window.checkList[10],"FOCUS_NEAR",window.checkList,10,$(this));
+        });
+        $('#FOCUS_FAR').on('click', function () {
+            console.log("focus_far");
+            toAction(window.cid,window.checkList[11],"FOCUS_FAR",window.checkList,11,$(this));
+        });
+        $('#IRIS_ENLARGE').on('click', function () {
+            console.log("iris_enlarge");
+            toAction(window.cid,window.checkList[12],"IRIS_ENLARGE",window.checkList,12,$(this));
+        });
+        $('#IRIS_REDUCE').on('click', function () {
+            console.log("iris_reduce");
+            toAction(window.cid,window.checkList[13],"IRIS_REDUCE",window.checkList,13,$(this));
+        });
+        $('#START_RECORD_TRACK').on('click', function () {
+            console.log("start_recore_track");
+            toAction(window.cid,window.checkList[14],"START_RECORD_TRACK",window.checkList,14,$(this));
+        });
+        $('#STOP_RECORD_TRACK').on('click', function () {
+            console.log("stop_recore_track");
+            toAction(window.cid,window.checkList[15],"STOP_RECORD_TRACK",window.checkList,15,$(this));
+        });
+        $('#START_TRACK').on('click', function () {
+            console.log("start_track");
+            toAction(window.cid,window.checkList[16],"START_TRACK",window.checkList,16,$(this));
+        });
+        $('#STOP_TRACK').on('click', function () {
+            console.log("stop_track");
+            toAction(window.cid,window.checkList[17],"STOP_TRACK",window.checkList,17,$(this));
+        });
+        $('#WIPER_SWITCH').on('click', function () {
+            console.log("wiper_switch");
+            toAction(window.cid,window.checkList[18],"WIPER_SWITCH",window.checkList,18,$(this));
+        });
+    </script>
+</body>
+<style>
+    .action {
+        float: left;
+        width: 80px;
+        padding: 10px 0;
+        background-color: rgba(146, 255, 255, 0.562);
+        text-align: center;
+        margin: 0 10px 10px 0;
+        cursor: pointer;
+        color: #000;
+        transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        -webkit-transition: all .5s;
+        font-size: 14px;
+    }
+
+    .action:hover {
+        background-color: rgba(15, 255, 255, 1);
+        color: #000;
+        transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        -webkit-transition: all .5s;
+    }
+</style>
+
+</html>

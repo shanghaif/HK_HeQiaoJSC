@@ -1,0 +1,5 @@
+2020-10-28 08:38:18,745 [4] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [(null)]  - Failed to determine the https port for redirect.
+2020-10-28 08:41:02,748 [8] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [(null)]  - Failed to determine the https port for redirect.
+2020-10-28 08:43:30,130 [4] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [(null)]  - Failed to determine the https port for redirect.
+2020-10-28 08:45:24,055 [4] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [(null)]  - Failed to determine the https port for redirect.
+2020-10-28 08:47:12,386 [9] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [(null)]  - Failed to determine the https port for redirect.

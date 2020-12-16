@@ -1,0 +1,17 @@
+[记录时间：2020-12-02 19:49:35,220 ]线程ID:[1] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：看门狗程序启动！ 
+[记录时间：2020-12-02 19:49:35,266 ]线程ID:[1] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：看门狗程序启动完毕！ 
+[记录时间：2020-12-02 19:49:36,658 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：看门狗程序完毕！ 
+[记录时间：2020-12-02 19:49:37,697 ]线程ID:[7] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：看门狗程序完毕！ 
+[记录时间：2020-12-02 19:49:38,654 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：看门狗程序完毕！ 
+[记录时间：2020-12-02 19:49:39,655 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：看门狗程序完毕！ 
+[记录时间：2020-12-02 19:49:40,711 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：开始同步污水监控！ 
+[记录时间：2020-12-02 19:49:40,711 ]线程ID:[7] 日志级别：INFO  类：System.String - 描述：开始进行监控同步！ 
+[记录时间：2020-12-02 19:49:40,852 ]线程ID:[5] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：看门狗程序开始！ 
+[记录时间：2020-12-02 19:49:40,852 ]线程ID:[5] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：开始同步PM2.5！ 
+[记录时间：2020-12-02 19:49:42,970 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：同步污水监控遇到错误！JSON integer 1607514083619 is too large or small for an Int32. Path 'data.expireTime', line 1, position 143. 
+[记录时间：2020-12-02 19:49:45,196 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：开始同步污水监控！ 
+[记录时间：2020-12-02 19:49:45,358 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：同步污水监控遇到错误！JSON integer 1607514083619 is too large or small for an Int32. Path 'data.expireTime', line 1, position 143. 
+[记录时间：2020-12-02 19:49:45,369 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：看门狗程序开始！ 
+[记录时间：2020-12-02 19:49:45,369 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：开始同步PM2.5！ 
+[记录时间：2020-12-02 19:49:45,597 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：同步PM2.5遇到错误！正在创建模型，此时不可使用上下文。如果在 OnModelCreating 方法内使用上下文或如果多个线程同时访问同一上下文实例，可能引发此异常。请注意不保证 DbContext 的实例成员和相关类是线程安全的。 
+[记录时间：2020-12-02 19:49:45,598 ]线程ID:[6] 日志级别：INFO  类：HaikanSmartTownCockpit.WatchDog.FrmMain - 描述：看门狗程序完毕！ 

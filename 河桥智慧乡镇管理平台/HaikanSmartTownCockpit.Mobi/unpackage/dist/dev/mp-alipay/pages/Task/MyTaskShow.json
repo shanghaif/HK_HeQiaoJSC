@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "任务列表",
+  "pullRefresh": true,
+  "titleBarColor": "#000000",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {}
+}

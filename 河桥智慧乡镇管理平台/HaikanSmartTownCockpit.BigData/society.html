@@ -1,0 +1,3529 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/divpoint.css">
+    <link rel="stylesheet" href="css/movePrompt.css">
+    <link rel="stylesheet" href="css/widget-win.css">
+    <link rel="stylesheet" href="css/metro-all.min.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="lib/include-lib.js" libpath=""
+        include="jquery,bootstrap,haoutil,crypto,toastr,mapv3d,layer"></script>
+    <script src="js/metro.min.js"></script>
+    <script type="text/javascript" src="js/map3dindex.js"></script>
+    <script src="js/video.min.js"></script>
+    <script src="js/videojs-contrib-hls.js"></script>
+    <script src="./js/flexible.js"></script>
+    <meta charset="UTF-8">
+    <title>河桥镇综合指挥驾驶舱</title>
+    <style>
+        @keyframes move {
+            0% {
+                transform: translateX(150px);
+            }
+
+            100% {
+                transform: translateX(-70px);
+            }
+        }
+
+        #tomore:hover {
+            color: #62a8ea;
+        }
+
+        .ytkz2 {
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .fl-table {
+            background-color: transparent !important;
+        }
+
+        .fl-table2 {
+            background-color: transparent !important;
+        }
+
+        #zfxx2 tr {
+            background-color: transparent !important;
+            border-bottom: 1px solid;
+        }
+
+        .fl-table td {
+            border: 0 !important;
+            font-size: 24px !important;
+            letter-spacing: 1px;
+        }
+
+        .fl-table2 td {
+            border: 0 !important;
+            font-size: 12px !important;
+            letter-spacing: 1px;
+        }
+
+        .snowBtn {
+            /* cursor: pointer; */
+            user-select: none;
+        }
+
+        .snowBtn:hover {
+            /* color: #fff; */
+            background-color: rgba(15, 255, 255, 0.4);
+        }
+
+        .masterList_th {
+            margin: 0;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .itemlis {
+            float: left;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #zfxx2 .itemlis:hover {
+            background-color: rgba(15, 255, 255, 0.4);
+        }
+    </style>
+</head>
+
+<body style="letter-spacing: 2px;">
+    <label id="lab_login" style="display:none;"></label>
+    <div class="data_bodey">
+        <div class="index_tabs">
+            <!--导航-->
+            <div class="index_navi">
+                <div class="nav_bg">
+                    <img src="./static/image/headbg.png" alt="" style="width: 100%;height: 100%;">
+                </div>
+                <h1 class="logoBox"><img src="./static/image/logo.png" alt="" style="width:100%;"></h1>
+                <ul class="navBox" style="margin: 0;">
+                    <li class="leftLi" style="margin-left: 21%;"><a href="index.html">基本信息</a></li>
+                    <li class="leftLi"><a href="party.html">数字党建</a></li>
+                    <li class="leftLi"><a href="environmental.html">环境治理</a></li>
+                    <li class="rightLi" style="margin-right: 21%;"><a href="emergency.html">应急处理</a></li>
+                    <li class="rightLi"><a href="travel.html">智慧旅游</a></li>
+                    <li class="rightLi nav_active"><a href="society.html">社会治理</a></li>
+                </ul>
+                <input type="button" value="退出登录" id="outTo">
+            </div>
+            <!--社会治理-->
+            <div class="inner">
+                <!--雪亮工程-->
+                <div class="user_left l_left">
+                    <!--雪亮工程-->
+                    <div class="dataAllBorder01 cage_cl" style="height: auto; padding: 0 15px;padding-bottom: 90px;">
+                        <div style="overflow: hidden;">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">雪亮工程</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div class="video_around video_around_chose btn2" id="jz_jk" onclick="xl(1)"
+                                style="width: 100%;height: 218px;">
+                                <div class="video_around2" style="display: block;font-size: 18px;">
+                                    <span style="float: left;">人脸监控</span>
+                                    <span id="jz_more" style="float: right;">更多</span>
+                                </div>
+                                <video id="jz-video" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%;width: 100%;">
+                                </video>
+                                <!--<img class="video_around1" src="video/./static/video/video1.jpg">-->
+                            </div>
+                            <div class="video_around video_around_chose btn2" id="dl_jk" onclick="xl(2)"
+                                style="width: 100%;height: 218px;">
+                                <div class="video_around2" style="display: block;font-size: 18px;">
+                                    <span style="float: left;">道路监控</span>
+                                    <span id="dl_more" style="float: right;">更多</span>
+                                </div>
+                                <video id="dl-video" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%; width: 100%;">
+                                </video>
+                                <!--<img class="video_around1" src="./static/video/video.jpg">-->
+                            </div>
+                            <div class="video_around video_around_chose btn2" id="hd_jk" onclick="xl(3)"
+                                style="width: 100%;height: 218px;">
+                                <div class="video_around2" style="display: block;font-size: 18px;">
+                                    <span style="float: left;">河道监控</span>
+                                    <span id="hd_more" style="float: right;">更多</span>
+                                </div>
+                                <video id="hd-video" class="video-js" autoplay="autoplay" controls preload="auto"
+                                    style="height: 85%; width: 100%;">
+                                </video>
+                                <!--<img class="video_around1" src="video/./static/video/video2.jpg">-->
+                            </div>
+                        </div>
+                        <div class="anniu1 btn1" style="font-size: 24px;color: #fff">更多</div>
+                        <div style="display:none;">
+                            <div id="userContainerManage" style="height: 90%"></div>
+                            <div id="userContainerAttendance" style="height: 90%"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+                <div class="infoview">
+                    <!--<div>
+                        三维地图：
+                        <input type="button" value="地图复位" onclick="home()" />
+                        <input type="button" value="键盘漫游" onclick="keyboardRoam()" />
+                        <input type="button" value="坐标定位" onclick="center()" />
+                    </div>
+                    <div>
+                        地图标绘：
+                        <input type="button" value="三维模型" onclick="gltf()" />
+                        <input type="button" value="点" onclick="point()" />
+                        <input type="button" value="线" onclick="line()" />
+                        <input type="button" value="面" onclick="area()" />
+                        <input type="button" value="清除" onclick="deleteAll()" />
+                    </div>
+                    <div>
+                        空间量算：
+                        <input type="button" value="空间距离" onclick="measuerLength(false)" />
+                        <input type="button" value="贴地距离" onclick="measuerLength(true)" />
+                        <input type="button" value="水平面积" onclick="measureArea(false)" />
+                        <input type="button" value="贴地面积" onclick="measureArea(true)" />
+                        <input type="button" value="高度差" onclick="measureHeight(false)" />
+                        <input type="button" value="三角测量" onclick="measureHeight(true)" />
+                        <input type="button" value="清除结果" onclick="clearMeasure()" />
+                    </div>-->
+                    <!--<div>
+                        设备操作：
+                        <input type="button" value="加载设备" onclick="loadDevice()" />
+                        <input type="button" value="添加图标" onclick="loadBillboard()" />
+                    </div>-->
+                </div>
+                <div id="itemldxx" class="item item--mod">
+                    <div class="table-wrapper">
+                        <h1>楼栋信息<span id="quyuxx"></span></h1>
+                        <!--<div class="societyanniu" id="videoappend">多屏模式</div>-->
+                        <div class="videoBox" id="loudxxinfo"
+                            style="width: 900px;height: 800px; overflow: auto;margin-bottom: 10px;line-height: 40px;font-size: 16px;letter-spacing: 5px;margin-left: 10px;">
+                        </div>
+                        <!--<a id="tomore" style="margin-left: 18px;font-size: 18px;text-decoration: none;color: #333;cursor: pointer;user-select: none;">获取更多</a>-->
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="itemldcyxx" class="item item--mod">
+                    <div class="table-wrapper">
+                        <h1>楼栋成员信息</h1>
+                        <!--<div class="societyanniu" id="videoappend">多屏模式</div>-->
+                        <div class="videoBox" id="loudxyxxinfo"
+                            style="width: 900px;height: 800px; overflow: auto;margin-bottom: 10px;line-height: 40px;font-size: 16px;letter-spacing: 5px;margin-left: 10px;">
+
+                        </div>
+                        <!--<a id="tomore" style="margin-left: 18px;font-size: 18px;text-decoration: none;color: #333;cursor: pointer;user-select: none;">获取更多</a>-->
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item1" class="item item--mod" style="width: 80%;">
+                    <div class="table-wrapper">
+                        <h1>雪亮工程</h1>
+                        <!-- <div class="societyanniu" id="videoappend">多屏模式</div> -->
+                        <div style="width: 31%;float: left;margin-left: 1%;font-size: 20px;">
+                            <select id="typeselect" data-role="select" data-drop-height="400" data-on-change="toSelect">
+                                <optgroup>
+                                    <option value="全部">全部</option>
+                                    <option value="五水共治监控">五水共治监控</option>
+                                    <option value="水库监控">水库监控</option>
+                                    <option value="农民房建设监控">农民房建设监控</option>
+                                    <option value="森林监控">森林监控</option>
+                                    <option value="应急响应监控">应急响应监控</option>
+                                    <option value="河道水位监控">河道水位监控</option>
+                                    <option value="危房监控">危房监控</option>
+                                    <option value="道路监控">道路监控</option>
+                                    <option value="集镇监控">集镇监控</option>
+                                    <option value="河道监控">河道监控</option>
+                                    <option value="河道监控">垃圾分类监控</option>
+                                    <option value="人脸监控">人脸监控</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div>
+                            <span class="bacic_number" id="xlgc_num" style="color: #000;padding-left: 50px;"></span>
+                            <span style="color: #000;" class="bacic_company">个</span>
+                        </div>
+                        <div style="height: 800px;margin-bottom: 10px;margin-top: 20px;text-align: center;">
+                            <div class="videoesBox"
+                                style="width:100%;height: 800px; overflow: auto;display: inline-block;">
+                            </div>
+                        </div>
+                        <a id="tomore"
+                            style="margin-left: 18px;font-size: 18px;text-decoration: none;color: #333;cursor: pointer;user-select: none;">获取更多</a>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item2" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>雪亮工程</h1>
+                        <div class="two-text" id="video_name" style="float:left;">当前视频来源--XX监控</div>
+                        <span id="ytkz" style="font-size:20px;float: right;">云台控制</span>
+                        <div class="societyjiankong" style="clear: both;">
+                            <video id="p-video" class="video-js" autoplay="autoplay" controls preload="auto"
+                                style="height: 500px;width: 1000px;">
+                            </video>
+                            <!-- <img src="./static/video/video.jpg" /> -->
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div class="user_left l_left">
+                    <!--智慧小区-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float:left; margin-right: 10px;">智慧安防小镇</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                                <!--<span class="gd btn3">更多</span>-->
+                            </div>
+                            <div style="overflow-y: auto;height: 220px;">
+                                <div style="margin-bottom:10px;">
+                                    <div style="color:#ffea00;font-size: 18px;letter-spacing: 2px;">人脸抓拍</div>
+                                    <div class="minbing" style="margin: 0;border-bottom: 1px solid #00ffff;">
+                                        <div class="cun btn22" id="d723879736c142f193e8d24dafb85996"
+                                            style="width: 46%;height: 60px;font-size:18px;text-align: center;margin: 5px 2%;padding: 0;display: table;">
+                                            <span style="display: table-cell;vertical-align: middle;">新街北入口人脸</span>
+                                        </div>
+                                        <div class="cun btn22" id="1d0f7a48b4644212bc5f7e3febf1c0c5"
+                                            style="width: 46%;height: 60px;font-size:18px;text-align: center;margin: 5px 2%;padding: 0;display: table;">
+                                            <span style="display: table-cell;vertical-align: middle;">幼儿园入口人脸</span>
+                                        </div>
+                                        <div class="cun btn22" id="a8bcc282d9484aac97b73207d0709737"
+                                            style="width: 46%;height: 60px;font-size:18px;text-align: center;margin: 5px 2%;padding: 0;display: table;">
+                                            <span style="display: table-cell;vertical-align: middle;">荷花塘入口人脸</span>
+                                        </div>
+                                        <div class="cun btn22" id="875e0d2f6db2482895c9389e35dc08d3"
+                                            style="width: 46%;height: 60px;font-size:18px;text-align: center;margin: 5px 2%;padding: 0;display: table;">
+                                            <span style="display: table-cell;vertical-align: middle;">新街南入口人脸</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-bottom:10px;">
+                                    <div style="color:#ffea00;font-size: 18px;letter-spacing: 2px;">车辆抓拍</div>
+                                    <div class="minbing" style="margin: 0;border-bottom: 1px solid #00ffff;">
+                                        <div class="cun btn23" id="新街北入口抓拍机"
+                                            style="width: 46%;height: 60px;font-size:18px;text-align: center;margin: 5px 2%;padding: 0;display: table;">
+                                            <span style="display: table-cell;vertical-align: middle;">新街北入口抓拍机</span>
+                                        </div>
+                                        <div class="cun btn23" id="新街南入口抓拍机"
+                                            style="width: 46%;height: 60px;font-size:18px;text-align: center;margin: 5px 2%;padding: 0;display: table;">
+                                            <span style="display: table-cell;vertical-align: middle;">新街南入口抓拍机</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--租房信息-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:3%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">租房管理</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                                <!-- <span class="gd btn4">更多</span> -->
+                            </div>
+                            <div id="zufangxinxi" style="height: 78%;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--智慧消防-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:3%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;display: flex;">
+                                <span style="margin-right: 10px;">智慧消防</span>
+                                <span style="width: 150px;overflow: hidden;flex: 1;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                                <span id="btn24" style="color: #04D6D3;cursor: pointer;">更多</span>
+                            </div>
+                            <div>
+                                <div class="masterList_th">
+                                    <div class="itemlis"
+                                        style="width: 25%;background-color: rgba(15, 255, 255, 0.4);padding: 10px 5px;">
+                                        事件类型</div>
+                                    <div class="itemlis" style="width: 45%;background-color:#333;padding: 10px 5px;">
+                                        发生地点</div>
+                                    <div class="itemlis"
+                                        style="width: 30%;background-color:rgba(15, 255, 255, 0.4);padding: 10px 5px;">
+                                        报警时间</div>
+                                    <!-- <ul id="masterList_th">
+                                        <li>事件类型</li>
+                                        <li>发生地点</li>
+                                        <li>报警时间</li>
+                                    </ul> -->
+                                </div>
+                                <div id="zfxx2"
+                                    style="clear: both;color: #fff;font-size: 16px;overflow-y: auto;height: 175px;">
+                                </div>
+                            </div>
+                            <!-- <table class="fl-table2" style="color: #fff;">
+                                <thead style="font-size: 10px;">
+                                    <tr>
+                                        <th>事件类型</th>
+                                        <th>发生地点</th>
+                                        <th>报警时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="zfxx2" style="background-color: transparent;">
+                                </tbody>
+                            </table> -->
+                            <div class="user_top_middle l_left">
+                                <div id="userContainerIllegal" style="height: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div id="item3" class="item item--mod">
+                    <div class="table-wrapper" style="width:660px;">
+                        <h1>智慧社区</h1>
+                        <div class="two-text">XX村</div>
+                        <div class="fl-table">
+                            <div class="societydata ">人员信息库</div>
+                            <div class="societydata ">监控</div>
+                            <div class="societydata ">安防管理</div>
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item4" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>出租房信息</h1>
+                        <div class="fl-table">
+                            <div class="partycun btn6">河桥村</div>
+                            <div class="partycun btn6">金燕村</div>
+                            <div class="partycun btn6">罗山村</div>
+                            <div class="partycun btn6">泥骆村</div>
+                            <div class="partycun btn6">蒲村村</div>
+                            <div class="partycun btn6">七都村</div>
+                            <div class="partycun btn6">秀溪村</div>
+                            <div class="partycun btn6">学川村</div>
+                            <div class="partycun btn6">云浪村</div>
+                            <div class="partycun btn6">中鑫村</div>
+                            <div class="partycun btn6">聚秀村</div>
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item6" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                        <h1>出租房管理</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>出租房信息</th>
+                                    <th>业主</th>
+                                    <th>租户</th>
+                                    <th>价格</th>
+                                    <th>状态</th>
+                                </tr>
+                            </thead>
+                            <tbody id="zfxx22">
+
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item5" class="item item--mod">
+                    <div class="table-wrapper" style="width:660px;">
+                        <h1>暂无</h1>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+
+                <div class="map" id="map_shzl"></div>
+
+                <div class="user_right r_right">
+                    
+                    <!--交办数据-->
+                    <div class="dataAllBorder01 cage_cl" style="height:150px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <a href="http://172.17.229.229/fengQiaoManage/fengQiaoHomePageDataStatistics/dispatchIndex.action?orgId=142010"
+                                    style="color: #00ffff;">
+                                    <span style="float: left;margin-right: 10px;">任务交办</span>
+                                </a>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                                <span class="gd btn16">更多</span>
+                            </div>
+                            <div class="basic_data">
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">已处理</div>
+                                    <div>
+                                        <!-- <span class="bacic_number" id="renwu_shuju"></span><span class="bacic_company">件</span> -->
+                                        <span class="bacic_number">5</span><span class="bacic_company">件</span>
+                                    </div>
+                                </div>
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">未处理</div>
+                                    <div>
+                                        <!-- <span class="bacic_number" id="renwu_tongji"></span><span class="bacic_company">件</span> -->
+                                        <span class="bacic_number">0</span><span class="bacic_company">件</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--交办数据统计-->
+                    <div class="dataAllBorder01 cage_cl" style="height:380px;margin-top:3%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">交办数据统计</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div id="container11" style="height: 78%;;padding: 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--社区矫正-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:3%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">社区矫正</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                                <!--<span class="gd btn16">更多</span>-->
+                            </div>
+                            <div id="userContainerAge" style="height:78%;margin: 0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+
+                <div class="user_right r_right">
+                    <!--重点人员关系分析-->
+                    <div class="dataAllBorder01 cage_cl" style="height:540px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">重点人员</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                                <!--<span class="gd btn16">更多</span>-->
+                            </div>
+                            <!-- <div id="userContainerFlow" style="height: 78%"></div> -->
+                            <div id="zhongdianrenyuan" style="height: 85%;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--城管执法-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top: 3%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">城管执法</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                </span>
+                                
+                            </div>
+                            <div id="container4" style="height:78%;margin: 0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+                <div id="item7" class="item item--mod">
+                    <div class="table-wrapper" style="width:1200px;">
+                        <span id="ul_gongce">
+                        </span>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item8" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>社区矫正</h1>
+                        <div class="fl-table">
+                            <div class="partycun btn9">河桥村</div>
+                            <div class="partycun btn9">金燕村</div>
+                            <div class="partycun btn9">罗山村</div>
+                            <div class="partycun btn9">泥骆村</div>
+                            <div class="partycun btn9">蒲村村</div>
+                            <div class="partycun btn9">七都村</div>
+                            <div class="partycun btn9">秀溪村</div>
+                            <div class="partycun btn9">学川村</div>
+                            <div class="partycun btn9">云浪村</div>
+                            <div class="partycun btn9">中鑫村</div>
+                            <div class="partycun btn9">聚秀村</div>
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item9" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                        <h1>矫正人员管理</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>矫正状态</th>
+                                    <th>定位手机</th>
+                                    <th>司法部上报状态</th>
+                                    <th>入矫时间</th>
+                                </tr>
+                            </thead>
+                            <tbody id="shjz">
+
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item10" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>城管执法</h1>
+                        <div class="fl-table">
+                            <div class="partycun btn11">河桥村</div>
+                            <div class="partycun btn11">金燕村</div>
+                            <div class="partycun btn11">罗山村</div>
+                            <div class="partycun btn11">泥骆村</div>
+                            <div class="partycun btn11">蒲村村</div>
+                            <div class="partycun btn11">七都村</div>
+                            <div class="partycun btn11">秀溪村</div>
+                            <div class="partycun btn11">学川村</div>
+                            <div class="partycun btn11">云浪村</div>
+                            <div class="partycun btn11">中鑫村</div>
+                            <div class="partycun btn11">聚秀村</div>
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item11" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                        <h1>城管执法</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>事件</th>
+                                    <th>时间</th>
+                                    <th>地址</th>
+                                    <th>处理情况</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cgzf">
+
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item12" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>任务交办</h1>
+                        <div class="fl-table">
+                            <div class="partycun btn17">河桥村</div>
+                            <div class="partycun btn17">金燕村</div>
+                            <div class="partycun btn17">罗山村</div>
+                            <div class="partycun btn17">泥骆村</div>
+                            <div class="partycun btn17">蒲村村</div>
+                            <div class="partycun btn17">七都村</div>
+                            <div class="partycun btn17">秀溪村</div>
+                            <div class="partycun btn17">学川村</div>
+                            <div class="partycun btn17">云浪村</div>
+                            <div class="partycun btn17">中鑫村</div>
+                            <div class="partycun btn17">聚秀村</div>
+                            <div class="partycun btn17">党政综合办公室</div>
+                            <div class="partycun btn17">党建工作办公室</div>
+                            <div class="partycun btn17">平安建设办公室</div>
+                            <div class="partycun btn17">公共服务办公室</div>
+                            <div class="partycun btn17">村镇管理办公室</div>
+                            <div class="partycun btn17">经济发展办公室</div>
+                            <div class="partycun btn17">集镇管理办公室</div>
+                            <div class="partycun btn17">农业农村办公室</div>
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item17" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                        <h1>交办任务</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr style="font-size: 24px;">
+                                    <th>任务标题</th>
+                                    <th>开始时间</th>
+                                    <th>结束时间</th>
+                                    <th>完成情况</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rwjb">
+
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item18" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                        <h1>交办任务</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>任务标题</th>
+                                    <th>开始时间</th>
+                                    <th>结束时间</th>
+                                    <th>完成情况</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rwjbqb">
+
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item13" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>任务详情</h1>
+                        <div class="shijian">
+                            <div>事件详情：</div>
+                            <div>xxxxxxxxxx</div>
+                        </div>
+                        <div class="shijian">
+                            <div>事件内容：</div>
+                            <div>xxxxxxxxxxxxx</div>
+                        </div>
+                        <div class="shijian">
+                            <div>事件时间：</div>
+                            <div>xxxxxxxxxxxxx</div>
+                        </div>
+                        <div class="shijian">
+                            <div>事件地点：</div>
+                            <div>xxxxxxxxxxxxx</div>
+                        </div>
+                        <div class="shijian">
+                            <div>处理情况：</div>
+                            <div>xxxxxxxxxxxxx</div>
+                        </div>
+                        <div class="shijian">
+                            <div>负责人：</div>
+                            <div>xxxxxxxxxxxxx</div>
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item14" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>卫生点管理</h1>
+                        <div class="fl-table">
+                            <div class="partycun btn15">河桥村</div>
+                            <div class="partycun btn15">金燕村</div>
+                            <div class="partycun btn15">罗山村</div>
+                            <div class="partycun btn15">泥骆村</div>
+                            <div class="partycun btn15">蒲村村</div>
+                            <div class="partycun btn15">七都村</div>
+                            <div class="partycun btn15">秀溪村</div>
+                            <div class="partycun btn15">学川村</div>
+                            <div class="partycun btn15">云浪村</div>
+                            <div class="partycun btn15">中鑫村</div>
+                            <div class="partycun btn15">聚秀村</div>
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item15" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>卫生点管理</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>位置</th>
+                                    <th>查看监控</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item16" class="item">
+                    <div class="login-box">
+                        <h2>用户登录</h2>
+                        <form>
+                            <div class="user-box">
+                                <input type="text" id="username" required="">
+                                <label>输入用户名</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="password" id="password" required="">
+                                <label>输入密码</label>
+                            </div>
+                            <!--<a href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                确定登录
+                            </a>-->
+                            <input type="button" value="确定登录" id="sendTo"
+                                style="background: transparent;border-width:0px;color:white">
+                        </form>
+                    </div>
+                </div>
+                <div class="user_right r_right" style="display:none">
+                    <div class="dataAllBorder01 cage_cl" style="height:150px;">
+                        <div class="dataAllBorder02">
+                            <div class="user_top_middle">
+                                <div id="userContainerComplaint" style="height: 90%"></div>
+                                <p>投诉情况</p>
+                            </div>
+                            <div class="user_top_middle">
+                                <div id="userContainerPrize" style="height: 90%"></div>
+                                <p>商家入驻</p>
+                            </div>
+                            <div class="user_top_middle l_left">
+                                <div class="user_right_left l_left">
+                                    <div id="userContainerReason" style="height: 90%"></div>
+                                    <p>游客溢出情况</p>
+                                </div>
+                                <div class="user_right_left l_left">
+                                    <div id="userContainerHandle" style="height: 90%"></div>
+                                    <p>游客报警情况</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="jdms" class="item item--mod"
+        style="height: 800px;width:1350px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+        <div class="table-wrapper" style="font-size: 16px;">
+            <h1>人脸抓拍详情列表</h1>
+            <div style="height:50px;" id="jdms_info">
+            </div>
+            <div style="height: 650px;overflow-y: auto;">
+                <table class="fl-table">
+                    <thead style="font-size: 24px;">
+                        <tr>
+                            <th>事件类型</th>
+                            <th>抓拍类型</th>
+                            <th>抓拍时间</th>
+                            <th>查看抓拍图</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jdms_table">
+                    <tbody>
+                </table>
+            </div>
+        </div>
+        <b class="item-close js-popup-close">x</b>
+    </div>
+    <div id="jdmsc" class="item item--mod"
+        style="height: 800px;width:1350px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+        <div class="table-wrapper" style="height:80%;">
+            <h1>车辆抓拍详情列表</h1>
+            <div style="height:50px;" id="jdmsc_info">
+            </div>
+            <div style="height: 650px;overflow-y: auto;">
+                <table class="fl-table">
+                    <thead>
+                        <tr>
+                            <th>事件类型</th>
+                            <th>车牌号码</th>
+                            <th>卡口点名称</th>
+                            <th>抓拍时间</th>
+                            <th>查看抓拍图</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jdmsc_table">
+
+                    <tbody>
+                </table>
+            </div>
+        </div>
+        <b class="item-close js-popup-close">x</b>
+    </div>
+    <div id="jdmsimg" class="item item--mod"
+         style="height: 500px;width:800px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+        <img id="img1" style="width: 700px;height: 400px;" />
+        <img id="img2" style="width: 700px;height: 400px;" />
+        <b class="item-close js-popup-close">x</b>
+    </div>
+    <div id="jdmsXiaofang" class="item item--mod"
+        style="height: 800px;width:1350px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+        <div class="table-wrapper" style="height:80%;">
+            <h1>河桥消防报警信息列表</h1>
+            <div style="height:50px;" id="jdmsXiaofang_info">
+            </div>
+            <div style="height: 650px;overflow-y: auto;">
+                <table class="fl-table">
+                    <thead>
+                        <tr style="font-size: 26px;">
+                            <th>事件类型</th>
+                            <th>事件状态</th>
+                            <!--<th>探测器类型</th>-->
+                            <th>发生地点</th>
+                            <th>报警时间</th>
+                            <th>是否已处理</th>
+                            <th>是否复位</th>
+                            <!--<th>结束时间</th>-->
+                            <th>状态</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jdmsXiaofang_table">
+
+                    <tbody>
+                </table>
+            </div>
+        </div>
+        <b class="item-close js-popup-close">x</b>
+    </div>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.limarquee.js"></script>
+    <!--<script src="js/index.js"></script>-->
+    <script src="js/jquery.leoTextAnimate.js"></script>
+    <script src="js/jquery.popup.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback">
+    </script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=51ef9d57c80eb7442667e77d14e97e86"></script>
+    <script>
+        var baseUrl = window.sessionStorage.getItem("path");
+    </script>
+    <script>
+        $('.bacic_number').leoTextAnimate({
+            autorun: true, //是否自动运行
+            fixed: [',', ':', '.'], //
+            start: '-'
+        });
+    </script>
+    <!-- 重点人员 -->
+    <script>
+        //重点人员
+        $(function () {
+            console.log('balbaksjbdjsbd')
+            $.ajax({
+                //zufanginfo        GetPersonnel
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/GetPersonnel',
+                method: 'get',
+                success: function (data) {
+                    console.log(1545454);
+                    console.log(data);
+                    var myChart = echarts.init($("#zhongdianrenyuan")[0]);
+                    option = {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: [{
+                            orient: 'vertical',
+                            x: '0',
+                            // y: '20px',
+                            data: ['刑满释放人员', '社区矫正人员', '精神病人员', '吸毒人员', '重点青少年',
+                                '重点上访人员'
+                            ],
+                            textStyle: {
+                                color: "#fff",
+                                fontSize: 16
+                            },
+                            itemGap: 20
+                        }, {
+                            orient: 'vertical',
+                            x: '170',
+                            // y: '20px',
+                            data: [
+                                '危险品从业人员', '传销人员', '特定人员', '疫情防控人员', '其他人员'
+                            ],
+                            textStyle: {
+                                color: "#fff",
+                                fontSize: 16
+                            },
+                            itemGap: 20
+                        }],
+                        calculable: false,
+                        graphic: {
+                            //图形中间文字
+                            type: "text",
+                            left: "center",
+                            top: "340",
+                            style: {
+                                text: "重点人员",
+                                textAlign: "center",
+                                fill: "#fff",
+                                fontSize: 18
+                            }
+                        },
+                        series: [{
+                            name: '重点人员',
+                            type: 'pie',
+                            radius: ['25%', '45%'],
+                            center: ['50%', '76%'],
+                            label: {
+                                normal: {
+                                    textStyle: {
+                                        fontSize: 12
+                                    }
+                                }
+                            },
+                            data: [{
+                                value: data.data.xmsfUser,
+                                name: '刑满释放人员',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#00ffff'
+
+                                    }
+                                }
+                            }, {
+                                value: data.data.sqjzUser,
+                                name: '社区矫正人员',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#0a8cff'
+
+                                    }
+                                }
+                            }, {
+                                value: data.data.jsbUser,
+                                name: '精神病人员',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#DA70D6'
+
+                                    }
+                                }
+                            }, {
+                                value: data.data.xdUser,
+                                name: '吸毒人员',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#B0C4DE'
+
+                                    }
+                                }
+                            }, {
+                                value: data.data.zdqsnUser,
+                                name: '重点青少年',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#fff'
+                                    }
+                                }
+                            }, {
+                                value: data.data.zdsfUser,
+                                name: '重点上访人员',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#9932CC'
+                                    }
+                                }
+                            }, {
+                                value: data.data.wxpcyUser,
+                                name: '危险品从业人员',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#00FFFF'
+
+                                    }
+                                }
+                            }, {
+                                value: data.data.qtUser,
+                                name: '其他人员',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#00FF7F'
+
+                                    }
+                                }
+                            }, {
+                                value: data.data.cxUser,
+                                name: '传销人员',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#008000'
+
+                                    }
+                                }
+                            }, {
+                                value: data.data.tdUser,
+                                name: '特定人员',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#FFD700'
+
+                                    }
+                                }
+                            }, {
+                                value: data.data.yqfkUser,
+                                name: '疫情防控人员',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#FF7F50'
+
+                                    }
+                                }
+                            }]
+                        }]
+                    };
+                    myChart.setOption(option);
+                    // 调用饼图动画函数
+                    chartAnimation(option, myChart, 4000);
+                },
+                error: function (err) {
+                    //alert(err);
+                }
+            });
+        });
+    </script>
+    <!-- 社区矫正 -->
+    <script>
+        //社区矫正
+        $(function () {
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/shehuijiaoz2',
+                method: 'get',
+                success: function (data) {
+                    //console.log(data);
+                    var myChart = echarts.init($("#userContainerAge")[0]);
+                    option = {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                            }
+                        },
+                        grid: {
+                            x: 30,
+                            y: 10,
+                            x2: 10,
+                            y2: 30,
+                            borderWidth: 0
+                        },
+                        calculable: true,
+                        xAxis: [{
+                            type: 'category',
+                            data: ['2016', '2017', '2018', '2019', '2020', '2021',
+                                '2022', '2023'
+                            ],
+                            splitLine: {
+                                show: false
+                            },
+                            axisLabel: {
+                                interval: 0,
+                                show: true,
+                                textStyle: {
+                                    color: '#fff',
+                                    align: 'center'
+                                }
+                            }
+                        }],
+                        yAxis: [{
+                            type: 'value',
+                            splitLine: {
+                                show: false
+                            },
+                            axisLabel: {
+                                show: true,
+                                textStyle: {
+                                    color: '#fff',
+                                    fontSize: 16
+                                }
+                            }
+                        }],
+                        series: [{
+                                name: '矫正结束人数',
+                                type: 'bar',
+                                barWidth: '20',
+                                data: [
+                                    data.data[0].num16,
+                                    data.data[0].num17,
+                                    data.data[0].num18,
+                                    data.data[0].num19,
+                                    data.data[0].num20,
+                                    data.data[0].num21,
+                                    data.data[0].num22,
+                                    data.data[0].num23
+                                ],
+                                itemStyle: {
+                                    normal: {
+                                        color: "#00ffff"
+                                    }
+                                }
+
+                            },
+                            //{
+                            //    name: '入矫人数',
+                            //    type: 'bar',
+                            //    stack: '广告',
+                            //    data: [2, 7, 3, 4, 9, 12, 0, 9, 1, 2, 3, 0],
+                            //    itemStyle: {
+                            //        normal: {
+                            //            color: "#0084e7"
+                            //        }
+                            //    }
+                            //}
+
+
+                        ]
+                    };
+
+                    myChart.setOption(option);
+                    // 调用饼图动画函数
+                    chartAnimation(option, myChart, 4000);
+                },
+                error: function (err) {
+                    //alert(err);
+                }
+            });
+        });
+    </script>
+    <!-- 城管执法 -->
+    <script>
+        //城管执法
+        $(function () {
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/chengguanzhifa',
+                method: 'get',
+                success: function (data) {
+                    //console.log(data);
+                    var myChart = echarts.init(document.getElementById('container4'));
+                    option = {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                            }
+                        },
+                        calculable: true,
+                        xAxis: [{
+                            type: 'category',
+                            data: [
+                                data.data.data[6],
+                                data.data.data[5],
+                                data.data.data[4],
+                                data.data.data[3],
+                                data.data.data[2],
+                                data.data.data[1],
+                                data.data.data[0]
+                            ],
+                            splitLine: {
+                                show: false
+                            },
+                            axisLabel: {
+                                show: true,
+                                textStyle: {
+                                    color: '#a4a7ab',
+                                    align: 'center'
+                                }
+                            }
+                        }],
+                        grid: {
+                            x: 30,
+                            y: 10,
+                            x2: 10,
+                            y2: 30,
+                            borderWidth: 0
+                        },
+                        yAxis: [{
+                            type: 'value',
+                            splitLine: {
+                                show: false
+                            },
+                            axisLabel: {
+                                show: true,
+                                textStyle: {
+                                    color: '#a4a7ab'
+                                }
+                            }
+                        }],
+                        series: [{
+                                name: '已解决事件（件）',
+                                type: 'bar',
+                                stack: '广告',
+                                barWidth: '30',
+                                data: [
+                                    data.data.data1[6],
+                                    data.data.data1[5],
+                                    data.data.data1[4],
+                                    data.data.data1[3],
+                                    data.data.data1[2],
+                                    data.data.data1[1],
+                                    data.data.data1[0]
+                                ],
+                                itemStyle: {
+                                    normal: {
+                                        color: "#ffea00"
+                                    }
+                                }
+                            },
+                            {
+                                name: '未解决事件（件）',
+                                type: 'bar',
+                                stack: '广告',
+                                data: [
+                                    data.data.data2[6],
+                                    data.data.data2[5],
+                                    data.data.data2[4],
+                                    data.data.data2[3],
+                                    data.data.data2[2],
+                                    data.data.data2[1],
+                                    data.data.data2[0]
+                                ],
+                                itemStyle: {
+                                    normal: {
+                                        color: "#0084e7"
+                                    }
+                                }
+                            }
+                        ]
+                    };
+
+
+                    myChart.setOption(option);
+                    // 调用饼图动画函数
+                    chartAnimation(option, myChart, 3000);
+                },
+                error: function (err) {
+                    //alert(err);
+                }
+            });
+        });
+    </script>
+    <!-- 租房信息 -->
+    <script>
+        //租房信息
+        $(function () {
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/zufanginfo',
+                method: 'get',
+                success: function (data) {
+                    console.log(data);
+                    var myChart = echarts.init($("#zufangxinxi")[0]);
+                    option = {
+                        tooltip: {
+                            trigger: 'item',
+                            // formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            x: 'left',
+                            data: ['出租房', '房屋总数'],
+                            textStyle: {
+                                color: "#fff",
+                                fontSize: 16
+                            }
+                        },
+                        calculable: false,
+                        series: [{
+                            name: '出租房屋',
+                            type: 'pie',
+                            radius: ['40%', '70%'],
+                            center: ['60%', '50%'],
+                            label: {
+                                normal: {
+                                    textStyle: {
+                                        fontSize: 16
+                                    }
+                                }
+                            },
+                            data: [{
+                                value: 3,
+                                name: '出租房',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#ffea00'
+                                    }
+                                }
+                            }, {
+                                value: 5853,
+                                name: '房屋总数',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#00ffff'
+                                    }
+                                }
+                            }]
+                        }]
+                    };
+                    myChart.setOption(option);
+                    // 调用饼图动画函数
+                    chartAnimation(option, myChart, 4000);
+                },
+                error: function (err) {
+                    //alert(err);
+                }
+            });
+        });
+    </script>
+    <!-- 智慧消防 -->
+    <script>
+        $(function () {
+            $.ajax({
+                url: "http://112.17.130.233:4474/api/v1/FireFighting/XiaoFangData/List",
+                type: "get",
+                success: function (data) {
+                    console.log("返回的数据")
+                    var ent = JSON.parse(data);
+                    console.log(ent);
+                    for (var c = 0; c < ent.length; c++) {
+                        let str = '<div><div class="itemlis" title="' + ent[c].EventTypeId +
+                            '" style="width: 25%;">' + ent[c].EventTypeId +
+                            '</div><div class="itemlis" title="' + ent[c].name +
+                            '" style="width: 45%;">' + ent[c].name +
+                            '</div><div class="itemlis" title="' + ent[c].StartTime +
+                            '" style="width: 30%;">' + ent[c].StartTime + '</div></div>'
+                        // var $tr =
+                        //     $("<tr>" +
+                        //         "<td>" + ent[c].EventTypeId + "</td>" +
+                        //         //"<td>" + ent[c].EventStatus + "</td>" +
+                        //         "<td>" + ent[c].name + "</td>" +
+                        //         "<td>" + ent[c].StartTime + "</td>" +
+                        //         //"<td>" + ent[i].EndTime + "</td>" +
+                        //         "</tr>");
+                        var $table = $('#zfxx2');
+                        $table.append(str);
+                    }
+                }
+            })
+        })
+        // 定义echarts图表动画
+        function chartAnimation(option, myChart, t) {
+            var isSet = true // 为了做判断：当鼠标移动上去的时候，自动高亮就被取消
+            var charPie3currentIndex = 0
+            // 2、鼠标移动上去的时候的高亮动画
+            myChart.on('mouseover', function (param) {
+                isSet = false
+                clearInterval(startCharts)
+                // 取消之前高亮的图形
+                myChart.dispatchAction({
+                    type: 'downplay',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+                // 高亮当前图形
+                myChart.dispatchAction({
+                    type: 'highlight',
+                    seriesIndex: 0,
+                    dataIndex: param.dataIndex
+                })
+                // 显示 tooltip
+                myChart.dispatchAction({
+                    type: 'showTip',
+                    seriesIndex: 0,
+                    dataIndex: param.dataIndex
+                })
+            })
+            // 3、自动高亮展示
+            var chartHover = function () {
+                // var $obj=$this;
+                var dataLen = option.series[0].data.length;
+                // console.log($obj)
+                // console.log($obj.series[0])
+                // console.log($obj.series[0].data)
+                // 取消之前高亮的图形
+                myChart.dispatchAction({
+                    type: 'downplay',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+                charPie3currentIndex = (charPie3currentIndex + 1) % dataLen
+                // 高亮当前图形
+                myChart.dispatchAction({
+                    type: 'highlight',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+                // 显示 tooltip
+                myChart.dispatchAction({
+                    type: 'showTip',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+            }
+            // chartHover(option)
+            var startCharts = setInterval(chartHover, t)
+            // 4、鼠标移出之后，恢复自动高亮
+            myChart.on('mouseout', function (param) {
+                if (!isSet) {
+                    startCharts = setInterval(chartHover, t)
+                    isSet = true
+                }
+            })
+        }
+    </script>
+    <script>
+        var pv_player = videojs('p-video');
+        // 社会治理地图
+        //3d地图
+        $(function () {
+            //createMap("map_shzl");
+        });
+        $(function () {
+            window.clicktype = "全部";
+        })
+        //百度地图
+        //var map = new BMap.Map("map_shzl", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+        //map.centerAndZoom(new BMap.Point(119.247083, 30.107503), 16);  // 初始化地图,设置中心点坐标和地图级别
+
+        //var mapStyle = {
+        //    style: "light"
+        //};
+        //map.setMapStyle(mapStyle);
+        //map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        //map.enableScrollWheelZoom();
+
+        //高德地图
+        var vlist = [];
+        var vlist2 = [];
+
+        //  var map = new AMap.Map('map_shzl', {
+        //      resizeEnable: true, //是否监控地图容器尺寸变化
+        //      zoom: 16, //初始地图级别
+        //      center: [119.24011, 30.102485], //初始地图中心点
+        //      showIndoorMap: false, //关闭室内地图
+        //      defaultLayer: new AMap.TileLayer.Satellite(),
+        //  });
+        //debugger
+        $.when(
+            $.ajax({
+                url: baseUrl + 'api/v1/Video/Video/VideoPoint',
+                method: 'get',
+                success: function (data) {
+                    console.log(11111);
+                    console.log(data);
+                    vlist2 = data.data;
+                    for (let i = 0; i < vlist2.length; i++) {
+                        vlist2[i].add = 1;
+                    }
+
+
+                },
+                error: function (data) {
+                    console.log("监控数据请求失败")
+                    console.log(data);
+                }
+            }),
+            $.ajax({
+                url: 'http://112.17.130.233:4474/api/v1/Video/Video/VideoPoint',
+                method: 'get',
+                success: function (data) {
+                    console.log(11111);
+                    console.log(data);
+                    vlist = data.data;
+                    window.list = vlist;
+                    for (let i = 0; i < vlist.length; i++) {
+                        vlist[i].add = 0;
+                    }
+                    //三维地图注掉这个循环
+                    // for (let i = 0; i < vlist.length; i++) {
+                    //     if (vlist[i].point != null) {
+                    //         addMarker(vlist[i].point, vlist[i].shebeiAddress, i);
+                    //     }
+                    // }
+                    window.vp1 = vlist.find(x => x.xlShebeiType == "人脸监控");
+                    window.vp2 = vlist.filter(x => x.xlShebeiType == "道路监控")[13];
+                    window.vp3 = vlist.find(x => x.xlShebeiType == "河道监控");
+                    if (typeof (window.vp1) != "undefined") {
+                        console.log('balbaslbjs')
+                        console.log(window.vp1);
+                        let player1 = videojs("jz-video");
+                        getVUrl(window.vp1.xlShebeiId, player1);
+                    }
+                    if (typeof (window.vp2) != "undefined") {
+                        console.log(window.vp2);
+                        let player2 = videojs("dl-video");
+
+                        getVUrl(window.vp2.xlShebeiId, player2);
+                    }
+                    if (typeof (window.vp3) != "undefined") {
+                        console.log(window.vp3);
+                        let player3 = videojs("hd-video");
+                        getVUrl(window.vp3.xlShebeiId, player3);
+                    }
+
+                },
+                error: function (data) {
+                    console.log("监控数据请求失败")
+                    console.log(data);
+                }
+            })).then(function () {
+            for (let i = 0; i < vlist2.length; i++) {
+                window.list.push(vlist2[i]);
+            }
+            window.list.sort();
+            console.log("***********");
+            console.log(window.list);
+            window.page = 1;
+            toCycle();
+
+        });
+
+
+
+
+
+        ////加点
+        function addMarker(point, label, i) {
+            marker = new AMap.Marker({
+
+                icon: new AMap.Icon({
+                    image: "https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-red.png",
+                    //size: new AMap.Size(60, 50), //图标大小
+                    imageSize: new AMap.Size(20, 30)
+                }),
+                extData: i,
+                position: point,
+
+            });
+            marker.setLabel({
+                offset: new AMap.Pixel(20, 0),
+                content: label
+            });
+            marker.on('click', showVideo);
+            marker.setMap(map);
+        }
+
+        //河桥监控
+        function getVUrl(indexcode, player) {
+
+            $.ajax({
+                url: 'http://112.17.130.233:44444/api/video/VideoUrl?indexcode=' + indexcode,
+                method: 'get',
+                success: function (data) {
+                    console.log(88333322);
+                    console.log(data);
+
+                    player.src([{
+                        type: "application/x-mpegURL",
+                        src: data.vdata.data.url
+                    }]);
+                    player.play();
+                },
+                error: function (err) {
+                    console.log(err);
+
+                }
+            });
+        }
+
+        //政法委的监控
+        function getVUrl2(indexcode, player) {
+            $.ajax({
+                url: 'http://172.18.19.212:44444/api/skvideo/VideoUrl?indexcode=' + indexcode,
+                method: 'get',
+                async: false,
+                success: function (data) {
+                    console.log(data);
+                    player.src([{
+                        type: "application/x-mpegURL",
+                        src: data.vdata.data.url
+                    }]);
+                    player.play();
+
+                },
+                error: function (err) {
+                    console.log(err);
+
+                }
+            });
+        }
+
+        function toSelect(e) {
+            console.log("$$$$$$$$$");
+            console.log(e);
+            let ty = e[0];
+            if (ty != window.clicktype) {
+                window.clicktype = ty;
+                console.log(ty);
+                window.page = 1;
+                $(".videoesBox").html('');
+                toCycle(ty.toString().trim());
+            }
+        }
+
+        function showVideo(e) {
+            pv_player.src([]);
+            console.log(e);
+            console.log(e.target.getExtData());
+            let index = e.target.getExtData();
+            console.log(vlist[index].xlShebeiId);
+            window.cameraIndex = vlist[index].xlShebeiId;
+            getVUrl(vlist[index].xlShebeiId, pv_player);
+            $("#video_name").text("当前视频来源--" + vlist[index].shebeiAddress);
+            $('#item2').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0')
+                    pv_player.pause();
+                    pv_player.src([]);
+                },
+                onPopupInit: function e() {
+                    console.log('1')
+
+                }
+            });
+
+        }
+
+        function showVideo2(e) {
+            pv_player.src([]);
+            console.log(e);
+            let vinfo = vlist.find(x => x.xlShebeiId == e);
+
+
+            window.cameraIndex = e;
+            if (vinfo.add == 0) {
+                getVUrl(e, pv_player);
+            } else {
+                getVUrl2(e, pv_player);
+            }
+
+            $("#video_name").text("当前视频来源--" + vinfo.shebeiAddress);
+            $('#item2').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0')
+                    pv_player.pause();
+                    pv_player.src([]);
+                },
+                onPopupInit: function e() {
+                    console.log('1')
+
+                }
+            });
+
+        }
+
+        function bbclick(e) {
+            //console.log(e)
+            console.log($(e).attr('id'));
+            console.log("cccccccc");
+            let cid = $(e).attr('id');
+            window.location.href = "/PTZControl.html?cid=" + cid;
+        }
+
+        function aaclick(e) {
+            console.log(e);
+            showVideo2(e)
+        }
+
+        function toCycle(type) {
+            // debugger;
+            let vl = [];
+            console.log("toCYcle:" + type)
+            if (type != "全部") {
+                //条件筛选
+                vl = window.list.filter(x => x.xlShebeiType == type);
+            } else {
+                vl = window.list;
+            }
+            console.log(vl.length);
+            let start = (window.page - 1) * 36;
+            let end = window.page * 36 - 1;
+            let pages = Math.ceil(vl.length / 36.0);
+            console.log('-----------------------------');
+            console.log("s:" + start + ";e:" + end + ";pages:" + pages);
+            console.log(5 <= end && 5 >= start);
+            if (window.page > pages) {
+                window.page--;
+            }
+            console.log(start + ":" + end);
+            $("#xlgc_num").html(vl.length);
+            console.log(vl);
+            for (let i = 0; i < vl.length; i++) {
+                if (i >= start && i <= end) {
+
+                    console.log(111111);
+                    console.log(i);
+                    console.log(vl[i].shebeiAddress);
+                    console.log(vl[i].xlShebeiId);
+
+
+                    // $.ajax({
+                    //     url: 'http://112.17.130.233:44444/api/video/VideoUrl?indexcode=' + vl[i].xlShebeiId,
+                    //     method: 'get',
+                    //     success: function (data) {
+                    //         console.log(3333333);
+                    //         console.log(data);
+                    //         if (data.vdata.data != null) {
+                    // $(".videoBox").append(
+                    //     '<div class="societyxuanzhe btn2"><div  class="jiankongtext" >当前视频来源--' +
+                    //     vl[i].shebeiAddress +
+                    //     '</div><div onclick="bbclick(this)" class="ytkz2" id="' + vl[i]
+                    //     .xlShebeiId + '">云台控制</div><div><video id="vedplay' + i +
+                    //     '" class="video-js" autoplay="autoplay" controls preload="auto" style="width:100%;height:335px; margin:0 auto"> <source src="' +
+                    //     data.vdata.data.url +
+                    //     '" type="application/x-mpegURL" /></video></div></div>');
+                    if (vl[i].shebeiType == "在线") {
+                        $(".videoesBox").append(
+                            '<div class="societyxuanzhe snowBtn" style="width:31%;margin:10px 1%;box-shadow:0 0 10px rgba(0,0,0,0.2);padding:10px;"><div style="float:left;height:auto;cursor: pointer;" class="jiankongtext" onclick="aaclick(\'' +
+                            vl[i]
+                            .xlShebeiId + '\')" >' +
+                            vl[i].shebeiAddress +
+                            '</div><div style="float:right;cursor: pointer;" onclick="bbclick(this)" class="ytkz2" id="' +
+                            vl[i]
+                            .xlShebeiId + '">云台控制</div></div>');
+                    } else {
+                        $(".videoesBox").append(
+                            '<div class="societyxuanzhe snowBtn" style="width:31%;margin:10px 1%;box-shadow:0 0 10px rgba(0,0,0,0.2);padding:10px;background-color: #ccc;"><div style="float:left;height:auto;cursor: pointer;" class="jiankongtext" >' +
+                            vl[i].shebeiAddress +
+                            '</div><div style="float:right;cursor: pointer;" onclick="bbclick(this)" class="ytkz2" id="' +
+                            vl[i]
+                            .xlShebeiId + '">云台控制</div></div>');
+                    }
+
+                    // console.log(1232456)
+                    let id = "vedplay" + i;
+                    // console.log(id);
+                    let ytid = '#' + vl[i].xlShebeiId;
+                    // console.log(ytid);
+
+                    // let player = videojs(id);
+                    // player.play();
+                    //         }
+                    //     },
+                    //     error: function (err) {
+                    //         console.log(err);
+
+                    //     }
+                    // });
+                }
+            }
+        }
+        $('.jiankongtext').on('click', function () {
+            //console.log()
+            console.log("cccccccc");
+            // let cid = $(this).attr('id');
+            // window.location.href = "/PTZControl.html?cid=" + cid;
+
+        });
+
+        $("#tomore").on('click', function () {
+            window.page++;
+            toCycle(window.clicktype);
+        });
+
+        $('.vtype').on('click', function () {
+            console.log($(this).text());
+            let ty = $(this).text();
+            if (ty != window.clicktype) {
+                window.clicktype = ty;
+                $('.vtype').css("background-color", "rgba(50,73,96,1)");
+                $(this).css("background-color", "rgba(79,195,161,1)");
+                window.page = 1;
+                $(".videoBox").html('');
+                toCycle(ty.toString().trim());
+            }
+        });
+        // $("input:radio[name='VType']").change(function(){
+        //     let type=$("input:radio[name='VType']:checked").val();
+        //     console.log(type);
+        //     if(type==0){
+        //         window.page=1;
+        //         $(".videoBox").html('');
+        //         toCycle();
+
+        //     }else if(type==1){
+        //         window.page=1;
+        //         $(".videoBox").html('');
+        //         toCycle("集镇监控");
+        //     }else if(type==2){
+        //         window.page=1;
+        //         $(".videoBox").html('');
+        //         toCycle("道路监控");
+        //     }else if(type==3){
+        //         window.page=1;
+        //         $(".videoBox").html('');
+        //         toCycle("河道监控");
+        //     }
+        // });
+    </script>
+    <script>
+        $('.btn7').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $.ajax({
+                                url: baseUrl + 'api/v1/AppTongji/AppTongji/zhongdianreny',
+                                method: 'get',
+                                success: function (data) {
+                                    $("#ul_gongce").html('');
+                                    var piclist = data.data.picture.split(',');
+                                    for (var i = 0; i < piclist.length; i++) {
+                                        //console.log("踩踩踩");
+                                        $("#ul_gongce").append(
+                                            '<img style="width:600px;height:600px" src="' +
+                                            baseUrl + 'UploadFiles/Relationships/' +
+                                            piclist[i] + '" />');
+                                    }
+                                },
+                                error: function (data) {
+                                    console.log("数据请求失败")
+                                    console.log(data);
+                                }
+                            });
+                        } else {
+                            //alert(data.message);
+                        }
+                    }
+                });
+            } else {
+                $('#item16').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        // $('#jz_more').on('click',function(){
+        //     alert(1)
+        // })
+        // $('#dl_more').on('click',function(){
+        //     alert(2)
+        // })
+        // $('#hd_more').on('click',function(){
+        //     alert(3)
+        // })
+        $('#jz_more').on('click', function (event) {
+            event.stopPropagation();
+            $('#item1').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function () {
+                    console.log('0');
+                    $(".videoBox").html('');
+                },
+                onPopupInit: function () {
+                    console.log(66666666);
+                    console.log('1');
+
+                    console.log(77777777);
+
+                    // $(":radio[name='VType'][value='1']").prop("checked",true);
+                    // $(".videoBox").html('');
+                    // toCycle("集镇监控");
+                }
+            });
+            window.page = 1;
+            // $('.vtype').css("background-color", "rgba(50,73,96,1)");
+            // console.log(88888888);
+            // $('#vtype1').css("background-color", "rgba(79,195,161,1)");
+            // console.log(99999999);
+            $(".videoesBox").html('');
+            console.log(00000000);
+            let select = $("#typeselect").data('select');
+            select.val(["人脸监控"]);
+            toCycle("人脸监控");
+        });
+        $('#dl_more').on('click', function (event) {
+            event.stopPropagation();
+            $('#item1').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function () {
+                    console.log('0');
+                    $(".videoBox").html('');
+                },
+                onPopupInit: function () {
+                    console.log('1');
+
+
+                    // $(".videoBox").html('');
+                    // toCycle("道路监控");
+                }
+            });
+            window.page = 1;
+            // $('.vtype').css("background-color", "rgba(50,73,96,1)");
+            // $('#vtype2').css("background-color", "rgba(79,195,161,1)");
+            $(".videoesBox").html('');
+            let select = $("#typeselect").data('select');
+            select.val(["道路监控"]);
+            toCycle("道路监控");
+        });
+        $('#hd_more').on('click', function (event) {
+            event.stopPropagation();
+
+            $('#item1').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function () {
+                    console.log('0');
+
+                },
+                onPopupInit: function () {
+                    console.log('1');
+
+                }
+            });
+            window.page = 1;
+            // $('.vtype').css("background-color", "rgba(50,73,96,1)");
+            // $('#vtype3').css("background-color", "rgba(79,195,161,1)");
+            let select = $("#typeselect").data('select');
+            select.val(["河道监控"]);
+            $(".videoesBox").html('');
+            toCycle("河道监控");
+        });
+    </script>
+    <script>
+        //background-color:'rgba(79,195,161,1)';
+    </script>
+
+
+
+    <script>
+        // 交办数据
+        $(function () {
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/renwujiaoban',
+                method: 'get',
+                success: function (data) {
+                    $("#renwu_shuju").html(data.data[0].aa);
+                    $("#renwu_tongji").html(data.data[0].bb);
+                },
+                error: function (data) {
+                    console.log("数据请求失败")
+                    console.log(data);
+                }
+            });
+        });
+    </script>
+
+    <!-- <script>
+        //重点人员关系分析
+        $(function () {
+            var myChart = echarts.init(document.getElementById('userContainerFlow'));
+            option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                grid: {
+                    x: 50,
+                    y: 10,
+                    x2: 30,
+                    y2: 30,
+                    borderWidth: 0
+                },
+                calculable: true,
+                xAxis: [{
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月',
+                        '十二月'
+                    ],
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#a4a7ab'
+                        }
+                    }
+                }],
+                yAxis: [{
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#a4a7ab'
+                        }
+                    }
+
+                }],
+                series: [{
+                    name: '总人数（人）',
+                    type: 'line',
+                    stack: '人',
+                    data: [120, 120, 101, 134, 90, 300, 100, 130, 240, 250, 207, 50],
+                    itemStyle: {
+                        normal: {
+                            color: "#1afffd"
+                        }
+                    }
+                }]
+            };
+            myChart.setOption(option);
+            // 调用饼图动画函数
+            chartAnimation(option, myChart, 3000);
+        });
+    </script> -->
+
+    <script>
+        //交办数据统计
+        $(function () {
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/renwutongji',
+                method: 'get',
+                success: function (data) {
+                    console.log(data);
+                    var myChart = echarts.init($("#container11")[0]);
+                    // 指定图表的配置项和数据
+                    option = {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: [{
+                            orient: 'vertical',
+                            x: 'top',
+                            data: ['综治工作', '综合执法'],
+                            textStyle: {
+                                color: "#fff",
+                                fontSize: 16
+                            }
+                        }, {
+                            orient: 'vertical',
+                            x: 'top',
+                            left: 180,
+                            data: ['市场监督', '便民服务'],
+                            textStyle: {
+                                color: "#fff",
+                                fontSize: 16
+                            }
+                        }],
+                        calculable: false,
+                        graphic: {
+                            //图形中间文字
+                            type: "text",
+                            left: "center",
+                            top: "150",
+                            style: {
+                                text: "任务状态",
+                                textAlign: "center",
+                                fill: "#fff",
+                                fontSize: 18
+                            }
+                        },
+                        series: [{
+                            // name: '任务状态',
+                            type: 'pie',
+                            radius: ['35%', '60%'],
+                            center: ['50%', '60%'],
+                            label: {
+                                normal: {
+                                    textStyle: {
+                                        fontSize: 16
+                                    }
+                                }
+                            },
+                            data: [{
+                                    // value: data.data[0].aa,
+                                    value: 4,
+                                    name: '综治工作',
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#8CC142'
+
+                                        }
+                                    }
+                                },
+                                {
+                                    // value: data.data[0].bb,
+                                    value: 128,
+                                    name: '综合执法',
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#00ffff'
+
+                                        }
+                                    }
+                                },
+                                {
+                                    // value: data.data[0].cc,
+                                    value: 1,
+                                    name: '市场监督',
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#fff'
+
+                                        }
+                                    }
+                                },
+                                {
+                                    // value: data.data[0].cc,
+                                    value: 26,
+                                    name: '便民服务',
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#ffea00'
+
+                                        }
+                                    }
+                                }
+                            ]
+                        }]
+                    };
+
+                    myChart.setOption(option);
+                    // 调用饼图动画函数
+                    chartAnimation(option, myChart, 3500);
+                },
+                error: function (err) {
+                    //alert(err);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $('.btn1').on('click', function () {
+
+            $('#item1').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0');
+                    $(".videoBox").html("");
+                },
+                onPopupInit: function e() {
+                    console.log('1')
+                }
+            });
+            window.page = 1;
+            $('.vtype').css("background-color", "rgba(50,73,96,1)");
+            $('#vtype0').css("background-color", "rgba(79,195,161,1)");
+            $(".videoBox").html('');
+            let select = $("#typeselect").data('select');
+            select.val(["全部"]);
+            toCycle("全部");
+        });
+    </script>
+    <script>
+        // $('.btn2').on('click', function () {
+        //     $('#item2').popup({
+        //         time: 1000,
+        //         classAnimateShow: 'slideInUp',
+        //         classAnimateHide: 'fadeOut',
+        //         onPopupClose: function e() {
+        //             // console.log('0')
+        //         },
+        //         onPopupInit: function e() {
+        //             // console.log('1')
+        //         }
+        //     });
+        // });
+        function xl(item) {
+            console.log(item);
+            if (item === 1) {
+                $('#item2').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        console.log('0')
+                        pv_player.pause();
+                        pv_player.src([]);
+                    },
+                    onPopupInit: function e() {
+                        console.log('1')
+
+                    }
+                });
+                if (window.vp1 != null) {
+                    console.log('vp1')
+                    console.log(window.vp1.xlShebeiId)
+                    window.cameraIndex = window.vp1.xlShebeiId;
+                    getVUrl(window.vp1.xlShebeiId, pv_player);
+                }
+                $("#video_name").text("当前视频来源--" + window.vp1.shebeiAddress);
+            } else if (item === 2) {
+                $('#item2').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        console.log('0')
+                        pv_player.pause();
+                        pv_player.src([]);
+
+                    },
+                    onPopupInit: function e() {
+                        console.log('2')
+
+                    }
+                });
+                if (window.vp2 != null) {
+                    console.log('vp2')
+                    console.log(window.vp2.xlShebeiId)
+                    window.cameraIndex = window.vp2.xlShebeiId;
+                    getVUrl(window.vp2.xlShebeiId, pv_player);
+                }
+                $("#video_name").text("当前视频来源--" + window.vp2.shebeiAddress);
+            } else if (item === 3) {
+                $('#item2').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        console.log('0');
+                        pv_player.pause();
+                        pv_player.src([]);
+                    },
+                    onPopupInit: function e() {
+                        console.log('1')
+
+                    }
+                });
+                if (window.vp3 != null) {
+                    console.log('vp3')
+                    window.cameraIndex = window.vp3.xlShebeiId;
+                    getVUrl(window.vp3.xlShebeiId, pv_player);
+                }
+                $("#video_name").text("当前视频来源--" + window.vp3.shebeiAddress);
+            }
+
+        }
+        // $('#jz_jk').on('click', function () {
+        //     $('#item2').popup({
+        //         time: 1000,
+        //         classAnimateShow: 'slideInUp',
+        //         classAnimateHide: 'fadeOut',
+        //         onPopupClose: function e() {
+        //             console.log('0')
+        //             pv_player.pause();
+        //             pv_player.src([]);
+        //         },
+        //         onPopupInit: function e() {
+        //             console.log('1')
+        //             if (window.vp1 != null) {
+        //                 console.log('vp1')
+        //                 console.log(window.vp1.xlShebeiId)
+        //                 window.cameraIndex = window.vp1.xlShebeiId;
+
+
+        //                 getVUrl(window.vp1.xlShebeiId, pv_player);
+        //             }
+
+        //         }
+        //     });
+        //     $("#video_name").text("当前视频来源--" + window.vp1.shebeiAddress);
+        // });
+        // $('#dl_jk').on('click', function () {
+        //     $('#item2').popup({
+        //         time: 1000,
+        //         classAnimateShow: 'slideInUp',
+        //         classAnimateHide: 'fadeOut',
+        //         onPopupClose: function e() {
+        //             console.log('0')
+        //             pv_player.pause();
+        //             pv_player.src([]);
+
+        //         },
+        //         onPopupInit: function e() {
+        //             console.log('1')
+        //             if (window.vp2 != null) {
+        //                 console.log('vp2')
+        //                 console.log(window.vp2.xlShebeiId)
+
+        //                 window.cameraIndex = window.vp2.xlShebeiId;
+
+        //                 getVUrl(window.vp2.xlShebeiId, pv_player);
+        //             }
+
+        //         }
+        //     });
+        //     $("#video_name").text("当前视频来源--" + window.vp2.shebeiAddress);
+
+        // });
+        // $('#hd_jk').on('click', function () {
+        //     $('#item2').popup({
+        //         time: 1000,
+        //         classAnimateShow: 'slideInUp',
+        //         classAnimateHide: 'fadeOut',
+        //         onPopupClose: function e() {
+        //             console.log('0');
+        //             pv_player.pause();
+        //             pv_player.src([]);
+        //         },
+        //         onPopupInit: function e() {
+        //             console.log('1')
+        //             if (window.vp3 != null) {
+        //                 window.cameraIndex = window.vp3.xlShebeiId;
+
+        //                 getVUrl(window.vp3.xlShebeiId, pv_player);
+        //             }
+
+
+        //         }
+        //     });
+        //     $("#video_name").text("当前视频来源--" + window.vp3.shebeiAddress);
+
+        // });
+        $('#ytkz').on('click', function () {
+            console.log("cccccccc");
+            console.log(window.cameraIndex);
+            window.location.href = "/PTZControl.html?cid=" + window.cameraIndex;
+            // window.open("../liumengdie/PTZControl.html","_blank");
+        });
+    </script>
+    <script>
+        $('.btn3').on('click', function () {
+            $('#item3').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn4').on('click', function () {
+            //获取值
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item4').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                        } else {
+                            //alert(data.message);
+                        }
+                    }
+                });
+            } else {
+                $('#item16').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.btn5').on('click', function () {
+            $('#item5').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn6').on('click', function () {
+            $('#item6').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+            $("#zfxx").html("");
+            $.ajax({
+                url: baseUrl + "api/v1/dangyuanxinxi/dangyuan/zufang",
+                type: "get",
+                data: {
+                    name: $(this).html()
+                },
+                dataType: "json",
+                //contentType: 'application/json;charset=UTF-8',
+                success: function (data) {
+                    console.log("返回数据")
+                    console.log(data)
+                    for (var i = 0; i < data.data.length; i++) {
+                        $("#zfxx").append('<tr><td id="zhi">' + data.data[i].rentoutInfo +
+                            '</td><td id="zhi">' + data.data[i].rentoutYezhu +
+                            '</td><td id="zhi">' + data.data[i].rentoutZuhu +
+                            '</td><td id="zhi">' + data.data[i].rentoutMoney +
+                            '</td><td id="zhi">' + data.data[i].rentoutStaues + '</td></tr>')
+                    }
+                },
+                error: function (data) {
+                    //alert("出错");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $('.btn7').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item7').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                        } else {
+                            //alert(data.message);
+                        }
+                    }
+                });
+            } else {
+                $('#item16').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.btn8').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item8').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                        } else {
+                            //alert(data.message);
+                        }
+                    }
+                });
+            } else {
+                $('#item16').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.btn9').on('click', function () {
+            $('#item9').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+            $("#shjz").html("");
+            $.ajax({
+                url: baseUrl + "api/v1/dangyuanxinxi/dangyuan/jiaozheng",
+                type: "get",
+                data: {
+                    name: $(this).html()
+                },
+                dataType: "json",
+                //contentType: 'application/json;charset=UTF-8',
+                success: function (data) {
+                    console.log("返回数据")
+                    console.log(data)
+                    for (var i = 0; i < data.data.length; i++) {
+                        $("#shjz").append('<tr><td>' + data.data[i].rectifyInfoName + '</td><td>' +
+                            data.data[i].rectifyInfoStaues + '</td><td>' + data.data[i]
+                            .dweiPhone + '</td><td>' + data.data[i].shangbanStaues +
+                            '</td><td>' + data.data[i].rectifyTiem + '</td></tr>')
+                    }
+                },
+                error: function (data) {
+                    //alert("出错");
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn10').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item10').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                        } else {
+                            //alert(data.message);
+                        }
+                    }
+                });
+            } else {
+                $('#item16').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.btn11').on('click', function () {
+            $('#item11').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+            $("#cgzf").html("");
+            $.ajax({
+                url: baseUrl + "api/v1/dangyuanxinxi/dangyuan/zhifa",
+                type: "get",
+                data: {
+                    name: $(this).html()
+                },
+                dataType: "json",
+                //contentType: 'application/json;charset=UTF-8',
+                success: function (data) {
+                    console.log("返回数据")
+                    console.log(data)
+                    for (var i = 0; i < data.data.length; i++) {
+                        $("#cgzf").append('<tr><td>' + data.data[i].incident + '</td><td>' + data
+                            .data[i].zhifaTime + '</td><td>' + data.data[i].zhifaAddress +
+                            '</td><td>' + data.data[i].chuliQingk + '</td></tr>')
+                    }
+                },
+                error: function (data) {
+                    //alert("出错");
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn12').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item18').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#rwjbqb").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/dangyuanxinxi/dangyuan/renwu",
+                                type: "get",
+                                data: {
+                                    name: $(this).html()
+                                },
+                                dataType: "json",
+                                //contentType: 'application/json;charset=UTF-8',
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        $("#rwjbqb").append('<tr><td>' + data.data[i]
+                                            .missionHeadline + '</td><td>' + data
+                                            .data[i].startTime + '</td><td>' + data
+                                            .data[i].finishTime + '</td><td>' + data
+                                            .data[i].auditStatus + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    //alert("出错");
+                                }
+                            });
+                        } else {
+                            //alert(data.message);
+                        }
+                    }
+                });
+            } else {
+                $('#item16').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.btn13').on('click', function () {
+            $('#item13').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn14').on('click', function () {
+            $('#item14').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn15').on('click', function () {
+            $('#item15').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn16').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item12').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                        } else {
+                            //alert(data.message);
+                        }
+                    }
+                });
+            } else {
+                $('#item16').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.btn17').on('click', function () {
+            $('#item17').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+            $("#rwjb").html("");
+            $.ajax({
+                url: baseUrl + "api/v1/dangyuanxinxi/dangyuan/jiaoban",
+                type: "get",
+                data: {
+                    name: $(this).html()
+                },
+                dataType: "json",
+                //contentType: 'application/json;charset=UTF-8',
+                success: function (data) {
+                    console.log("返回数据")
+                    console.log(data)
+                    for (var i = 0; i < data.data.length; i++) {
+                        $("#rwjb").append('<tr><td>' + data.data[i].missionHeadline + '</td><td>' +
+                            data.data[i].startTime + '</td><td>' + data.data[i].finishTime +
+                            '</td><td>' + data.data[i].auditStatus + '</td></tr>')
+                    }
+                },
+                error: function (data) {
+                    //alert("出错");
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn22').on('click', function () {
+            $('#jdms_table').html("");
+            var devid = $(this).attr("id");
+            $.ajax({
+                url: "http://112.17.130.233:4474/api/v1/FireFighting/AnFangData/List/?id=" + devid,
+                type: "get",
+                success: function (data) {
+                    console.log("返回的数据")
+                    var ent = JSON.parse(data);
+                    console.log(ent);
+                    for (var c = 0; c < ent.length; c++) {
+                        var $tr =
+                            $('<tr style="font-size:24px;">' +
+                                '<td>' + ent[c].Ability + '</td>' +
+                                '<td>' + ent[c].Types + '</td>' +
+                                '<td>' + ent[c].HappenTime + '</td>' +
+                                '<td><div class="cun btn23" onclick="imgSearch(\'' + ent[c].Url +
+                                '\')"  id="' + ent[c].Url +
+                                '"><span style="cursor: pointer;">查看图片</span></div></td>' +
+                                //"<td>" + ent[i].EndTime + "</td>" +
+                                '</tr>');
+                        var $table = $('#jdms_table');
+                        $table.append($tr);
+                    }
+                    $('#jdms').popup({
+                        time: 1000,
+                        classAnimateShow: 'slideInUp',
+                        classAnimateHide: 'fadeOut',
+                        onPopupClose: function e() {
+                            // console.log('0')
+                        },
+                        onPopupInit: function e() {
+                            // console.log('1')
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+    <script>
+        $('.btn23').on('click', function () {
+            $('#jdmsc_table').html("");
+            var devid = $(this).attr("id");
+            $.ajax({
+                url: "http://112.17.130.233:4474/api/v1/FireFighting/AnFangData/List2/?id=" + devid,
+                type: "get",
+                success: function (data) {
+                    console.log("返回的数据")
+                    var ent = JSON.parse(data);
+                    console.log(ent);
+                    for (var c = 0; c < ent.length; c++) {
+                        var $tr =
+                            $('<tr>' +
+                                '<td>' + ent[c].Ability + '</td>' +
+                                '<td>' + ent[c].PhoneNo + '</td>' +
+                                '<td>' + ent[c].MonitorName + '</td>' +
+                                '<td>' + ent[c].HappenTime + '</td>' +
+                                '<td><div class="cun btn23" onclick="imgSearch2(\'' + ent[c]
+                                    .VehiclePicUrl + ',' + ent[c].PlatePicUrl+'\')"  id="' + ent[c].VehiclePicUrl +
+                                '"><span>查看图片</span></div></td>' +
+                                //"<td>" + ent[i].EndTime + "</td>" +
+                                '</tr>');
+                        var $table = $('#jdmsc_table');
+                        $table.append($tr);
+                    }
+                    $('#jdmsc').popup({
+                        time: 1000,
+                        classAnimateShow: 'slideInUp',
+                        classAnimateHide: 'fadeOut',
+                        onPopupClose: function e() {
+                            // console.log('0')
+                        },
+                        onPopupInit: function e() {
+                            // console.log('1')
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+    <script>
+        function imgSearch(id) {
+            //debugger;
+            console.log(id)
+            //var path = $(this).attr("id");
+            //alert(path);
+            $("#img1").attr('src', id);
+            $('#jdmsimg').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            })
+        }
+
+        function imgSearch2(id,id2) {
+            //debugger;
+            console.log(id)
+            id = 'http://10.172.33.2:6120' + id;
+            id2 = 'http://10.172.33.2:6120' + id2;
+            //var path = $(this).attr("id");
+            //alert(path);
+            $("#img1").attr('src', id);
+            $("#img2").attr('src', id2);
+            $('#jdmsimg').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            })
+        }
+    </script>
+    <script>
+        $('#btn24').on('click', function () {
+            debugger;
+            $('#jdmsXiaofang_table').html("");
+            $.ajax({
+                url: "http://112.17.130.233:4474/api/v1/FireFighting/XiaoFangData/List",
+                type: "get",
+                success: function (data) {
+                    console.log("返回的数据")
+                    var ent = JSON.parse(data);
+                    console.log(ent);
+                    for (var c = 0; c < ent.length; c++) {
+                        var $tr =
+                            $("<tr style='font-Size:18px'>" +
+                                "<td>" + ent[c].EventTypeId + "</td>" +
+                                "<td>" + ent[c].EventStatus + "</td>" +
+                                "<td>" + ent[c].name + "</td>" +
+                                "<td>" + ent[c].StartTime + "</td>" +
+                                "<td>" + ent[c].chuli + "</td>" +
+                                "<td>" + ent[c].fuwei + "</td>" +
+                                "<td>" + ent[c].AlarmTypeId + "</td>" +
+                                "<td>" + ent[c].Remarks + "</td>" +
+                                "</tr>");
+                        var $table = $('#jdmsXiaofang_table');
+                        $table.append($tr);
+                    }
+                    $('#jdmsXiaofang').popup({
+                        time: 1000,
+                        classAnimateShow: 'slideInUp',
+                        classAnimateHide: 'fadeOut',
+                        onPopupClose: function e() {
+                            // console.log('0')
+                        },
+                        onPopupInit: function e() {
+                            // console.log('1')
+                        }
+                    })
+                }
+            })
+        });
+    </script>
+    <script>
+        $('.bacic_number').leoTextAnimate({
+            autorun: true, //是否自动运行
+            fixed: [',', ':', '.'], //
+            start: '-'
+        });
+    </script>
+
+    <!--<script>
+        $(function () {
+            $('.wrap').liMarquee({
+                direction: 'up',//身上滚动
+                runshort: false,//内容不足时不滚动
+                scrollamount: 20//速度
+            });
+        });
+    </script>-->
+
+
+
+    <script>
+        var number;
+        $(function () {
+            if (window.screen.height <= 768) {
+                number = 4;
+            } else if (window.screen.height > 768 && window.screen.height <= 900) {
+                number = 6
+            } else if (window.screen.height > 1080) {
+                number = 8
+            }
+        });
+
+
+
+        $(function () {
+            $(".tit02Diva a").each(function (index) {
+                $(this).on("click", function () {
+                    $(".data_map").eq(index).fadeIn().siblings(".data_map").stop().hide();
+                    $(this).prev('i').removeClass('i_crlieAction');
+                    $(this).siblings('a').prev('i').addClass('i_crlieAction');
+
+                })
+            });
+            Echarts();
+            $("#fresh_tool").click(function (event) {
+                event.stopPropagation();
+                cancel();
+            })
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+    <script>
+        //智慧小区
+        function Echarts() {
+            var myChart = echarts.init($("#userContainerPersonal")[0]);
+            option = {
+
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
+                    data: ['小区', '社区'],
+                    textStyle: {
+                        color: "#e9ebee"
+                    }
+                },
+                calculable: false,
+                graphic: { //图形中间文字
+                    type: "text",
+                    left: "center",
+                    top: "center",
+                    style: {
+                        text: "智慧小区",
+                        textAlign: "center",
+                        fill: "#fff",
+                        fontSize: 20
+                    }
+                },
+                series: [{
+                    name: '智慧社区',
+                    type: 'pie',
+                    radius: ['50%', '80%'],
+                    center: ['50%', '50%'],
+                    label: {
+                        normal: {
+                            textStyle: {
+                                fontSize: 16
+                            }
+                        }
+                    },
+                    data: [{
+                            value: 5,
+                            name: '小区',
+                            itemStyle: {
+                                normal: {
+                                    color: '#00ffff'
+
+                                }
+                            }
+                        },
+                        {
+                            value: 4,
+                            name: '社区',
+                            itemStyle: {
+                                normal: {
+                                    color: '#0a8cff'
+
+                                }
+                            }
+                        }
+                    ]
+                }]
+            };
+
+            myChart.setOption(option);
+            // 调用饼图动画函数
+            chartAnimation(option, myChart, 2000);
+        };
+
+
+        //智慧消防
+        //$(function () {
+        //    var myChart = echarts.init($("#userContainerIllegal")[0]);
+        //    option = {
+        //        tooltip: {
+        //            trigger: 'axis',
+        //            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+        //                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+        //            }
+        //        },
+        //        //legend: {
+        //        //    data:['散客人数（万人）','团队人数（万人）'],
+        //        //    textStyle: { fontWeight: 'bold', color: '#a4a7ab' }
+        //        //},
+        //        grid: {
+        //            x: 40,
+        //            y: 10,
+        //            x2: 20,
+        //            y2: 30,
+        //            borderWidth: 0
+        //        },
+        //        xAxis: [{
+        //            type: 'category',
+        //            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+        //            splitLine: {
+        //                show: false
+        //            },
+        //            axisLabel: {
+        //                show: true,
+        //                textStyle: {
+        //                    color: '#a4a7ab',
+        //                    align: 'center'
+        //                }
+        //            }
+        //        }],
+        //        yAxis: [{
+        //            type: 'value',
+        //            splitLine: {
+        //                show: false
+        //            },
+        //            axisLabel: {
+        //                show: true,
+        //                textStyle: {
+        //                    color: '#a4a7ab'
+        //                }
+        //            }
+        //        }],
+        //        series: [{
+        //            name: '已损坏（个）',
+        //            type: 'bar',
+        //            //stack: '广告',
+        //            data: [50, 60, 50, 50, 45, 40, 25],
+        //            itemStyle: {
+        //                normal: {
+        //                    color: "#ffea00"
+        //                }
+        //            }
+        //        },
+        //        {
+        //            name: '良好（个）',
+        //            type: 'bar',
+        //            data: [60, 65, 55, 56, 58, 45, 30],
+        //            itemStyle: {
+        //                normal: {
+        //                    color: "#00ffff"
+        //                }
+        //            }
+        //        }
+
+        //        ]
+        //    };
+        //    myChart.setOption(option);
+        //    // 调用饼图动画函数
+        //    chartAnimation(option, myChart, 4000);
+        //});
+    </script>
+
+
+    <script type="text/javascript">
+        $("#sendTo").click(function () {
+
+            console.log("保存的值")
+            console.log($("#lab_login").html());
+
+            //获取值
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var jiaose = $("#lab_login").html();
+            console.log(username, password, jiaose);
+            var data = {
+                username: $("#username").val(),
+                password: $("#password").val(),
+                jiaose: $("#lab_login").html(),
+            };
+
+            $.ajax({
+                url: baseUrl + "api/v1/QTLogin/Login/receive",
+                type: "post",
+                data: JSON.stringify(data),
+                dataType: "json",
+                contentType: 'application/json;charset=UTF-8',
+                headers: {
+                    withCredentials: true,
+                },
+                success: function (data) {
+                    console.log("返回的数据")
+                    console.log(data);
+                    if (data.message == "操作成功") {
+                        $("#item16").hide();
+                        console.log(data.data)
+                        localStorage.setItem('token', data.data);
+                        console.log(localStorage.getItem('token'));
+                        //alert("登入成功");
+                        location.reload();
+
+                    } else {
+                        //alert(data.message);
+                        location.reload();
+                    }
+                }
+            })
+        })
+    </script>
+    <script>
+        $("#outTo").click(function () {
+            var storage = window.localStorage;
+            //storage.a = 1;
+            //storage.setItem("c", 3);
+            //console.log(storage);
+            storage.removeItem("token");
+            location.reload();
+            //console.log(storage.a);
+
+        });
+    </script>
+    <script>
+        window.onload = function () {
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                outTo.style.display = "block";
+            } else {
+                outTo.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        function gettydzkdjsj(untydzkid) {
+            $('#itemldcyxx').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+            $("#loudxyxxinfo").html("");
+            $.ajax({
+                url: baseUrl + "api/v1/AppTongji/AppTongji/gettydzkuuserInfo",
+                type: "get",
+                data: {
+                    untydzkid: untydzkid
+                },
+                dataType: "json",
+                //contentType: 'application/json;charset=UTF-8',
+                success: function (data) {
+                    console.log("返回数据")
+                    console.log(data)
+                    for (var i = 0; i < data.data.length; i++) {
+                        $("#loudxyxxinfo").append(
+                            "<div style='margin-bottom:30px;line-height:30px;'><p>姓名：" + data.data[i]
+                            .username + "</br><p><p>性别：" + data.data[i].sex + "</br><p><p>身份证：" + data
+                            .data[i].idcard + "</br><p></div>");
+                    }
+                },
+                error: function (data) {
+                    //alert("出错");
+                }
+            });
+        }
+    </script>
+    <script>
+        setTimeout(function () {
+            // createMap("map_shzl");
+        }, 3000)
+    </script>
+</body>
+
+</html>

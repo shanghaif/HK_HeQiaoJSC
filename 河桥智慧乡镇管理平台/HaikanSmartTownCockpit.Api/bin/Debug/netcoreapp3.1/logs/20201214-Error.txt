@@ -1,0 +1,9 @@
+2020-12-14 16:45:37,714 [24] ERROR Microsoft.EntityFrameworkCore.Query [(null)]  - An exception occurred while iterating over the results of a query for context type 'HaikanSmartTownCockpit.Api.Entities.haikanHeQiaoContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HaikanSmartTownCockpit.Api.Controllers.Api.V1.Task.app.taskappController.getissfycss(String fzrid, String cyrid, String dlrid, String type, String status)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HaikanSmartTownCockpit.Api.Controllers.Api.V1.Task.app.taskappController.getissfycss(String fzrid, String cyrid, String dlrid, String type, String status)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()

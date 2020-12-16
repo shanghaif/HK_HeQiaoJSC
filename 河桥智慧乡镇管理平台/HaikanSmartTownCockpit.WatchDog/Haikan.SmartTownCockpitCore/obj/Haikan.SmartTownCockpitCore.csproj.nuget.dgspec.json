@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\work_hqzhxz\\201210_09.27\\河桥智慧乡镇管理平台\\HaikanSmartTownCockpit.WatchDog\\Haikan.SmartTownCockpitCore\\Haikan.SmartTownCockpitCore.csproj": {}
+  },
+  "projects": {
+    "D:\\work_hqzhxz\\201210_09.27\\河桥智慧乡镇管理平台\\HaikanSmartTownCockpit.WatchDog\\Haikan.SmartTownCockpitCore\\Haikan.SmartTownCockpitCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\work_hqzhxz\\201210_09.27\\河桥智慧乡镇管理平台\\HaikanSmartTownCockpit.WatchDog\\Haikan.SmartTownCockpitCore\\Haikan.SmartTownCockpitCore.csproj",
+        "projectName": "Haikan.SmartTownCockpitCore",
+        "projectPath": "D:\\work_hqzhxz\\201210_09.27\\河桥智慧乡镇管理平台\\HaikanSmartTownCockpit.WatchDog\\Haikan.SmartTownCockpitCore\\Haikan.SmartTownCockpitCore.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\work_hqzhxz\\201210_09.27\\河桥智慧乡镇管理平台\\HaikanSmartTownCockpit.WatchDog\\Haikan.SmartTownCockpitCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://www.haikan.com.cn:8081/repository/nuget-hosted/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "EntityFramework.zh-Hans": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "Haikan2": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

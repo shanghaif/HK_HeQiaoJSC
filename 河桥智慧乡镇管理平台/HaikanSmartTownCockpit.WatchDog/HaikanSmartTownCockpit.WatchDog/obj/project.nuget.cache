@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "FEEUOnlpeWZeO4pRUuj7B5yt40d39GIpu73cC8dTDGbYY3WdZuJhRhq8wcHcJ72C4kCK1Je0PP5M6kLzKOt/gA==",
+  "success": true,
+  "projectFilePath": "D:\\work_hqzhxz\\201210_09.27\\河桥智慧乡镇管理平台\\HaikanSmartTownCockpit.WatchDog\\HaikanSmartTownCockpit.WatchDog\\HaikanSmartTownCockpit.WatchDog.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\entityframework.zh-hans\\6.2.0\\entityframework.zh-hans.6.2.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\haikan2\\2.3.0\\haikan2.2.3.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\npoi\\2.5.1\\npoi.2.5.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\portable.bouncycastle\\1.8.6\\portable.bouncycastle.1.8.6.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "检测到的包版本在依赖项约束之外: EntityFramework.zh-Hans 6.2.0 需要 EntityFramework (= 6.2.0)，但版本 EntityFramework 6.4.4 已解决。",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.7.2",
+        ".NETFramework,Version=v4.7.2/win",
+        ".NETFramework,Version=v4.7.2/win-x64",
+        ".NETFramework,Version=v4.7.2/win-x86"
+      ]
+    }
+  ]
+}

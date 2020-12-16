@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "任务列表",
+  "titleBarColor": "#000000",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "u-popup": "/uview-ui/components/u-popup/u-popup",
+    "u-button": "/uview-ui/components/u-button/u-button"
+  }
+}

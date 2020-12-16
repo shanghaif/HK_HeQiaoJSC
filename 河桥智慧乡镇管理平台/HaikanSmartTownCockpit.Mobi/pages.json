@@ -1,0 +1,260 @@
+{
+	"easycom": {
+			"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+		},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "智慧河桥",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/Task/MyTaskShow",
+			"style": {
+				"navigationBarTitleText": "任务列表",
+				"enablePullDownRefresh": true, //开启下拉				
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Task/AccomplishTask",
+			"style": {
+				"navigationBarTitleText": "完成任务",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Task/MissionJournal",
+			"style": {
+				"navigationBarTitleText": "操作日志",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/MessageAdd/TaskAdd2",
+			"style": {
+				"navigationBarTitleText": "添加任务",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/MessageAdd/PersonalDiaryAdd",
+			"style": {
+				"navigationBarTitleText": "添加个人日志",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/MessageAdd/PriorityAdd",
+			"style": {
+				"navigationBarTitleText": "添加重点工作",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Priority/AccomplishPriority",
+			"style": {
+				"navigationBarTitleText": "完成工作",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Task/Taskywc",
+			"style": {
+				"navigationBarTitleText": "任务详情",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		}, {
+			"path": "pages/index/new_file",
+			"style": {
+				"navigationBarTitleText": "智慧河桥",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},{
+			"path": "pages/index/login",
+			"style": {
+				"navigationBarTitleText": "专有钉钉测试",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/index/personnel",
+			"style": {
+				"navigationBarTitleText": "选择人员",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Task/MyTaskzonjie",
+			"style": {
+				"navigationBarTitleText": "部门列表",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Task/MyTaskUser",
+			"style": {
+				"navigationBarTitleText": "用户列表",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Task/MyTaskzonjieList",
+			"style": {
+				"navigationBarTitleText": "汇报总结列表",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Task/huibao",
+			"style": {
+				"navigationBarTitleText": "工作汇报",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Task/MyTaskzonjieShow",
+			"style": {
+				"navigationBarTitleText": "汇报总结详情",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Task/MyTaskList",
+			"style": {
+				"navigationBarTitleText": "任务列表",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Priority/PriorityAdd",
+			"style": {
+				"navigationBarTitleText": "添加工作汇报",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Priority/PriorityDepartList",
+			"style": {
+				"navigationBarTitleText": "部门列表",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Priority/PriorityGZHJList",
+			"style": {
+				"navigationBarTitleText": "工作总结列表",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Priority/PriorityGZHJShows",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Priority/PriorityUserList",
+			"style": {
+				"navigationBarTitleText": "用户",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Personallog/userlist",
+			"style": {
+				"navigationBarTitleText": "选择用户",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Personallog/datalist",
+			"style": {
+				"navigationBarTitleText": "个人日志列表",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/Personallog/datadatas",
+			"style": {
+				"navigationBarTitleText": "个人日志详情",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		}
+        ,{
+            "path" : "pages/Priority/MessageDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "信息详情",
+                "backgroundColor": "#FFFFFF",
+                "navigationBarBackgroundColor": "#000000"
+            }
+            
+        }
+        
+        ,{
+            "path" : "pages/MessageAdd/TaskAdd",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "添加任务",
+                "backgroundColor": "#FFFFFF",
+                "navigationBarBackgroundColor": "#000000"
+            }
+            
+        }
+        ,{
+            "path" : "pages/MessageAdd/AddTask",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "添加任务",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/MessageAdd/MessageList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "abc",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

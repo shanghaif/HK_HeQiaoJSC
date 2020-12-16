@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Task/MyTaskShow",
+    "pages/Task/AccomplishTask",
+    "pages/Task/MissionJournal",
+    "pages/MessageAdd/TaskAdd2",
+    "pages/MessageAdd/PersonalDiaryAdd",
+    "pages/MessageAdd/PriorityAdd",
+    "pages/Priority/AccomplishPriority",
+    "pages/Task/Taskywc",
+    "pages/index/new_file",
+    "pages/index/login",
+    "pages/index/personnel",
+    "pages/Task/MyTaskzonjie",
+    "pages/Task/MyTaskUser",
+    "pages/Task/MyTaskzonjieList",
+    "pages/Task/huibao",
+    "pages/Task/MyTaskzonjieShow",
+    "pages/Task/MyTaskList",
+    "pages/Priority/PriorityAdd",
+    "pages/Priority/PriorityDepartList",
+    "pages/Priority/PriorityGZHJList",
+    "pages/Priority/PriorityGZHJShows",
+    "pages/Priority/PriorityUserList",
+    "pages/Personallog/userlist",
+    "pages/Personallog/datalist",
+    "pages/Personallog/datadatas",
+    "pages/Priority/MessageDetail",
+    "pages/MessageAdd/TaskAdd",
+    "pages/MessageAdd/AddTask",
+    "pages/MessageAdd/MessageList"
+  ],
+  "subPackages": [],
+  "window": {
+    "defaultTitle": "uni-app",
+    "titleBarColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {
+    "task": "/pages/Task/MyTask",
+    "message-add": "/pages/MessageAdd/MessageList",
+    "priority": "/pages/Priority/PriorityShow",
+    "tong-ji": "/pages/TongJi/TongJi",
+    "personallog": "/pages/Personallog/personalloglist"
+  }
+}

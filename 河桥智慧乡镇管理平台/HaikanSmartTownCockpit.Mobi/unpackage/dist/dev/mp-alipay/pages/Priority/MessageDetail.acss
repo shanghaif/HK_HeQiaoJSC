@@ -1,0 +1,8 @@
+
+page{
+	background-color: #fff;
+}
+.title {
+	width: 30%;
+}
+

@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?s764j9');
+    src:  url('../fonts/icomoon.eot?s764j9#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?s764j9') format('truetype'),
+      url('../fonts/icomoon.woff?s764j9') format('woff'),
+      url('../fonts/icomoon.svg?s764j9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+div{
+    box-sizing: border-box;
+}
+img{
+    font-size: 0;
+}
+li{
+    list-style: none;
+}
+
+.main{
+    position: relative;
+    max-width: 1200px;
+    min-width: 600px;
+    height: 700px;
+    margin: 0 auto;
+    /*border: 1px solid #ccc;*/
+}
+.main:hover .swiperBox{
+    display: block;
+}
+.mainCon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+    #classli {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    #current{
+        display:none;
+    }
+/* 顶部图片 */
+.mainTop ul{
+    max-width: 1200px;
+    height: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.mainTop li{
+    text-align: center;
+}
+.mainTop img{
+    max-width: 600px;
+    max-height: 580px; 
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 底部标题 */
+.mainItem{
+    display: table;
+    width: 100%;
+    height: 100px;
+}
+.itemCon{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 35px;
+    font-size:20px;
+    letter-spacing:2px;
+    padding: 0 50px;
+}
+/* 切换按钮 */
+.swiperBox{
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    /*background-color: #ccc;*/
+    display: none;
+    /*opacity: 0.9;*/
+}
+.swiper-left{
+    left: 0;
+}
+.swiper-right{
+    right: 0;
+}
+.swiperBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'icomoon';
+    font-size: 50px;
+    color: #ccc;
+    font-weight: 600;
+    cursor: pointer;
+    -moz-user-select: none; /* Firefox私有属性 */
+    -webkit-user-select: none; /* WebKit内核私有属性 */
+    -ms-user-select: none; /* IE私有属性(IE10及以后) */
+    -khtml-user-select: none; /* KHTML内核私有属性 */
+    -o-user-select: none; /* Opera私有属性 */
+    user-select: none; /* CSS3属性 */
+}

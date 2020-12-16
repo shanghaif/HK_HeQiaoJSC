@@ -1,0 +1,13 @@
+<!--pages/wxqrcode/demo1.wxml-->
+<view class='container'>
+  <hr/>
+	<view style='font-size:24rpx; text-align: center; '>Demo for create QR code Image with wxqrcode.js </view>
+  <hr/>
+	<textarea bindinput='bind_text' value='{{text}}' style='background:#f4f4f4;margin:30rpx auto; padding:20rpx; width:650rpx;' />
+  <hr/>
+  <button bindtap='bind_sumbit'>提交</button>
+  <hr/>
+  <image src="{{qrcode}}" class="qrcode"></image>
+
+</view>
+

@@ -1,0 +1,12 @@
+{
+  "defaultTitle": "智慧河桥",
+  "pullRefresh": true,
+  "titleBarColor": "#000000",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "task": "/pages/Task/MyTask",
+    "priority": "/pages/Priority/PriorityShow",
+    "tong-ji": "/pages/TongJi/TongJi",
+    "personallog": "/pages/Personallog/personalloglist"
+  }
+}

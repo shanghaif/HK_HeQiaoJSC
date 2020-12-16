@@ -1,0 +1,2677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="yixueyuanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Abnormal">
+    <Key>
+      <PropertyRef Name="AbnormalUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="AbnormalUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StuNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CollegeUuid" Type="Guid" />
+    <Property Name="MajorUuid" Type="Guid" />
+    <Property Name="StuClassUuid" Type="Guid" />
+    <Property Name="AbnormalTime" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="State" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WarnState" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="College" Relationship="Self.FK__Abnormal__Colleg__1209AD79" FromRole="Abnormal" ToRole="College" />
+    <NavigationProperty Name="Major" Relationship="Self.FK__Abnormal__MajorU__12FDD1B2" FromRole="Abnormal" ToRole="Major" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Abnormal__School__14E61A24" FromRole="Abnormal" ToRole="SchoolDistrict" />
+    <NavigationProperty Name="StuClass" Relationship="Self.FK__Abnormal__StuCla__13F1F5EB" FromRole="Abnormal" ToRole="StuClass" />
+  </EntityType>
+  <EntityType Name="AccessControlRecord">
+    <Key>
+      <PropertyRef Name="AccessControlRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="AccessControlRecordUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ComeInTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GetOutTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ResearchBuildingUuid" Type="Guid" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ResearchBuilding" Relationship="Self.FK__AccessCon__Resea__44952D46" FromRole="AccessControlRecord" ToRole="ResearchBuilding" />
+  </EntityType>
+  <EntityType Name="AnjianType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Other" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDelete" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ApartmentRecord">
+    <Key>
+      <PropertyRef Name="ApartmentRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="ApartmentRecordUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdentityType" Type="Int32" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="DormitoryUuid" Type="Guid" />
+    <Property Name="EnterTime" Type="DateTime" Precision="3" />
+    <Property Name="OutTime" Type="DateTime" Precision="3" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StuNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Dormitory" Relationship="Self.FK__Apartment__Dormi__04AFB25B" FromRole="ApartmentRecord" ToRole="Dormitory" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Apartment__Schoo__03BB8E22" FromRole="ApartmentRecord" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="ApartmentWarn">
+    <Key>
+      <PropertyRef Name="ApartmentWarnUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="ApartmentWarnUuid" Type="Guid" Nullable="false" />
+    <Property Name="EquipmentId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EquipmentName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WarnTime" Type="DateTime" Precision="3" />
+    <Property Name="Place" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Blacker">
+    <Key>
+      <PropertyRef Name="BlackerUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="BlackerUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Features" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CampusPatrol">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GUID" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ShenFen" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="longitude" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="latitude" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="CarUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdentityType" Type="Int32" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentUuid" Type="Guid" />
+    <Property Name="State" Type="Int32" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarColor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="InSchoolNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__Car__DepartmentU__719CDDE7" FromRole="Car" ToRole="Department" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Car__SchoolDistr__72910220" FromRole="Car" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="CarAccident">
+    <Key>
+      <PropertyRef Name="CarAccidentUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarAccidentUuid" Type="Guid" Nullable="false" />
+    <Property Name="AccidentTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AccidentPlace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="CarBlack">
+    <Key>
+      <PropertyRef Name="CarBlackUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarBlackUuid" Type="Guid" Nullable="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarColor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarBrand" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="CarIllegalStop">
+    <Key>
+      <PropertyRef Name="CarIllegalStopUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarIllegalStopUuid" Type="Guid" Nullable="false" />
+    <Property Name="IllegalStopTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IllegalStopPlace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="CarNonMotor">
+    <Key>
+      <PropertyRef Name="CarNonMotorUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarNonMotorUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdentityType" Type="Int32" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarBrand" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentUuid" Type="Guid" />
+    <Property Name="State" Type="Int32" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarColor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="InSchoolNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__CarNonMot__Depar__7D0E9093" FromRole="CarNonMotor" ToRole="Department" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__CarNonMot__Schoo__7E02B4CC" FromRole="CarNonMotor" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="CarNonMotorAccident">
+    <Key>
+      <PropertyRef Name="CarNonMotorAccidentUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarNonMotorAccidentUuid" Type="Guid" Nullable="false" />
+    <Property Name="AccidentTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AccidentPlace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarBrand" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="CarNonMotorBlack">
+    <Key>
+      <PropertyRef Name="CarNonMotorBlackUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarNonMotorBlackUuid" Type="Guid" Nullable="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarColor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarBrand" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Origion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="CarNonMotorHelmeted">
+    <Key>
+      <PropertyRef Name="CarNonMotorHelmetedUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarNonMotorHelmetedUuid" Type="Guid" Nullable="false" />
+    <Property Name="HelmetedTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="HelmetedPlace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="HelmetedEvent" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="CarNonMotorIllegalStop">
+    <Key>
+      <PropertyRef Name="CarNonMotorIllegalStopUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarNonMotorIllegalStopUuid" Type="Guid" Nullable="false" />
+    <Property Name="IllegalStopTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IllegalStopPlace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CarNonMotorManned">
+    <Key>
+      <PropertyRef Name="CarNonMotorMannedUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarNonMotorMannedUuid" Type="Guid" Nullable="false" />
+    <Property Name="MannedTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MannedPlace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MannedEvent" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="CarNonMotorSpeedRecord">
+    <Key>
+      <PropertyRef Name="CarNonMotorSpeedRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarNonMotorSpeedRecordUuid" Type="Guid" Nullable="false" />
+    <Property Name="SpeedTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SpeedPlace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SpeedOver" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SpeedLimit" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="CarSpeedRecord">
+    <Key>
+      <PropertyRef Name="CarSpeedRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CarSpeedRecordUuid" Type="Guid" Nullable="false" />
+    <Property Name="SpeedTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SpeedPlace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SpeedOver" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SpeedLimit" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="College">
+    <Key>
+      <PropertyRef Name="CollegeUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="CollegeUuid" Type="Guid" Nullable="false" />
+    <Property Name="CollegeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Abnormals" Relationship="Self.FK__Abnormal__Colleg__1209AD79" FromRole="College" ToRole="Abnormal" />
+    <NavigationProperty Name="Majors" Relationship="Self.FK__Major__CollegeUu__6B24EA82" FromRole="College" ToRole="Major" />
+    <NavigationProperty Name="Students" Relationship="Self.FK__Student__College__6FE99F9F" FromRole="College" ToRole="Student" />
+    <NavigationProperty Name="StuManagements" Relationship="Self.FK__StuManage__Colle__793DFFAF" FromRole="College" ToRole="StuManagement" />
+  </EntityType>
+  <EntityType Name="Curriculum">
+    <Key>
+      <PropertyRef Name="CurriculumUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CurriculumUuid" Type="Guid" Nullable="false" />
+    <Property Name="CurriculumName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WeeklyUuid" Type="Guid" />
+    <Property Name="FestivalUuid" Type="Guid" />
+    <Property Name="Week" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CurriculumNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Weekly" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Festival" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolYear" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Semester" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Dc_EarlyWarningRecord">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoomID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RoomName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Reason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDelete" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Dc_TemHum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstrumentID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Temperature" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Humidity" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="InCharge" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="InChargeID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDelete" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="InstrumentName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RoomID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RoomName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="DepartmentUuid" Type="Guid" Nullable="false" />
+    <Property Name="DepartmentName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ResPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK__Car__DepartmentU__719CDDE7" FromRole="Department" ToRole="Car" />
+    <NavigationProperty Name="CarNonMotors" Relationship="Self.FK__CarNonMot__Depar__7D0E9093" FromRole="Department" ToRole="CarNonMotor" />
+    <NavigationProperty Name="IncidentReports" Relationship="Self.FK__IncidentR__Depar__2EA5EC27" FromRole="Department" ToRole="IncidentReport" />
+    <NavigationProperty Name="SchoolInCars" Relationship="Self.FK__SchoolInC__Depar__01D345B0" FromRole="Department" ToRole="SchoolInCar" />
+    <NavigationProperty Name="ScoreAdds" Relationship="Self.FK__ScoreAdd__Depart__3552E9B6" FromRole="Department" ToRole="ScoreAdd" />
+    <NavigationProperty Name="StuManagements" Relationship="Self.FK__StuManage__Depar__7849DB76" FromRole="Department" ToRole="StuManagement" />
+    <NavigationProperty Name="Teachers" Relationship="Self.FK__Teacher__Departm__0A688BB1" FromRole="Department" ToRole="Teacher" />
+    <NavigationProperty Name="Workers" Relationship="Self.FK__Worker__Departme__7755B73D" FromRole="Department" ToRole="Worker" />
+  </EntityType>
+  <EntityType Name="DoorOpening">
+    <Key>
+      <PropertyRef Name="DoorOpeningRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="DoorOpeningRecordUuid" Type="Guid" Nullable="false" />
+    <Property Name="AffiliatedLaboratory" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DoorOpener" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="OpeningHours" Type="DateTime" Precision="7" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Dormitory">
+    <Key>
+      <PropertyRef Name="DormitoryUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="DormitoryUuid" Type="Guid" Nullable="false" />
+    <Property Name="DormitoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <NavigationProperty Name="ApartmentRecords" Relationship="Self.FK__Apartment__Dormi__04AFB25B" FromRole="Dormitory" ToRole="ApartmentRecord" />
+    <NavigationProperty Name="DormitoryNums" Relationship="Self.FK__Dormitory__Dormi__6EF57B66" FromRole="Dormitory" ToRole="DormitoryNum" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Dormitory__Schoo__6E01572D" FromRole="Dormitory" ToRole="SchoolDistrict" />
+    <NavigationProperty Name="Students" Relationship="Self.FK__Student__Dormito__72C60C4A" FromRole="Dormitory" ToRole="Student" />
+    <NavigationProperty Name="StuManagements" Relationship="Self.FK__StuManage__Dormi__7B264821" FromRole="Dormitory" ToRole="StuManagement" />
+    <NavigationProperty Name="Teachers" Relationship="Self.FK__Teacher__Dormito__0B5CAFEA" FromRole="Dormitory" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="DormitoryNum">
+    <Key>
+      <PropertyRef Name="DormitoryNumUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="DormitoryNumUuid" Type="Guid" Nullable="false" />
+    <Property Name="DormitoryUuid" Type="Guid" />
+    <Property Name="DormitoryNumName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Dormitory" Relationship="Self.FK__Dormitory__Dormi__6EF57B66" FromRole="DormitoryNum" ToRole="Dormitory" />
+    <NavigationProperty Name="Students" Relationship="Self.FK__Student__Dormito__73BA3083" FromRole="DormitoryNum" ToRole="Student" />
+    <NavigationProperty Name="Teachers" Relationship="Self.FK__Teacher__Dormito__0C50D423" FromRole="DormitoryNum" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Festival">
+    <Key>
+      <PropertyRef Name="FestivalUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FestivalUuid" Type="Guid" Nullable="false" />
+    <Property Name="FestivalName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FestivalTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FireFacility">
+    <Key>
+      <PropertyRef Name="FireFacilitiesUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="FireFacilitiesUuid" Type="Guid" Nullable="false" />
+    <Property Name="ResearchBuildingUuid" Type="Guid" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SpecificationModel" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Company" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Unit" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Number" Type="Int32" />
+    <Property Name="DateOfManufacture" Type="DateTime" Precision="7" />
+    <Property Name="LastRepairDate" Type="DateTime" Precision="7" />
+    <Property Name="ServiceLife" Type="Int32" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ResearchBuilding" Relationship="Self.FK__FireFacil__Resea__43A1090D" FromRole="FireFacilities" ToRole="ResearchBuilding" />
+  </EntityType>
+  <EntityType Name="FivePicture">
+    <Key>
+      <PropertyRef Name="FivePictureUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="FivePictureUuid" Type="Guid" Nullable="false" />
+    <Property Name="ScoreStart" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Level" Type="Int32" />
+    <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="ScoreOver" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentUuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="Focuser">
+    <Key>
+      <PropertyRef Name="FocuserUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="FocuserUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="FocusType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Focuser__SchoolD__74794A92" FromRole="Focuser" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="Foreigner">
+    <Key>
+      <PropertyRef Name="ForeignerUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="ForeignerUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdentityType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Foreigner__Schoo__19AACF41" FromRole="Foreigner" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="ForeignerAppoint">
+    <Key>
+      <PropertyRef Name="ForeignerAppointUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="ForeignerAppointUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdentityType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="VisitName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="VisitPhone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="HealthCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Temperature" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="VisitTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Foreigner__Schoo__05A3D694" FromRole="ForeignerAppoint" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="ForeignerRecord">
+    <Key>
+      <PropertyRef Name="ForeignerRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="ForeignerRecordUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdentityType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="VisitName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="VisitPhone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="HealthCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Temperature" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="VisitTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ComeInDoor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ComeInTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GetOutDoor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GetOutTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Foreigner__Schoo__0880433F" FromRole="ForeignerRecord" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="GeneralLaboratory">
+    <Key>
+      <PropertyRef Name="GeneralLaboratoryUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="GeneralLaboratoryUuid" Type="Guid" Nullable="false" />
+    <Property Name="GeneralLaboratoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GeneralLaboratoryBasicInformation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BuildingName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RoomNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Principal" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AllowEntry" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GooutForm">
+    <Key>
+      <PropertyRef Name="GooutFormUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="GooutFormUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Reason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__GooutForm__Schoo__7EF6D905" FromRole="GooutForm" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="HazardousChemicalsUseRecord">
+    <Key>
+      <PropertyRef Name="HazardousChemicalsUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="HazardousChemicalsUuid" Type="Guid" Nullable="false" />
+    <Property Name="HazardousChemicalsType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="HazardousChemicalsName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ReservationPerson" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AppointmentStartTime" Type="DateTime" Precision="7" />
+    <Property Name="AppointmentEndTime" Type="DateTime" Precision="7" />
+    <Property Name="TotalTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HazardousChemicalsWarehouse">
+    <Key>
+      <PropertyRef Name="HazardousChemicalsWarehouseUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="HazardousChemicalsWarehouseUuid" Type="Guid" Nullable="false" />
+    <Property Name="HazardousChemicalsWarehouseName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="HazardousChemicalsWarehouseBasicInformation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BuildingName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RoomNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Principal" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AllowEntry" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="InAndOutTime">
+    <Key>
+      <PropertyRef Name="InAndOutTimeUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="InAndOutTimeUuid" Type="Guid" Nullable="false" />
+    <Property Name="InTime" Type="Int32" />
+    <Property Name="OutTime" Type="Int32" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="IncidentReport">
+    <Key>
+      <PropertyRef Name="IncidentReportUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="IncidentReportUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="Gh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentUuid" Type="Guid" />
+    <Property Name="StuClassUuid" Type="Guid" />
+    <Property Name="EventLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EventSituation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SecurityTypeUuid" Type="Guid" />
+    <Property Name="Recorder" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Rectify" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EventNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EventTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EventStatus" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EventName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__IncidentR__Depar__2EA5EC27" FromRole="IncidentReport" ToRole="Department" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__IncidentR__Schoo__2CBDA3B5" FromRole="IncidentReport" ToRole="SchoolDistrict" />
+    <NavigationProperty Name="SecurityType" Relationship="Self.FK__IncidentR__Secur__308E3499" FromRole="IncidentReport" ToRole="SecurityType" />
+    <NavigationProperty Name="StuClass" Relationship="Self.FK__IncidentR__StuCl__2F9A1060" FromRole="IncidentReport" ToRole="StuClass" />
+  </EntityType>
+  <EntityType Name="Library">
+    <Key>
+      <PropertyRef Name="LibraryUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="LibraryUuid" Type="Guid" Nullable="false" />
+    <Property Name="LibraryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MainLab">
+    <Key>
+      <PropertyRef Name="MainLabUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="MainLabUuid" Type="Guid" Nullable="false" />
+    <Property Name="MainLabName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MainLabBasicInformation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BuildingName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RoomNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Principal" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AllowEntry" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Major">
+    <Key>
+      <PropertyRef Name="MajorUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="MajorUuid" Type="Guid" Nullable="false" />
+    <Property Name="MajorName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CollegeUuid" Type="Guid" />
+    <NavigationProperty Name="Abnormals" Relationship="Self.FK__Abnormal__MajorU__12FDD1B2" FromRole="Major" ToRole="Abnormal" />
+    <NavigationProperty Name="College" Relationship="Self.FK__Major__CollegeUu__6B24EA82" FromRole="Major" ToRole="College" />
+    <NavigationProperty Name="StuClasses" Relationship="Self.FK__StuClass__MajorU__6D0D32F4" FromRole="Major" ToRole="StuClass" />
+    <NavigationProperty Name="Students" Relationship="Self.FK__Student__MajorUu__70DDC3D8" FromRole="Major" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="MapIcon">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Icon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Explain" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Monitor">
+    <Key>
+      <PropertyRef Name="MonitorUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="MonitorUuid" Type="Guid" Nullable="false" />
+    <Property Name="ResearchBuildingUuid" Type="Guid" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SpecificationModel" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Company" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Unit" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Number" Type="Int32" />
+    <Property Name="DateOfManufacture" Type="DateTime" Precision="7" />
+    <Property Name="LastRepairDate" Type="DateTime" Precision="7" />
+    <Property Name="ServiceLife" Type="Int32" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ResearchBuilding" Relationship="Self.FK__Monitor__Researc__4865BE2A" FromRole="Monitor" ToRole="ResearchBuilding" />
+  </EntityType>
+  <EntityType Name="RecyclingManagement">
+    <Key>
+      <PropertyRef Name="RecyclingManagementUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="RecyclingManagementUuid" Type="Guid" Nullable="false" />
+    <Property Name="RecyclingManagementTagUuid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RecyclingManagementName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RecyclingManagementPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RecyclingManagementTime" Type="DateTime" Precision="7" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ResearchBuilding">
+    <Key>
+      <PropertyRef Name="ResearchBuildingUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="ResearchBuildingUuid" Type="Guid" Nullable="false" />
+    <Property Name="ResearchBuildingName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AccessControlRecords" Relationship="Self.FK__AccessCon__Resea__44952D46" FromRole="ResearchBuilding" ToRole="AccessControlRecord" />
+    <NavigationProperty Name="FireFacilities" Relationship="Self.FK__FireFacil__Resea__43A1090D" FromRole="ResearchBuilding" ToRole="FireFacilities" />
+    <NavigationProperty Name="Monitors" Relationship="Self.FK__Monitor__Researc__4865BE2A" FromRole="ResearchBuilding" ToRole="Monitor" />
+  </EntityType>
+  <EntityType Name="SafeManagement">
+    <Key>
+      <PropertyRef Name="SafeManagementUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="SafeManagementUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdentityType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Gh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="YiCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__SafeManag__Schoo__756D6ECB" FromRole="SafeManagement" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="SchoolDistrict">
+    <Key>
+      <PropertyRef Name="SchoolDistrictUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" Nullable="false" />
+    <Property Name="SchoolDistrictName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Abnormals" Relationship="Self.FK__Abnormal__School__14E61A24" FromRole="SchoolDistrict" ToRole="Abnormal" />
+    <NavigationProperty Name="ApartmentRecords" Relationship="Self.FK__Apartment__Schoo__03BB8E22" FromRole="SchoolDistrict" ToRole="ApartmentRecord" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK__Car__SchoolDistr__72910220" FromRole="SchoolDistrict" ToRole="Car" />
+    <NavigationProperty Name="CarNonMotors" Relationship="Self.FK__CarNonMot__Schoo__7E02B4CC" FromRole="SchoolDistrict" ToRole="CarNonMotor" />
+    <NavigationProperty Name="Dormitories" Relationship="Self.FK__Dormitory__Schoo__6E01572D" FromRole="SchoolDistrict" ToRole="Dormitory" />
+    <NavigationProperty Name="Focusers" Relationship="Self.FK__Focuser__SchoolD__74794A92" FromRole="SchoolDistrict" ToRole="Focuser" />
+    <NavigationProperty Name="Foreigners" Relationship="Self.FK__Foreigner__Schoo__19AACF41" FromRole="SchoolDistrict" ToRole="Foreigner" />
+    <NavigationProperty Name="ForeignerAppoints" Relationship="Self.FK__Foreigner__Schoo__05A3D694" FromRole="SchoolDistrict" ToRole="ForeignerAppoint" />
+    <NavigationProperty Name="ForeignerRecords" Relationship="Self.FK__Foreigner__Schoo__0880433F" FromRole="SchoolDistrict" ToRole="ForeignerRecord" />
+    <NavigationProperty Name="GooutForms" Relationship="Self.FK__GooutForm__Schoo__7EF6D905" FromRole="SchoolDistrict" ToRole="GooutForm" />
+    <NavigationProperty Name="IncidentReports" Relationship="Self.FK__IncidentR__Schoo__2CBDA3B5" FromRole="SchoolDistrict" ToRole="IncidentReport" />
+    <NavigationProperty Name="SafeManagements" Relationship="Self.FK__SafeManag__Schoo__756D6ECB" FromRole="SchoolDistrict" ToRole="SafeManagement" />
+    <NavigationProperty Name="SchoolInCars" Relationship="Self.FK__SchoolInC__Schoo__02C769E9" FromRole="SchoolDistrict" ToRole="SchoolInCar" />
+    <NavigationProperty Name="SchoolStaffRecords" Relationship="Self.FK__SchoolSta__Schoo__0E391C95" FromRole="SchoolDistrict" ToRole="SchoolStaffRecord" />
+    <NavigationProperty Name="Specifics" Relationship="Self.FK__Specific__School__27F8EE98" FromRole="SchoolDistrict" ToRole="Specific" />
+    <NavigationProperty Name="StrangeWarnings" Relationship="Self.FK__StrangeWa__Schoo__1A9EF37A" FromRole="SchoolDistrict" ToRole="StrangeWarning" />
+    <NavigationProperty Name="Students" Relationship="Self.FK__Student__SchoolD__74AE54BC" FromRole="SchoolDistrict" ToRole="Student" />
+    <NavigationProperty Name="StuManagements" Relationship="Self.FK__StuManage__Schoo__7C1A6C5A" FromRole="SchoolDistrict" ToRole="StuManagement" />
+    <NavigationProperty Name="Teachers" Relationship="Self.FK__Teacher__SchoolD__0D44F85C" FromRole="SchoolDistrict" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="SchoolInCar">
+    <Key>
+      <PropertyRef Name="SchoolInCarUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="SchoolInCarUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentUuid" Type="Guid" />
+    <Property Name="ComeInDoor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ComeInTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GetOutDoor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GetOutTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="CarType" Type="Int32" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__SchoolInC__Depar__01D345B0" FromRole="SchoolInCar" ToRole="Department" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__SchoolInC__Schoo__02C769E9" FromRole="SchoolInCar" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="SchoolStaffRecord">
+    <Key>
+      <PropertyRef Name="SchoolStaffRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="SchoolStaffRecordUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="HealthCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Temperature" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ComeInDoor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ComeInTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GetOutDoor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GetOutTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__SchoolSta__Schoo__0E391C95" FromRole="SchoolStaffRecord" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="ScoreAdd">
+    <Key>
+      <PropertyRef Name="ScoreAddUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="ScoreAddUuid" Type="Guid" Nullable="false" />
+    <Property Name="DepartmentUuid" Type="Guid" />
+    <Property Name="DepartmentScore" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentPicture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentPoints" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentAddPoints" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ScoreType" Type="Int32" />
+    <Property Name="EventsPoints" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__ScoreAdd__Depart__3552E9B6" FromRole="ScoreAdd" ToRole="Department" />
+  </EntityType>
+  <EntityType Name="SecurityType">
+    <Key>
+      <PropertyRef Name="SecurityTypeUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="SecurityTypeUuid" Type="Guid" Nullable="false" />
+    <Property Name="SecurityTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="IncidentReports" Relationship="Self.FK__IncidentR__Secur__308E3499" FromRole="SecurityType" ToRole="IncidentReport" />
+  </EntityType>
+  <EntityType Name="Specific">
+    <Key>
+      <PropertyRef Name="SpecificUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="SpecificUuid" Type="Guid" Nullable="false" />
+    <Property Name="TypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EventScore" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EventName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Events" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Points" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RectificationTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RectificationScore" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RectificationPoints" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDelete" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Specific__School__27F8EE98" FromRole="Specific" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="Stadium">
+    <Key>
+      <PropertyRef Name="StadiumUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="StadiumUuid" Type="Guid" Nullable="false" />
+    <Property Name="StadiumName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="StrangeWarning">
+    <Key>
+      <PropertyRef Name="StrangeWarningUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="StrangeWarningUuid" Type="Guid" Nullable="false" />
+    <Property Name="EquipmentNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EquipmentName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ComeInDoor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ComeInTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GetOutDoor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GetOutTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="EquipmentType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__StrangeWa__Schoo__1A9EF37A" FromRole="StrangeWarning" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="StuClass">
+    <Key>
+      <PropertyRef Name="StuClassUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="StuClassUuid" Type="Guid" Nullable="false" />
+    <Property Name="MajorUuid" Type="Guid" />
+    <Property Name="StuClassName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Abnormals" Relationship="Self.FK__Abnormal__StuCla__13F1F5EB" FromRole="StuClass" ToRole="Abnormal" />
+    <NavigationProperty Name="IncidentReports" Relationship="Self.FK__IncidentR__StuCl__2F9A1060" FromRole="StuClass" ToRole="IncidentReport" />
+    <NavigationProperty Name="Major" Relationship="Self.FK__StuClass__MajorU__6D0D32F4" FromRole="StuClass" ToRole="Major" />
+    <NavigationProperty Name="Students" Relationship="Self.FK__Student__StuClas__71D1E811" FromRole="StuClass" ToRole="Student" />
+    <NavigationProperty Name="StuManagements" Relationship="Self.FK__StuManage__StuCl__7A3223E8" FromRole="StuClass" ToRole="StuManagement" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="StudentUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StuNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CollegeUuid" Type="Guid" />
+    <Property Name="MajorUuid" Type="Guid" />
+    <Property Name="StuClassUuid" Type="Guid" />
+    <Property Name="YiCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DormitoryUuid" Type="Guid" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DormitoryNumUuid" Type="Guid" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Nation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Political" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Religion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <NavigationProperty Name="College" Relationship="Self.FK__Student__College__6FE99F9F" FromRole="Student" ToRole="College" />
+    <NavigationProperty Name="Dormitory" Relationship="Self.FK__Student__Dormito__72C60C4A" FromRole="Student" ToRole="Dormitory" />
+    <NavigationProperty Name="DormitoryNum" Relationship="Self.FK__Student__Dormito__73BA3083" FromRole="Student" ToRole="DormitoryNum" />
+    <NavigationProperty Name="Major" Relationship="Self.FK__Student__MajorUu__70DDC3D8" FromRole="Student" ToRole="Major" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Student__SchoolD__74AE54BC" FromRole="Student" ToRole="SchoolDistrict" />
+    <NavigationProperty Name="StuClass" Relationship="Self.FK__Student__StuClas__71D1E811" FromRole="Student" ToRole="StuClass" />
+  </EntityType>
+  <EntityType Name="StudentsApartment">
+    <Key>
+      <PropertyRef Name="StudentsApartmentUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="StudentsApartmentUuid" Type="Guid" Nullable="false" />
+    <Property Name="StudentsApartmentName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="StuManagement">
+    <Key>
+      <PropertyRef Name="StuManagementUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="StuManagementUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdentityType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Gh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="YiCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentUuid" Type="Guid" />
+    <Property Name="CollegeUuid" Type="Guid" />
+    <Property Name="StuClassUuid" Type="Guid" />
+    <Property Name="DormitoryUuid" Type="Guid" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <NavigationProperty Name="College" Relationship="Self.FK__StuManage__Colle__793DFFAF" FromRole="StuManagement" ToRole="College" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__StuManage__Depar__7849DB76" FromRole="StuManagement" ToRole="Department" />
+    <NavigationProperty Name="Dormitory" Relationship="Self.FK__StuManage__Dormi__7B264821" FromRole="StuManagement" ToRole="Dormitory" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__StuManage__Schoo__7C1A6C5A" FromRole="StuManagement" ToRole="SchoolDistrict" />
+    <NavigationProperty Name="StuClass" Relationship="Self.FK__StuManage__StuCl__7A3223E8" FromRole="StuManagement" ToRole="StuClass" />
+  </EntityType>
+  <EntityType Name="StuMapCurriculum">
+    <Key>
+      <PropertyRef Name="StuMapCurriculumUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="StuMapCurriculumUuid" Type="Guid" Nullable="false" />
+    <Property Name="StuNum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CurriculumUuid" Type="Guid" />
+    <Property Name="SchoolYear" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolTerm" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_ApparatusRegistration">
+    <Key>
+      <PropertyRef Name="sys_ApparatusRegistrationUuid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_ApparatusRegistrationUuid" Type="Guid" Nullable="false" />
+    <Property Name="isbig" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sys_InstrumentUuid" Type="Guid" />
+    <Property Name="num" Type="Int32" />
+    <Property Name="isaudit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="isback" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="money" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isusetime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="usetype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rooomid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stime" Type="DateTime" Precision="3" />
+    <Property Name="etime" Type="DateTime" Precision="3" />
+    <Property Name="applicationnameid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="applicationpurpose" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="consumablesnum" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="consumablesname" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="laboratory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sampleid" Type="Int32" />
+    <Property Name="note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="auditreason" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="auditername" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="taskname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="taskresourse" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="cardnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="usertimes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="isteacher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="applytime" Type="DateTime" Precision="3" />
+    <Property Name="sys_LaboratoryUuid" Type="Guid" />
+    <Property Name="xinhao" Type="Int32" />
+    <Property Name="enable" Type="Int32" />
+    <Property Name="teacheraudit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="auditperson" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="sstime" Type="DateTime" Precision="3" />
+    <Property Name="setime" Type="DateTime" Precision="3" />
+    <Property Name="types" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stimes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="truename" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="capital" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ExperimentPurpose" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ExperimentalScheme" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FileState" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ArchivalAudit" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FileResult" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FileNoTime" Type="DateTime" Precision="7" />
+    <Property Name="FileGoTime" Type="DateTime" Precision="3" />
+    <Property Name="JianMianMoney" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddMoney" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Isxsf" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SXCLShiJi" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="QiTi" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GuangBan" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Isxhx" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="HXName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ProbjetName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ProbjetLaiYuan" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CeShiContent" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="NiCStime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="NiCSCount" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Issfsy" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SQDanWei" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="NumberSample" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ActualCost" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Isdelete" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_BlackList">
+    <Key>
+      <PropertyRef Name="sys_BlackListUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="sys_BlackListUuid" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EndTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EquipmentName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="YuyueType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Eamil" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="card" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_Captial">
+    <Key>
+      <PropertyRef Name="sys_CaptialUuid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_CaptialUuid" Type="Guid" Nullable="false" />
+    <Property Name="capital" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Worker" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_ConsumptionRecord">
+    <Key>
+      <PropertyRef Name="sys_ConsumptionRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_ConsumptionRecordUuid" Type="Guid" Nullable="false" />
+    <Property Name="NameSubscriber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="worker" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="nameInstrument" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BookingFee" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="dateConsumption" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_EntramceGuard">
+    <Key>
+      <PropertyRef Name="sys_EntramceGuardUuid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_EntramceGuardUuid" Type="Guid" Nullable="false" />
+    <Property Name="GNameListID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Entcardnumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USB" Type="Int32" />
+    <Property Name="stime" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+    <Property Name="etime" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+    <Property Name="GNameListName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StudenListID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StudentListName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntcardType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_InsOpen">
+    <Key>
+      <PropertyRef Name="sys_InsOpenUuid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_InsOpenUuid" Type="Guid" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="week" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="kstime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sjtime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Isoptional" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BeginTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EndTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDel" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="sys_InstrumentUuid" Type="Guid" />
+    <Property Name="Dispark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_Instrument">
+    <Key>
+      <PropertyRef Name="sys_InstrumentUuid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_InstrumentUuid" Type="Guid" Nullable="false" />
+    <Property Name="sys_InstrumentTypeUuid" Type="Guid" />
+    <Property Name="bianhao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="studentNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="iname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="guige" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="time" Type="DateTime" Precision="3" />
+    <Property Name="canjia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="count" Type="Double" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="gonplace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lab" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="roonnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="guanPeopleID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="imgtwo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="imgstr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="imgfor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="money" Type="Decimal" Precision="18" Scale="1" />
+    <Property Name="appartus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isshow" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="makestate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="labId" Type="Int32" />
+    <Property Name="instrupower" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="guanPeopleName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EntranceGuaerdID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntranceGuaerdName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ismanagement" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="menttype" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="smalltime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="minprice" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="remark" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="Isoptional" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Dispark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_InstrumentFault">
+    <Key>
+      <PropertyRef Name="sys_InstrumentFaultUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_InstrumentFaultUuid" Type="Guid" Nullable="false" />
+    <Property Name="sys_InstrumentUuid" Type="Guid" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="OccurrenceTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_InstrumentMaintain">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_InstrumentMaintainUuid" Type="Guid" />
+    <Property Name="sys_InstrumentUuid" Type="Guid" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MaintainBeginTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MaintainEndTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_InstrumentUse">
+    <Key>
+      <PropertyRef Name="sys_InstrumentUseUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_InstrumentUseUuid" Type="Guid" Nullable="false" />
+    <Property Name="ApparatusName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Worker" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="stime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="etime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="setime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TheLength" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="intro" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Money" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_Laboratory">
+    <Key>
+      <PropertyRef Name="sys_LaboratoryUuid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_LaboratoryUuid" Type="Guid" Nullable="false" />
+    <Property Name="roomid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="roomname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="roomarea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="chief" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pronumber" Type="Int32" />
+    <Property Name="hasprojection" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="facnumber" Type="Int32" />
+    <Property Name="category" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="phototwo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="photostr" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="photofor" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isshow" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="makestate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_LaboratoryLog">
+    <Key>
+      <PropertyRef Name="sys_LaboratoryLogUuid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_LaboratoryLogUuid" Type="Guid" Nullable="false" />
+    <Property Name="roomid" Type="Int32" />
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="demo" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+    <Property Name="classstate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="proquestion" Type="String" MaxLength="225" FixedLength="false" Unicode="true" />
+    <Property Name="prostate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="laboquestion" Type="String" MaxLength="225" FixedLength="false" Unicode="true" />
+    <Property Name="labostate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="applytime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="sys_LaboratoryType">
+    <Key>
+      <PropertyRef Name="sys_LaboratoryTypeUuid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_LaboratoryTypeUuid" Type="Guid" Nullable="false" />
+    <Property Name="rootid" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_RechargeRecord">
+    <Key>
+      <PropertyRef Name="sys_RechargeRecordUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_RechargeRecordUuid" Type="Guid" Nullable="false" />
+    <Property Name="worker" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TopAccount" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TopAmount" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PrepaidPhonePeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PrepaidphoneTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SourcesFunding" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_User">
+    <Key>
+      <PropertyRef Name="sys_UserUuid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_UserUuid" Type="Guid" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="userpassword" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="roleid" Type="Int32" />
+    <Property Name="photo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="lasttime" Type="DateTime" Precision="3" />
+    <Property Name="linestate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="truename" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ActiveTime" Type="DateTime" Precision="3" />
+    <Property Name="mobile" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CardNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LearnWorkNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PersonnelType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ReviewStatus" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="isaudite" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="adddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="job" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="department" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AdmissionTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ClassName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DateBirth" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="dataAddTime" Type="DateTime" Precision="3" />
+    <Property Name="PupilName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Iccid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SystemIcon">
+    <Key>
+      <PropertyRef Name="SystemIconUUID" />
+    </Key>
+    <Property Name="SystemIconUUID" Type="Guid" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Size" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Custom" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatedByUserGuid" Type="Guid" Nullable="false" />
+    <Property Name="CreatedByUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="7" />
+    <Property Name="ModifiedByUserGuid" Type="Guid" />
+    <Property Name="ModifiedByUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="SystemLog">
+    <Key>
+      <PropertyRef Name="SystemLogUUID" />
+    </Key>
+    <Property Name="SystemLogUUID" Type="Guid" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserIDType" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsDelete" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="SystemMenu">
+    <Key>
+      <PropertyRef Name="SystemMenuUUID" />
+    </Key>
+    <Property Name="SystemMenuUUID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Alias" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Icon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ParentGuid" Type="Guid" />
+    <Property Name="ParentName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Level" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="IsDefaultRouter" Type="Int32" />
+    <Property Name="CreatedOn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedByUserGuid" Type="Guid" />
+    <Property Name="CreatedByUserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedByUserGuid" Type="Guid" />
+    <Property Name="ModifiedByUserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Component" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HideInMenu" Type="Int32" />
+    <Property Name="NotCache" Type="Int32" />
+    <Property Name="BeforeCloseFun" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="SystemPermissions" Relationship="Self.FK_SystemPermission_SystemMenu" FromRole="SystemMenu" ToRole="SystemPermission" />
+  </EntityType>
+  <EntityType Name="SystemPermission">
+    <Key>
+      <PropertyRef Name="SystemPermissionUUID" />
+    </Key>
+    <Property Name="SystemPermissionUUID" Type="Guid" Nullable="false" />
+    <Property Name="SystemMenuUUID" Type="Guid" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ActionCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Icon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="CreatedByUserGuid" Type="Guid" />
+    <Property Name="CreatedOn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedByUserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedByUserGuid" Type="Guid" />
+    <Property Name="ModifiedByUserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CaPower" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="SystemMenu" Relationship="Self.FK_SystemPermission_SystemMenu" FromRole="SystemPermission" ToRole="SystemMenu" />
+  </EntityType>
+  <EntityType Name="SystemRole">
+    <Key>
+      <PropertyRef Name="SystemRoleUUID" />
+    </Key>
+    <Property Name="SystemRoleUUID" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IsFixation" Type="Int32" />
+    <Property Name="SchoolUUID" Type="Guid" />
+    <Property Name="IsCreEdu" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SystemRolePermissionMapping">
+    <Key>
+      <PropertyRef Name="SystemRoleUUID" />
+      <PropertyRef Name="SystemPermissionUUID" />
+    </Key>
+    <Property Name="SystemRoleUUID" Type="Guid" Nullable="false" />
+    <Property Name="SystemPermissionUUID" Type="Guid" Nullable="false" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="SystemUser">
+    <Key>
+      <PropertyRef Name="SystemUserUUID" />
+    </Key>
+    <Property Name="SystemUserUUID" Type="Guid" Nullable="false" />
+    <Property Name="LoginName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RealName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UserIdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PassWord" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UserType" Type="Int32" />
+    <Property Name="SchoolUUID" Type="Guid" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="ManageDepartment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ZaiGang" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="InTime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Types" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SystemRoleUUid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StaffNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Wechat" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Topic" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Train" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Main" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Job" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HealthCertificate" Type="Int32" />
+    <Property Name="IsStaff" Type="Int32" />
+    <Property Name="IsCreEdu" Type="Int32" />
+    <Property Name="PersonnelType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ReviewStatus" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CardNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsBlacklist" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SystemUserRoleMapping">
+    <Key>
+      <PropertyRef Name="SystemUserUUID" />
+      <PropertyRef Name="SystemRoleUUID" />
+    </Key>
+    <Property Name="SystemUserUUID" Type="Guid" Nullable="false" />
+    <Property Name="SystemRoleUUID" Type="Guid" Nullable="false" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TeacherUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="TeacherUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Gh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentUuid" Type="Guid" />
+    <Property Name="YiCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DormitoryUuid" Type="Guid" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DormitoryNumUuid" Type="Guid" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Nation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Political" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Religion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <Property Name="ProfessionalTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__Teacher__Departm__0A688BB1" FromRole="Teacher" ToRole="Department" />
+    <NavigationProperty Name="Dormitory" Relationship="Self.FK__Teacher__Dormito__0B5CAFEA" FromRole="Teacher" ToRole="Dormitory" />
+    <NavigationProperty Name="DormitoryNum" Relationship="Self.FK__Teacher__Dormito__0C50D423" FromRole="Teacher" ToRole="DormitoryNum" />
+    <NavigationProperty Name="SchoolDistrict" Relationship="Self.FK__Teacher__SchoolD__0D44F85C" FromRole="Teacher" ToRole="SchoolDistrict" />
+  </EntityType>
+  <EntityType Name="Warning">
+    <Key>
+      <PropertyRef Name="WarningUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="WarningUuid" Type="Guid" Nullable="false" />
+    <Property Name="WarningType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WarningName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WarningLastUser" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WarningInformation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AffiliatedLaboratory" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Mark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Weekly">
+    <Key>
+      <PropertyRef Name="WeeklyUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WeeklyUuid" Type="Guid" Nullable="false" />
+    <Property Name="SchoolYear" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Semester" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WeeklyName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WeeklyTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="whp_EntramceGuard">
+    <Key>
+      <PropertyRef Name="whp_EntramceGuardUuid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="whp_EntramceGuardUuid" Type="Guid" Nullable="false" />
+    <Property Name="GNameListID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Entcardnumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USB" Type="Int32" />
+    <Property Name="stime" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+    <Property Name="etime" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+    <Property Name="GNameListName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StudenListID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StudentListName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntcardType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDelete" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="WorkerUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="7" />
+    <Property Name="WorkerUuid" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Gh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentUuid" Type="Guid" />
+    <Property Name="Job" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ValidityTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CarNum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="YiCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IdCard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Nation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Political" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Religion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" />
+    <Property Name="AddTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AddPeople" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolDistrictUuid" Type="Guid" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__Worker__Departme__7755B73D" FromRole="Worker" ToRole="Department" />
+  </EntityType>
+  <EntityType Name="Wrj">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Guid" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserNo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="longitude" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="latitude" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="adduser" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="addtime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_InstrumentType">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="sys_InstrumentTypeUuid" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_InstrumentTypeUuid" Type="Guid" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__Abnormal__Colleg__1209AD79">
+    <End Role="College" Type="Self.College" Multiplicity="0..1" />
+    <End Role="Abnormal" Type="Self.Abnormal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="College">
+        <PropertyRef Name="CollegeUuid" />
+      </Principal>
+      <Dependent Role="Abnormal">
+        <PropertyRef Name="CollegeUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Abnormal__MajorU__12FDD1B2">
+    <End Role="Major" Type="Self.Major" Multiplicity="0..1" />
+    <End Role="Abnormal" Type="Self.Abnormal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Major">
+        <PropertyRef Name="MajorUuid" />
+      </Principal>
+      <Dependent Role="Abnormal">
+        <PropertyRef Name="MajorUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Abnormal__School__14E61A24">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Abnormal" Type="Self.Abnormal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Abnormal">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Abnormal__StuCla__13F1F5EB">
+    <End Role="StuClass" Type="Self.StuClass" Multiplicity="0..1" />
+    <End Role="Abnormal" Type="Self.Abnormal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StuClass">
+        <PropertyRef Name="StuClassUuid" />
+      </Principal>
+      <Dependent Role="Abnormal">
+        <PropertyRef Name="StuClassUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AccessCon__Resea__44952D46">
+    <End Role="ResearchBuilding" Type="Self.ResearchBuilding" Multiplicity="0..1" />
+    <End Role="AccessControlRecord" Type="Self.AccessControlRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResearchBuilding">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Principal>
+      <Dependent Role="AccessControlRecord">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Apartment__Dormi__04AFB25B">
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="0..1" />
+    <End Role="ApartmentRecord" Type="Self.ApartmentRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dormitory">
+        <PropertyRef Name="DormitoryUuid" />
+      </Principal>
+      <Dependent Role="ApartmentRecord">
+        <PropertyRef Name="DormitoryUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Apartment__Schoo__03BB8E22">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="ApartmentRecord" Type="Self.ApartmentRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="ApartmentRecord">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Car__DepartmentU__719CDDE7">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Car__SchoolDistr__72910220">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CarNonMot__Depar__7D0E9093">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="CarNonMotor" Type="Self.CarNonMotor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="CarNonMotor">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CarNonMot__Schoo__7E02B4CC">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="CarNonMotor" Type="Self.CarNonMotor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="CarNonMotor">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Major__CollegeUu__6B24EA82">
+    <End Role="College" Type="Self.College" Multiplicity="0..1" />
+    <End Role="Major" Type="Self.Major" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="College">
+        <PropertyRef Name="CollegeUuid" />
+      </Principal>
+      <Dependent Role="Major">
+        <PropertyRef Name="CollegeUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__College__6FE99F9F">
+    <End Role="College" Type="Self.College" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="College">
+        <PropertyRef Name="CollegeUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="CollegeUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuManage__Colle__793DFFAF">
+    <End Role="College" Type="Self.College" Multiplicity="0..1" />
+    <End Role="StuManagement" Type="Self.StuManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="College">
+        <PropertyRef Name="CollegeUuid" />
+      </Principal>
+      <Dependent Role="StuManagement">
+        <PropertyRef Name="CollegeUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IncidentR__Depar__2EA5EC27">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="IncidentReport" Type="Self.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchoolInC__Depar__01D345B0">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="SchoolInCar" Type="Self.SchoolInCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="SchoolInCar">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ScoreAdd__Depart__3552E9B6">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="ScoreAdd" Type="Self.ScoreAdd" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="ScoreAdd">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuManage__Depar__7849DB76">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="StuManagement" Type="Self.StuManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="StuManagement">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__Departm__0A688BB1">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Worker__Departme__7755B73D">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Worker" Type="Self.Worker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentUuid" />
+      </Principal>
+      <Dependent Role="Worker">
+        <PropertyRef Name="DepartmentUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dormitory__Dormi__6EF57B66">
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="0..1" />
+    <End Role="DormitoryNum" Type="Self.DormitoryNum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dormitory">
+        <PropertyRef Name="DormitoryUuid" />
+      </Principal>
+      <Dependent Role="DormitoryNum">
+        <PropertyRef Name="DormitoryUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dormitory__Schoo__6E01572D">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Dormitory">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__Dormito__72C60C4A">
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dormitory">
+        <PropertyRef Name="DormitoryUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="DormitoryUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuManage__Dormi__7B264821">
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="0..1" />
+    <End Role="StuManagement" Type="Self.StuManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dormitory">
+        <PropertyRef Name="DormitoryUuid" />
+      </Principal>
+      <Dependent Role="StuManagement">
+        <PropertyRef Name="DormitoryUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__Dormito__0B5CAFEA">
+    <End Role="Dormitory" Type="Self.Dormitory" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dormitory">
+        <PropertyRef Name="DormitoryUuid" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="DormitoryUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__Dormito__73BA3083">
+    <End Role="DormitoryNum" Type="Self.DormitoryNum" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DormitoryNum">
+        <PropertyRef Name="DormitoryNumUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="DormitoryNumUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__Dormito__0C50D423">
+    <End Role="DormitoryNum" Type="Self.DormitoryNum" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DormitoryNum">
+        <PropertyRef Name="DormitoryNumUuid" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="DormitoryNumUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FireFacil__Resea__43A1090D">
+    <End Role="ResearchBuilding" Type="Self.ResearchBuilding" Multiplicity="0..1" />
+    <End Role="FireFacilities" Type="Self.FireFacility" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResearchBuilding">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Principal>
+      <Dependent Role="FireFacilities">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Focuser__SchoolD__74794A92">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Focuser" Type="Self.Focuser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Focuser">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Foreigner__Schoo__19AACF41">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Foreigner" Type="Self.Foreigner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Foreigner">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Foreigner__Schoo__05A3D694">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="ForeignerAppoint" Type="Self.ForeignerAppoint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="ForeignerAppoint">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Foreigner__Schoo__0880433F">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="ForeignerRecord" Type="Self.ForeignerRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="ForeignerRecord">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GooutForm__Schoo__7EF6D905">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="GooutForm" Type="Self.GooutForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="GooutForm">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IncidentR__Schoo__2CBDA3B5">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="IncidentReport" Type="Self.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IncidentR__Secur__308E3499">
+    <End Role="SecurityType" Type="Self.SecurityType" Multiplicity="0..1" />
+    <End Role="IncidentReport" Type="Self.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SecurityType">
+        <PropertyRef Name="SecurityTypeUuid" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="SecurityTypeUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IncidentR__StuCl__2F9A1060">
+    <End Role="StuClass" Type="Self.StuClass" Multiplicity="0..1" />
+    <End Role="IncidentReport" Type="Self.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StuClass">
+        <PropertyRef Name="StuClassUuid" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="StuClassUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuClass__MajorU__6D0D32F4">
+    <End Role="Major" Type="Self.Major" Multiplicity="0..1" />
+    <End Role="StuClass" Type="Self.StuClass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Major">
+        <PropertyRef Name="MajorUuid" />
+      </Principal>
+      <Dependent Role="StuClass">
+        <PropertyRef Name="MajorUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__MajorUu__70DDC3D8">
+    <End Role="Major" Type="Self.Major" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Major">
+        <PropertyRef Name="MajorUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="MajorUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Monitor__Researc__4865BE2A">
+    <End Role="ResearchBuilding" Type="Self.ResearchBuilding" Multiplicity="0..1" />
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResearchBuilding">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Principal>
+      <Dependent Role="Monitor">
+        <PropertyRef Name="ResearchBuildingUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SafeManag__Schoo__756D6ECB">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="SafeManagement" Type="Self.SafeManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="SafeManagement">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchoolInC__Schoo__02C769E9">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="SchoolInCar" Type="Self.SchoolInCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="SchoolInCar">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchoolSta__Schoo__0E391C95">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="SchoolStaffRecord" Type="Self.SchoolStaffRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="SchoolStaffRecord">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Specific__School__27F8EE98">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Specific" Type="Self.Specific" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Specific">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StrangeWa__Schoo__1A9EF37A">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="StrangeWarning" Type="Self.StrangeWarning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="StrangeWarning">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__SchoolD__74AE54BC">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuManage__Schoo__7C1A6C5A">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="StuManagement" Type="Self.StuManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="StuManagement">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__SchoolD__0D44F85C">
+    <End Role="SchoolDistrict" Type="Self.SchoolDistrict" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolDistrict">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="SchoolDistrictUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__StuClas__71D1E811">
+    <End Role="StuClass" Type="Self.StuClass" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StuClass">
+        <PropertyRef Name="StuClassUuid" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="StuClassUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StuManage__StuCl__7A3223E8">
+    <End Role="StuClass" Type="Self.StuClass" Multiplicity="0..1" />
+    <End Role="StuManagement" Type="Self.StuManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StuClass">
+        <PropertyRef Name="StuClassUuid" />
+      </Principal>
+      <Dependent Role="StuManagement">
+        <PropertyRef Name="StuClassUuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemPermission_SystemMenu">
+    <End Role="SystemMenu" Type="Self.SystemMenu" Multiplicity="0..1" />
+    <End Role="SystemPermission" Type="Self.SystemPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemMenu">
+        <PropertyRef Name="SystemMenuUUID" />
+      </Principal>
+      <Dependent Role="SystemPermission">
+        <PropertyRef Name="SystemMenuUUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="yixueyuanEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Abnormals" EntityType="Self.Abnormal" />
+    <EntitySet Name="AccessControlRecords" EntityType="Self.AccessControlRecord" />
+    <EntitySet Name="AnjianTypes" EntityType="Self.AnjianType" />
+    <EntitySet Name="ApartmentRecords" EntityType="Self.ApartmentRecord" />
+    <EntitySet Name="ApartmentWarns" EntityType="Self.ApartmentWarn" />
+    <EntitySet Name="Blackers" EntityType="Self.Blacker" />
+    <EntitySet Name="CampusPatrols" EntityType="Self.CampusPatrol" />
+    <EntitySet Name="Cars" EntityType="Self.Car" />
+    <EntitySet Name="CarAccidents" EntityType="Self.CarAccident" />
+    <EntitySet Name="CarBlacks" EntityType="Self.CarBlack" />
+    <EntitySet Name="CarIllegalStops" EntityType="Self.CarIllegalStop" />
+    <EntitySet Name="CarNonMotors" EntityType="Self.CarNonMotor" />
+    <EntitySet Name="CarNonMotorAccidents" EntityType="Self.CarNonMotorAccident" />
+    <EntitySet Name="CarNonMotorBlacks" EntityType="Self.CarNonMotorBlack" />
+    <EntitySet Name="CarNonMotorHelmeteds" EntityType="Self.CarNonMotorHelmeted" />
+    <EntitySet Name="CarNonMotorIllegalStops" EntityType="Self.CarNonMotorIllegalStop" />
+    <EntitySet Name="CarNonMotorManneds" EntityType="Self.CarNonMotorManned" />
+    <EntitySet Name="CarNonMotorSpeedRecords" EntityType="Self.CarNonMotorSpeedRecord" />
+    <EntitySet Name="CarSpeedRecords" EntityType="Self.CarSpeedRecord" />
+    <EntitySet Name="Colleges" EntityType="Self.College" />
+    <EntitySet Name="Curricula" EntityType="Self.Curriculum" />
+    <EntitySet Name="Dc_EarlyWarningRecord" EntityType="Self.Dc_EarlyWarningRecord" />
+    <EntitySet Name="Dc_TemHum" EntityType="Self.Dc_TemHum" />
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="DoorOpenings" EntityType="Self.DoorOpening" />
+    <EntitySet Name="Dormitories" EntityType="Self.Dormitory" />
+    <EntitySet Name="DormitoryNums" EntityType="Self.DormitoryNum" />
+    <EntitySet Name="Festivals" EntityType="Self.Festival" />
+    <EntitySet Name="FireFacilities" EntityType="Self.FireFacility" />
+    <EntitySet Name="FivePictures" EntityType="Self.FivePicture" />
+    <EntitySet Name="Focusers" EntityType="Self.Focuser" />
+    <EntitySet Name="Foreigners" EntityType="Self.Foreigner" />
+    <EntitySet Name="ForeignerAppoints" EntityType="Self.ForeignerAppoint" />
+    <EntitySet Name="ForeignerRecords" EntityType="Self.ForeignerRecord" />
+    <EntitySet Name="GeneralLaboratories" EntityType="Self.GeneralLaboratory" />
+    <EntitySet Name="GooutForms" EntityType="Self.GooutForm" />
+    <EntitySet Name="HazardousChemicalsUseRecords" EntityType="Self.HazardousChemicalsUseRecord" />
+    <EntitySet Name="HazardousChemicalsWarehouses" EntityType="Self.HazardousChemicalsWarehouse" />
+    <EntitySet Name="InAndOutTimes" EntityType="Self.InAndOutTime" />
+    <EntitySet Name="IncidentReports" EntityType="Self.IncidentReport" />
+    <EntitySet Name="Libraries" EntityType="Self.Library" />
+    <EntitySet Name="MainLabs" EntityType="Self.MainLab" />
+    <EntitySet Name="Majors" EntityType="Self.Major" />
+    <EntitySet Name="MapIcons" EntityType="Self.MapIcon" />
+    <EntitySet Name="Monitors" EntityType="Self.Monitor" />
+    <EntitySet Name="RecyclingManagements" EntityType="Self.RecyclingManagement" />
+    <EntitySet Name="ResearchBuildings" EntityType="Self.ResearchBuilding" />
+    <EntitySet Name="SafeManagements" EntityType="Self.SafeManagement" />
+    <EntitySet Name="SchoolDistricts" EntityType="Self.SchoolDistrict" />
+    <EntitySet Name="SchoolInCars" EntityType="Self.SchoolInCar" />
+    <EntitySet Name="SchoolStaffRecords" EntityType="Self.SchoolStaffRecord" />
+    <EntitySet Name="ScoreAdds" EntityType="Self.ScoreAdd" />
+    <EntitySet Name="SecurityTypes" EntityType="Self.SecurityType" />
+    <EntitySet Name="Specifics" EntityType="Self.Specific" />
+    <EntitySet Name="Stadia" EntityType="Self.Stadium" />
+    <EntitySet Name="StrangeWarnings" EntityType="Self.StrangeWarning" />
+    <EntitySet Name="StuClasses" EntityType="Self.StuClass" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="StudentsApartments" EntityType="Self.StudentsApartment" />
+    <EntitySet Name="StuManagements" EntityType="Self.StuManagement" />
+    <EntitySet Name="StuMapCurriculums" EntityType="Self.StuMapCurriculum" />
+    <EntitySet Name="sys_ApparatusRegistration" EntityType="Self.sys_ApparatusRegistration" />
+    <EntitySet Name="sys_BlackList" EntityType="Self.sys_BlackList" />
+    <EntitySet Name="sys_Captial" EntityType="Self.sys_Captial" />
+    <EntitySet Name="sys_ConsumptionRecord" EntityType="Self.sys_ConsumptionRecord" />
+    <EntitySet Name="sys_EntramceGuard" EntityType="Self.sys_EntramceGuard" />
+    <EntitySet Name="sys_InsOpen" EntityType="Self.sys_InsOpen" />
+    <EntitySet Name="sys_Instrument" EntityType="Self.sys_Instrument" />
+    <EntitySet Name="sys_InstrumentFault" EntityType="Self.sys_InstrumentFault" />
+    <EntitySet Name="sys_InstrumentMaintain" EntityType="Self.sys_InstrumentMaintain" />
+    <EntitySet Name="sys_InstrumentUse" EntityType="Self.sys_InstrumentUse" />
+    <EntitySet Name="sys_Laboratory" EntityType="Self.sys_Laboratory" />
+    <EntitySet Name="sys_LaboratoryLog" EntityType="Self.sys_LaboratoryLog" />
+    <EntitySet Name="sys_LaboratoryType" EntityType="Self.sys_LaboratoryType" />
+    <EntitySet Name="sys_RechargeRecord" EntityType="Self.sys_RechargeRecord" />
+    <EntitySet Name="sys_User" EntityType="Self.sys_User" />
+    <EntitySet Name="SystemIcons" EntityType="Self.SystemIcon" />
+    <EntitySet Name="SystemLogs" EntityType="Self.SystemLog" />
+    <EntitySet Name="SystemMenus" EntityType="Self.SystemMenu" />
+    <EntitySet Name="SystemPermissions" EntityType="Self.SystemPermission" />
+    <EntitySet Name="SystemRoles" EntityType="Self.SystemRole" />
+    <EntitySet Name="SystemRolePermissionMappings" EntityType="Self.SystemRolePermissionMapping" />
+    <EntitySet Name="SystemUsers" EntityType="Self.SystemUser" />
+    <EntitySet Name="SystemUserRoleMappings" EntityType="Self.SystemUserRoleMapping" />
+    <EntitySet Name="Teachers" EntityType="Self.Teacher" />
+    <EntitySet Name="Warnings" EntityType="Self.Warning" />
+    <EntitySet Name="Weeklies" EntityType="Self.Weekly" />
+    <EntitySet Name="whp_EntramceGuard" EntityType="Self.whp_EntramceGuard" />
+    <EntitySet Name="Workers" EntityType="Self.Worker" />
+    <EntitySet Name="Wrjs" EntityType="Self.Wrj" />
+    <EntitySet Name="sys_InstrumentType" EntityType="Self.sys_InstrumentType" />
+    <AssociationSet Name="FK__Abnormal__Colleg__1209AD79" Association="Self.FK__Abnormal__Colleg__1209AD79">
+      <End Role="College" EntitySet="Colleges" />
+      <End Role="Abnormal" EntitySet="Abnormals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Abnormal__MajorU__12FDD1B2" Association="Self.FK__Abnormal__MajorU__12FDD1B2">
+      <End Role="Major" EntitySet="Majors" />
+      <End Role="Abnormal" EntitySet="Abnormals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Abnormal__School__14E61A24" Association="Self.FK__Abnormal__School__14E61A24">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="Abnormal" EntitySet="Abnormals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Abnormal__StuCla__13F1F5EB" Association="Self.FK__Abnormal__StuCla__13F1F5EB">
+      <End Role="StuClass" EntitySet="StuClasses" />
+      <End Role="Abnormal" EntitySet="Abnormals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AccessCon__Resea__44952D46" Association="Self.FK__AccessCon__Resea__44952D46">
+      <End Role="ResearchBuilding" EntitySet="ResearchBuildings" />
+      <End Role="AccessControlRecord" EntitySet="AccessControlRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Apartment__Dormi__04AFB25B" Association="Self.FK__Apartment__Dormi__04AFB25B">
+      <End Role="Dormitory" EntitySet="Dormitories" />
+      <End Role="ApartmentRecord" EntitySet="ApartmentRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Apartment__Schoo__03BB8E22" Association="Self.FK__Apartment__Schoo__03BB8E22">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="ApartmentRecord" EntitySet="ApartmentRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Car__DepartmentU__719CDDE7" Association="Self.FK__Car__DepartmentU__719CDDE7">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Car__SchoolDistr__72910220" Association="Self.FK__Car__SchoolDistr__72910220">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CarNonMot__Depar__7D0E9093" Association="Self.FK__CarNonMot__Depar__7D0E9093">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="CarNonMotor" EntitySet="CarNonMotors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CarNonMot__Schoo__7E02B4CC" Association="Self.FK__CarNonMot__Schoo__7E02B4CC">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="CarNonMotor" EntitySet="CarNonMotors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Major__CollegeUu__6B24EA82" Association="Self.FK__Major__CollegeUu__6B24EA82">
+      <End Role="College" EntitySet="Colleges" />
+      <End Role="Major" EntitySet="Majors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__College__6FE99F9F" Association="Self.FK__Student__College__6FE99F9F">
+      <End Role="College" EntitySet="Colleges" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuManage__Colle__793DFFAF" Association="Self.FK__StuManage__Colle__793DFFAF">
+      <End Role="College" EntitySet="Colleges" />
+      <End Role="StuManagement" EntitySet="StuManagements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IncidentR__Depar__2EA5EC27" Association="Self.FK__IncidentR__Depar__2EA5EC27">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="IncidentReport" EntitySet="IncidentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchoolInC__Depar__01D345B0" Association="Self.FK__SchoolInC__Depar__01D345B0">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="SchoolInCar" EntitySet="SchoolInCars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ScoreAdd__Depart__3552E9B6" Association="Self.FK__ScoreAdd__Depart__3552E9B6">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="ScoreAdd" EntitySet="ScoreAdds" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuManage__Depar__7849DB76" Association="Self.FK__StuManage__Depar__7849DB76">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="StuManagement" EntitySet="StuManagements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__Departm__0A688BB1" Association="Self.FK__Teacher__Departm__0A688BB1">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Teacher" EntitySet="Teachers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Worker__Departme__7755B73D" Association="Self.FK__Worker__Departme__7755B73D">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Worker" EntitySet="Workers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dormitory__Dormi__6EF57B66" Association="Self.FK__Dormitory__Dormi__6EF57B66">
+      <End Role="Dormitory" EntitySet="Dormitories" />
+      <End Role="DormitoryNum" EntitySet="DormitoryNums" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dormitory__Schoo__6E01572D" Association="Self.FK__Dormitory__Schoo__6E01572D">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="Dormitory" EntitySet="Dormitories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__Dormito__72C60C4A" Association="Self.FK__Student__Dormito__72C60C4A">
+      <End Role="Dormitory" EntitySet="Dormitories" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuManage__Dormi__7B264821" Association="Self.FK__StuManage__Dormi__7B264821">
+      <End Role="Dormitory" EntitySet="Dormitories" />
+      <End Role="StuManagement" EntitySet="StuManagements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__Dormito__0B5CAFEA" Association="Self.FK__Teacher__Dormito__0B5CAFEA">
+      <End Role="Dormitory" EntitySet="Dormitories" />
+      <End Role="Teacher" EntitySet="Teachers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__Dormito__73BA3083" Association="Self.FK__Student__Dormito__73BA3083">
+      <End Role="DormitoryNum" EntitySet="DormitoryNums" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__Dormito__0C50D423" Association="Self.FK__Teacher__Dormito__0C50D423">
+      <End Role="DormitoryNum" EntitySet="DormitoryNums" />
+      <End Role="Teacher" EntitySet="Teachers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FireFacil__Resea__43A1090D" Association="Self.FK__FireFacil__Resea__43A1090D">
+      <End Role="ResearchBuilding" EntitySet="ResearchBuildings" />
+      <End Role="FireFacilities" EntitySet="FireFacilities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Focuser__SchoolD__74794A92" Association="Self.FK__Focuser__SchoolD__74794A92">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="Focuser" EntitySet="Focusers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Foreigner__Schoo__19AACF41" Association="Self.FK__Foreigner__Schoo__19AACF41">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="Foreigner" EntitySet="Foreigners" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Foreigner__Schoo__05A3D694" Association="Self.FK__Foreigner__Schoo__05A3D694">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="ForeignerAppoint" EntitySet="ForeignerAppoints" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Foreigner__Schoo__0880433F" Association="Self.FK__Foreigner__Schoo__0880433F">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="ForeignerRecord" EntitySet="ForeignerRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GooutForm__Schoo__7EF6D905" Association="Self.FK__GooutForm__Schoo__7EF6D905">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="GooutForm" EntitySet="GooutForms" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IncidentR__Schoo__2CBDA3B5" Association="Self.FK__IncidentR__Schoo__2CBDA3B5">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="IncidentReport" EntitySet="IncidentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IncidentR__Secur__308E3499" Association="Self.FK__IncidentR__Secur__308E3499">
+      <End Role="SecurityType" EntitySet="SecurityTypes" />
+      <End Role="IncidentReport" EntitySet="IncidentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IncidentR__StuCl__2F9A1060" Association="Self.FK__IncidentR__StuCl__2F9A1060">
+      <End Role="StuClass" EntitySet="StuClasses" />
+      <End Role="IncidentReport" EntitySet="IncidentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuClass__MajorU__6D0D32F4" Association="Self.FK__StuClass__MajorU__6D0D32F4">
+      <End Role="Major" EntitySet="Majors" />
+      <End Role="StuClass" EntitySet="StuClasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__MajorUu__70DDC3D8" Association="Self.FK__Student__MajorUu__70DDC3D8">
+      <End Role="Major" EntitySet="Majors" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Monitor__Researc__4865BE2A" Association="Self.FK__Monitor__Researc__4865BE2A">
+      <End Role="ResearchBuilding" EntitySet="ResearchBuildings" />
+      <End Role="Monitor" EntitySet="Monitors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SafeManag__Schoo__756D6ECB" Association="Self.FK__SafeManag__Schoo__756D6ECB">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="SafeManagement" EntitySet="SafeManagements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchoolInC__Schoo__02C769E9" Association="Self.FK__SchoolInC__Schoo__02C769E9">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="SchoolInCar" EntitySet="SchoolInCars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchoolSta__Schoo__0E391C95" Association="Self.FK__SchoolSta__Schoo__0E391C95">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="SchoolStaffRecord" EntitySet="SchoolStaffRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Specific__School__27F8EE98" Association="Self.FK__Specific__School__27F8EE98">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="Specific" EntitySet="Specifics" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StrangeWa__Schoo__1A9EF37A" Association="Self.FK__StrangeWa__Schoo__1A9EF37A">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="StrangeWarning" EntitySet="StrangeWarnings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__SchoolD__74AE54BC" Association="Self.FK__Student__SchoolD__74AE54BC">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuManage__Schoo__7C1A6C5A" Association="Self.FK__StuManage__Schoo__7C1A6C5A">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="StuManagement" EntitySet="StuManagements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__SchoolD__0D44F85C" Association="Self.FK__Teacher__SchoolD__0D44F85C">
+      <End Role="SchoolDistrict" EntitySet="SchoolDistricts" />
+      <End Role="Teacher" EntitySet="Teachers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__StuClas__71D1E811" Association="Self.FK__Student__StuClas__71D1E811">
+      <End Role="StuClass" EntitySet="StuClasses" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StuManage__StuCl__7A3223E8" Association="Self.FK__StuManage__StuCl__7A3223E8">
+      <End Role="StuClass" EntitySet="StuClasses" />
+      <End Role="StuManagement" EntitySet="StuManagements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemPermission_SystemMenu" Association="Self.FK_SystemPermission_SystemMenu">
+      <End Role="SystemMenu" EntitySet="SystemMenus" />
+      <End Role="SystemPermission" EntitySet="SystemPermissions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

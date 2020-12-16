@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "选择人员",
+  "titleBarColor": "#000000",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "uni-drawer": "/components/uni-drawer/uni-drawer"
+  }
+}

@@ -1,0 +1,2996 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/video-js.css" rel="stylesheet">
+    <!--<link href="css/liMarquee.css" rel="stylesheet" />-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <!--<script src="js/jquery.limarquee.js"></script>-->
+    <script type="text/javascript" src="lib/include-lib.js" libpath=""
+        include="jquery,bootstrap,haoutil,crypto,toastr,mapv3d,layer"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/divpoint.css">
+    <link rel="stylesheet" href="css/movePrompt.css">
+    <link rel="stylesheet" href="css/widget-win.css">
+    <script type="text/javascript" src="js/map3dindex.js"></script>
+    <script src="js/video.min.js"></script>
+    <script src="js/videojs-contrib-hls.js"></script>
+
+    <link rel="stylesheet" href="./css/header.css">
+    <!-- <script src="./js/flexible.js"></script> -->
+    <meta charset="UTF-8">
+    <title>河桥镇综合指挥驾驶舱</title>
+    <style>
+        @keyframes move {
+            0% {
+                transform: translateX(150px);
+            }
+
+            100% {
+                transform: translateX(-610px);
+            }
+        }
+
+        /* #ul_tingche li p span:nth-child(1){
+            width: 30%;
+        }
+        #ul_tingche li p span:nth-child(2){
+            width: 44%;
+        } */
+        .hotelInfo {
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        #ul_gongce li {
+            /* padding: 0 10px; */
+        }
+
+        #ul_tingche li {
+            padding: 0 5px;
+        }
+
+        .itemArea {
+            width: 40% !important;
+            float: left;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 0 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body style="letter-spacing: 2px;">
+    <div class="data_bodey">
+        <div class="index_tabs">
+
+            <!--导航-->
+            <div class="index_navi">
+                <div class="nav_bg">
+                    <img src="./static/image/headbg.png" alt="" style="width: 100%;height: 100%;">
+                </div>
+                <h1 class="logoBox"><img src="./static/image/logo.png" alt="" style="width:100%;"></h1>
+                <ul class="navBox">
+                    <li class="leftLi" style="margin-left: 21%;"><a href="index.html">基本信息</a></li>
+                    <li class="leftLi"><a href="party.html">数字党建</a></li>
+                    <li class="leftLi"><a href="environmental.html">环境治理</a></li>
+                    <li class="rightLi" style="margin-right: 21%;"><a href="emergency.html">应急处理</a></li>
+                    <li class="rightLi nav_active"><a href="travel.html">智慧旅游</a></li>
+                    <li class="rightLi"><a href="society.html">社会治理</a></li>
+                </ul>
+                <input type="button" value="退出登录" id="outTo">
+            </div>
+            <!--智慧旅游-->
+            <div class="inner">
+                <div class="manage_left l_left">
+                    <!--景点实时游客信息-->
+                    <div class="dataAllBorder01 cage_cl" style="height:140px">
+                        <div class="dataAllBorder02">
+                            <div class="manage_top_middle" style="margin: 0 3% 15px 3%;width: 94%;">
+                                <div class="biaoti" style="overflow: hidden;">
+                                    <span style="float: left;margin-right: 10px;">景点实时游客信息</span>
+                                    <span style="width: 150px;float: left;overflow: hidden;">
+                                        <img style="animation: move 1.4s linear infinite;"
+                                            src="./static/image/diaotitupian.png" />
+                                    </span>
+                                </div>
+                                <div class="five_data">
+                                    <div class="five_information">
+                                        <div class="five_title">河桥老街</div>
+                                        <div><span class="five_number">156</span><span class="bacic_company">人</span>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="five_information">
+                                        <div class="five_title">唐昌首镇</div>
+                                        <div><span class="five_number">125</span><span class="bacic_company">人</span></div>
+                                    </div> -->
+                                    <div class="five_information">
+                                        <div class="five_title">柳溪江码头</div>
+                                        <div><span class="five_number">279</span><span class="bacic_company">人</span>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="five_information">
+                                        <div class="five_title">曙光亭</div>
+                                        <div><span class="five_number">276</span><span class="bacic_company">人</span></div>
+                                    </div> -->
+                                    <div class="five_information">
+                                        <div class="five_title">风之谷</div>
+                                        <div><span class="five_number">372</span><span class="bacic_company">人</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--游客溢出情况-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:3%;letter-spacing: 0;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">游客溢出情况</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div id="container2" style="height: 78%;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--各景点人数统计-->
+                    <div class="dataAllBorder01 cage_cl" style="height:380px;margin-top:3%;letter-spacing: 0;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">各景点人数统计</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div id="container1" style="height: 78%;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+                <!--<div id="item1" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>景点信息</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>等级</th>
+                                    <th>门票</th>
+                                    <th>日游客量</th>
+                                    <th>实时人数</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item2" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>游客溢出情况</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>容量</th>
+                                    <th>实时人数</th>
+                                    <th>溢出情况</th>
+                                    <th>预警情况</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item3" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>景点游客统计</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>日游客量</th>
+                                    <th>实时人数</th>
+                                    <th>月游客量</th>
+                                    <th>历史数据</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>-->
+                <div class="manage_left l_left">
+                    <!--游客男女比例-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">游客男女比例</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div id="container9" style="height: 78%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--游客来源-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:3%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">游客来源</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div id="container10" style="height: 78%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--游客年龄段比例-->
+                    <div class="dataAllBorder01 cage_cl" style="height:290px;margin-top:3%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">游客年龄段比例</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div id="container11" style="height: 78%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+                <div id="item4" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>游客信息库</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>性别</th>
+                                    <th>出生日期</th>
+                                    <th>身份证号</th>
+                                    <th>民族</th>
+                                    <th>户籍地</th>
+                                    <th>来源地</th>
+                                    <th>职业</th>
+                                    <th>学历</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+
+                <div class="map" id="map_zhly"></div>
+
+                <div class="manage_right r_right">
+                    <!--酒店民宿-->
+                    <div class="dataAllBorder01 cage_cl" style="height:210px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">民宿</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div class="minbing" style="font-size: 12px;overflow-y: auto;margin: 0;height: 140px;">
+                                <div class="cun btn15" id="河桥村" style="width: 108px;font-size: 20px;"><span>河桥村</span>
+                                </div>
+                                <div class="cun btn15" id="金燕村" style="width: 108px;font-size: 20px;"><span>金燕村</span>
+                                </div>
+                                <div class="cun btn15" id="罗山村" style="width: 108px;font-size: 20px;"><span>罗山村</span>
+                                </div>
+                                <div class="cun btn15" id="泥骆村" style="width: 108px;font-size: 20px;"><span>泥骆村</span>
+                                </div>
+                                <div class="cun btn15" id="蒲村村" style="width: 108px;font-size: 20px;"><span>蒲村村</span>
+                                </div>
+                                <div class="cun btn15" id="七都村" style="width: 108px;font-size: 20px;"><span>七都村</span>
+                                </div>
+                                <div class="cun btn15" id="秀溪村" style="width: 108px;font-size: 20px;"><span>秀溪村</span>
+                                </div>
+                                <div class="cun btn15" id="学川村" style="width: 108px;font-size: 20px;"><span>学川村</span>
+                                </div>
+                                <div class="cun btn15" id="云浪村" style="width: 108px;font-size: 20px;"><span>云浪村</span>
+                                </div>
+                                <div class="cun btn15" id="中鑫村" style="width: 108px;font-size: 20px;"><span>中鑫村</span>
+                                </div>
+                                <div class="cun btn15" id="聚秀村" style="width: 108px;font-size: 20px;"><span>聚秀村</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--景点数量总数-->
+                    <div class="dataAllBorder01 cage_cl" style="height:150px;margin-top:3%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">景点数量总数</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div id="container12" style="height: 90%;display:none"></div>
+                            <div class="basic_data">
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">总数</div>
+                                    <div><span id="jd_allcount" class="bacic_number bacic_number1">3</span><span
+                                            class="bacic_company">个</span></div>
+                                </div>
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">在营</div>
+                                    <div><span id="jd_zycount" class="bacic_number bacic_number1">3</span><span
+                                            class="bacic_company">个</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--餐饮数量总数-->
+                    <div class="dataAllBorder01 cage_cl" style="height:150px;margin-top:3%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">餐饮数量总数</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div id="container6" style="height: 90%;display:none"></div>
+                            <div class="basic_data">
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">总数</div>
+                                    <div><span class="bacic_number bacic_number2" id="canyin_zs"></span><span
+                                            class="bacic_company">个</span></div>
+                                </div>
+                                <div class="basic_information_two">
+                                    <div class="bacic_title">在营</div>
+                                    <div><span class="bacic_number bacic_number2" id="canyin_zy"></span><span
+                                            class="bacic_company">个</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--酒店民宿入驻情况-->
+                    <div class="dataAllBorder01 cage_cl" style="height:390px;margin-top:3%;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">酒店民宿入驻情况</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div id="container5" style="height: 83%;margin:0 15px;"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+                <!--景点分布地图点-->
+                <div id="item7map" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>景点分布地图点</h1>
+                        <div style="height:500px;" id="map_jingdian">
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item8" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>民宿酒店入住情况</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>酒店名称</th>
+                                    <th>XX酒店</th>
+                                    <th>XX民宿</th>
+                                    <th>XX酒店</th>
+                                    <th>XX民宿</th>
+                                    <th>XX酒店</th>
+                                    <th>XX民宿</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div class="manage_right r_right">
+                    <!--智慧公厕使用情况分析-->
+                    <div class="dataAllBorder01 cage_cl" style="height:400px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="padding: 15px 0;display: flex;">
+                                <span style="margin-right: 10px;">智慧公厕使用情况分析</span>
+                                <span style="overflow: hidden;flex: 1;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div class="wrap wrap_gongce adduser">
+                                <ul id="ul_gongce" class="zhihuigongce">
+                                    <!--<li><p><span>河桥老街</span><span>剩余：13</span><span class="btn5map" style="width:auto;height:auto;cursor:pointer;">查看坐标</span></p></li>
+                                    <li><p><span>柳溪江码头</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>唐昌首镇</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>风之谷</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>曙光亭</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>瑞晶石花洞</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>河桥镇农博馆</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>观音阁</span><span>剩余：13</span><span>查看坐标</span></p></li>
+                                    <li><p><span>急流勇进</span><span>剩余：13</span><span>查看坐标</span></p></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                    <!--停车位分析-->
+                    <div class="dataAllBorder01 cage_cl" style="height:400px;margin-top:3%;padding-bottom: 20px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">停车位分析</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;"
+                                        src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div class="wrap wrap_tingche adduser" style="height:100%;" id="div_tingche"></div>
+                        </div>
+                        <div class="boxfoot"></div>
+                    </div>
+                </div>
+                <!--地图显示-->
+                <div id="item5map" class="item item--mod" style="width:80%;max-width:1350px;">
+                    <div class="table-wrapper" style="height:80%;">
+                        <h1>智慧公厕地图点</h1>
+                        <div id="showvideo" onclick="zhdVideo(window.clickindex)"
+                            style="font-size: 20px;line-height: 2;font-weight: bold;cursor: pointer;display: inline-block;">
+                            查看监控</div>
+                        <div style="height:650.000006px;" id="map_gongce">
+                        </div>
+
+
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="zhdjk" class="item item--mod" style="width:40%;">
+                    <div class="table-wrapper" style="height:80%;">
+                        <h1>智慧公厕监控</h1>
+                        <div style="height:550px;overflow-y: auto;" id="zhdvideolist">
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item6map" class="item item--mod" style="width:80%;max-width:1350px;">
+                    <div class="table-wrapper" style="height:80%;">
+                        <h1>停车位地图点</h1>
+                        <div style="height:650.000006px;" id="map_tingche">
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item5" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>智慧公厕</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>位置</th>
+                                    <th>使用情况</th>
+                                    <th>空气质量</th>
+                                    <th>水量预警</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item6" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;">
+                        <h1>智慧停车</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>位置</th>
+                                    <th>已用车位</th>
+                                    <th>剩余车位</th>
+                                    <th>收入</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                    <td>Content</td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <!--酒店民宿-->
+                <div id="jdms" class="item item--mod"
+                    style="height: 800px;;width:1350px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+                    <div class="table-wrapper" style="height:80%;">
+                        <h1>名宿详情列表</h1>
+                        <div style="height:50px;" id="jdms_info">
+                        </div>
+                        <div style="height: 650px;overflow-y: auto;">
+                            <table class="fl-table">
+                                <thead style="font-size: 24px;">
+                                    <tr>
+                                        <th>名宿名称</th>
+                                        <th>名宿地址</th>
+                                        <th>联系方式</th>
+                                        <th>名宿状态</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="jdms_table">
+                                <tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.limarquee.js"></script>
+
+    <!--<script src="js/index.js"></script>-->
+    <script src="js/jquery.leoTextAnimate.js"></script>
+    <script src="js/jquery.popup.js"></script>
+    <script type="text/javascript"
+        src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+    <script>
+        $('.bacic_number').leoTextAnimate({
+            autorun: true, //是否自动运行
+            fixed: [',', ':', '.'], //
+            start: '-'
+        });
+        setInterval(function () {
+            $('.bacic_number1').leoTextAnimate({
+                autorun: true, //是否自动运行
+                fixed: [',', ':', '.'], //
+                start: '-'
+            });
+        }, 4000)
+        setInterval(function () {
+            $('.bacic_number2').leoTextAnimate({
+                autorun: true, //是否自动运行
+                fixed: [',', ':', '.'], //
+                start: '-'
+            });
+        }, 5000)
+    </script>
+    <script>
+        // 定义echarts图表动画
+        function chartAnimation(option, myChart, t) {
+            var isSet = true // 为了做判断：当鼠标移动上去的时候，自动高亮就被取消
+            var charPie3currentIndex = 0
+            // 2、鼠标移动上去的时候的高亮动画
+            myChart.on('mouseover', function (param) {
+                isSet = false
+                clearInterval(startCharts)
+                // 取消之前高亮的图形
+                myChart.dispatchAction({
+                    type: 'downplay',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+                // 高亮当前图形
+                myChart.dispatchAction({
+                    type: 'highlight',
+                    seriesIndex: 0,
+                    dataIndex: param.dataIndex
+                })
+                // 显示 tooltip
+                myChart.dispatchAction({
+                    type: 'showTip',
+                    seriesIndex: 0,
+                    dataIndex: param.dataIndex
+                })
+            })
+            // 3、自动高亮展示
+            var chartHover = function () {
+                // var $obj=$this;
+                var dataLen = option.series[0].data.length;
+                //console.log(123)
+                //console.log(dataLen)
+                // console.log($obj)
+                // console.log($obj.series[0])
+                // console.log($obj.series[0].data)
+                // 取消之前高亮的图形
+                myChart.dispatchAction({
+                    type: 'downplay',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+                charPie3currentIndex = (charPie3currentIndex + 1) % dataLen
+                // 高亮当前图形
+                myChart.dispatchAction({
+                    type: 'highlight',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+                // 显示 tooltip
+                myChart.dispatchAction({
+                    type: 'showTip',
+                    seriesIndex: 0,
+                    dataIndex: charPie3currentIndex
+                })
+            }
+            // chartHover(option)
+            var startCharts = setInterval(chartHover, t)
+            // 4、鼠标移出之后，恢复自动高亮
+            myChart.on('mouseout', function (param) {
+                if (!isSet) {
+                    startCharts = setInterval(chartHover, t)
+                    isSet = true
+                }
+            })
+        }
+    </script>
+    <script>
+        var baseUrl = window.sessionStorage.getItem("path");
+    </script>
+    <script>
+        $(function () {
+            window.plist = [];
+            window.zhdvideos = [];
+            window.clickindex = 0;
+        });
+
+        // var map = new BMap.Map("map_zhly", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+        // map.centerAndZoom(new BMap.Point(119.247261, 30.109483), 16);  // 初始化地图,设置中心点坐标和地图级别
+
+        // var mapStyle = {
+        //     style: "light"
+        // };
+        // map.setMapStyle(mapStyle);
+        // //map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        // map.enableScrollWheelZoom(true);
+    </script>
+    <script>
+        // 酒店民宿数量总数
+        // $(function () {
+        //     $.ajax({
+        //         url: baseUrl + 'api/v1/AppTongji/AppTongji/jiudian',
+        //         method: 'get',
+        //         success: function (data) {
+        //             $("#jiudianms_zs").html(data.data[0].aa);
+        //             $("#jiudianms_zy").html(data.data[0].bb);
+        //         },
+        //         error: function (data) {
+        //             console.log("数据请求失败")
+        //             console.log(data);
+        //         }
+        //     });
+        // });
+        $(function () {
+            let elems = $('.btn15');
+            console.log(elems);
+            for (let i = 0; i < elems.length; i++) {
+                let v = $(elems[i]).attr('id');
+                $.ajax({
+                    url: baseUrl + 'api/v1/AppTongji/AppTongji/HotelCount?village=' + v,
+                    method: 'get',
+                    success: function (data) {
+                        console.log(111111);
+                        console.log(data);
+                        let text = $(elems[i]).text();
+                        $(elems[i]).text(text + '(' + data.data + ')');
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+            }
+
+        });
+
+        $('.btn15').on('click', function () {
+            let vli = $(this).attr('id');
+            console.log(vli);
+            $('#jdms_info').html('');
+            $('#jdms_table').html('');
+
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/Hotel?village=' + vli,
+                method: 'get',
+                success: function (data) {
+                    console.log(data);
+                    $('#jdms_info').append('<div class="hotelInfo">' + vli + '酒店民宿总数:' + data.data.all +
+                        '家,正在营业:' + data.data.normal + '家</div>');
+                    let list = data.data.alllist;
+                    for (let i = 0; i < list.length; i++) {
+                        $('#jdms_table').append('<tr><td style="font-size:20px;">' + list[i].hotelName + '</td><td style="font-size:20px;">' + list[i].hotelLocation + '</td><td style="font-size:20px;">' + list[i].hotelPhone + '</td><td style="font-size:20px;">' + list[i].hotelType + '</td></tr>')
+                    }
+
+                },
+                error: function (data) {
+                    console.log("数据请求失败")
+                    console.log(data);
+                }
+            });
+            $('#jdms').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $.ajax({
+            url: 'http://112.17.130.233:4474/api/v1/Video/Video/ZHDVideo3',
+            method: 'get',
+            success: function (data) {
+                console.log(3333333);
+                console.log(data);
+                window.zhdvideos = data.data;
+                //window.list = vlist;
+
+            },
+            error: function (data) {
+                console.log("监控数据请求失败")
+                console.log(data);
+            }
+        });
+
+        function zhdVideo(e) {
+            $("#zhdvideolist").html('');
+            console.log(45645465);
+
+            console.log(e);
+            let varr = [];
+            if (e == 0) {
+                varr = window.zhdvideos.filter(x => x.shebeiAddress == "蒲溪旁3A公厕");
+            }
+            if (e == 1) {
+                varr = window.zhdvideos.filter(x => x.shebeiAddress == "新街停车场旁3A公厕");
+            }
+            console.log(window.zhdvideos);
+            if (varr.length > 0) {
+                // for (let i = 0; i < varr.length; i++) {
+                $.ajax({
+                    url: 'http://112.17.130.233:44444/api/video/VideoUrl?indexcode=' + varr[0].xlShebeiId,
+                    method: 'get',
+                    success: function (data) {
+                        console.log(66666);
+                        console.log(data);
+                        $("#zhdvideolist").append(
+                            '<div class="btn2" style="width:60%;margin:20px auto;text-align:center;line-height:2;"><div  class="jiankongtext">当前视频来源--' +
+                            varr[0].shebeiAddress +
+                            '</div><div onclick="bbclick(this)" class="ytkz2" id="' + varr[0]
+                                .xlShebeiId + '">云台控制</div><div style="margin-top:10px;"><video id="vedzhplay' + 0 +
+                            '" class="video-js" autoplay="autoplay" controls preload="auto" style="width:100%;height:335px; margin:0 auto"> <source src="' +
+                            data.vdata.data.url +
+                            '" type="application/x-mpegURL" /></video></div></div>');
+                        let id = "vedzhplay" + 0;
+                        console.log(id);
+
+                        let player = videojs(id);
+                        window.plist.push(player);
+                        player.play();
+                    },
+                    error: function (err) {
+                        console.log(err);
+
+                    }
+                })
+                // }
+            }
+
+
+            $('#zhdjk').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    console.log('0')
+                    for (let i = 0; i < window.plist.length; i++) {
+                        window.plist[i].pause();
+                    }
+                    // pv_player.pause();
+                    // pv_player.src([]);
+                },
+                onPopupInit: function e() {
+                    console.log('1')
+
+                }
+            });
+        }
+    </script>
+    <script>
+        //餐饮数量总数
+        $(function () {
+            $.ajax(
+                {
+                    url: baseUrl + 'api/v1/AppTongji/AppTongji/canyishuliang',
+                    method: 'get',
+                    success: function (data) {
+                        console.log(112131);
+
+                        console.log(data);
+                        $("#canyin_zs").html(data.data[0].aa);
+                        $("#canyin_zy").html(data.data[0].bb);
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+        });
+
+    </script>
+
+    <script>
+        //酒店民宿入驻情况
+        $(function () {
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/jiudianruzhu',
+                method: 'get',
+                success: function (data) {
+                    console.log(data);
+                    var myChart = echarts.init(document.getElementById('container5'));
+                    // 指定图表的配置项和数据
+                    option = {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            x: 'left',
+                            data: ['民宿', '酒店'],
+                            textStyle: {
+                                color: "#fff",
+                                fontSize: 16
+                            }
+                        },
+                        calculable: false,
+                        graphic: {
+                            //图形中间文字
+                            type: "text",
+                            left: "center",
+                            top: "center",
+                            style: {
+                                text: "入驻情况",
+                                textAlign: "center",
+                                fill: "#fff",
+                                fontSize: 20
+                            }
+                        },
+                        series: [{
+                            name: '入驻情况',
+                            type: 'pie',
+                            radius: ['40%', '60%'],
+                            center: ['50%', '50%'],
+                            label: {
+                                normal: {
+                                    textStyle: {
+                                        fontSize: 16
+                                    }
+                                }
+                            },
+                            data: [{
+                                value: data.data[0].bb, name: '民宿',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#00ffff'
+
+                                    }
+                                }
+                            }, {
+                                value: data.data[0].aa, name: '酒店',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#ffea00'
+
+                                    }
+                                }
+                            }]
+                        }]
+                    };
+                    myChart.setOption(option);
+                    // 调用饼图动画函数
+                    chartAnimation(option, myChart, 3500);
+                },
+                error: function (err) {
+                    //alert(err);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        //游客来源
+        $(function () {
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/youeklaiyuan',
+                method: 'get',
+                success: function (data) {
+                    console.log(data);
+                    var myChart = echarts.init($("#container10")[0]);
+                    // 指定图表的配置项和数据
+                    option = {
+
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            x: 'left',
+                            data: ['省内', '省外'],
+                            textStyle: {
+                                color: "#fff",
+                                fontSize: 16
+                            }
+                        },
+                        calculable: false,
+                        graphic: {       //图形中间文字
+                            type: "text",
+                            left: "center",
+                            top: "center",
+                            style: {
+                                text: "游客来源",
+                                textAlign: "center",
+                                fill: "#fff",
+                                fontSize: 20
+                            }
+                        },
+                        series: [{
+                            name: '游客来源',
+                            type: 'pie',
+                            radius: ['50%', '80%'],
+                            center: ['50%', '50%'],
+                            label: {
+                                normal: {
+                                    textStyle: {
+                                        fontSize: 16
+                                    }
+                                }
+                            },
+                            data: [{
+                                value: data.data[0].aa, name: '省内',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#00ffff'
+
+                                    }
+                                }
+                            }, {
+                                value: data.data[0].bb, name: '省外',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#ffea00'
+                                    }
+                                }
+                            }]
+                        }]
+                    };
+                    myChart.setOption(option);
+                    // 调用饼图动画函数
+                    chartAnimation(option, myChart, 3000);
+                },
+                error: function (err) {
+                    //alert(err);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        //游客男女比例
+        $(function () {
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/youkenannv',
+                method: 'get',
+                success: function (data) {
+                    console.log(data);
+                    var myChart = echarts.init($("#container9")[0]);
+                    // 指定图表的配置项和数据
+                    option = {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            x: 'left',
+                            data: ['男', '女'],
+                            textStyle: {
+                                color: "#fff",
+                                fontSize: 16
+                            }
+                        },
+                        calculable: false,
+                        graphic: {       //图形中间文字
+                            type: "text",
+                            left: "center",
+                            top: "center",
+                            style: {
+                                text: "男女比例",
+                                textAlign: "center",
+                                fill: "#fff",
+                                fontSize: 20
+                            }
+                        },
+                        series: [{
+                            name: '男女比例',
+                            type: 'pie',
+                            radius: ['50%', '80%'],
+                            center: ['50%', '50%'],
+                            label: {
+                                normal: {
+                                    textStyle: {
+                                        fontSize: 16
+                                    }
+                                }
+                            },
+                            data: [{
+                                value: data.data[0].aa, name: '男',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#0a8cff'
+                                    }
+                                }
+                            }, {
+                                value: data.data[0].bb, name: '女',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#00ffff'
+                                    }
+                                }
+                            }]
+                        }]
+                    };
+                    myChart.setOption(option);
+                    // 调用饼图动画函数
+                    chartAnimation(option, myChart, 4000);
+                },
+                error: function (err) {
+                    //alert(err);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        //游客年龄段比例
+        $(function () {
+            $.ajax({
+                url: baseUrl + 'api/v1/AppTongji/AppTongji/youkeage',
+                method: 'get',
+                success: function (data) {
+                    console.log(data);
+                    var myChart = echarts.init($("#container11")[0]);
+                    // 指定图表的配置项和数据
+                    option = {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            x: 'left',
+                            data: ['幼年', '少年', '青年', '中年', '老年'],
+                            textStyle: {
+                                color: "#fff",
+                                fontSize: 16
+                            }
+                        },
+                        calculable: false,
+                        graphic: {
+                            //图形中间文字
+                            type: "text",
+                            left: 180,
+                            top: "center",
+                            style: {
+                                text: "游客年龄",
+                                textAlign: "center",
+                                fill: "#fff",
+                                fontSize: 20
+                            }
+                        },
+                        series: [{
+                            name: '游客年龄',
+                            type: 'pie',
+                            radius: ['50%', '80%'],
+                            center: ['65%', '50%'],
+                            label: {
+                                normal: {
+                                    textStyle: {
+                                        fontSize: 16
+                                    }
+                                }
+                            },
+                            data: [{
+                                value: data.data[0].ee, name: '幼年',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#8CC142'
+                                    }
+                                }
+                            }, {
+                                value: data.data[0].dd, name: '少年',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#23977A'
+                                    }
+                                }
+                            }, {
+                                value: data.data[0].cc, name: '青年',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#36AFCE'
+                                    }
+                                }
+                            }, {
+                                value: data.data[0].bb, name: '中年',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#ffea00'
+                                    }
+                                }
+                            }, {
+                                value: data.data[0].aa, name: '老年',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#00ffff'
+                                    }
+                                }
+                            }]
+                        }]
+                    };
+                    myChart.setOption(option);
+                    // 调用饼图动画函数
+                    chartAnimation(option, myChart, 3000);
+                },
+                error: function (err) {
+                    //alert(err);
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        $('.btn1').on('click', function () {
+            $('#item1').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn2').on('click', function () {
+            $('#item2').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn3').on('click', function () {
+            $('#item3').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn4').on('click', function () {
+            $('#item4').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn8').on('click', function () {
+            $('#item8').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.bacic_number').leoTextAnimate({
+            autorun: true, //是否自动运行
+            fixed: [',', ':', '.'], //
+            start: '-'
+        });
+    </script>
+    <script>
+        $('.five_number').leoTextAnimate({
+            autorun: true, //是否自动运行
+            fixed: [',', ':', '.'], //
+            start: '-'
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#xiangying div").bind("click", function () {
+                $(this).siblings('div').removeClass('jibie05');  // 删除其他兄弟元素的样式
+                $(this).addClass('jibie05');
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#wurenji div").bind("click", function () {
+                $(this).siblings('div').removeClass('wrj05');  // 删除其他兄弟元素的样式
+                $(this).addClass('wrj05');
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#jiuyuandui div").bind("click", function () {
+                $(this).siblings('div').removeClass('jyd05');  // 删除其他兄弟元素的样式
+                $(this).addClass('jyd05');
+            });
+        });
+    </script>
+    <script>
+        var an1 = $('.xianshi01');
+        var an2 = $('.xianshi02');
+        var an3 = $('.xianshi03');
+        var an4 = $('.xianshi04');
+        an1.on('click', function () {
+            if (an1.hasClass('xianshi01')) {//如果有‘test’的样式，就去除他的样式，添加‘active’的样式
+                an1.removeClass('xianshi01').addClass('yingchang01');
+            } else if (an1.hasClass('yingchang01')) {//如果有‘active’的样式，就祛除他的样式，添加‘test’的样式
+                an1.removeClass('yingchang01').addClass('xianshi01');
+            }
+        })
+        an2.on('click', function () {
+            if (an2.hasClass('xianshi02')) {//如果有‘test’的样式，就去除他的样式，添加‘active’的样式
+                an2.removeClass('xianshi02').addClass('yingchang02');
+            } else if (an2.hasClass('yingchang02')) {//如果有‘active’的样式，就祛除他的样式，添加‘test’的样式
+                an2.removeClass('yingchang02').addClass('xianshi02');
+            }
+        })
+        an3.on('click', function () {
+            if (an3.hasClass('xianshi03')) {//如果有‘test’的样式，就去除他的样式，添加‘active’的样式
+                an3.removeClass('xianshi03').addClass('yingchang03');
+            } else if (an3.hasClass('yingchang03')) {//如果有‘active’的样式，就祛除他的样式，添加‘test’的样式
+                an3.removeClass('yingchang03').addClass('xianshi03');
+            }
+        })
+        an4.on('click', function () {
+            if (an4.hasClass('xianshi04')) {//如果有‘test’的样式，就去除他的样式，添加‘active’的样式
+                an4.removeClass('xianshi04').addClass('yingchang04');
+            } else if (an4.hasClass('yingchang04')) {//如果有‘active’的样式，就祛除他的样式，添加‘test’的样式
+                an4.removeClass('yingchang04').addClass('xianshi04');
+            }
+        })
+    </script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init($("#bome2")[0]);
+        // 指定图表的配置项和数据
+        var option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                x: 30,
+                y: 10,
+                x2: 10,
+                y2: 30,
+                borderWidth: 0
+            },
+            calculable: true,
+            xAxis: [{
+                type: 'category',
+                data: ['2月', '4月', '6月', '8月', '10月', '12月'],
+                splitLine: {
+                    show: false
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#a4a7ab',
+                        align: 'center'
+                    }
+                }
+            }],
+            yAxis: [{
+                type: 'value',
+                splitLine: {
+                    show: false
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#a4a7ab'
+                    }
+                }
+            }],
+            series: [{
+                name: '矫正人员',
+                type: 'bar',
+                barWidth: '30',
+                data: [124, 522, 235, 365, 214, 265,],
+                itemStyle: {
+                    normal: {
+                        color: "#00ffff"
+                    }
+                }
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        // 调用饼图动画函数
+        chartAnimation(option, myChart, 3500);
+    </script>
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        //var myChart = echarts.init($("#zhuzhuangtu")[0]);
+        var myChart = echarts.init(document.getElementById('zhuzhuangtu'));
+        option = {
+            color: ['#3398DB'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            series: [{
+                name: '直接访问',
+                type: 'bar',
+                barWidth: '60%',
+                data: [10, 52, 200, 334, 390, 330, 220]
+            }]
+        };
+        myChart.setOption(option);
+        // 调用饼图动画函数
+        chartAnimation(option, myChart, 3500);
+    </script>
+
+    <script>
+        var number;
+        $(function () {
+            if (window.screen.height <= 768) {
+                number = 4;
+            } else if (window.screen.height > 768 && window.screen.height <= 900) {
+                number = 6
+            } else if (window.screen.height > 1080) {
+                number = 8
+            }
+        });
+
+        $(function () {
+            $(".tit02Diva a").each(function (index) {
+                $(this).on("click", function () {
+                    $(".data_map").eq(index).fadeIn().siblings(".data_map").stop().hide();
+                    $(this).prev('i').removeClass('i_crlieAction');
+                    $(this).siblings('a').prev('i').addClass('i_crlieAction');
+
+                })
+            });
+            Echarts();
+            $("#fresh_tool").click(function (event) {
+                event.stopPropagation();
+                cancel();
+            })
+
+        });
+    </script>
+
+    <script>
+        //游客溢出情况
+        // function Echarts() {
+        //     var myChart = echarts.init($("#container2")[0]);
+        //     option = {
+
+        //         tooltip: {
+        //             trigger: 'item',
+        //             formatter: "{a} <br/>{b} : {c} ({d}%)"
+        //         },
+        //         legend: {
+        //             orient: 'horizontal',
+        //             x: 'left',
+        //             left:0,
+        //             data: ['游客较少', '游客中等', '游客较多'],
+        //             textStyle: {
+        //                 color: "#fff",
+        //                 fontSize:16
+        //             }
+        //         },
+        //         calculable: false,
+        //         graphic: {       //图形中间文字
+        //             type: "text",
+        //             left: "center",
+        //             top: 110,
+        //             style: {
+        //                 text: "游客溢出",
+        //                 textAlign: "center",
+        //                 fill: "#fff",
+        //                 fontSize: 18
+        //             }
+        //         },
+        //         series: [{
+        //             name: '游客溢出',
+        //             type: 'pie',
+        //             radius: ['40%', '65%'],
+        //             center: ['50%', '55%'],
+        //             label: {
+        //                             normal: {
+        //                                 textStyle: {
+        //                                     fontSize:16
+        //                                 }
+        //                             }
+        //                         },
+        //             data: [{
+        //                 value: 5, name: '游客较少',
+        //                 itemStyle: {
+        //                     normal: {
+        //                         color: '#00ffff'
+
+        //                     }
+        //                 }
+        //             },{
+        //                 value: 4, name: '游客中等',
+        //                 itemStyle: {
+        //                     normal: {
+        //                         color: '#ffea00'
+
+        //                     }
+        //                 }
+        //             },{
+        //                 value: 5, name: '游客较多',
+        //                 itemStyle: {
+        //                     normal: {
+        //                         color: '#0a8cff'
+
+        //                     }
+        //                 }
+        //             }]
+        //         }]
+        //     };
+
+        //     myChart.setOption(option);
+        //     // 调用饼图动画函数
+        //     chartAnimation(option,myChart,3500);
+        // };
+        function Echarts() {
+            var myChart = echarts.init($("#container2")[0]);
+            option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        lineStyle: {
+                            color: '#57617B'
+                        }
+                    }
+                },
+                legend: {
+
+                    //icon: 'vertical',
+                    data: ['游客溢出'],
+                    //align: 'center',
+                    // right: '35%',
+                    top: '0',
+                    textStyle: {
+                        color: "#fff",
+                        fontSize: 16
+                    },
+                    // itemWidth: 15,
+                    // itemHeight: 15,
+                    itemGap: 20,
+                },
+                grid: {
+                    left: '0',
+                    right: '20',
+                    top: '10',
+                    bottom: '0',
+                    containLabel: true
+                },
+                xAxis: [{
+                    type: 'category',
+                    boundaryGap: false,
+
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 16
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    data: ['鼎升门', '稻田公园', '耶稣教堂']
+                }, {
+
+                }],
+                yAxis: [{
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 16
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    }
+                }],
+                series: [{
+                    name: '游客溢出(人)',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    label: {
+                        normal: {
+                            textStyle: {
+                                fontSize: 16
+                            }
+                        }
+                    },
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(24, 163, 64, 0.3)'
+                            }, {
+                                offset: 0.8,
+                                color: 'rgba(24, 163, 64, 0)'
+                            }], false),
+                            shadowColor: 'rgba(0, 0, 0, 0.1)',
+                            shadowBlur: 10
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#cdba00',
+                            borderColor: 'rgba(137,189,2,0.27)',
+                            borderWidth: 12
+                        }
+                    },
+                    data: [500, 400, 200]
+                }]
+            };
+
+
+            myChart.setOption(option);
+            // 调用饼图动画函数
+            chartAnimation(option, myChart, 3000);
+        };
+
+        //各景点人数统计
+        $(function () {
+            var myChart = echarts.init($("#container1")[0]);
+            option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        lineStyle: {
+                            color: '#57617B'
+                        }
+                    }
+                },
+                legend: {
+
+                    //icon: 'vertical',
+                    data: ['河桥老街', '唐昌首镇'],
+                    //align: 'center',
+                    // right: '35%',
+                    top: '0',
+                    textStyle: {
+                        color: "#fff",
+                        fontSize: 16
+                    },
+                    // itemWidth: 15,
+                    // itemHeight: 15,
+                    itemGap: 20,
+                },
+                grid: {
+                    left: '0',
+                    right: '20',
+                    top: '10',
+                    bottom: '0',
+                    containLabel: true
+                },
+                xAxis: [{
+                    type: 'category',
+                    boundaryGap: false,
+
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 18
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+                }, {
+
+                }],
+                yAxis: [{
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 18
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    }
+                }],
+                series: [{
+                    name: '河桥老街',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    label: {
+                        normal: {
+                            textStyle: {
+                                fontSize: 16
+                            }
+                        }
+                    },
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(24, 163, 64, 0.3)'
+                            }, {
+                                offset: 0.8,
+                                color: 'rgba(24, 163, 64, 0)'
+                            }], false),
+                            shadowColor: 'rgba(0, 0, 0, 0.1)',
+                            shadowBlur: 10
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#cdba00',
+                            borderColor: 'rgba(137,189,2,0.27)',
+                            borderWidth: 12
+                        }
+                    },
+                    data: [12000, 5800, 14200, 13400, 15000, 12000, 11000, 12500, 14500, 12200, 16500, 12200]
+                }, {
+                    name: '唐昌首镇',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(39, 122,206, 0.3)'
+                            }, {
+                                offset: 0.8,
+                                color: 'rgba(39, 122,206, 0)'
+                            }], false),
+                            shadowColor: 'rgba(0, 0, 0, 0.1)',
+                            shadowBlur: 10
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#277ace',
+                            borderColor: 'rgba(0,136,212,0.2)',
+                            borderWidth: 12
+                        }
+                    },
+                    data: [12000, 11000, 12500, 14500, 12200, 16500, 12200, 14400, 18200, 14800, 13400, 15000]
+                }]
+            };
+
+
+            myChart.setOption(option);
+            // 调用饼图动画函数
+            chartAnimation(option, myChart, 3000);
+        });
+    </script>
+
+    <!--智慧公厕，停车位，景点信息地图点位显示-->
+    <script>
+        console.log("进入阿贾克斯")
+        $.ajax({
+            url: baseUrl + 'api/v1/MapQian/Allmap/gongcelist',//加载所有公厕数据
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                //console.log("公厕请求成功");
+                //console.log(data.data);
+                for (var i = 0; i < data.data.length; i++) {
+                    $("#ul_gongce").append('<li><p><span>' + data.data[i].key.gtoiletAddress + '</span><span>' + data.data[i].count + '个</span><span><span class="btn5map" style="width:auto;height:auto;cursor:pointer;">查看坐标</span><label class="lab_name" style="display:none;">' + data.data[i].key.gtoiletAddress + '</label></span></p></li>')
+                }
+
+                $(function () {
+                    $('.wrap_gongce').liMarquee({
+                        direction: 'up',//向上滚动
+                        runshort: false,//内容不足时不滚动
+                        scrollamount: 20//速度
+                    });
+                });
+
+                $('.btn5map').on('click', function () {
+                    // console.log("点击的同辈元素")
+                    //console.log($(this).siblings(".lab_name").html())
+                    $('#item5map').popup({
+                        time: 1000,
+                        classAnimateShow: 'slideInUp',
+                        classAnimateHide: 'fadeOut',
+                        onPopupClose: function e() {
+                            // console.log('0')
+                        },
+                        onPopupInit: function e() {
+                            // console.log('1')
+                        }
+                    });
+
+                    let vname = $(this).siblings(".lab_name").html();
+                    console.log(vname)
+                    if (vname == "河桥镇柳溪") {
+                        window.clickindex = 0;
+                    }
+                    if (vname == "东门大停车场") {
+                        window.clickindex = 1;
+                    }
+                    var lnglat = new BMap.Point(119.247261, 30.109483);
+
+                    var map = new BMap.Map("map_gongce", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+                    map.centerAndZoom(lnglat, 16);  // 初始化地图,设置中心点坐标和地图级别
+
+                    map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+                    map.enableScrollWheelZoom(true);
+
+
+                    $.ajax({
+                        url: baseUrl + 'api/v1/MapQian/Allmap/gongcedata',//加载所有公厕数据
+                        data: { name: $(this).siblings(".lab_name").html() },
+                        type: "get",
+                        dataType: "json",
+                        success: function (data) {
+                            console.log("位置公厕请求成功");
+                            console.log(data);
+
+                            //判断获取的点位数据是否合法
+                            if (data.data.length > 0) {
+                                for (var i = 0; i < data.data.length; i++) {
+                                    if (data.data[i].lon != "" && data.data[i].lon != null && data.data[i].lat != "" && data.data[i].lat != null) {
+                                        lnglat = new BMap.Point(data.data[i].lon, data.data[i].lat);//地图中心点坐标
+                                        break;
+                                    }
+                                }
+                            }
+                            map.centerAndZoom(lnglat, 16);  // 重新设置地图中心点
+
+                            for (var i = 0; i < data.data.length; i++) {
+                                var x_pi = 3.14159265358979324;
+                                var x = parseFloat(data.data[i].lon);
+                                var y = parseFloat(data.data[i].lat);
+                                var z = Math.sqrt(x * x + y * y) + 0.00002 * Math.sin(y * x_pi);
+                                var theta = Math.atan2(y, x) + 0.000003 * Math.cos(x * x_pi);
+                                var lng = (z * Math.cos(theta) + 0.0065).toFixed(5);
+                                var lat = (z * Math.sin(theta) + 0.006).toFixed(5);
+                                var point = new BMap.Point(lng, lat);
+                                map.centerAndZoom(point, 0);
+                                var marker = new BMap.Marker(point);// 创建标注（智慧公厕地图点位）
+
+                                //创建标点自定义属性
+                                marker.uuid = data.data[i].gtoiletUuid;
+                                marker.lon = lng;
+                                marker.lat = lat;
+                                marker.picture = baseUrl + data.data[i].picture;
+                                marker.name = data.data[i].gtoiletName;//名称
+                                marker.weizhi = data.data[i].gtoiletAddress;//位置
+                                marker.syqk = data.data[i].gtoiletStaues;//使用情况
+                                marker.kqzl = data.data[i].kongqiZhil;//空气质量
+                                marker.slyj = data.data[i].waterYujin;//水量预警
+                                map.addOverlay(marker);
+
+                                //监听点位点击事件
+                                marker.addEventListener("click", function (e) {
+                                    var opts = {
+                                        width: 250,     // 信息窗口宽度
+                                        height: 320,     // 信息窗口高度
+                                        title: "<h4 style='text-align:center;font-weight:bold;'>公厕信息</h4>",  // 信息窗口标题
+                                        fontSize: 10
+                                    }
+                                    var Pointwindow = new BMap.Point(e.target.lon, e.target.lat);//创建一个点位对象
+                                    var infoWindow = new BMap.InfoWindow("<p style='text-align: center;'><img style='width:50%;height:94px;' src='" + e.target.picture + "'/></p><p>公厕名称：" + e.target.name + "</p><p>公厕位置：" + e.target.weizhi + "</p><p>使用情况：" + e.target.syqk + "</p><p>空气质量：" + e.target.kqzl + "</p><p>水量预警：" + e.target.slyj + "</p><p>地图经纬度：" + e.target.lon + "," + e.target.lat + "</p>", opts);  // 创建信息窗口对象
+                                    map.openInfoWindow(infoWindow, Pointwindow);
+                                });
+
+                            }
+
+
+                            ////地图点击事件
+                            //map.addEventListener("click", function (e) {
+                            //    alert("您点击的经纬度:" + e.point.lng + "," + e.point.lat);
+                            //    var point = new BMap.Point(e.point.lng, e.point.lat);
+                            //    map.centerAndZoom(point, 0);
+                            //    var marker = new BMap.Marker(point);        // 创建标注
+                            //    map.addOverlay(marker);
+                            //});
+
+
+
+
+                        }, error: function (data) {
+                            //alert(data);
+                            console.log("位置公厕信息请求失败:");
+                            console.log(data);
+                        }
+                    });
+
+
+
+
+
+
+
+
+                })
+
+
+
+            }, error: function (data) {
+                //alert(data);
+                console.log("公厕请求失败:");
+                console.log(data);
+            }
+        });
+
+        //智慧公厕-更多
+        $('.btn5').on('click', function () {
+            $('#item5map').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+
+            var lnglat = new BMap.Point(119.247261, 30.109483);
+
+            var map = new BMap.Map("map_gongce", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+            map.centerAndZoom(lnglat, 16);  // 初始化地图,设置中心点坐标和地图级别
+
+            map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);
+
+            $.ajax({
+                url: baseUrl + 'api/v1/MapQian/Allmap/gongcedata',//加载所有公厕数据
+                data: { name: "all" },
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    console.log("所有公厕请求成功");
+                    console.log(data.data);
+
+                    //判断获取的点位数据是否合法
+                    if (data.data.length > 0) {
+                        for (var i = 0; i < data.data.length; i++) {
+                            if (data.data[i].lon != "" && data.data[i].lon != null && data.data[i].lat != "" && data.data[i].lat != null) {
+                                lnglat = new BMap.Point(data.data[i].lon, data.data[i].lat);//地图中心点坐标
+                                break;
+                            }
+                        }
+                    }
+
+                    map.centerAndZoom(lnglat, 16);  // 重新设置地图中心点
+                    for (var i = 0; i < data.data.length; i++) {
+                        var x_pi = 3.14159265358979324;
+                        var x = parseFloat(data.data[i].lon);
+                        var y = parseFloat(data.data[i].lat);
+                        var z = Math.sqrt(x * x + y * y) + 0.00002 * Math.sin(y * x_pi);
+                        var theta = Math.atan2(y, x) + 0.000003 * Math.cos(x * x_pi);
+                        var lng = (z * Math.cos(theta) + 0.0065).toFixed(5);
+                        var lat = (z * Math.sin(theta) + 0.006).toFixed(5);
+                        var point = new BMap.Point(lng, lat);
+                        map.centerAndZoom(point, 0);
+                        var marker = new BMap.Marker(point);// 创建标注（智慧公厕地图点位）
+
+                        //创建标点自定义属性
+                        marker.uuid = data.data[i].gtoiletUuid;
+                        marker.lon = lng;
+                        marker.lat = lat;
+                        marker.picture = baseUrl + data.data[i].picture;
+                        marker.name = data.data[i].gtoiletName;//名称
+                        marker.weizhi = data.data[i].gtoiletAddress;//位置
+                        marker.syqk = data.data[i].gtoiletStaues;//使用情况
+                        marker.kqzl = data.data[i].kongqiZhil;//空气质量
+                        marker.slyj = data.data[i].waterYujin;//水量预警
+                        map.addOverlay(marker);
+
+                        //监听点位点击事件
+                        marker.addEventListener("click", function (e) {
+                            var opts = {
+                                width: 250,     // 信息窗口宽度
+                                height: 320,     // 信息窗口高度
+                                title: "<h4 style='text-align:center;font-weight:bold;'>公厕信息</h4>",  // 信息窗口标题
+                                fontSize: 10
+                            }
+                            var Pointwindow = new BMap.Point(e.target.lon, e.target.lat);//创建一个点位对象
+                            var infoWindow = new BMap.InfoWindow("<p style='text-align: center;'><img style='width:50%;' src='" + e.target.picture + "'/></p><p>公厕名称：" + e.target.name + "</p><p>公厕位置：" + e.target.weizhi + "</p><p>使用情况：" + e.target.syqk + "</p><p>空气质量：" + e.target.kqzl + "</p><p>水量预警：" + e.target.slyj + "</p><p>地图经纬度：" + e.target.lon + "," + e.target.lat + "</p>", opts);  // 创建信息窗口对象
+                            map.openInfoWindow(infoWindow, Pointwindow);
+                        });
+
+                    }
+
+
+
+                    ////地图点击事件
+                    //map.addEventListener("click", function (e) {
+                    //    alert("您点击的经纬度:" + e.point.lng + "," + e.point.lat);
+                    //    var point = new BMap.Point(e.point.lng, e.point.lat);
+                    //    map.centerAndZoom(point, 0);
+                    //    var marker = new BMap.Marker(point);        // 创建标注
+                    //    map.addOverlay(marker);
+                    //});
+
+
+
+
+                }, error: function (data) {
+                    //alert(data);
+                    console.log("所有公厕请求失败:");
+                    console.log(data);
+                }
+            });
+
+
+        });
+
+        //停车场
+        function toTCC() {
+            $("#div_tingche").html("");
+            $.ajax({
+                url: 'http://112.17.130.233:4474/api/v1/MapQian/Allmap/tingche',//加载所有停车位
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    console.log("所有停车位请求成功");
+                    console.log(data.data);
+
+                    for (var i = 0; i < data.data.length; i++) {
+                        let parkingLotName = data.data[i].parkingLotName;
+                        console.log(parkingLotName)
+                        if (data.data[i].parkingLotName.length > 7) {
+                            parkingLotName = data.data[i].parkingLotName.substring(0, 7);
+                        }
+                        let schewei = data.data[i].schewei;
+                        console.log(data.data[i].schewei);
+                        if (data.data[i].schewei == "" || data.data[i].schewei == null) {
+                            schewei = 0;
+                        }
+                        $("#div_tingche").append('<ul id="ul_tingche" class="zhihuigongce"></ul>');
+                        $("#ul_tingche").append('<li style="padding:0;"><p style="margin:0;"><span class="itemArea" title="' + parkingLotName + '">' + parkingLotName + '</span><span style="display:inline-block;width:35%;float:left;text-align:left;">空位：' + schewei + '</span><span style="width:25%;float:left;"><span class="btn6map" style="cursor:pointer;width:100%;">查看坐标</span><label style="display:none;" class="lbl_uuid">' + data.data[i].parkingLotUuid + '</label></span></p></li>')
+                    }
+
+                    $(function () {
+                        $('.wrap_tingche').liMarquee({
+                            direction: 'up',//身上滚动
+                            runshort: false,//内容不足时不滚动
+                            scrollamount: 20//速度
+                        });
+                    });
+
+
+                    $('.btn6').on('click', function () {
+                        $('#item6map').popup({
+                            time: 1000,
+                            classAnimateShow: 'slideInUp',
+                            classAnimateHide: 'fadeOut',
+                            onPopupClose: function e() {
+                                // console.log('0')
+                            },
+                            onPopupInit: function e() {
+                                // console.log('1')
+                            }
+                        });
+
+                        var lnglat = new BMap.Point(119.247261, 30.109483);
+
+                        //判断获取的点位数据是否合法
+                        if (data.data.length > 0) {
+                            for (var i = 0; i < data.data.length; i++) {
+                                if (data.data[i].lon != "" && data.data[i].lon != null && data.data[i].lat != "" && data.data[i].lat != null) {
+                                    lnglat = new BMap.Point(data.data[i].lon, data.data[i].lat);
+                                    break;
+                                }
+                            }
+                        }
+
+                        var map = new BMap.Map("map_tingche", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+                        map.centerAndZoom(lnglat, 16);  // 初始化地图,设置中心点坐标和地图级别
+
+                        map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+                        map.enableScrollWheelZoom(true);
+
+                        for (var i = 0; i < data.data.length; i++) {
+                            var point = new BMap.Point(data.data[i].lon, data.data[i].lat);
+                            map.centerAndZoom(point, 0);
+                            var marker = new BMap.Marker(point);// 创建标注（显示危房地图点位）
+                            //创建标点自定义属性
+                            marker.uuid = data.data[i].parkingLotUuid;
+                            marker.lon = data.data[i].lon;
+                            marker.lat = data.data[i].lat;
+                            marker.name = data.data[i].parkingLotName;//名称
+                            marker.zchewei = data.data[i].zchewei;//总车位
+                            marker.ychewei = data.data[i].ychewei;//已用车位
+                            marker.schewei = data.data[i].schewei;//剩余车位
+                            marker.weizhi = data.data[i].parkingLotAddress;//位置
+                            marker.shouru = data.data[i].parkingLotsru;//收入
+                            map.addOverlay(marker);
+
+                            //监听点位点击事件
+                            marker.addEventListener("click", function (e) {
+                                var opts = {
+                                    width: 250,     // 信息窗口宽度
+                                    height: 240,     // 信息窗口高度
+                                    title: "<h4 style='text-align:center;font-weight:bold;'>停车位信息</h4>",  // 信息窗口标题
+                                    fontSize: 10
+                                }
+                                console.log("监听点击事件,获取点击经纬度")
+                                console.log(e.target.lon, e.target.lat)
+                                //var Pointwindow = new BMap.Point(e.target.lon, e.target.lat);//创建一个点位对象
+                                var Pointwindow = new BMap.Point(data.data[i].lon, data.data[i].lat);//创建一个点位对象
+                                var infoWindow = new BMap.InfoWindow("<p>名称：" + e.target.name + "</p><p>位置：" + e.target.weizhi + "</p><p>总车位：" + e.target.zchewei + "</p><p>已用车位：" + e.target.ychewei + "</p><p>剩余车位：" + e.target.schewei + "</p><p>地图经纬度：" + e.target.lon + "," + e.target.lat + "</p>", opts);  // 创建信息窗口对象
+                                map.openInfoWindow(infoWindow, Pointwindow);
+                            });
+
+                        }
+
+                        ////地图点击事件
+                        //map.addEventListener("click", function (e) {
+                        //    alert("您点击的经纬度:" + e.point.lng + "," + e.point.lat);
+                        //    var point = new BMap.Point(e.point.lng, e.point.lat);
+                        //    map.centerAndZoom(point, 0);
+                        //    var marker = new BMap.Marker(point);        // 创建标注
+                        //    map.addOverlay(marker);
+                        //});
+
+
+
+                    });
+
+
+                    $('.btn6map').on('click', function () {
+                        console.log("点击的同辈元素")
+                        console.log($(this).siblings(".lbl_uuid").html())
+                        $('#item6map').popup({
+                            time: 1000,
+                            classAnimateShow: 'slideInUp',
+                            classAnimateHide: 'fadeOut',
+                            onPopupClose: function e() {
+                                // console.log('0')
+                            },
+                            onPopupInit: function e() {
+                                // console.log('1')
+                            }
+
+                        });
+                        var lnglat = new BMap.Point(119.247261, 30.109483);
+                        var map = new BMap.Map("map_tingche", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+                        map.centerAndZoom(lnglat, 16);  // 初始化地图,设置中心点坐标和地图级别
+                        map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+                        map.enableScrollWheelZoom(true);
+
+                        $.ajax({
+                            url: 'http://112.17.130.233:4474/api/v1/MapQian/Allmap/tingchedata',//加载停车场数据
+                            data: { uuid: $(this).siblings(".lbl_uuid").html() },
+                            type: "get",
+                            dataType: "json",
+                            success: function (data) {
+                                console.log("停车场数据请求成功");
+                                console.log(data.data);
+
+                                //判断获取的点位数据是否合法
+                                if (data.data.length > 0) {
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        if (data.data[i].lon != "" && data.data[i].lon != null && data.data[i].lat != "" && data.data[i].lat != null) {
+                                            lnglat = new BMap.Point(data.data[i].lon, data.data[i].lat);
+                                            break;
+                                        }
+                                    }
+                                }
+                                //重新设置地图中心点
+
+                                for (var i = 0; i < data.data.length; i++) {
+
+                                    var x_pi = 3.14159265358979324;
+                                    var x = parseFloat(data.data[i].lon);
+                                    var y = parseFloat(data.data[i].lat);
+                                    var z = Math.sqrt(x * x + y * y) + 0.00002 * Math.sin(y * x_pi);
+                                    var theta = Math.atan2(y, x) + 0.000003 * Math.cos(x * x_pi);
+                                    var lng = (z * Math.cos(theta) + 0.0065).toFixed(5);
+                                    var lat = (z * Math.sin(theta) + 0.006).toFixed(5);
+                                    var point = new BMap.Point(lng, lat);
+                                    //var point = new BMap.Point(data.data[i].lon, data.data[i].lat);
+                                    map.centerAndZoom(point, 0);
+                                    var marker = new BMap.Marker(point);// 创建标注（显示地图点位）
+                                    lnglat = new BMap.Point(lng, lat);
+                                    map.centerAndZoom(lnglat, 16);
+
+
+                                    //创建标点自定义属性
+                                    marker.uuid = data.data[i].parkingLotUuid;
+                                    marker.lon = data.data[i].lon;
+                                    marker.lat = data.data[i].lat;
+                                    marker.name = data.data[i].parkingLotName;//名称
+                                    marker.zchewei = data.data[i].zchewei;//总车位
+                                    marker.ychewei = data.data[i].ychewei;//已用车位
+                                    marker.schewei = data.data[i].schewei;//剩余车位
+                                    marker.weizhi = data.data[i].parkingLotAddress;//位置
+                                    marker.shouru = data.data[i].parkingLotsru;//收入
+                                    map.addOverlay(marker);
+
+                                    //监听点位点击事件
+                                    marker.addEventListener("click", function (e) {
+                                        var opts = {
+                                            width: 250,     // 信息窗口宽度
+                                            height: 240,     // 信息窗口高度
+                                            title: "<h4 style='text-align:center;font-weight:bold;'>停车场信息</h4>",  // 信息窗口标题
+                                            fontSize: 10
+                                        }
+                                        let zchewei = e.target.zchewei;
+                                        if (zchewei == null) {
+                                            zchewei = 0;
+                                        }
+                                        let ychewei = e.target.ychewei;
+                                        if (ychewei == null) {
+                                            ychewei = 0;
+                                        }
+                                        let schewei = e.target.schewei;
+                                        if (schewei == null) {
+                                            schewei = 0;
+                                        }
+                                        var x_pi = 3.14159265358979324;
+                                        var x = parseFloat(e.target.lon);
+                                        var y = parseFloat(e.target.lat);
+                                        var z = Math.sqrt(x * x + y * y) + 0.00002 * Math.sin(y * x_pi);
+                                        var theta = Math.atan2(y, x) + 0.000003 * Math.cos(x * x_pi);
+                                        var lng = (z * Math.cos(theta) + 0.0065).toFixed(5);
+                                        var lat = (z * Math.sin(theta) + 0.006).toFixed(5);
+                                        var Pointwindow = new BMap.Point(lng, lat);//创建一个点位对象
+                                        var infoWindow = new BMap.InfoWindow("<p>名称：" + e.target.name + "</p><p>位置：" + e.target.weizhi + "</p><p>总车位：" + e.target.zchewei + "</p><p>已用车位：" + e.target.ychewei + "</p><p>剩余车位：" + e.target.schewei + "</p><p>地图经纬度：" + e.target.lon + "," + e.target.lat + "</p>", opts);  // 创建信息窗口对象
+                                        map.openInfoWindow(infoWindow, Pointwindow);
+                                    });
+
+                                }
+
+
+
+
+                            }, error: function (data) {
+                                //alert(data);
+                                console.log("停车位数据请求失败:");
+                                console.log(data);
+                            }
+                        });
+
+
+
+
+                    });
+
+
+
+                }, error: function (data) {
+                    //alert(data);
+                    console.log("所有停车位请求失败:");
+                    console.log(data);
+                }
+            });
+
+        }
+
+        $(function () {
+            toTCC();
+            var time = setInterval(function () {
+                toTCC();
+            }, 1000 * 300);
+        });
+
+        //景点信息
+        $.ajax({
+            url: baseUrl + 'api/v1/MapQian/Allmap/jingdaian',//加载景点数据
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                console.log("景点数据请求成功");
+                console.log(data.data);
+                $("#jd_allcount").text(data.data[0].allcount);//景点总数
+                $("#jd_zycount").text(data.data[0].zhengchangcount);//在营景点数
+
+        //         var datatb = data.data[0].datatable;//查询的数据表
+
+        //         $('.btn7').on('click', function () {
+        //             $('#item7map').popup({
+        //                 time: 1000,
+        //                 classAnimateShow: 'slideInUp',
+        //                 classAnimateHide: 'fadeOut',
+        //                 onPopupClose: function e() {
+        //                     // console.log('0')
+        //                 },
+        //                 onPopupInit: function e() {
+        //                     // console.log('1')
+        //                 }
+        //             });
+
+        //             var lnglat = new BMap.Point(119.247261, 30.109483);
+        //             var map = new BMap.Map("map_jingdian", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+        //             map.centerAndZoom(lnglat, 16);  // 初始化地图,设置中心点坐标和地图级别
+
+        //             map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        //             map.enableScrollWheelZoom(true);
+
+        //             //判断获取的点位数据是否合法
+        //             if (datatb.length > 0) {
+        //                 for (var i = 0; i < datatb.length; i++) {
+        //                     if (datatb[i].lon != "" && datatb[i].lon != null && datatb[i].lat != "" && datatb[i].lat != null) {
+        //                         lnglat = new BMap.Point(datatb[i].lon, datatb[i].lat);
+        //                         break;
+        //                     }
+        //                 }
+        //             }
+        //             map.centerAndZoom(lnglat, 16);  // 重新定位地图中心点
+        //             for (var i = 0; i < datatb.length; i++) {
+        //                 var point = new BMap.Point(datatb[i].lon, datatb[i].lat);
+        //                 map.centerAndZoom(point, 0);
+        //                 var marker = new BMap.Marker(point);// 创建标注（显示景点地图点位）
+
+        //                 //创建标点自定义属性
+        //                 marker.uuid = datatb[i].scenicUuid;
+        //                 marker.lon = datatb[i].lon;
+        //                 marker.lat = datatb[i].lat;
+        //                 marker.name = datatb[i].scenicName;//景点名称
+        //                 marker.dengji = datatb[i].scenicGrade;//景点等级
+        //                 marker.menpiao = datatb[i].scenicTickets;//门票
+        //                 marker.dizhi = datatb[i].scenicAddress;//景点地址
+        //                 marker.jieshao = datatb[i].scenicRemarks;//景点介绍
+        //                 marker.zhuangtai = datatb[i].scenicType;//状态
+        //                 map.addOverlay(marker);
+        //                 console.log(marker)
+
+        //                 //监听点位点击事件
+        //                 marker.addEventListener("click", function (e) {
+        //                     var opts = {
+        //                         width: 250,     // 信息窗口宽度
+        //                         height: 250,     // 信息窗口高度
+        //                         title: "<h4 style='text-align:center;font-weight:bold;'>景点信息</h4>",  // 信息窗口标题
+        //                         fontSize: 10
+        //                     }
+        //                     var Pointwindow = new BMap.Point(e.target.lon, e.target.lat);//创建一个点位对象
+        //                     var infoWindow = new BMap.InfoWindow("<p>景点名称：" + e.target.name + "</p><p>景点等级：" + e.target.dengji + "</p><p>景点门票：" + e.target.menpiao + "</p><p>景点地址：" + e.target.dizhi + "</p><p>景点介绍：" + e.target.jieshao + "</p><p>状态：" + e.target.zhuangtai + "</p><p>地图经纬度：" + e.target.lon + "," + e.target.lat + "</p>", opts);  // 创建信息窗口对象
+        //                     map.openInfoWindow(infoWindow, Pointwindow);
+        //                 });
+
+        //             }
+
+
+
+        //             ////地图点击事件
+        //             //map.addEventListener("click", function (e) {
+        //             //    alert("您点击的经纬度:" + e.point.lng + "," + e.point.lat);
+        //             //    var point = new BMap.Point(e.point.lng, e.point.lat);
+        //             //    map.centerAndZoom(point, 0);
+        //             //    var marker = new BMap.Marker(point);        // 创建标注
+        //             //    map.addOverlay(marker);
+        //             //});
+
+        //         });
+
+
+
+
+
+            }, error: function (data) {
+                //alert(data);
+                console.log("景点数据请求失败:");
+                console.log(data);
+            }
+        });
+    </script>
+    <script>
+        // 智慧旅游地图
+        setTimeout(function () {
+            createMap2("map_zhly");
+        }, 3000)
+        // $(function () {
+        //    createMap2("map_zhly");
+        // });
+    </script>
+
+
+</body>
+
+</html>

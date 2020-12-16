@@ -1,0 +1,3060 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    
+    <script type="text/javascript" src="lib/include-lib.js" libpath=""
+            include="jquery,bootstrap,haoutil,crypto,toastr,mapv3d,layer"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/divpoint.css">
+    <link rel="stylesheet" href="css/movePrompt.css">
+    <link rel="stylesheet" href="css/widget-win.css">
+    <script type="text/javascript" src="js/map3dindex.js"></script>
+    <link rel="stylesheet" href="./css/header.css">
+    <meta charset="UTF-8">
+    <title>河桥镇综合指挥驾驶舱</title>
+    <style>
+        @keyframes move{
+            0% {
+                transform: translateX(150px);
+            }
+            
+            100%{
+                transform: translateX(-70px);
+            }
+        }
+    </style>
+</head>
+<body style="letter-spacing: 2px;">
+    <label id="lab_login" style="display:none;"></label>
+    <div class="data_bodey">
+        <div class="index_tabs">
+            <!--导航-->
+            <div class="index_navi">
+                <div class="nav_bg">
+                    <img src="./static/image/headbg.png" alt="" style="width: 100%;height: 100%;">
+                </div>
+                <h1 class="logoBox"><img src="./static/image/logo.png" alt="" style="width:100%;"></h1>
+                <ul class="navBox">
+                    <li class="leftLi" style="margin-left: 21%;"><a href="index.html">基本信息</a></li>
+                    <li class="leftLi nav_active"><a href="party.html">数字党建</a></li>
+                    <li class="leftLi"><a href="environmental.html">环境治理</a></li>
+                    <li class="rightLi" style="margin-right: 21%;"><a href="emergency.html">应急处理</a></li>
+                    <li class="rightLi"><a href="travel.html">智慧旅游</a></li>
+                    <li class="rightLi"><a href="society.html">社会治理</a></li>
+                </ul>
+                <input type="button" value="退出登录" id="outTo">
+            </div>
+            <!--党建引领-->
+            <div class="inner">
+                <div class="data_left03">
+                    <!--党组织架构-->
+                    <!-- <div class="dataAllNo01 cage_cl" style="height: 400px;"> -->
+                        <div class="dataAllBorder01 cage_cl" style="height: 400px;">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti" style="overflow: hidden;">
+                                    <span style="float: left;margin-right: 10px;">党组织架构</span>
+                                    <span style="width: 150px;float: left;overflow: hidden;">
+                                        <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                    </span>
+                                </div>
+                                <div class="basic_data">
+                                    <div class="basic_information">
+                                        <label style="display:none;">党组织基本信息</label>
+                                        <div class="bacic_title btn11">乡镇</div>
+                                        <div><span class="bacic_number bacic_number1" id="xj"></span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <label style="display:none;">党组织基本信息</label>
+                                        <div class="bacic_title btn11">行政村</div>
+                                        <div><span class="bacic_number bacic_number1" id="xzc"></span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <label style="display:none;">党组织基本信息</label>
+                                        <div class="bacic_title btn11">机关</div>
+                                        <div><span class="bacic_number bacic_number1" id="jg">3</span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <label style="display:none;">党组织基本信息</label>
+                                        <div class="bacic_title btn11">两新</div>
+                                        <div><span class="bacic_number bacic_number1" id="lx"></span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <label style="display:none;">党组织基本信息</label>
+                                        <div class="bacic_title btn11">国企</div>
+                                        <div><span class="bacic_number bacic_number1" id="gq"></span><span class="bacic_company">个</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    <!-- </div> -->
+                    <div id="item11" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                            <h1>党组织架构</h1>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr style="font-size: 24px;">
+                                        <th>党组织名称</th>
+                                        <th>党员人数</th>
+                                        <th>党组织书记</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dzzjg">
+
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <!--党员信息-->
+                    <!--<div class="dataAllNo01 cage_cl" style="height: 290px;margin-top: 3%;">-->
+                        <div class="dataAllBorder01 cage_cl" style="height: 290px;margin-top: 3%;">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti" style="overflow: hidden;">
+                                    <span style="float: left;margin-right: 10px;">党员信息</span>
+                                    <span style="width: 150px;float: left;overflow: hidden;">
+                                        <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                    </span>
+                                </div>
+                                <div class="basic_data">
+                                    <div class="basic_information">
+                                        <label style="display:none;">党员基本信息</label>
+                                        <div class="bacic_title ">正式党员</div>
+                                        <div><span class="bacic_number bacic_number2" id="zsdy"></span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <label style="display:none;">党员基本信息</label>
+                                        <div class="bacic_title ">预备党员</div>
+                                        <div><span class="bacic_number bacic_number2" id="ybdy"></span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <label style="display:none;">党员基本信息</label>
+                                        <div class="bacic_title ">入党申请人</div>
+                                        <div><span class="bacic_number bacic_number2" id="fzdx"></span><span class="bacic_company">人</span></div>
+                                    </div>
+                                    <div class="basic_information ">
+                                        <label style="display:none;">党员基本信息</label>
+                                        <div class="bacic_title">入党积极分子</div>
+                                        <div><span class="bacic_number bacic_number2" id="jjfz"></span><span class="bacic_company">人</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    <!--</div>-->
+                    <div id="item12" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                            <h1>党员信息</h1>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr>
+                                        <th>党组织</th>
+                                        <th>姓名</th>
+                                        <th>性别</th>
+                                        <th>出生日期</th>
+                                        <th>学历</th>
+                                        <th>面貌</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dyjbxx">
+
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                </div>
+                <div class="data_left03">
+                    <!--宣传-->
+                    <!-- <div class="dataAllNo01"> -->
+                        <div class="dataAllBorder01 cage_cl" style="height: 510px;">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti" style="overflow: hidden;">
+                                    <span style="float: left;margin-right: 10px;">宣传</span>
+                                    <span style="width: 150px;float: left;overflow: hidden;">
+                                        <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                    </span>
+                                </div>
+                                <div class="basic_data">
+                                    <div class="basic_information zwhzbtn">
+                                        <label style="display:none;">宣传阵地</label>
+                                        <div class="bacic_title ">镇文化站</div>
+                                        <div><span class="bacic_number bacic_number3" id="zwhz_num"></span><span class="bacic_company">处</span></div>
+                                    </div>
+                                    <div class="basic_information cjwhltbtn">
+                                        <label style="display:none;">宣传阵地</label>
+                                        <div class="bacic_title ">村级文化礼堂</div>
+                                        <div><span class="bacic_number bacic_number3" id="cjwhlt_num">11</span><span class="bacic_company">处</span></div>
+                                    </div>
+                                    <div class="basic_information xsdwmsjsbtn">
+                                        <label style="display:none;">宣传阵地</label>
+                                        <div class="bacic_title ">新时代文明实践所</div>
+                                        <div><span class="bacic_number bacic_number3" id="xsdwmsjs_num">1</span><span class="bacic_company">处</span></div>
+                                    </div>
+                                    <div class="basic_information xsdwmsjzbtn">
+                                        <label style="display:none;">宣传阵地</label>
+                                        <div class="bacic_title ">新时代文明实践站</div>
+                                        <div><span class="bacic_number bacic_number3" id="xsdwmsjz_num">11</span><span class="bacic_company">处</span></div>
+                                    </div>
+                                    <div class="basic_information njswbtn">
+                                        <label style="display:none;">宣传阵地</label>
+                                        <div class="bacic_title">农家书屋</div>
+                                        <div><span class="bacic_number bacic_number3" id="njsw_num">11</span><span class="bacic_company">处</span></div>
+                                    </div>
+                                    <div class="basic_information djxchdbtn">
+                                        <div class="bacic_title">宣传活动</div>
+                                        <div><span class="bacic_number bacic_number3" id="djxchd_num">16</span><span class="bacic_company">次</span></div>
+                                    </div>
+                                    <div class="basic_information xcwhdwbtn">
+                                        <label style="display:none;">宣传队伍</label>
+                                        <div class="bacic_title">宣传文化队伍</div>
+                                        <div><span class="bacic_number bacic_number3" id="xcwhdw_num"></span><span class="bacic_company">人</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    <!-- </div> -->
+                    <div id="zwhzitem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>镇文化站</h1>
+                            <div class="main">
+                                <div class="mainCon" id="zwhz">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="cjwhltitem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>村级文化礼堂</h1>
+                            <div class="main">
+                                <div class="mainCon" id="cjwhlt">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="xsdwmsjsitem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>新时代文明实践所</h1>
+                            <div class="main">
+                                <div class="mainCon" id="xsdwmsjs">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="xsdwmsjzitem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>新时代文明实践站</h1>
+                            <div class="main">
+                                <div class="mainCon" id="xsdwmsjz">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="njswitem" class="item item--mod" style="width: 1000px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>农家书屋</h1>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th>
+                                        <th>开放时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="njsw">
+
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="djxchditem" class="item item--mod" style="width: 1000px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>宣传活动</h1>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>活动时间</th>
+                                        <th>标题</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="djxchd">
+
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="xcwhdwitem" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                            <h1>宣传文化员名单</h1>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr style="font-size: 24px;">
+                                        <th>序号</th>
+                                        <th>村别</th>
+                                        <th>姓名</th>
+                                        <th>性别</th>
+                                        <th>出生年月</th>
+                                        <th>政治面貌</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="xcwhdw">
+
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <!--党组织活动-->
+                    <!-- <div class="dataAllNo01"> -->
+                        <div class="dataAllBorder01 cage_cl" style="height: 180px;margin-top: 3%;">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti" style="overflow: hidden;">
+                                    <span style="float: left;margin-right: 10px;">党组织活动</span>
+                                    <span style="width: 150px;float: left;overflow: hidden;">
+                                        <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                    </span>
+                                </div>
+                                <div class="basic_data">
+                                    <div class="basic_information dzzhdbtn">
+                                        <label style="display:none;">党组织活动</label>
+                                        <div class="bacic_title">活动次数</div>
+                                        <div><span class="bacic_number bacic_number4" id="dyjd"></span><span class="bacic_company">项</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    <!-- </div> -->
+
+                    <div id="dzzhditem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>党组织活动</h1>
+                            <div class="main">
+                                <div class="mainCon" id="dzzhd">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                </div>
+
+
+                <!--全域地图-->
+                <div class="map" id="map_djyl"></div>
+
+
+                <div class="data_left04">
+                    <!--共青团-->
+                    <!-- <div class="dataAllNo01 maginS01" style="height:300px;"> -->
+                        <div class="dataAllBorder01 cage_cl" style="height:300px;">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti" style="overflow: hidden;">
+                                    <span style="float: left;margin-right: 10px;">共青团</span>
+                                    <span style="width: 150px;float: left;overflow: hidden;">
+                                        <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                    </span>
+                                </div>
+                                <div class="basic_data" style=" margin-top: 10px;">
+                                    <div class="basic_information gqttzzbtn">
+                                        <label style="display:none;">团组织架构</label>
+                                        <div class="bacic_title">团组织</div>
+                                        <div><span class="bacic_number bacic_number5" id="sorganic"></span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="basic_information zyfwdwbtn">
+                                        <label style="display:none;">志愿服务队伍</label>
+                                        <div class="bacic_title">志愿服务队伍</div>
+                                        <div><span class="bacic_number bacic_number5" id="yposition"></span><span class="bacic_company">队</span></div>
+                                    </div>
+                                    <div class="basic_information qnhdzdbtn">
+                                        <label style="display:none;">青年活动阵地</label>
+                                        <div class="bacic_title">青年活动阵地</div>
+                                        <div><span class="bacic_number bacic_number5" id="vteam"></span><span class="bacic_company">处</span></div>
+                                    </div>
+                                    <div class="basic_information">
+                                        <div class="bacic_title">活动次数</div>
+                                        <div><span class="bacic_number bacic_number5">4</span><span class="bacic_company">次</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    <!-- </div> -->
+                    <div id="gqttzzitem" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>团组织架构</h1>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr style="font-size: 24px;">
+                                        <th>序号</th>
+                                        <th>团组织名称</th>
+                                        <th>团组织书记</th>
+                                        <th>其它团干部</th>
+                                        <th>团员人数</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tzzjg">
+
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="qnhdzditem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>青年活动阵地</h1>
+                            <div class="main">
+                                <div class="mainCon" id="qnhdzd">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="zyfwdwitem" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                            <h1>志愿服务队伍</h1>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr style="font-size: 24px;">
+                                        <th>序号</th>
+                                        <th>名称</th>
+                                        <th>志愿者人数</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="zyfwdw">
+
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <!--妇联-->
+                    <!-- <div class="dataAllNo01 maginS01"> -->
+                        <div class="dataAllBorder01 cage_cl" style="height:300px;margin-top:3%;">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti" style="overflow: hidden;">
+                                    <span style="float: left;margin-right: 10px;">妇联</span>
+                                    <span style="width: 150px;float: left;overflow: hidden;">
+                                        <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                    </span>
+                                </div>
+                                <div class="basic_data" style="margin-top: 10px;height: 220px;">
+                                    <div class="basic_information womenzzbtn">
+                                        <label style="display:none;">妇联组织</label>
+                                        <div class="bacic_title">组织</div>
+                                        <div><span class="bacic_number bacic_number6" id="flzz_num"></span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="basic_information womenfnzjbtn">
+                                        <label style="display:none;">妇女之家</label>
+                                        <div class="bacic_title">妇女之家</div>
+                                        <div><span class="bacic_number bacic_number6" id="fnzj_num"></span><span class="bacic_company">处</span></div>
+                                    </div>
+                                    <div class="basic_information womenhdbtn">
+                                        <label style="display:none;">妇联活动</label>
+                                        <div class="bacic_title">活动</div>
+                                        <div><span class="bacic_number bacic_number6" id="flhd_num"></span><span class="bacic_company">次</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    <!-- </div> -->
+                    <div id="womenzzitem" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                            <h1>组织</h1>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr style="font-size: 24px;">
+                                        <th>名称</th>
+                                        <th>所在地</th>
+                                        <th>主席</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="womenzz">
+
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="womenfnzjitem" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                            <h1>妇女之家</h1>
+                            <table class="fl-table">
+                                <thead>
+                                    <tr style="font-size: 24px;">
+                                        <th>名称</th>
+                                        <th>所在地</th>
+                                        <th>负责人</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="womenfnzj">
+
+                                <tbody>
+                            </table>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="womenhditem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>活动</h1>
+                            <div class="main">
+                                <div class="mainCon" id="womenhd">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="item8" class="item item--mod">
+                        <div class="table-wrapper" style="width:1000px;">
+                            <h1>支部活动详细信息</h1>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                </div>
+                <div class="data_left04">
+                    <!--统战-->
+                    <div class="dataAllBorder01 cage_cl" style="height:300px;">
+                        <div class="dataAllBorder02">
+                            <div class="biaoti" style="overflow: hidden;">
+                                <span style="float: left;margin-right: 10px;">统战</span>
+                                <span style="width: 150px;float: left;overflow: hidden;">
+                                    <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                </span>
+                            </div>
+                            <div class="basic_data" style="padding-top:10px">
+
+                                <div class="basic_information qjzyzdwbtn">
+                                    <label style="display:none;">侨界志愿者信息</label>
+                                    <div class="bacic_title">侨界志愿者队伍</div>
+                                    <div><span class="bacic_number bacic_number7">30</span><span class="bacic_company">人</span></div>
+                                </div>
+                                <div class="basic_information sqrysbtn">
+                                    <label style="display:none;">涉侨人员信息</label>
+                                    <div class="bacic_title">涉侨人员数</div>
+                                    <div><span class="bacic_number bacic_number7">141</span><span class="bacic_company">人</span></div>
+                                </div>
+                                <div class="basic_information zjcsbtn">
+                                    <label style="display:none;">宗教场所信息</label>
+                                    <div class="bacic_title">宗教场所</div>
+                                    <div><span class="bacic_number bacic_number7">3</span><span class="bacic_company">所</span></div>
+                                </div>
+                                <div class="basic_information xxrsbtn">
+                                    <label style="display:none;">乡贤信息</label>
+                                    <div class="bacic_title">乡贤人数</div>
+                                    <div><span class="bacic_number bacic_number7">60</span><span class="bacic_company">人</span></div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    </div>
+
+                    <div id="qjzyzdwitem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>侨界志愿者队伍</h1>
+                            <div class="main">
+                                <div class="mainCon" id="qjzyzdw">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="sqrysitem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>涉侨人员数</h1>
+                            <div class="main">
+                                <div class="mainCon" id="sqrys">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="zjcsitem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>宗教场所</h1>
+                            <div class="main">
+                                <div class="mainCon" id="zjcs">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <div id="xxrsitem" class="item item--mod" style="width: 1200px;">
+                        <div class="table-wrapper" style="height:775px;overflow:hidden; overflow-y: auto;">
+                            <h1>乡贤人数</h1>
+                            <div class="main">
+                                <div class="mainCon" id="xxrs">
+                                </div>
+                                <div class="swiperBox swiper-left">
+                                    <span class="swiperBtn lbtn"></span>
+                                </div>
+                                <div class="swiperBox swiper-right">
+                                    <span class="swiperBtn rbtn"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <b class="item-close js-popup-close">x</b>
+                    </div>
+                    <!--工会-->
+                    <!-- <div class=" dataAllNo01"> -->
+                        <div class="dataAllBorder01 cage_cl" style="height:300px;margin-top: 3%;">
+                            <div class="dataAllBorder02">
+                                <div class="biaoti" style="overflow: hidden;">
+                                    <span style="float: left;margin-right: 10px;">工会</span>
+                                    <span style="width: 150px;float: left;overflow: hidden;">
+                                        <img style="animation: move 1.4s linear infinite;" src="./static/image/diaotitupian.png" />
+                                    </span>
+                                </div>
+                                <div class="basic_data" style=" margin-top: 10px;">
+                                    <div class="basic_information btn13">
+                                        <label style="display:none;">工会信息</label>
+                                        <div class="bacic_title">会员单位</div>
+                                        <div><span class="bacic_number bacic_number8" id="ghhy"></span><span class="bacic_company">个</span></div>
+                                    </div>
+                                    <div class="basic_information btn14">
+                                        <label style="display:none;">工会普惠政策</label>
+                                        <div class="bacic_title">普惠政策</div>
+                                        <div><span class="bacic_number bacic_number8" id="hpzc"></span><span class="bacic_company">条</span></div>
+                                    </div>
+                                    <div class="basic_information ghhdbtn">
+                                        <label style="display:none;">工会活动</label>
+                                        <div class="bacic_title">工会活动</div>
+                                        <div><span class="bacic_number bacic_number8" id="ghhd_num"></span><span class="bacic_company">次</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxfoot"></div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+                <div id="ghhditem" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                        <h1>工会活动</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr style="font-size: 24px;">
+                                    <th>活动名称</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ghhd">
+
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item13" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                        <h1>会员单位</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr style="font-size: 24px;">
+                                    <th>公会名称</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ghghhy">
+
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item14" class="item item--mod">
+                    <div class="table-wrapper" style="width:1000px;height:600px;overflow:hidden; overflow-y: auto;">
+                        <h1>普惠政策</h1>
+                        <table class="fl-table">
+                            <thead>
+                                <tr style="font-size: 24px;">
+                                    <th>政策名</th>
+                                    <th>政策内容</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ghhpzc">
+
+                            <tbody>
+                        </table>
+                    </div>
+                    <b class="item-close js-popup-close">x</b>
+                </div>
+                <div id="item3" class="item">
+                    <div class="login-box">
+                        <h2>用户登录</h2>
+                        <form>
+                            <div class="user-box">
+                                <input type="text" id="username" required="">
+                                <label>输入用户名</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="password" id="password" required="">
+                                <label>输入密码</label>
+                            </div>
+                            <!--<a href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                确定登录
+                            </a>-->
+                            <input type="button" value="确定登录" id="sendTo" style="background: transparent;border-width:0px;color:white">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.limarquee.js"></script>
+    <!--<script src="js/index.js"></script>-->
+    <script src="js/jquery.leoTextAnimate.js"></script>
+    <script src="js/jquery.popup.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+    <script>
+        var baseUrl = window.sessionStorage.getItem("path");
+    </script>
+    <script>
+       
+        // var map = new BMap.Map("map_djyl", { mapType: BMAP_HYBRID_MAP });    // 创建Map实例
+        // map.centerAndZoom(new BMap.Point(119.247261, 30.109483), 16);  // 初始化地图,设置中心点坐标和地图级别
+
+        // var mapStyle = {
+        //     style: "light"
+        // };
+        // map.setMapStyle(mapStyle);
+        // //map.setCurrentCity("临安");          // 设置地图显示的城市 此项是必须设置的
+        // map.enableScrollWheelZoom(true);
+    </script>
+    <script>
+
+        $('.btn1').on('click', function () {
+            $('#item1').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn2').on('click', function () {
+            $('#item2').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn3').on('click', function () {
+            $('#item3').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn4').on('click', function () {
+            $('#item4').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn5').on('click', function () {
+            $('#item5').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn6').on('click', function () {
+            $('#item6').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn7').on('click', function () {
+            $('#item7').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn8').on('click', function () {
+            $('#item8').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn9').on('click', function () {
+            $('#item9').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn10').on('click', function () {
+            $('#item10').popup({
+                time: 1000,
+                classAnimateShow: 'slideInUp',
+                classAnimateHide: 'fadeOut',
+                onPopupClose: function e() {
+                    // console.log('0')
+                },
+                onPopupInit: function e() {
+                    // console.log('1')
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.btn11').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            var name = $(this).html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item11').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#dzzjg").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/AppTongji/AppTongji/getdangzuzhi",
+                                type: "get",
+                                data: { name: name },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        $("#dzzjg").append('<tr><td>' + data.data[i].dangOrganizationName + '</td><td>' + data.data[i].dangOrganizationRemarks + '</td><td>' + data.data[i].dangClerk + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $('.btn12').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            var name = $(this).html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item12').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            console.log(1111)
+                            $("#dyjbxx").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/AppTongji/AppTongji/getdjdangyuanInfo",
+                                type: "get",
+                                data: { name: name },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("党员基本信息")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        $("#dyjbxx").append('<tr><td>' + data.data[i].dangOrganizationName + '</td><td>' + data.data[i].realName + '</td><td>' + data.data[i].sex + '</td><td>' + data.data[i].birth + '</td><td>' + data.data[i].education + '</td><td>' + data.data[i].politics + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.btn13').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item13').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#ghghhy").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/AppTongji/AppTongji/gethuiyuan",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        $("#ghghhy").append('<tr><td>' + data.data[i].organizationName + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.btn14').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#item14').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#ghhpzc").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/AppTongji/AppTongji/gethpzc",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        $("#ghhpzc").append('<tr><td>' + data.data[i].theUnionZhengcName + '</td><td>' + data.data[i].neirong + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $('.gqttzzbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#gqttzzitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#tzzjg").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Gettzzjg",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        if (data.data[i].cadre == null) {
+                                            data.data[i].cadre = "";
+                                        }
+                                        $("#tzzjg").append('<tr><td>' + [i + 1] + '</td><td>' + data.data[i].name + '</td><td>' + data.data[i].secretary + '</td><td>' + data.data[i].cadre + '</td><td>' + data.data[i].number + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.zyfwdwbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#zyfwdwitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#zyfwdw").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getzyfwdw",
+                                type: "get",
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        $("#zyfwdw").append('<tr><td>' + [i + 1] + '</td><td>' + data.data[i].name + '</td><td>' + data.data[i].number + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.xcwhdwbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#xcwhdwitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#xcwhdw").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getxcwhymd",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        $("#xcwhdw").append('<tr><td>' + [i + 1] + '</td><td>' + data.data[i].cunz + '</td><td>' + data.data[i].teamCaptain + '</td><td>' + data.data[i].sex + '</td><td>' + data.data[i].birth + '</td><td>' + data.data[i].politics + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.qnhdzdbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#qnhdzditem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#qnhdzd").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getqnhdzd",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        if (i == 0) {
+                                            $("#qnhdzd").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data[i].accessory + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data[i].name + '</div></div></div>')
+                                        } else {
+                                            $("#qnhdzd").append('<div id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: none;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data[i].accessory + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data[i].name + '</div></div></div>')
+                                        }
+
+
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <!--宣传-->
+    <script>
+        $('.zwhzbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#zwhzitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#zwhz").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getxcwhzd",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.zwhz.length; i++) {
+                                        if (i == 0) {
+                                            $("#zwhz").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data.zwhz[i].picture + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data.zwhz[i].introduction + '</div></div></div>')
+                                        } else {
+                                            $("#zwhz").append('<div id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: none;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data.zwhz[i].picture + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data.zwhz[i].introduction + '</div></div></div>')
+                                        }
+
+
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.cjwhltbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#cjwhltitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#cjwhlt").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getxcwhzd",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.cjwhlt.length; i++) {
+                                        if (i == 0) {
+                                            $("#cjwhlt").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data.cjwhlt[i].picture + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data.cjwhlt[i].introduction + '</div></div></div>')
+                                        } else {
+                                            $("#cjwhlt").append('<div id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: none;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data.cjwhlt[i].picture + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data.cjwhlt[i].introduction + '</div></div></div>')
+                                        }
+
+
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.xsdwmsjsbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#xsdwmsjsitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#xsdwmsjs").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getxcwhzd",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.xsdwmsjs.length; i++) {
+                                        if (i == 0) {
+                                            $("#xsdwmsjs").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data.xsdwmsjs[i].picture + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data.xsdwmsjs[i].introduction + '</div></div></div>')
+                                        } else {
+                                            $("#xsdwmsjs").append('<div id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: none;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data.xsdwmsjs[i].picture + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data.xsdwmsjs[i].introduction + '</div></div></div>')
+                                        }
+
+
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.xsdwmsjzbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#xsdwmsjzitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#xsdwmsjz").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getxcwhzd",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.xsdwmsjz.length; i++) {
+                                        if (i == 0) {
+                                            $("#xsdwmsjz").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data.xsdwmsjz[i].picture + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data.xsdwmsjz[i].introduction + '</div></div></div>')
+                                        } else {
+                                            $("#xsdwmsjz").append('<div id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: none;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data.xsdwmsjz[i].picture + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data.xsdwmsjz[i].introduction + '</div></div></div>')
+                                        }
+
+
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.njswbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#njswitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#njsw").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getxcwhzd",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.njsw.length; i++) {
+                                        $("#njsw").append('<tr><td>' + data.data.njsw[i].publicityFrontsName + '</td><td>' + data.data.njsw[i].introduction + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.djxchdbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#djxchditem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#djxchd").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getxcwhzd",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.djxchd.length; i++) {
+                                        let title = data.data.djxchd[i].title;
+                                        if (data.data.djxchd[i].title.length>30) {
+                                            title = data.data.djxchd[i].title.substring(0, 30)+"...";
+                                        }
+                                        let releaseTime = data.data.djxchd[i].releaseTime;
+                                        if (data.data.djxchd[i].releaseTime.length > 10) {
+                                            releaseTime = data.data.djxchd[i].releaseTime.substring(0, 10);
+                                        }
+                                        $("#djxchd").append('<tr><td>' + [i + 1] + '</td><td>' + releaseTime + '</td><td>' + title + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.qjzyzdwbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#qjzyzdwitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#qjzyzdw").html("");
+                            $("#qjzyzdw").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="./static/image/reqiao.png" alt=""></div><div class="mainItem"><div class="itemCon" style="text-align:left;text-indent:2em;">河桥镇侨界志愿者服务队共有队员30人，致力于做好侨眷、归侨、归国留学人员的关心关爱工作，为广大海外侨胞、港澳台胞排忧解难。</div></div></div>')
+
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.sqrysbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#sqrysitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#sqrys").html("");
+                            $("#sqrys").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="img/party/reqiao.png" alt=""></div><div class="mainItem"><div class="itemCon">河桥镇现有涉侨人员情况：现有47位华人华侨、5位留学生、4位港澳台胞，共涉及33户，分布19个国家和香港、台湾地区；侨眷65人，港澳台胞眷属6人，海外留学人员眷属14人。</div></div></div>')
+
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.zjcsbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#zjcsitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#zjcs").html("");
+                            $("#zjcs").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="./static/image/zongjiao.png" alt=""></div><div class="mainItem"><div class="itemCon">河桥镇有宗教场所1个：基督教河桥教堂；民间信仰活动场所1个，玉屏寺；寺庙1个，白云寺。</div></div></div>')
+
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $('.xxrsbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#xxrsitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#xxrs").html("");
+                            $("#xxrs").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="./static/image/xiangxian.png" alt=""></div><div class="mainItem"><div class="itemCon" style="text-indent:2em;text-align:justify;">河桥镇新乡贤联谊会正在筹建中，新乡贤队伍60人，主要以热心家乡发展事业的外出经商、从政、从军的人员为主，平均年龄50岁左右。村级乡贤队伍：围绕党建和小微权力开展工作，服务乡村振兴工作部署，泥骆村聘任8位乡贤，成立临安首个乡贤参与自治服务站，让传统乡贤文化在基层治理中发挥“宣传员” “管理员” “监督员” “调解员”作用。</div></div></div>')
+
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $('.dzzhdbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#dzzhditem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#dzzhd").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Activitylist",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        if (i == 0) {
+                                            $("#dzzhd").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data[i].photo + '" alt=""></div><div class="mainItem"><div class="itemCon" style="text-align:justify;text-indent:2em;">' + data.data[i].content + '</div></div></div>')
+                                        } else {
+                                            $("#dzzhd").append('<div id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: none;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data[i].photo + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data[i].content + '</div></div></div>')
+                                        }
+
+
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!--妇联-->
+    <script>
+        $('.womenzzbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#womenzzitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#womenzz").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getwomen",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.womenzz.length; i++) {
+                                        $("#womenzz").append('<tr><td>' + data.data.womenzz[i].womenFederationName + '</td><td>' + data.data.womenzz[i].address + '</td><td>' + data.data.womenzz[i].zhuxi + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.womenfnzjbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#womenfnzjitem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#womenfnzj").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getwomen",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.womenfnzj.length; i++) {
+                                        $("#womenfnzj").append('<tr><td>' + data.data.womenfnzj[i].womenHouseName + '</td><td>' + data.data.womenfnzj[i].address + '</td><td>' + data.data.womenfnzj[i].zhuxi + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $('.womenhdbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#womenhditem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#womenhd").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getwomen",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.womenhd.length; i++) {
+                                        if (i == 0) {
+                                            $("#womenhd").append('<div  id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data.womenhd[i].photo + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data.womenhd[i].content + '</div></div></div>')
+                                        } else {
+                                            $("#womenhd").append('<div id="classli" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: none;"><div class="mainTop" style="text-align: center;height:580px;line-height:580px;"><img src="' +
+                                                baseUrl + "UploadFiles/PFrontsInfo/" + data.data.womenhd[i].photo + '" alt=""></div><div class="mainItem"><div class="itemCon">' + data.data.womenhd[i].content + '</div></div></div>')
+                                        }
+
+
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <!--工会-->
+    <script>
+        $('.ghhdbtn').on('click', function () {
+            var jiaose = $(this).children("label").html();
+            $("#lab_login").html(jiaose);
+            var data = {
+                jiaose: $("#lab_login").html(),
+            };
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                $.ajax({
+                    url: baseUrl + "api/v1/QTLogin/Login/Profile",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json;charset=UTF-8',
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                    success: function (data) {
+                        console.log("返回的")
+                        console.log(data)
+                        if (data.message == "操作成功") {
+                            $('#ghhditem').popup({
+                                time: 1000,
+                                classAnimateShow: 'slideInUp',
+                                classAnimateHide: 'fadeOut',
+                                onPopupClose: function e() {
+                                    // console.log('0')
+                                },
+                                onPopupInit: function e() {
+                                    // console.log('1')
+                                }
+                            });
+                            $("#ghhd").html("");
+                            $.ajax({
+                                url: baseUrl + "api/v1/Party/Party/Getghhd",
+                                type: "get",
+                                //data: { name: $(this).html() },
+                                dataType: "json",
+                                success: function (data) {
+                                    console.log("返回数据")
+                                    console.log(data)
+                                    for (var i = 0; i < data.data.length; i++) {
+                                        $("#ghhd").append('<tr><td>' + data.data[i].title + '</td></tr>')
+                                    }
+                                },
+                                error: function (data) {
+                                    alert("未获取到数据");
+                                }
+                            });
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            else {
+                $('#item3').popup({
+                    time: 1000,
+                    classAnimateShow: 'slideInUp',
+                    classAnimateHide: 'fadeOut',
+                    onPopupClose: function e() {
+                        // console.log('0')
+                    },
+                    onPopupInit: function e() {
+                        // console.log('1')
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+
+        // 外层li数量
+        var cons = $('.mainCon #classli').length;
+        console.log(cons)
+        // 实现轮播
+        $('.mainCon #classli').eq(0).show();
+        var index = 0;
+        function lbtn() {
+
+            // 外层li数量
+            cons = $('.mainCon #classli').length;
+            console.log(cons)
+            if (index == 0) {
+                index = cons;
+                console.log(index);
+            }
+            index--;
+            $('.mainCon #classli').eq(index).stop().fadeIn().siblings().stop().fadeOut();
+            $('.mainCon #classli').eq(index).addClass('current').siblings().removeClass('current');
+
+        }
+        function rbtn() {
+
+            // 外层li数量
+            cons = $('.mainCon #classli').length;
+            console.log(cons)
+            if (index == cons - 1) {
+                index = -1;
+            }
+            index++;
+            $('.mainCon #classli').eq(index).stop().fadeIn().siblings().stop().fadeOut();
+            $('.mainCon #classli').eq(index).addClass('current').siblings().removeClass('current');
+        }
+        $('.lbtn').click(function () {
+            lbtn()
+        });
+        $('.rbtn').click(function () {
+            rbtn()
+        })
+    </script>
+    <script>
+        $('.bacic_number').leoTextAnimate({
+            autorun: true, //是否自动运行
+            fixed: [',', ':', '.'], //
+            start: '-'
+        });
+        setInterval(function(){
+            $('.bacic_number1').leoTextAnimate({
+                autorun: true, //是否自动运行
+                fixed: [',', ':', '.'], //
+                start: '-'
+            });
+        },4000)
+        setInterval(function(){
+            $('.bacic_number2').leoTextAnimate({
+                autorun: true, //是否自动运行
+                fixed: [',', ':', '.'], //
+                start: '-'
+            });
+        },4500)
+        setInterval(function(){
+            $('.bacic_number3').leoTextAnimate({
+                autorun: true, //是否自动运行
+                fixed: [',', ':', '.'], //
+                start: '-'
+            });
+        },5000)
+        setInterval(function(){
+            $('.bacic_number4').leoTextAnimate({
+                autorun: true, //是否自动运行
+                fixed: [',', ':', '.'], //
+                start: '-'
+            });
+        },4000)
+        setInterval(function(){
+            $('.bacic_number5').leoTextAnimate({
+                autorun: true, //是否自动运行
+                fixed: [',', ':', '.'], //
+                start: '-'
+            });
+        },4500)
+        setInterval(function(){
+            $('.bacic_number6').leoTextAnimate({
+                autorun: true, //是否自动运行
+                fixed: [',', ':', '.'], //
+                start: '-'
+            });
+        },5000)
+        setInterval(function(){
+            $('.bacic_number7').leoTextAnimate({
+                autorun: true, //是否自动运行
+                fixed: [',', ':', '.'], //
+                start: '-'
+            });
+        },4000)
+        setInterval(function(){
+            $('.bacic_number8').leoTextAnimate({
+                autorun: true, //是否自动运行
+                fixed: [',', ':', '.'], //
+                start: '-'
+            });
+        },4500)
+        
+    </script>
+
+    <!--<script>
+        $(function () {
+            $('.wrap').liMarquee({
+                direction: 'up',//身上滚动
+                runshort: false,//内容不足时不滚动
+                scrollamount: 20//速度
+            });
+        });
+    </script>-->
+    <!--<script>
+        var number;
+        $(function () {
+            if (window.screen.height <= 768) {
+                number = 4;
+            } else if (window.screen.height > 768 && window.screen.height <= 900) {
+                number = 6
+            } else if (window.screen.height > 1080) {
+                number = 8
+            }
+        });
+
+        $(function () {
+            $(".tit02Diva a").each(function (index) {
+                $(this).on("click", function () {
+                    $(".data_map").eq(index).fadeIn().siblings(".data_map").stop().hide();
+                    $(this).prev('i').removeClass('i_crlieAction');
+                    $(this).siblings('a').prev('i').addClass('i_crlieAction');
+
+                })
+            });
+            BootstrapTable();
+            //Echarts();
+            $("#fresh_tool").click(function (event) {
+                event.stopPropagation();
+                cancel();
+            })
+
+        });
+        function EventClick() {
+            $(".check_increase").removeClass("check_increase_act");
+            $("#over_hide1").show().siblings().hide();
+            $(".ceshi01").show().siblings().hide();
+            $(".check_decrease").show();
+            $("#cage_cl").hide();
+            $("#map_title_innerbox").hide();
+            $("#cage_cl1").show();
+            //        $("#over_hide").show();
+            $("#map_title_innerbox1").show();
+            $(".addition_check_in").hide();
+            $("#car_check_in").hide();
+            BootstrapTable();
+        }
+        function cancel(e) {
+            $(".check_increase").removeClass("check_increase_act");
+            $("#over_hide").show().siblings().hide();
+            $(".ceshi01").show().siblings().hide();
+            $(".check_decrease").show();
+            $("#cage_cl").show();
+            $("#cage_cl1").hide();
+            $("#map_title_innerbox").show();
+            $("#map_title_innerbox1").hide();
+            //        $("#cage_cl").show();
+            //        $("#over_hide1").show();
+            //        $("#map_title_innerbox").show();
+            BootstrapTable();
+        }
+
+
+        function BootstrapTable() {
+
+
+        }
+    </script>-->
+
+    <script>
+        // 妇联
+        $(function () {
+            $.ajax(
+                {
+                    url: baseUrl + 'api/v1/party/party/Getwomen',
+                    method: 'get',
+                    dataType: "json",
+                    success: function (data) {
+                        $("#flzz_num").html(data.data.womenzz.length);
+                        $("#fnzj_num").html(data.data.womenfnzj.length);
+                        $("#flhd_num").html(data.data.womenhd.length);
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+        });
+        // 工会
+        $(function () {
+            $.ajax(
+                {
+                    url: baseUrl + 'api/v1/AppTongji/AppTongji/djGonghui',
+                    method: 'get',
+                    dataType: "json",
+                    success: function (data) {
+                        $("#ghhy").html(data.data[0].aa);
+                        $("#hpzc").html(data.data[0].bb);
+                        $("#ghhd").html(data.data[0].dd);
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+        });
+
+        // 党组织架构
+        $(function () {
+            $.ajax(
+                {
+                    url: baseUrl + 'api/v1/AppTongji/AppTongji/djdangzuzhi',
+                    method: 'get',
+                    dataType: "json",
+                    success: function (data) {
+                        $("#xj").html(data.data[0].aa);
+                        $("#xzc").html(data.data[0].bb);
+                        // $("#jg").html(data.data[0].cc);
+                        $("#lx").html(data.data[0].dd);
+                        $("#gq").html(data.data[0].ee);
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+        });
+
+        // 党员信息
+        $(function () {
+            $.ajax(
+                {
+                    url: baseUrl + 'api/v1/AppTongji/AppTongji/djdangyuanInfo',
+                    method: 'get',
+                    dataType: "json",
+                    success: function (data) {
+                        $("#zsdy").html(data.data[0].aa);
+                        $("#ybdy").html(data.data[0].bb);
+                        $("#fzdx").html(data.data[0].dd);
+                        $("#jjfz").html(data.data[0].cc);
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+        });
+        // 党组织活动
+        $(function () {
+            $.ajax(
+                {
+                    url: baseUrl + 'api/v1/party/party/Activitylist',
+                    method: 'get',
+                    success: function (data) {
+                        console.log(data);
+                        $("#dyjd").html(data.data.length);
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+        });
+
+        // 宣传
+        $(function () {
+            $.ajax(
+                {
+                    url: baseUrl + 'api/v1/party/party/Getxcwhzd',
+                    method: 'get',
+                    success: function (data) {
+                        console.log(data);
+                        // $("#cjwhlt_num").html(data.data.cjwhlt.length);
+                        $("#njsw_num").html(data.data.njsw.length);
+                        $("#xsdwmsjs_num").html(data.data.xsdwmsjs.length);
+                        $("#xsdwmsjz_num").html(data.data.xsdwmsjz.length);
+                        $("#zwhz_num").html(data.data.zwhz.length);
+                        $("#djxchd_num").html(data.data.djxchd.length);
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+        });
+
+        // 共青团架构
+        $(function () {
+            $.ajax(
+                {
+                    url: baseUrl + 'api/v1/party/party/YLeague',
+                    method: 'get',
+                    success: function (data) {
+                        $("#sorganic").html(data.data.sorganic);
+                        $("#yposition").html(data.data.yposition);
+                        $("#vteam").html(data.data.vteam);
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+        });
+
+        // 宣传文化队伍
+        $(function () {
+            $.ajax(
+                {
+                    url: baseUrl + 'api/v1/party/party/Getxcwhymd',
+                    method: 'get',
+                    success: function (data) {
+                        $("#xcwhdw_num").html(data.data.length);
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+        });
+
+        // 工会活动
+        $(function () {
+            $.ajax(
+                {
+                    url: baseUrl + 'api/v1/party/party/Getghhd',
+                    method: 'get',
+                    success: function (data) {
+
+                        $("#ghhd_num").html(data.data.length);
+                    },
+                    error: function (data) {
+                        console.log("数据请求失败")
+                        console.log(data);
+                    }
+                });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $("#sendTo").click(function () {
+
+            console.log("保存的值")
+            console.log($("#lab_login").html());
+
+            //获取值
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var jiaose = $("#lab_login").html();
+            console.log(username, password, jiaose);
+            var data = {
+                username: $("#username").val(),
+                password: $("#password").val(),
+                jiaose: $("#lab_login").html(),
+            };
+
+            $.ajax({
+                url: baseUrl + "api/v1/QTLogin/Login/receive",
+                type: "post",
+                data: JSON.stringify(data),
+                dataType: "json",
+                contentType: 'application/json;charset=UTF-8',
+                headers: {
+                    withCredentials: true,
+                },
+                success: function (data) {
+                    console.log("返回的数据")
+                    console.log(data);
+                    if (data.message == "操作成功") {
+                        $("#item16").hide();
+                        console.log(data.data)
+                        localStorage.setItem('token', data.data);
+                        console.log(localStorage.getItem('token'));
+                        alert("登入成功");
+                        location.reload();
+
+                    } else {
+                        alert(data.message);
+                        location.reload();
+                    }
+                }
+            })
+        })
+    </script>
+    <script>
+        $("#outTo").click(function () {
+            var storage = window.localStorage;
+            //storage.a = 1;
+            //storage.setItem("c", 3);
+            //console.log(storage);
+            storage.removeItem("token");
+            location.reload();
+            //console.log(storage.a);
+
+        });
+    </script>
+    <script>
+        window.onload = function () {
+            let token = localStorage.getItem('token');
+            if (token != null && token != '') {
+                outTo.style.display = "block";
+            }
+            else {
+                outTo.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        // 党建引领地图
+        setTimeout(function(){
+           createMap2("map_djyl");
+        },3000)
+        // $(function () {
+        //    createMap2("map_djyl");
+        // });
+    </script>
+
+
+</body>
+</html>

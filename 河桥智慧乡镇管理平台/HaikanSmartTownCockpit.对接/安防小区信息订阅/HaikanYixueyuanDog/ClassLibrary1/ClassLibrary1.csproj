@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB6FC663-8371-4E86-AEB1-BC807D57DCFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLibrary1</RootNamespace>
+    <AssemblyName>ClassLibrary1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="HData\Activity.cs" />
+    <Compile Include="HData\Administrator.cs" />
+    <Compile Include="HData\Barometric.cs" />
+    <Compile Include="HData\BuildHouse.cs" />
+    <Compile Include="HData\Canyin.cs" />
+    <Compile Include="HData\CityManagement.cs" />
+    <Compile Include="HData\Company.cs" />
+    <Compile Include="HData\ConcerQiao.cs" />
+    <Compile Include="HData\CpcmanInfo.cs" />
+    <Compile Include="HData\Cunzhenmb.cs" />
+    <Compile Include="HData\DangActivity.cs" />
+    <Compile Include="HData\DangerousRoom.cs" />
+    <Compile Include="HData\DangOrganization.cs" />
+    <Compile Include="HData\Department.cs" />
+    <Compile Include="HData\DepartmentDeclare.cs" />
+    <Compile Include="HData\DepartSumary.cs" />
+    <Compile Include="HData\DisasterInfo.cs" />
+    <Compile Include="HData\DzhizaihaiInfo.cs" />
+    <Compile Include="HData\Emergency.cs" />
+    <Compile Include="HData\Evacuate.cs" />
+    <Compile Include="HData\Followvillager.cs" />
+    <Compile Include="HData\Gtoilet.cs" />
+    <Compile Include="HData\HeDaowater.cs" />
+    <Compile Include="HData\HomeAddress.cs" />
+    <Compile Include="HData\Hotel.cs" />
+    <Compile Include="HData\HqCommunal.cs" />
+    <Compile Include="HData\Mission.cs" />
+    <Compile Include="HData\MissionJournal.cs" />
+    <Compile Include="HData\HeQiaoDb.cs" />
+    <Compile Include="HData\Note.cs" />
+    <Compile Include="HData\Organization.cs" />
+    <Compile Include="HData\OrganPeoInfo.cs" />
+    <Compile Include="HData\PaibanInfo.cs" />
+    <Compile Include="HData\ParkingLot.cs" />
+    <Compile Include="HData\PerformanceDeclare.cs" />
+    <Compile Include="HData\PersonalDiary.cs" />
+    <Compile Include="HData\Priority.cs" />
+    <Compile Include="HData\PriorityJournal.cs" />
+    <Compile Include="HData\Promo.cs" />
+    <Compile Include="HData\PromoTeam.cs" />
+    <Compile Include="HData\Propaganda.cs" />
+    <Compile Include="HData\PublicityFronts.cs" />
+    <Compile Include="HData\PublicityType.cs" />
+    <Compile Include="HData\Qiye.cs" />
+    <Compile Include="HData\RectifyInfo.cs" />
+    <Compile Include="HData\RegionInfo.cs" />
+    <Compile Include="HData\RegionInfos.cs" />
+    <Compile Include="HData\RegionInfos_copy.cs" />
+    <Compile Include="HData\Relationships.cs" />
+    <Compile Include="HData\RentoutRoom.cs" />
+    <Compile Include="HData\RenyuZhuany.cs" />
+    <Compile Include="HData\RescueMember.cs" />
+    <Compile Include="HData\RescueTeam.cs" />
+    <Compile Include="HData\ResponseInfo.cs" />
+    <Compile Include="HData\ResponseInit.cs" />
+    <Compile Include="HData\Runbusiness.cs" />
+    <Compile Include="HData\RuzhuInfo.cs" />
+    <Compile Include="HData\Scenic.cs" />
+    <Compile Include="HData\Sectarian.cs" />
+    <Compile Include="HData\Security.cs" />
+    <Compile Include="HData\SecurityCode.cs" />
+    <Compile Include="HData\SecurityReport.cs" />
+    <Compile Include="HData\Sightseer.cs" />
+    <Compile Include="HData\SmokeGan.cs" />
+    <Compile Include="HData\SthOrganic.cs" />
+    <Compile Include="HData\SystemIcon.cs" />
+    <Compile Include="HData\SystemLog.cs" />
+    <Compile Include="HData\SystemMenu.cs" />
+    <Compile Include="HData\SystemPermission.cs" />
+    <Compile Include="HData\SystemRole.cs" />
+    <Compile Include="HData\SystemRolePermissionMapping.cs" />
+    <Compile Include="HData\SystemUser.cs" />
+    <Compile Include="HData\SystemUserRoleMapping.cs" />
+    <Compile Include="HData\TheUnion.cs" />
+    <Compile Include="HData\TheUnionZhengc.cs" />
+    <Compile Include="HData\Tourist.cs" />
+    <Compile Include="HData\Town.cs" />
+    <Compile Include="HData\TownMilitia.cs" />
+    <Compile Include="HData\UAV.cs" />
+    <Compile Include="HData\UnifiedAddressLibrary.cs" />
+    <Compile Include="HData\UnifiedAddressLibraryUserInfo.cs" />
+    <Compile Include="HData\Userinfoty.cs" />
+    <Compile Include="HData\View_Menu.cs" />
+    <Compile Include="HData\View_SystemPermissionWithMenu.cs" />
+    <Compile Include="HData\View_SystemPermissionWithMenu2.cs" />
+    <Compile Include="HData\Village.cs" />
+    <Compile Include="HData\VillageMember.cs" />
+    <Compile Include="HData\Volunteers.cs" />
+    <Compile Include="HData\VolunteerTeam.cs" />
+    <Compile Include="HData\WaterLevel.cs" />
+    <Compile Include="HData\WaterLevelSheb.cs" />
+    <Compile Include="HData\WomenActivities.cs" />
+    <Compile Include="HData\WomenFederation.cs" />
+    <Compile Include="HData\WomenHouse.cs" />
+    <Compile Include="HData\Woods.cs" />
+    <Compile Include="HData\XlProject.cs" />
+    <Compile Include="HData\XunchaDuty.cs" />
+    <Compile Include="HData\XunchaInfo.cs" />
+    <Compile Include="HData\Ygiene.cs" />
+    <Compile Include="HData\YoukeOverflow.cs" />
+    <Compile Include="HData\Youth.cs" />
+    <Compile Include="HData\YouthPosition.cs" />
+    <Compile Include="HttpUtillib.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

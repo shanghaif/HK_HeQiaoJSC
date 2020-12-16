@@ -1,0 +1,5 @@
+D:\我的工作目录\2019新项目\江西赣县二中智慧校园看门狗\SmartCampusManagementWatchDog\obj\Release\SmartCampusManagementWatchDog.csprojAssemblyReference.cache
+D:\我的工作目录\2019新项目\江西赣县二中智慧校园看门狗\SmartCampusManagementWatchDog\obj\Release\SmartCampusManagementWatchDog.FrmMain.resources
+D:\我的工作目录\2019新项目\江西赣县二中智慧校园看门狗\SmartCampusManagementWatchDog\obj\Release\SmartCampusManagementWatchDog.Properties.Resources.resources
+D:\我的工作目录\2019新项目\江西赣县二中智慧校园看门狗\SmartCampusManagementWatchDog\obj\Release\SmartCampusManagementWatchDog.csproj.GenerateResource.cache
+D:\我的工作目录\2019新项目\江西赣县二中智慧校园看门狗\SmartCampusManagementWatchDog\obj\Release\SmartCampusManagementWatchDog.csproj.CoreCompileInputs.cache
